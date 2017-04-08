@@ -1,0 +1,651 @@
+dependencies:
+  load-yaml-file@^0.1.0: 0.1.0
+  path-exists@^3.0.0: 3.0.0
+  standard@^9.0.2: 9.0.2
+  tape@^4.6.3: 4.6.3
+packages:
+  /acorn-jsx/3.0.1:
+    dependencies:
+      acorn: 3.3.0
+    resolution: afdf9488fb1ecefc8348f6fb22f464e32a58b36b
+  /acorn/3.3.0: 45e37fb39e8da3f25baee3ff5369e2bb5f22017a
+  /acorn/5.0.3: c460df08491463f028ccb82eab3730bf01087b3d
+  /ajv-keywords/1.5.1: 314dd0a4b3368fad3dfcdc54ede6171b886daf3c
+  /ajv/4.11.6:
+    dependencies:
+      co: 4.6.0
+      json-stable-stringify: 1.0.1
+    resolution: 947e93049790942b2a2d60a8289b28924d39f987
+  /ansi-escapes/1.4.0: d3a8a83b319aa67793662b13e761c7911422306e
+  /ansi-regex/2.1.1: c3b33ab5ee360d86e0e628f0468ae7ef27d654df
+  /ansi-styles/2.2.1: b432dd3358b634cf75e1e4664368240533c1ddbe
+  /argparse/1.0.9:
+    dependencies:
+      sprintf-js: 1.0.3
+    resolution: 73d83bc263f86e97f8cc4f6bae1b0e90a7d22c86
+  /array-union/1.0.2:
+    dependencies:
+      array-uniq: 1.0.3
+    resolution: 9a34410e4f4e3da23dea375be5be70f24778ec39
+  /array-uniq/1.0.3: af6ac877a25cc7f74e058894753858dfdb24fdb6
+  /array.prototype.find/2.0.4:
+    dependencies:
+      define-properties: 1.1.2
+      es-abstract: 1.7.0
+    resolution: 556a5c5362c08648323ddaeb9de9d14bc1864c90
+  /arrify/1.0.1: 898508da2226f380df904728456849c1501a4b0d
+  /babel-code-frame/6.22.0:
+    dependencies:
+      chalk: 1.1.3
+      esutils: 2.0.2
+      js-tokens: 3.0.1
+    resolution: 027620bee567a88c32561574e7fd0801d33118e4
+  /balanced-match/0.4.2: cb3f3e3c732dc0f01ee70b403f302e61d7709838
+  /brace-expansion/1.1.7:
+    dependencies:
+      balanced-match: 0.4.2
+      concat-map: 0.0.1
+    resolution: 3effc3c50e000531fb720eaff80f0ae8ef23cf59
+  /buffer-shims/1.0.0: 9978ce317388c649ad8793028c3477ef044a8b51
+  /caller-path/0.1.0:
+    dependencies:
+      callsites: 0.2.0
+    resolution: 94085ef63581ecd3daa92444a8fe94e82577751f
+  /callsites/0.2.0: afab96262910a7f33c19a5775825c69f34e350ca
+  /chalk/1.1.3:
+    dependencies:
+      ansi-styles: 2.2.1
+      escape-string-regexp: 1.0.5
+      has-ansi: 2.0.0
+      strip-ansi: 3.0.1
+      supports-color: 2.0.0
+    resolution: a8115c55e4a702fe4d150abd3872822a7e09fc98
+  /circular-json/0.3.1: be8b36aefccde8b3ca7aa2d6afc07a37242c0d2d
+  /cli-cursor/1.0.2:
+    dependencies:
+      restore-cursor: 1.0.1
+    resolution: 64da3f7d56a54412e59794bd62dc35295e8f2987
+  /cli-width/2.1.0: b234ca209b29ef66fc518d9b98d5847b00edf00a
+  /co/4.6.0: 6ea6bdf3d853ae54ccb8e47bfa0bf3f9031fb184
+  /code-point-at/1.1.0: 0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77
+  /concat-map/0.0.1: d8a96bd77fd68df7793a73036a3ba0d5405d477b
+  /concat-stream/1.6.0:
+    dependencies:
+      inherits: 2.0.3
+      readable-stream: 2.2.9
+      typedarray: 0.0.6
+    resolution: 0aac662fd52be78964d5532f694784e70110acf7
+  /core-util-is/1.0.2: b5fd54220aa2bc5ab57aab7140c940754503c1a7
+  /d/1.0.0:
+    dependencies:
+      es5-ext: 0.10.15
+    resolution: 754bb5bfe55451da69a58b94d45f4c5b0462d58f
+  /debug-log/1.0.1: 2307632d4c04382b8df8a32f70b895046d52745f
+  /debug/2.6.3:
+    dependencies:
+      ms: 0.7.2
+    resolution: 0f7eb8c30965ec08c72accfa0130c8b79984141d
+  /deep-equal/1.0.1: f5d260292b660e084eff4cdbc9f08ad3247448b5
+  /deep-is/0.1.3: b369d6fb5dbc13eecf524f91b070feedc357cf34
+  /define-properties/1.1.2:
+    dependencies:
+      foreach: 2.0.5
+      object-keys: 1.0.11
+    resolution: 83a73f2fea569898fb737193c8f873caf6d45c94
+  /defined/1.0.0: c98d9bcef75674188e110969151199e39b1fa693
+  /deglob/2.1.0:
+    dependencies:
+      find-root: 1.0.0
+      glob: 7.1.1
+      ignore: 3.2.7
+      pkg-config: 1.1.1
+      run-parallel: 1.1.6
+      uniq: 1.0.1
+    resolution: 4d44abe16ef32c779b4972bd141a80325029a14a
+  /del/2.2.2:
+    dependencies:
+      globby: 5.0.0
+      is-path-cwd: 1.0.0
+      is-path-in-cwd: 1.0.0
+      object-assign: 4.1.1
+      pify: 2.3.0
+      pinkie-promise: 2.0.1
+      rimraf: 2.6.1
+    resolution: c12c981d067846c84bcaf862cff930d907ffd1a8
+  /doctrine/1.5.0:
+    dependencies:
+      esutils: 2.0.2
+      isarray: 1.0.0
+    resolution: 379dce730f6166f76cefa4e6707a159b02c5a6fa
+  /doctrine/2.0.0:
+    dependencies:
+      esutils: 2.0.2
+      isarray: 1.0.0
+    resolution: c73d8d2909d22291e1a007a395804da8b665fe63
+  /error-ex/1.3.1:
+    dependencies:
+      is-arrayish: 0.2.1
+    resolution: f855a86ce61adc4e8621c3cda21e7a7612c3a8dc
+  /es-abstract/1.7.0:
+    dependencies:
+      es-to-primitive: 1.1.1
+      function-bind: 1.1.0
+      is-callable: 1.1.3
+      is-regex: 1.0.4
+    resolution: dfade774e01bfcd97f96180298c449c8623fb94c
+  /es-to-primitive/1.1.1:
+    dependencies:
+      is-callable: 1.1.3
+      is-date-object: 1.0.1
+      is-symbol: 1.0.1
+    resolution: 45355248a88979034b6792e19bb81f2b7975dd0d
+  /es5-ext/0.10.15:
+    dependencies:
+      es6-iterator: 2.0.1
+      es6-symbol: 3.1.1
+    resolution: c330a5934c1ee21284a7c081a86e5fd937c91ea6
+  /es6-iterator/2.0.1:
+    dependencies:
+      d: 1.0.0
+      es5-ext: 0.10.15
+      es6-symbol: 3.1.1
+    resolution: 8e319c9f0453bf575d374940a655920e59ca5512
+  /es6-map/0.1.5:
+    dependencies:
+      d: 1.0.0
+      es5-ext: 0.10.15
+      es6-iterator: 2.0.1
+      es6-set: 0.1.5
+      es6-symbol: 3.1.1
+      event-emitter: 0.3.5
+    resolution: 9136e0503dcc06a301690f0bb14ff4e364e949f0
+  /es6-set/0.1.5:
+    dependencies:
+      d: 1.0.0
+      es5-ext: 0.10.15
+      es6-iterator: 2.0.1
+      es6-symbol: 3.1.1
+      event-emitter: 0.3.5
+    resolution: d2b3ec5d4d800ced818db538d28974db0a73ccb1
+  /es6-symbol/3.1.1:
+    dependencies:
+      d: 1.0.0
+      es5-ext: 0.10.15
+    resolution: bf00ef4fdab6ba1b46ecb7b629b4c7ed5715cc77
+  /es6-weak-map/2.0.2:
+    dependencies:
+      d: 1.0.0
+      es5-ext: 0.10.15
+      es6-iterator: 2.0.1
+      es6-symbol: 3.1.1
+    resolution: 5e3ab32251ffd1538a1f8e5ffa1357772f92d96f
+  /escape-string-regexp/1.0.5: 1b61c0562190a8dff6ae3bb2cf0200ca130b86d4
+  /escope/3.6.0:
+    dependencies:
+      es6-map: 0.1.5
+      es6-weak-map: 2.0.2
+      esrecurse: 4.1.0
+      estraverse: 4.2.0
+    resolution: e01975e812781a163a6dadfdd80398dc64c889c3
+  /eslint-config-standard-jsx/3.3.0: cab0801a15a360bf63facb97ab22fbdd88d8a5e0
+  /eslint-config-standard/7.1.0: 47e769ea0739f5b2d5693b1a501c21c9650fafcf
+  /eslint-plugin-promise/3.4.2: 1be2793eafe2d18b5b123b8136c269f804fe7122
+  /eslint-plugin-react/6.9.0:
+    dependencies:
+      array.prototype.find: 2.0.4
+      doctrine: 1.5.0
+      jsx-ast-utils: 1.4.0
+    resolution: 54c2e9906b76f9d10142030bdc34e9d6840a0bb2
+  /eslint-plugin-standard/2.0.1: 3589699ff9c917f2c25f76a916687f641c369ff3
+  /eslint/3.18.0:
+    dependencies:
+      babel-code-frame: 6.22.0
+      chalk: 1.1.3
+      concat-stream: 1.6.0
+      debug: 2.6.3
+      doctrine: 2.0.0
+      escope: 3.6.0
+      espree: 3.4.1
+      esquery: 1.0.0
+      estraverse: 4.2.0
+      esutils: 2.0.2
+      file-entry-cache: 2.0.0
+      glob: 7.1.1
+      globals: 9.17.0
+      ignore: 3.2.7
+      imurmurhash: 0.1.4
+      inquirer: 0.12.0
+      is-my-json-valid: 2.16.0
+      is-resolvable: 1.0.0
+      js-yaml: 3.8.3
+      json-stable-stringify: 1.0.1
+      levn: 0.3.0
+      lodash: 4.17.4
+      mkdirp: 0.5.1
+      natural-compare: 1.4.0
+      optionator: 0.8.2
+      path-is-inside: 1.0.2
+      pluralize: 1.2.1
+      progress: 1.1.8
+      require-uncached: 1.0.3
+      shelljs: 0.7.7
+      strip-bom: 3.0.0
+      strip-json-comments: 2.0.1
+      table: 3.8.3
+      text-table: 0.2.0
+      user-home: 2.0.0
+    resolution: 647e985c4ae71502d20ac62c109f66d5104c8a4b
+  /espree/3.4.1:
+    dependencies:
+      acorn: 5.0.3
+      acorn-jsx: 3.0.1
+    resolution: 28a83ab4aaed71ed8fe0f5efe61b76a05c13c4d2
+  /esprima/3.1.3: fdca51cee6133895e3c88d535ce49dbff62a4633
+  /esquery/1.0.0:
+    dependencies:
+      estraverse: 4.2.0
+    resolution: cfba8b57d7fba93f17298a8a006a04cda13d80fa
+  /esrecurse/4.1.0:
+    dependencies:
+      estraverse: 4.1.1
+      object-assign: 4.1.1
+    resolution: 4713b6536adf7f2ac4f327d559e7756bff648220
+  /estraverse/4.1.1: f6caca728933a850ef90661d0e17982ba47111a2
+  /estraverse/4.2.0: 0dee3fed31fcd469618ce7342099fc1afa0bdb13
+  /esutils/2.0.2: 0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b
+  /event-emitter/0.3.5:
+    dependencies:
+      d: 1.0.0
+      es5-ext: 0.10.15
+    resolution: df8c69eef1647923c7157b9ce83840610b02cc39
+  /exit-hook/1.1.1: f05ca233b48c05d54fff07765df8507e95c02ff8
+  /fast-levenshtein/2.0.6: 3d8a5c66883a16a30ca8643e851f19baa7797917
+  /figures/1.7.0:
+    dependencies:
+      escape-string-regexp: 1.0.5
+      object-assign: 4.1.1
+    resolution: cbe1e3affcf1cd44b80cadfed28dc793a9701d2e
+  /file-entry-cache/2.0.0:
+    dependencies:
+      flat-cache: 1.2.2
+      object-assign: 4.1.1
+    resolution: c392990c3e684783d838b8c84a45d8a048458361
+  /find-root/1.0.0: 962ff211aab25c6520feeeb8d6287f8f6e95807a
+  /find-up/2.1.0:
+    dependencies:
+      locate-path: 2.0.0
+    resolution: 45d1b7e506c717ddd482775a2b77920a3c0c57a7
+  /flat-cache/1.2.2:
+    dependencies:
+      circular-json: 0.3.1
+      del: 2.2.2
+      graceful-fs: 4.1.11
+      write: 0.2.1
+    resolution: fa86714e72c21db88601761ecf2f555d1abc6b96
+  /for-each/0.3.2:
+    dependencies:
+      is-function: 1.0.1
+    resolution: 2c40450b9348e97f281322593ba96704b9abd4d4
+  /foreach/2.0.5: 0bee005018aeb260d0a3af3ae658dd0136ec1b99
+  /fs.realpath/1.0.0: 1504ad2523158caa40db4a2787cb01411994ea4f
+  /function-bind/1.1.0: 16176714c801798e4e8f2cf7f7529467bb4a5771
+  /generate-function/2.0.0: 6858fe7c0969b7d4e9093337647ac79f60dfbe74
+  /generate-object-property/1.2.0:
+    dependencies:
+      is-property: 1.0.2
+    resolution: 9c0e1c40308ce804f4783618b937fa88f99d50d0
+  /get-stdin/5.0.1: 122e161591e21ff4c52530305693f20e6393a398
+  /glob/7.1.1:
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.3
+      minimatch: 3.0.3
+      once: 1.4.0
+      path-is-absolute: 1.0.1
+    resolution: 805211df04faaf1c63a3600306cdf5ade50b2ec8
+  /globals/9.17.0: 0c0ca696d9b9bb694d2e5470bd37777caad50286
+  /globby/5.0.0:
+    dependencies:
+      array-union: 1.0.2
+      arrify: 1.0.1
+      glob: 7.1.1
+      object-assign: 4.1.1
+      pify: 2.3.0
+      pinkie-promise: 2.0.1
+    resolution: ebd84667ca0dbb330b99bcfc68eac2bc54370e0d
+  /graceful-fs/4.1.11: 0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658
+  /has-ansi/2.0.0:
+    dependencies:
+      ansi-regex: 2.1.1
+    resolution: 34f5049ce1ecdf2b0649af3ef24e45ed35416d91
+  /has/1.0.1:
+    dependencies:
+      function-bind: 1.1.0
+    resolution: 8461733f538b0837c9361e39a9ab9e9704dc2f28
+  /home-or-tmp/2.0.0:
+    dependencies:
+      os-homedir: 1.0.2
+      os-tmpdir: 1.0.2
+    resolution: e36c3f2d2cae7d746a857e38d18d5f32a7882db8
+  /ignore/3.2.7: 4810ca5f1d8eca5595213a34b94f2eb4ed926bbd
+  /imurmurhash/0.1.4: 9218b9b2b928a238b13dc4fb6b6d576f231453ea
+  /inflight/1.0.6:
+    dependencies:
+      once: 1.4.0
+      wrappy: 1.0.2
+    resolution: 49bd6331d7d02d0c09bc910a1075ba8165b56df9
+  /inherits/2.0.3: 633c2c83e3da42a502f52466022480f4208261de
+  /inquirer/0.12.0:
+    dependencies:
+      ansi-escapes: 1.4.0
+      ansi-regex: 2.1.1
+      chalk: 1.1.3
+      cli-cursor: 1.0.2
+      cli-width: 2.1.0
+      figures: 1.7.0
+      lodash: 4.17.4
+      readline2: 1.0.1
+      run-async: 0.1.0
+      rx-lite: 3.1.2
+      string-width: 1.0.2
+      strip-ansi: 3.0.1
+      through: 2.3.8
+    resolution: 1ef2bfd63504df0bc75785fff8c2c41df12f077e
+  /interpret/1.0.2: f4f623f0bb7122f15f5717c8e254b8161b5c5b2d
+  /is-arrayish/0.2.1: 77c99840527aa8ecb1a8ba697b80645a7a926a9d
+  /is-callable/1.1.3: 86eb75392805ddc33af71c92a0eedf74ee7604b2
+  /is-date-object/1.0.1: 9aa20eb6aeebbff77fbd33e74ca01b33581d3a16
+  /is-fullwidth-code-point/1.0.0:
+    dependencies:
+      number-is-nan: 1.0.1
+    resolution: ef9e31386f031a7f0d643af82fde50c457ef00cb
+  /is-fullwidth-code-point/2.0.0: a3b30a5c4f199183167aaab93beefae3ddfb654f
+  /is-function/1.0.1: 12cfb98b65b57dd3d193a3121f5f6e2f437602b5
+  /is-my-json-valid/2.16.0:
+    dependencies:
+      generate-function: 2.0.0
+      generate-object-property: 1.2.0
+      jsonpointer: 4.0.1
+      xtend: 4.0.1
+    resolution: f079dd9bfdae65ee2038aae8acbc86ab109e3693
+  /is-path-cwd/1.0.0: d225ec23132e89edd38fda767472e62e65f1106d
+  /is-path-in-cwd/1.0.0:
+    dependencies:
+      is-path-inside: 1.0.0
+    resolution: 6477582b8214d602346094567003be8a9eac04dc
+  /is-path-inside/1.0.0:
+    dependencies:
+      path-is-inside: 1.0.2
+    resolution: fc06e5a1683fbda13de667aff717bbc10a48f37f
+  /is-property/1.0.2: 57fe1c4e48474edd65b09911f26b1cd4095dda84
+  /is-regex/1.0.4:
+    dependencies:
+      has: 1.0.1
+    resolution: 5517489b547091b0930e095654ced25ee97e9491
+  /is-resolvable/1.0.0:
+    dependencies:
+      tryit: 1.0.3
+    resolution: 8df57c61ea2e3c501408d100fb013cf8d6e0cc62
+  /is-symbol/1.0.1: 3cc59f00025194b6ab2e38dbae6689256b660572
+  /isarray/1.0.0: bb935d48582cba168c06834957a54a3e07124f11
+  /js-tokens/3.0.1: 08e9f132484a2c45a30907e9dc4d5567b7f114d7
+  /js-yaml/3.8.3:
+    dependencies:
+      argparse: 1.0.9
+      esprima: 3.1.3
+    resolution: 33a05ec481c850c8875929166fe1beb61c728766
+  /json-stable-stringify/1.0.1:
+    dependencies:
+      jsonify: 0.0.0
+    resolution: 9a759d39c5f2ff503fd5300646ed445f88c4f9af
+  /jsonify/0.0.0: 2c74b6ee41d93ca51b7b5aaee8f503631d252a73
+  /jsonpointer/4.0.1: 4fd92cb34e0e9db3c89c8622ecf51f9b978c6cb9
+  /jsx-ast-utils/1.4.0:
+    dependencies:
+      object-assign: 4.1.1
+    resolution: 5afe38868f56bc8cc7aeaef0100ba8c75bd12591
+  /levn/0.3.0:
+    dependencies:
+      prelude-ls: 1.1.2
+      type-check: 0.3.2
+    resolution: 3b09924edf9f083c0490fdd4c0bc4421e04764ee
+  /load-json-file/2.0.0:
+    dependencies:
+      graceful-fs: 4.1.11
+      parse-json: 2.2.0
+      pify: 2.3.0
+      strip-bom: 3.0.0
+    resolution: 7947e42149af80d696cbf797bcaabcfe1fe29ca8
+  /load-yaml-file/0.1.0:
+    dependencies:
+      graceful-fs: 4.1.11
+      js-yaml: 3.8.3
+      pify: 2.3.0
+      strip-bom: 3.0.0
+    resolution: f680066e691b3eeb45017672e4a3956af5b83b89
+  /locate-path/2.0.0:
+    dependencies:
+      p-locate: 2.0.0
+      path-exists: 3.0.0
+    resolution: 2b568b265eec944c6d9c0de9c3dbbbca0354cd8e
+  /lodash/4.17.4: 78203a4d1c328ae1d86dca6460e369b57f4055ae
+  /minimatch/3.0.3:
+    dependencies:
+      brace-expansion: 1.1.7
+    resolution: 2a4e4090b96b2db06a9d7df01055a62a77c9b774
+  /minimist/0.0.8: 857fcabfc3397d2625b8228262e86aa7a011b05d
+  /minimist/1.2.0: a35008b20f41383eec1fb914f4cd5df79a264284
+  /mkdirp/0.5.1:
+    dependencies:
+      minimist: 0.0.8
+    resolution: 30057438eac6cf7f8c4767f38648d6697d75c903
+  /ms/0.7.2: ae25cf2512b3885a1d95d7f037868d8431124765
+  /mute-stream/0.0.5: 8fbfabb0a98a253d3184331f9e8deb7372fac6c0
+  /natural-compare/1.4.0: 4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7
+  /number-is-nan/1.0.1: 097b602b53422a522c1afb8790318336941a011d
+  /object-assign/4.1.1: 2109adc7965887cfc05cbbd442cac8bfbb360863
+  /object-inspect/1.2.2: c82115e4fcc888aea14d64c22e4f17f6a70d5e5a
+  /object-keys/1.0.11: c54601778ad560f1142ce0e01bcca8b56d13426d
+  /once/1.4.0:
+    dependencies:
+      wrappy: 1.0.2
+    resolution: 583b1aa775961d4b113ac17d9c50baef9dd76bd1
+  /onetime/1.1.0: a1f7838f8314c516f05ecefcbc4ccfe04b4ed789
+  /optionator/0.8.2:
+    dependencies:
+      deep-is: 0.1.3
+      fast-levenshtein: 2.0.6
+      levn: 0.3.0
+      prelude-ls: 1.1.2
+      type-check: 0.3.2
+      wordwrap: 1.0.0
+    resolution: 364c5e409d3f4d6301d6c0b4c05bba50180aeb64
+  /os-homedir/1.0.2: ffbc4988336e0e833de0c168c7ef152121aa7fb3
+  /os-tmpdir/1.0.2: bbe67406c79aa85c5cfec766fe5734555dfa1274
+  /p-limit/1.1.0: b07ff2d9a5d88bec806035895a2bab66a27988bc
+  /p-locate/2.0.0:
+    dependencies:
+      p-limit: 1.1.0
+    resolution: 20a0103b222a70c8fd39cc2e580680f3dde5ec43
+  /parse-json/2.2.0:
+    dependencies:
+      error-ex: 1.3.1
+    resolution: f480f40434ef80741f8469099f8dea18f55a4dc9
+  /path-exists/3.0.0: ce0ebeaa5f78cb18925ea7d810d7b59b010fd515
+  /path-is-absolute/1.0.1: 174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f
+  /path-is-inside/1.0.2: 365417dede44430d1c11af61027facf074bdfc53
+  /path-parse/1.0.5: 3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1
+  /pify/2.3.0: ed141a6ac043a849ea588498e7dca8b15330e90c
+  /pinkie-promise/2.0.1:
+    dependencies:
+      pinkie: 2.0.4
+    resolution: 2135d6dfa7a358c069ac9b178776288228450ffa
+  /pinkie/2.0.4: 72556b80cfa0d48a974e80e77248e80ed4f7f870
+  /pkg-conf/2.0.0:
+    dependencies:
+      find-up: 2.1.0
+      load-json-file: 2.0.0
+    resolution: 071c87650403bccfb9c627f58751bfe47c067279
+  /pkg-config/1.1.1:
+    dependencies:
+      debug-log: 1.0.1
+      find-root: 1.0.0
+      xtend: 4.0.1
+    resolution: 557ef22d73da3c8837107766c52eadabde298fe4
+  /pluralize/1.2.1: d1a21483fd22bb41e58a12fa3421823140897c45
+  /prelude-ls/1.1.2: 21932a549f5e52ffd9a827f570e04be62a97da54
+  /process-nextick-args/1.0.7: 150e20b756590ad3f91093f25a4f2ad8bff30ba3
+  /progress/1.1.8: e260c78f6161cdd9b0e56cc3e0a85de17c7a57be
+  /readable-stream/2.2.9:
+    dependencies:
+      buffer-shims: 1.0.0
+      core-util-is: 1.0.2
+      inherits: 2.0.3
+      isarray: 1.0.0
+      process-nextick-args: 1.0.7
+      string_decoder: 1.0.0
+      util-deprecate: 1.0.2
+    resolution: cf78ec6f4a6d1eb43d26488cac97f042e74b7fc8
+  /readline2/1.0.1:
+    dependencies:
+      code-point-at: 1.1.0
+      is-fullwidth-code-point: 1.0.0
+      mute-stream: 0.0.5
+    resolution: 41059608ffc154757b715d9989d199ffbf372e35
+  /rechoir/0.6.2:
+    dependencies:
+      resolve: 1.3.2
+    resolution: 85204b54dba82d5742e28c96756ef43af50e3384
+  /require-uncached/1.0.3:
+    dependencies:
+      caller-path: 0.1.0
+      resolve-from: 1.0.1
+    resolution: 4e0d56d6c9662fd31e43011c4b95aa49955421d3
+  /resolve-from/1.0.1: 26cbfe935d1aeeeabb29bc3fe5aeb01e93d44226
+  /resolve/1.1.7: 203114d82ad2c5ed9e8e0411b3932875e889e97b
+  /resolve/1.3.2:
+    dependencies:
+      path-parse: 1.0.5
+    resolution: 1f0442c9e0cbb8136e87b9305f932f46c7f28235
+  /restore-cursor/1.0.1:
+    dependencies:
+      exit-hook: 1.1.1
+      onetime: 1.1.0
+    resolution: 34661f46886327fed2991479152252df92daa541
+  /resumer/0.0.0:
+    dependencies:
+      through: 2.3.8
+    resolution: f1e8f461e4064ba39e82af3cdc2a8c893d076759
+  /rimraf/2.6.1:
+    dependencies:
+      glob: 7.1.1
+    resolution: c2338ec643df7a1b7fe5c54fa86f57428a55f33d
+  /run-async/0.1.0:
+    dependencies:
+      once: 1.4.0
+    resolution: c8ad4a5e110661e402a7d21b530e009f25f8e389
+  /run-parallel/1.1.6: 29003c9a2163e01e2d2dfc90575f2c6c1d61a039
+  /rx-lite/3.1.2: 19ce502ca572665f3b647b10939f97fd1615f102
+  /shelljs/0.7.7:
+    dependencies:
+      glob: 7.1.1
+      interpret: 1.0.2
+      rechoir: 0.6.2
+    resolution: b2f5c77ef97148f4b4f6e22682e10bba8667cff1
+  /slice-ansi/0.0.4: edbf8903f66f7ce2f8eafd6ceed65e264c831b35
+  /sprintf-js/1.0.3: 04e6926f662895354f3dd015203633b857297e2c
+  /standard-engine/5.4.0:
+    dependencies:
+      deglob: 2.1.0
+      get-stdin: 5.0.1
+      home-or-tmp: 2.0.0
+      minimist: 1.2.0
+      pkg-conf: 2.0.0
+    resolution: e0e86959ea0786425d3383e40c1bf70d2f985579
+  /standard/9.0.2:
+    dependencies:
+      eslint: 3.18.0
+      eslint-config-standard: 7.1.0
+      eslint-config-standard-jsx: 3.3.0
+      eslint-plugin-promise: 3.4.2
+      eslint-plugin-react: 6.9.0
+      eslint-plugin-standard: 2.0.1
+      standard-engine: 5.4.0
+    resolution: 9bd3b9467492e212b1914d78553943ff9b48fd99
+  /string-width/1.0.2:
+    dependencies:
+      code-point-at: 1.1.0
+      is-fullwidth-code-point: 1.0.0
+      strip-ansi: 3.0.1
+    resolution: 118bdf5b8cdc51a2a7e70d211e07e2b0b9b107d3
+  /string-width/2.0.0:
+    dependencies:
+      is-fullwidth-code-point: 2.0.0
+      strip-ansi: 3.0.1
+    resolution: 635c5436cc72a6e0c387ceca278d4e2eec52687e
+  /string.prototype.trim/1.1.2:
+    dependencies:
+      define-properties: 1.1.2
+      es-abstract: 1.7.0
+      function-bind: 1.1.0
+    resolution: d04de2c89e137f4d7d206f086b5ed2fae6be8cea
+  /string_decoder/1.0.0:
+    dependencies:
+      buffer-shims: 1.0.0
+    resolution: f06f41157b664d86069f84bdbdc9b0d8ab281667
+  /strip-ansi/3.0.1:
+    dependencies:
+      ansi-regex: 2.1.1
+    resolution: 6a385fb8853d952d5ff05d0e8aaf94278dc63dcf
+  /strip-bom/3.0.0: 2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3
+  /strip-json-comments/2.0.1: 3c531942e908c2697c0ec344858c286c7ca0a60a
+  /supports-color/2.0.0: 535d045ce6b6363fa40117084629995e9df324c7
+  /table/3.8.3:
+    dependencies:
+      ajv: 4.11.6
+      ajv-keywords: 1.5.1
+      chalk: 1.1.3
+      lodash: 4.17.4
+      slice-ansi: 0.0.4
+      string-width: 2.0.0
+    resolution: 2bbc542f0fda9861a755d3947fefd8b3f513855f
+  /tape/4.6.3:
+    dependencies:
+      deep-equal: 1.0.1
+      defined: 1.0.0
+      for-each: 0.3.2
+      function-bind: 1.1.0
+      glob: 7.1.1
+      has: 1.0.1
+      inherits: 2.0.3
+      minimist: 1.2.0
+      object-inspect: 1.2.2
+      resolve: 1.1.7
+      resumer: 0.0.0
+      string.prototype.trim: 1.1.2
+      through: 2.3.8
+    resolution: 637e77581e9ab2ce17577e9bd4ce4f575806d8b6
+  /text-table/0.2.0: 7f5ee823ae805207c00af2df4a84ec3fcfa570b4
+  /through/2.3.8: 0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5
+  /tryit/1.0.3: 393be730a9446fd1ead6da59a014308f36c289cb
+  /type-check/0.3.2:
+    dependencies:
+      prelude-ls: 1.1.2
+    resolution: 5884cab512cf1d355e3fb784f30804b2b520db72
+  /typedarray/0.0.6: 867ac74e3864187b1d3d47d996a78ec5c8830777
+  /uniq/1.0.1: b31c5ae8254844a3a8281541ce2b04b865a734ff
+  /user-home/2.0.0:
+    dependencies:
+      os-homedir: 1.0.2
+    resolution: 9c70bfd8169bc1dcbf48604e0f04b8b49cde9e9f
+  /util-deprecate/1.0.2: 450d4dc9fa70de732762fbd2d4a28981419a0ccf
+  /wordwrap/1.0.0: 27584810891456a4171c8d0226441ade90cbcaeb
+  /wrappy/1.0.2: b5243d8f3ec1aa35f1364605bc0d1036e30ab69f
+  /write/0.2.1:
+    dependencies:
+      mkdirp: 0.5.1
+    resolution: 5fc03828e264cea3fe91455476f7a3c566cb0757
+  /xtend/4.0.1: a5c6d532be656e23db820efb943a1f04998d63af
+registry: 'https://registry.npmjs.org/'
+version: 2
