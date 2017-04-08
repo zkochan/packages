@@ -8,7 +8,16 @@ const fixturesDir = path.join(__dirname, 'fixtures')
 test('identifies pnpm installation', t => {
   whichpm(path.join(fixturesDir, 'pnpm'))
     .then(pm => {
-      t.equal(pm, 'pnpm@0.70.0')
+      t.deepEqual(pm, {name: 'pnpm', version: '0.70.0'})
+      t.end()
+    })
+    .catch(t.end)
+})
+
+test('identifies pnpm installation', t => {
+  whichpm(path.join(fixturesDir, 'scoped-pnpm'))
+    .then(pm => {
+      t.deepEqual(pm, {name: '@zkochan/pnpm', version: '0.70.0'})
       t.end()
     })
     .catch(t.end)
@@ -17,7 +26,7 @@ test('identifies pnpm installation', t => {
 test('identifies yarn installation', t => {
   whichpm(path.join(fixturesDir, 'yarn'))
     .then(pm => {
-      t.equal(pm, 'yarn')
+      t.deepEqual(pm, {name: 'yarn'})
       t.end()
     })
     .catch(t.end)
@@ -26,7 +35,7 @@ test('identifies yarn installation', t => {
 test('identifies npm installation', t => {
   whichpm(path.join(fixturesDir, 'npm'))
     .then(pm => {
-      t.equal(pm, 'npm')
+      t.deepEqual(pm, {name: 'npm'})
       t.end()
     })
     .catch(t.end)
