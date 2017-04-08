@@ -22,6 +22,10 @@ whichpm(process.cwd())
 //> {name: "pnpm", version: "0.64.2"}
 ```
 
+## Related
+
+* [which-pm-runs](https://github.com/zkochan/which-pm-runs) - Detects what package manager executes the process
+
 ## License
 
 [MIT](LICENSE) © [Zoltan Kochan](http://kochan.io)
