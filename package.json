@@ -25,10 +25,10 @@
   "license": "MIT",
   "dependencies": {
     "load-yaml-file": "^0.1.0",
-    "path-exists": "^3.0.0",
-    "tape": "^4.6.3"
+    "path-exists": "^3.0.0"
   },
   "devDependencies": {
-    "standard": "^10.0.2"
+    "standard": "^10.0.2",
+    "tape": "^4.8.0"
   }
 }
