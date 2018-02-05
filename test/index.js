@@ -1,7 +1,7 @@
 'use strict'
 const test = require('tape')
 const path = require('path')
-const whichpm = require('..')
+const whichpm = require('which-pm')
 
 const fixturesDir = path.join(__dirname, 'fixtures')
 

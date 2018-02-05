@@ -7,7 +7,7 @@
     "index.js"
   ],
   "scripts": {
-    "test": "standard && node test"
+    "test": "standard && preview && node test"
   },
   "engines": {
     "node": ">=4"
@@ -31,6 +31,7 @@
     "path-exists": "^3.0.0"
   },
   "devDependencies": {
+    "package-preview": "^1.0.5",
     "standard": "^10.0.2",
     "tape": "^4.8.0"
   }
