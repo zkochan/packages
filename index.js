@@ -7,7 +7,7 @@ module.exports = function (pkgPath) {
   const modulesPath = path.join(pkgPath, 'node_modules')
   return pathExists(path.join(modulesPath, '.yarn-integrity'))
     .then(exists => {
-      if (exists) return {name: 'yarn'}
+      if (exists) return { name: 'yarn' }
 
       return loadYamlFile(path.join(modulesPath, '.modules.yaml'))
         .then(modules => toNameAndVersion(modules.packageManager))
@@ -16,7 +16,7 @@ module.exports = function (pkgPath) {
 
           return pathExists(modulesPath)
             .then(modulesExists => {
-              return modulesExists ? {name: 'npm'} : null
+              return modulesExists ? { name: 'npm' } : null
             })
         })
     })
