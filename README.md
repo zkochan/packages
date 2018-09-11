@@ -4,10 +4,16 @@
 
 [![npm version](https://img.shields.io/npm/v/which-pm.svg)](https://www.npmjs.com/package/which-pm) [![Build Status](https://img.shields.io/travis/zkochan/which-pm/master.svg)](https://travis-ci.org/zkochan/which-pm)
 
+Can detect [npm](https://github.com/npm/cli), [pnpm](https://github.com/pnpm/pnpm) and [yarn](https://github.com/yarnpkg/yarn).
+
 ## Installation
 
-```
+```bash
 npm i which-pm
+# or
+pnpm i which-pm
+# or
+yarn add which-pm
 ```
 
 ## Usage
@@ -24,8 +30,9 @@ whichpm(process.cwd())
 
 ## Related
 
+* [preferred-pm](https://github.com/zkochan/preferred-pm) - Returns the preferred package manager of a project
 * [which-pm-runs](https://github.com/zkochan/which-pm-runs) - Detects what package manager executes the process
 
 ## License
 
-[MIT](LICENSE) © [Zoltan Kochan](http://kochan.io)
+[MIT](LICENSE) © [Zoltan Kochan](https://kochan.io)
