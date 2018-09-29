@@ -14,12 +14,9 @@
   "engines": {
     "node": ">=4"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zkochan/which-pm.git"
-  },
+  "repository": "https://github.com/zkochan/packages/tree/master/which-pm",
   "bugs": {
-    "url": "https://github.com/zkochan/which-pm/issues"
+    "url": "https://github.com/zkochan/packages/labels/package%3A%20which-pm"
   },
   "keywords": [
     "npm",

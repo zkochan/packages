@@ -2,7 +2,7 @@
 
 > Detects what package manager was used for installation
 
-[![npm version](https://img.shields.io/npm/v/which-pm.svg)](https://www.npmjs.com/package/which-pm) [![Build Status](https://img.shields.io/travis/zkochan/which-pm/master.svg)](https://travis-ci.org/zkochan/which-pm)
+[![npm version](https://img.shields.io/npm/v/which-pm.svg)](https://www.npmjs.com/package/which-pm)
 
 Can detect [npm](https://github.com/npm/cli), [pnpm](https://github.com/pnpm/pnpm) and [yarn](https://github.com/yarnpkg/yarn).
 
