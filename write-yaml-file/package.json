@@ -1,0 +1,45 @@
+{
+  "name": "write-yaml-file",
+  "version": "1.0.1",
+  "description": "Stringify and write YAML to a file atomically",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/master/write-yaml-file",
+  "keywords": [
+    "write",
+    "yaml",
+    "stringify",
+    "file",
+    "fs",
+    "graceful",
+    "stable",
+    "atomic",
+    "atomically"
+  ],
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "z@kochan.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/master/write-yaml-file#readme",
+  "dependencies": {
+    "graceful-fs": "^4.1.11",
+    "js-yaml": "^3.8.1",
+    "mkdirp": "^0.5.1",
+    "pify": "^3.0.0",
+    "write-file-atomic": "^2.0.0"
+  },
+  "devDependencies": {
+    "standard": "12.0.1"
+  }
+}
