@@ -2,5 +2,12 @@
   "extends": [
     "config:base"
   ],
-  "pinVersions": false
+  "ignorePaths": [
+    "**/test/**"
+  ],
+  "pinVersions": false,
+  "schedule": [
+    "on Friday",
+    "every weekend"
+  ]
 }
