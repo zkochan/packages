@@ -1,0 +1,41 @@
+{
+  "name": "rename-overwrite",
+  "version": "1.0.3",
+  "description": "Like `fs.rename` but overwrites existing file or directory",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "standard && preview && node test"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/master/rename-overwrite",
+  "keywords": [
+    "rename",
+    "move",
+    "fs"
+  ],
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "z@kochan.io",
+    "url": "https://www.kochan.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/master/rename-overwrite#readme",
+  "dependencies": {
+    "graceful-fs": "^4.1.11",
+    "rimraf": "^2.6.1",
+    "util.promisify": "^1.0.0"
+  },
+  "devDependencies": {
+    "load-json-file": "5.1.0",
+    "package-preview": "^1.0.4",
+    "standard": "12.0.1",
+    "tape": "^4.7.0",
+    "tempy": "^0.2.1",
+    "write-json-file": "3.0.2"
+  }
+}
