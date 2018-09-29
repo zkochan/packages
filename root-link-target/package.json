@@ -1,0 +1,48 @@
+{
+  "name": "root-link-target",
+  "version": "1.0.1",
+  "description": "Gets the shortest directory to which a file can be linked",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "standard && mos t && preview && node test",
+    "md": "mos"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/master/root-link-target",
+  "keywords": [
+    "link",
+    "hardlink",
+    "fs"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/master/root-link-target#readme",
+  "dependencies": {
+    "can-link": "^1.0.1",
+    "graceful-fs": "^4.1.11",
+    "next-path": "^1.0.0",
+    "path-temp": "^1.0.0"
+  },
+  "devDependencies": {
+    "mos": "^2.0.0-alpha.3",
+    "mos-plugin-readme": "^1.0.4",
+    "package-preview": "^1.0.5",
+    "standard": "12.0.1",
+    "tape": "^4.8.0"
+  },
+  "mos": {
+    "plugins": [
+      "readme"
+    ],
+    "installation": {
+      "useShortAlias": true
+    }
+  }
+}
