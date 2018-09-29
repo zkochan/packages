@@ -3,6 +3,8 @@ const test = require('tape')
 const execa = require('execa')
 const path = require('path')
 
+delete process.env.npm_config_user_agent
+
 const fixturesDir = path.join(__dirname, 'fixtures')
 
 test('detects yarn', t => {
