@@ -22,7 +22,7 @@ whichPMRuns()
 
 ## Related
 
-* [which-pm](https://github.com/zkochan/which-pm) - Detects what package manager was used for installation
+* [which-pm](https://github.com/zkochan/packages/tree/master/which-pm) - Detects what package manager was used for installation
 
 ## License
 
