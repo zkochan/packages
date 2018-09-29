@@ -13,7 +13,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    curl -L https://unpkg.com/@pnpm/self-installer
+    curl -L https://unpkg.com/@pnpm/self-installer | node
     pnpm recursive install
     pnpm recursive test --workspace-concurrency 1
   displayName: 'pnpm install and test'
