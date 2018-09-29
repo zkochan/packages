@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "preinstall": "node index.js"
+  }
+}
