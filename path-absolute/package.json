@@ -1,6 +1,6 @@
 {
   "name": "path-absolute",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Resolves a path to an absolute path. Supports tilde",
   "main": "index.js",
   "typings": "index.d.ts",
