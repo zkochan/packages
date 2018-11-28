@@ -1,5 +1,5 @@
 'use strict'
-const osHomedir = require('os-homedir')
+const os = require('os')
 const path = require('path')
 
 module.exports = function (filepath, cwd) {
@@ -18,7 +18,7 @@ module.exports = function (filepath, cwd) {
 }
 
 function getHomedir () {
-  const home = osHomedir()
+  const home = os.homedir()
   if (!home) throw new Error('Could not find the homedir')
   return home
 }

@@ -1,5 +1,3 @@
-dependencies:
-  os-homedir: 1.0.2
 devDependencies:
   standard: 12.0.1
 packages:
@@ -969,12 +967,6 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha1-NkxeQJ0/TWMB1sC0wFu6UBgK62Q=
-  /os-homedir/1.0.2:
-    dev: false
-    engines:
-      node: '>=0.10.0'
-    resolution:
-      integrity: sha1-/7xJiDNuDoM94MFox+8VISGqf7M=
   /os-tmpdir/1.0.2:
     dev: true
     engines:
@@ -1459,5 +1451,4 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  os-homedir: ^1.0.2
   standard: 12.0.1
