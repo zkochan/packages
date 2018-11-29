@@ -2,6 +2,8 @@
 
 > Read and parse a YAML file
 
+[![npm version](https://img.shields.io/npm/v/read-yaml-file.svg)](https://www.npmjs.com/package/read-yaml-file)
+
 ## Installation
 
 ```sh
@@ -36,3 +38,7 @@ Returns the parsed YAML.
 ## License
 
 [MIT](./LICENSE) © [Zoltan Kochan](https://www.kochan.io)
+
+***
+
+This package was forked from [load-yaml-file](https://github.com/LinusU/load-yaml-file)
