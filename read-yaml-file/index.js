@@ -7,5 +7,8 @@ const yaml = require('js-yaml')
 
 const parse = data => yaml.safeLoad(stripBom(data))
 
-module.exports = fp => pify(fs.readFile)(fp, 'utf8').then(data => parse(data))
+const readYamlFile = fp => pify(fs.readFile)(fp, 'utf8').then(data => parse(data))
+
+module.exports = readYamlFile
+module.exports.default = readYamlFile
 module.exports.sync = fp => parse(fs.readFileSync(fp, 'utf8'))
