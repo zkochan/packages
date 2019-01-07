@@ -1,0 +1,38 @@
+{
+  "name": "run-groups",
+  "version": "0.0.0",
+  "description": "Runs a sequence of concurrent task groups",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "preview && ts-node test",
+    "tsc": "tsc",
+    "prepublishOnly": "pnpm run tsc"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/master/run-groups",
+  "keywords": [],
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "z@kochan.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/master/run-groups#readme",
+  "dependencies": {
+    "p-limit": "2.1.0"
+  },
+  "devDependencies": {
+    "@types/p-limit": "2.0.0",
+    "@types/tape": "4.2.33",
+    "delay": "4.1.0",
+    "package-preview": "2.0.0",
+    "tape": "4.9.2",
+    "ts-node": "7.0.1",
+    "typescript": "3.2.2"
+  }
+}
