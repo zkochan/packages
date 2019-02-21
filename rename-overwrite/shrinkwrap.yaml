@@ -3,7 +3,7 @@ dependencies:
   rimraf: 2.6.3
   util.promisify: 1.0.0
 devDependencies:
-  load-json-file: 5.1.0
+  load-json-file: 5.2.0
   package-preview: 2.0.0
   standard: 12.0.1
   tape: 4.10.1
@@ -1097,7 +1097,7 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-L19Fq5HjMhYjT9U62rZo607AmTs=
-  /load-json-file/5.1.0:
+  /load-json-file/5.2.0:
     dependencies:
       graceful-fs: 4.1.15
       parse-json: 4.0.0
@@ -1107,7 +1107,7 @@ packages:
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-+ggO8OpTviHQ/zoyFxLJglsu1CylXUt1vpGa+mIUeesCkTC0G+JO6rdTS1/WcGBZDC7Nejo1aZ9MxbqflpmO6Q==
+      integrity: sha512-HvjIlM2Y/RDHk1X6i4sGgaMTrAsnNrgQCJtuf5PEhbOV6MCJuMVZLMdlJRE0JGLMkF7b6O5zs9LcDxKIUt9CbQ==
   /locate-path/2.0.0:
     dependencies:
       p-locate: 2.0.0
@@ -1339,7 +1339,7 @@ packages:
       find-down: 0.1.4
       fs-extra: 7.0.1
       graceful-fs: 4.1.15
-      load-json-file: 5.1.0
+      load-json-file: 5.2.0
       meow: 5.0.0
       mz: 2.7.0
       rimraf-then: 1.0.1
@@ -2109,7 +2109,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   graceful-fs: ^4.1.11
-  load-json-file: 5.1.0
+  load-json-file: 5.2.0
   package-preview: 2.0.0
   rimraf: ^2.6.1
   standard: 12.0.1
