@@ -1,6 +1,7 @@
 dependencies:
-  is-windows: 1.0.2
+  better-path-resolve: 1.0.0
 devDependencies:
+  is-windows: 1.0.2
   mos: 2.0.0-alpha.3
   mos-plugin-readme: 1.0.4
   tape: 4.9.1
@@ -257,6 +258,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+  /better-path-resolve/1.0.0:
+    dependencies:
+      is-windows: 1.0.2
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g==
   /boxen/0.5.1:
     dependencies:
       camelcase: 2.1.1
@@ -931,7 +940,6 @@ packages:
     resolution:
       integrity: sha1-Sw2hRCEE0bM2NA6AeX6GXPOffXI=
   /is-windows/1.0.2:
-    dev: false
     engines:
       node: '>=0.10.0'
     resolution:
@@ -2202,7 +2210,8 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  is-windows: ^1.0.0
+  better-path-resolve: 1.0.0
+  is-windows: 1.0.2
   mos: ^2.0.0-alpha.3
   mos-plugin-readme: ^1.0.4
   tape: ^4.6.3

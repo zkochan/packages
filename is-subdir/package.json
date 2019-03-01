@@ -36,12 +36,13 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/is-subdir#readme",
-  "dependencies": {
-    "is-windows": "^1.0.0"
-  },
   "devDependencies": {
+    "is-windows": "1.0.2",
     "mos": "^2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
     "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "better-path-resolve": "1.0.0"
   }
 }
