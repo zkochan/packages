@@ -1,6 +1,6 @@
 {
   "name": "better-path-resolve",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A better path.resolve() that normalizes paths on Windows",
   "main": "index.js",
   "files": [
