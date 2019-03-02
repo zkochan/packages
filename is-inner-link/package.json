@@ -23,7 +23,7 @@
     "url": "https://www.kochan.io"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=8"
   },
   "license": "MIT",
   "mos": {
