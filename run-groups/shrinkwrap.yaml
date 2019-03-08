@@ -6,14 +6,14 @@ devDependencies:
   delay: 4.1.0
   package-preview: 2.0.0
   tape: 4.10.1
-  ts-node: 8.0.2
+  ts-node: 8.0.3
   typescript: 3.3.1
 packages:
   /@pnpm/exec/1.1.5:
     dependencies:
       '@pnpm/self-installer': 2.0.7
       '@types/got': 8.3.5
-      '@types/node': 10.12.26
+      '@types/node': 10.12.30
       command-exists: 1.2.8
       cross-spawn: 6.0.5
     dev: true
@@ -29,37 +29,41 @@ packages:
       integrity: sha512-FGKMmjqP0S+E1n9M6BcsVVkOVB0NfhBzXGZK6bLmerRT3EOvQ09KY++hBXoq0+/TqCvbsth6ER+EO0i46uJttQ==
   /@types/fs-extra/5.0.5:
     dependencies:
-      '@types/node': 11.9.3
+      '@types/node': 11.10.5
     dev: true
     resolution:
       integrity: sha512-w7iqhDH9mN8eLClQOYTkhdYUOSpp25eXxfc6VbFOGtzxW34JcvctH2bKjj4jD4++z4R5iO5D+pg48W2e03I65A==
   /@types/got/8.3.5:
     dependencies:
-      '@types/node': 11.9.3
+      '@types/node': 11.10.5
     dev: true
     resolution:
       integrity: sha512-AaXSrIF99SjjtPVNmCmYb388HML+PKEJb/xmj4SbL2ZO0hHuETZZzyDIKfOqaEoAHZEuX4sC+FRFrHYJoIby6A==
+  /@types/is-windows/0.2.0:
+    dev: true
+    resolution:
+      integrity: sha1-byTuSHMdMRaOpRBhDW3RXl/Jxv8=
   /@types/mz/0.0.32:
     dependencies:
-      '@types/node': 11.9.3
+      '@types/node': 11.10.5
     dev: true
     resolution:
       integrity: sha512-cy3yebKhrHuOcrJGkfwNHhpTXQLgmXSv1BX+4p32j+VUQ6aP2eJ5cL7OvGcAQx75fCTFaAIIAKewvqL+iwSd4g==
-  /@types/node/10.12.26:
+  /@types/node/10.12.30:
     dev: true
     resolution:
-      integrity: sha512-nMRqS+mL1TOnIJrL6LKJcNZPB8V3eTfRo9FQA2b5gDvrHurC8XbSA86KNe0dShlEL7ReWJv/OU9NL7Z0dnqWTg==
-  /@types/node/11.9.3:
+      integrity: sha512-nsqTN6zUcm9xtdJiM9OvOJ5EF0kOI8f1Zuug27O/rgtxCRJHGqncSWfCMZUP852dCKPsDsYXGvBhxfRjDBkF5Q==
+  /@types/node/11.10.5:
     dev: true
     resolution:
-      integrity: sha512-DMiqG51GwES/c4ScBY0u5bDlH44+oY8AeYHjY1SGCWidD7h08o1dfHue/TGK7REmif2KiJzaUskO+Q0eaeZ2fQ==
+      integrity: sha512-DuIRlQbX4K+d5I+GMnv+UfnGh+ist0RdlvOp+JZ7ePJ6KQONCFQv/gKYSU1ZzbVdFSUCKZOltjmpFAGGv5MdYA==
   /@types/p-limit/2.0.0:
     dev: true
     resolution:
       integrity: sha512-vx0HhwWQcrIzFn+Bx5OS6hk3wQ9++QjRyZgybM0+20MKqq1uYYgVjDxXk8+fFDfeGArep5l1laHCxEwltfzwYQ==
   /@types/tape/4.2.33:
     dependencies:
-      '@types/node': 11.9.3
+      '@types/node': 11.10.5
     dev: true
     resolution:
       integrity: sha512-ltfyuY5BIkYlGuQfwqzTDT8f0q8Z5DGppvUnWGs39oqDmMd6/UWhNpX3ZMh/VYvfxs3rFGHMrLC/eGRdLiDGuw==
@@ -91,13 +95,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ccav/yGvoa80BQDljCxsmmQ3Xvx60/UpBIij5QN21W3wBi/hhIC9OoO+KLpu9IJTS9j4DRVJ3aDDF9cMSoa2lw==
-  /bl/2.2.0:
+  /bl/3.0.0:
     dependencies:
-      readable-stream: 2.3.6
-      safe-buffer: 5.1.2
+      readable-stream: 3.2.0
     dev: true
     resolution:
-      integrity: sha512-wbgvOpqopSr7uq6fJrLH8EsvYMJf9gzfo2jCsL2eTy75qXPukA4pCgHamOQkZtY5vmfVtjB+P3LNlMHW5CEZXA==
+      integrity: sha512-EUAyP5UHU5hxF8BPT0LKW8gjYLhq1DQIcneOX/pL/m2Alo+OYDQAJlHq+yseMP50Os2nHXOSic6Ss3vSQeyf4A==
   /brace-expansion/1.1.11:
     dependencies:
       balanced-match: 1.0.0
@@ -461,6 +464,12 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-HS8bZ9ox60yCJLH9snBpIwv9pYUAkcuLhSA1oero1UB5y9aiQpRA8y2ex945AOtCZL1lJDeIk3G5LthswI46Lw==
+  /is-windows/1.0.2:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-eXK1UInq2bPmjyX6e3VHIzMLobc4J94i4AWn+Hpq3OU5KkrRC96OAcR3PRJ/pGu6m8TRnBHP9dkXQVsT/COVIA==
   /isarray/1.0.0:
     dev: true
     resolution:
@@ -679,7 +688,7 @@ packages:
       '@pnpm/exec': 1.1.5
       '@types/fs-extra': 5.0.5
       '@types/mz': 0.0.32
-      '@types/node': 10.12.26
+      '@types/node': 10.12.30
       cross-spawn: 6.0.5
       find-down: 0.1.4
       fs-extra: 7.0.1
@@ -688,7 +697,7 @@ packages:
       meow: 5.0.0
       mz: 2.7.0
       rimraf-then: 1.0.1
-      unpack-stream: 4.0.1
+      unpack-stream: 4.0.2
       write-json-file: 3.1.0
     dev: true
     engines:
@@ -822,7 +831,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-tQtKA9WIAhBF3+VLAseyMqZeBjW0AHJoxOtYqSUZNJxauErmLbVm2FW1y+J/YA9dUrAC39ITejlZWhVIwawkKw==
-  /readable-stream/3.1.1:
+  /readable-stream/3.2.0:
     dependencies:
       inherits: 2.0.3
       string_decoder: 1.2.0
@@ -831,7 +840,7 @@ packages:
     engines:
       node: '>= 6'
     resolution:
-      integrity: sha512-DkN66hPyqDhnIQ6Jcsvx9bFjhw214O4poMBcIMgPVpQvNy9a0e0Uhg5SqySyDKAmUlwt8LonTBz1ezOnM8pUdA==
+      integrity: sha512-RV20kLjdmpZuTF1INEb9IA3L68Nmi+Ri7ppZqo78wj//Pn62fCoJyV9zalccNzDD/OuJpMG4f+pfMl8+L6QdGw==
   /redent/2.0.0:
     dependencies:
       indent-string: 3.2.0
@@ -1005,20 +1014,20 @@ packages:
       chownr: 1.1.1
       mkdirp: 0.5.1
       pump: 3.0.0
-      tar-stream: 2.0.0
+      tar-stream: 2.0.1
     dev: true
     resolution:
       integrity: sha512-vaY0obB6Om/fso8a8vakQBzwholQ7v5+uy+tF3Ozvxv1KNezmVQAiWtcNmMHFSFPqL3dJA8ha6gdtFbfX9mcxA==
-  /tar-stream/2.0.0:
+  /tar-stream/2.0.1:
     dependencies:
-      bl: 2.2.0
+      bl: 3.0.0
       end-of-stream: 1.4.1
       fs-constants: 1.0.0
       inherits: 2.0.3
-      readable-stream: 3.1.1
+      readable-stream: 3.2.0
     dev: true
     resolution:
-      integrity: sha512-n2vtsWshZOVr/SY4KtslPoUlyNh06I2SGgAOCZmquCEjlbV/LjY2CY80rDtdQRHFOYXNlgBDo6Fr3ww2CWPOtA==
+      integrity: sha512-I6OJF7wE62BC6zNPdHDtseK0D0187PBjbKSLYY4ffvVkBM6tyBn2O9plDvVM2229/mozfEL/X3++qSvYYQE2xw==
   /thenify-all/1.6.0:
     dependencies:
       thenify: 3.3.0
@@ -1050,7 +1059,7 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-tAPQuRvlDDMd/EuC7s6yLD3hbSA=
-  /ts-node/8.0.2:
+  /ts-node/8.0.3:
     dependencies:
       arg: 4.1.0
       diff: 3.5.0
@@ -1064,7 +1073,7 @@ packages:
     peerDependencies:
       typescript: '>=2.0'
     resolution:
-      integrity: sha512-MosTrinKmaAcWgO8tqMjMJB22h+sp3Rd1i4fdoWY4mhBDekOwIAKI/bzmRi7IcbCmjquccYg2gcF6NBkLgr0Tw==
+      integrity: sha512-2qayBA4vdtVRuDo11DEFSsD/SFsBXQBRZZhbRGSIkmYmVkWjULn/GGMdG10KVqkaGndljfaTD8dKjWgcejO8YA==
   /typescript/3.3.1:
     dev: true
     engines:
@@ -1085,17 +1094,19 @@ packages:
       node: '>= 4.0.0'
     resolution:
       integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
-  /unpack-stream/4.0.1:
+  /unpack-stream/4.0.2:
     dependencies:
-      '@types/node': 10.12.26
+      '@types/is-windows': 0.2.0
+      '@types/node': 10.12.30
       decompress-maybe: 1.0.0
+      is-windows: 1.0.2
       ssri: 6.0.1
       tar-fs: 2.0.0
     dev: true
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-TlkUGYprBFsWkrm1ifv3BHwrH6QpmhTSiUhe07OPsEaJ9cxA9F4yAdrkvyX0u8Q+XiqyrOMNFunuri9PuCMH/g==
+      integrity: sha512-9lsxZvzD52IZjUSCd3UKXQi6oErlqK6QCTkQuTE4I1SqO8lh5aoIAxmMgUbixQyWrWW4/DxYuXtbKKmgnXo+MQ==
   /util-deprecate/1.0.2:
     dev: true
     resolution:
@@ -1167,5 +1178,5 @@ specifiers:
   p-limit: 2.1.0
   package-preview: 2.0.0
   tape: 4.10.1
-  ts-node: 8.0.2
+  ts-node: 8.0.3
   typescript: 3.3.1
