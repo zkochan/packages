@@ -24,10 +24,10 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/run-groups#readme",
   "dependencies": {
-    "p-limit": "2.1.0"
+    "p-limit": "2.2.0"
   },
   "devDependencies": {
-    "@types/p-limit": "2.0.0",
+    "@types/p-limit": "2.1.0",
     "@types/tape": "4.2.33",
     "delay": "4.1.0",
     "package-preview": "2.0.0",
