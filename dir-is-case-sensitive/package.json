@@ -1,6 +1,6 @@
 {
   "name": "dir-is-case-sensitive",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Returns true, if the specified directory is case sensitive",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
