@@ -6,7 +6,7 @@ devDependencies:
   package-preview: 2.0.0
   tape: 4.10.1
   ts-node: 8.0.3
-  typescript: 3.3.1
+  typescript: 3.4.2
 lockfileVersion: 5
 packages:
   /@pnpm/exec/1.1.5:
@@ -1070,13 +1070,13 @@ packages:
       typescript: '>=2.0'
     resolution:
       integrity: sha512-2qayBA4vdtVRuDo11DEFSsD/SFsBXQBRZZhbRGSIkmYmVkWjULn/GGMdG10KVqkaGndljfaTD8dKjWgcejO8YA==
-  /typescript/3.3.1:
+  /typescript/3.4.2:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-cTmIDFW7O0IHbn1DPYjkiebHxwtCMU+eTy30ZtJNBPF9j2O1ITu5XH2YnBeVRKWHqF+3JQwWJv0Q0aUgX8W7IA==
+      integrity: sha512-Og2Vn6Mk7JAuWA1hQdDQN/Ekm/SchX80VzLhjKN9ETYrIepBFAd8PkOdOTK2nKt0FCkmMZKBJvQ1dV1gIxPu/A==
   /unbzip2-stream/1.3.3:
     dependencies:
       buffer: 5.2.1
@@ -1171,4 +1171,4 @@ specifiers:
   package-preview: 2.0.0
   tape: 4.10.1
   ts-node: 8.0.3
-  typescript: 3.3.1
+  typescript: 3.4.2

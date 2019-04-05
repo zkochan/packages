@@ -1,6 +1,6 @@
 dependencies:
-  load-yaml-file: 0.1.0
-  path-exists: 3.0.0
+  load-yaml-file: 0.2.0
+  path-exists: 4.0.0
 devDependencies:
   package-preview: 2.0.0
   standard: 12.0.1
@@ -1042,9 +1042,18 @@ packages:
     dependencies:
       argparse: 1.0.10
       esprima: 4.0.1
+    dev: true
     hasBin: true
     resolution:
       integrity: sha512-QHn/Lh/7HhZ/Twc7vJYQTkjuCa0kaCcDcjK5Zlk2rvnUpy7DxMJ23+Jc2dcyvltwQVg1nygAVlB2oRDFHoRS5Q==
+  /js-yaml/3.13.1:
+    dependencies:
+      argparse: 1.0.10
+      esprima: 4.0.1
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
   /json-parse-better-errors/1.0.2:
     dev: true
     resolution:
@@ -1113,17 +1122,17 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-HvjIlM2Y/RDHk1X6i4sGgaMTrAsnNrgQCJtuf5PEhbOV6MCJuMVZLMdlJRE0JGLMkF7b6O5zs9LcDxKIUt9CbQ==
-  /load-yaml-file/0.1.0:
+  /load-yaml-file/0.2.0:
     dependencies:
       graceful-fs: 4.1.15
-      js-yaml: 3.12.2
-      pify: 2.3.0
+      js-yaml: 3.13.1
+      pify: 4.0.1
       strip-bom: 3.0.0
     dev: false
     engines:
-      node: '>=4'
+      node: '>=6'
     resolution:
-      integrity: sha1-9oAGbmkbPutFAXZy5KOVavW4O4k=
+      integrity: sha512-OfCBkGEw4nN6JLtgRidPX6QxjBQGQf72q3si2uvqyFEMbycSFFHwAZeXx6cJgFM9wmLrf9zBwCP3Ivqa+LLZPw==
   /locate-path/2.0.0:
     dependencies:
       p-locate: 2.0.0
@@ -1383,10 +1392,17 @@ packages:
     resolution:
       integrity: sha1-vjX1Qlvh9/bHRxhPmKeIy5lHfuA=
   /path-exists/3.0.0:
+    dev: true
     engines:
       node: '>=4'
     resolution:
       integrity: sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=
+  /path-exists/4.0.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==
   /path-is-absolute/1.0.1:
     dev: true
     engines:
@@ -1432,6 +1448,7 @@ packages:
     resolution:
       integrity: sha512-FhJ+YbOSBb9/rIl2ZeE/QHEsWn7PqNYt8ARAY3kIgNGOk13g9FGyIY6JIl/xB/3TFRVoTv5as0l11weORrTekA==
   /pify/2.3.0:
+    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
@@ -1443,7 +1460,6 @@ packages:
     resolution:
       integrity: sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
   /pify/4.0.1:
-    dev: true
     engines:
       node: '>=6'
     resolution:
@@ -2086,8 +2102,8 @@ packages:
     resolution:
       integrity: sha512-VCIyR1wJoEBZUqk5PA+oOBF6ypbwh5aNB3I50guxAL/quggdfs4TtNHQrSazFA3fYZ+tEqfs0zIGlv0c/rgjbQ==
 specifiers:
-  load-yaml-file: ^0.1.0
+  load-yaml-file: ^0.2.0
   package-preview: 2.0.0
-  path-exists: ^3.0.0
+  path-exists: ^4.0.0
   standard: ^12.0.1
   tape: ^4.8.0
