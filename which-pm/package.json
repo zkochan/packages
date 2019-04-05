@@ -27,7 +27,7 @@
   "license": "MIT",
   "dependencies": {
     "load-yaml-file": "^0.1.0",
-    "path-exists": "^3.0.0"
+    "path-exists": "^4.0.0"
   },
   "devDependencies": {
     "package-preview": "2.0.0",
