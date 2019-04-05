@@ -5,58 +5,50 @@ const loadJsonFile = require('load-json-file')
 const renameOverwrite = require('rename-overwrite')
 const tempy = require('tempy')
 
-test('overwrite directory', t => {
+test('overwrite directory', async t => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('1/foo.json', 1)
   writeJsonFile.sync('2/foo.json', 2)
 
-  renameOverwrite('1', '2')
-    .then(() => {
-      t.equal(loadJsonFile.sync('2/foo.json'), 1)
-      t.end()
-    })
-    .catch(t.end)
+  await renameOverwrite('1', '2')
+
+  t.equal(loadJsonFile.sync('2/foo.json'), 1)
+  t.end()
 })
 
-test('overwrite file', t => {
+test('overwrite file', async t => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('1.json', 1)
   writeJsonFile.sync('2.json', 2)
 
-  renameOverwrite('1.json', '2.json')
-    .then(() => {
-      t.equal(loadJsonFile.sync('2.json'), 1)
-      t.end()
-    })
-    .catch(t.end)
+  await renameOverwrite('1.json', '2.json')
+
+  t.equal(loadJsonFile.sync('2.json'), 1)
+  t.end()
 })
 
-test('rename file when no overwrite is needed', t => {
+test('rename file when no overwrite is needed', async t => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('1.json', 1)
 
-  renameOverwrite('1.json', '2.json')
-    .then(() => {
-      t.equal(loadJsonFile.sync('2.json'), 1)
-      t.end()
-    })
-    .catch(t.end)
+  await renameOverwrite('1.json', '2.json')
+
+  t.equal(loadJsonFile.sync('2.json'), 1)
+  t.end()
 })
 
-test('rename directory when no overwrite is needed', t => {
+test('rename directory when no overwrite is needed', async t => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('dir/foo.json', 1)
 
-  renameOverwrite('dir', 'newdir')
-    .then(() => {
-      t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
-      t.end()
-    })
-    .catch(t.end)
+  await renameOverwrite('dir', 'newdir')
+
+  t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
+  t.end()
 })
 
 test('sync overwrite directory', t => {
