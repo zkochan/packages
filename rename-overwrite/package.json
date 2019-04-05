@@ -27,8 +27,7 @@
   "homepage": "https://github.com/zkochan/packages/tree/master/rename-overwrite#readme",
   "dependencies": {
     "graceful-fs": "^4.1.11",
-    "rimraf": "^2.6.1",
-    "util.promisify": "^1.0.0"
+    "rimraf": "^2.6.1"
   },
   "devDependencies": {
     "load-json-file": "5.2.0",
