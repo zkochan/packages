@@ -36,6 +36,6 @@
     "package-preview": "2.0.0",
     "tape": "4.10.1",
     "ts-node": "8.0.3",
-    "typescript": "3.4.3"
+    "typescript": "3.4.4"
   }
 }
