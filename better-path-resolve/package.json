@@ -14,8 +14,7 @@
     "node": ">=4"
   },
   "repository": "https://github.com/zkochan/packages/tree/master/better-path-resolve",
-  "keywords": [
-  ],
+  "keywords": [],
   "author": {
     "name": "Zoltan Kochan",
     "url": "https://www.kochan.io"
