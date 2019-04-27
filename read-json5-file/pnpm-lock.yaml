@@ -1,7 +1,6 @@
 dependencies:
   graceful-fs: 4.1.15
   json5: 2.1.0
-  pify: 4.0.1
   strip-bom: 3.0.0
 devDependencies:
   mos: 2.0.0-alpha.3
@@ -2199,12 +2198,6 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=
-  /pify/4.0.1:
-    dev: false
-    engines:
-      node: '>=6'
-    resolution:
-      integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
   /pinkie-promise/2.0.1:
     dependencies:
       pinkie: 2.0.4
@@ -3161,7 +3154,6 @@ specifiers:
   json5: ^2.1.0
   mos: ^2.0.0-alpha.3
   mos-plugin-readme: ^1.0.4
-  pify: ^4.0.1
   standard: ^12.0.1
   strip-bom: ^3.0.0
   tape: ^4.10.1

@@ -7,7 +7,8 @@
     "node": ">=8.15"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "scripts": {
     "test": "standard && tape test.js",
@@ -43,7 +44,6 @@
     "graceful-fs": "^4.1.11",
     "json5": "^2.0.0",
     "mkdirp": "^0.5.1",
-    "pify": "^3.0.0",
     "sort-keys": "^2.0.0",
     "write-file-atomic": "^2.0.0"
   },
