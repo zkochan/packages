@@ -10,7 +10,7 @@
     "index.js"
   ],
   "scripts": {
-    "test": "mos t && standard && tape test.js",
+    "test": "standard && tape test.js",
     "md": "mos"
   },
   "repository": "https://github.com/zkochan/packages/tree/master/write-json5-file",

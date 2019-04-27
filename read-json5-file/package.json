@@ -1,0 +1,50 @@
+{
+  "name": "read-json5-file",
+  "version": "0.0.0",
+  "description": "Read and parse a JSON5 file",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "standard && tape test",
+    "md": "mos"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/master/read-json5-file",
+  "mos": {
+    "plugins": [
+      "readme"
+    ],
+    "installation": {
+      "useShortAlias": true
+    }
+  },
+  "keywords": [
+    "read",
+    "JSON5",
+    "parse",
+    "file",
+    "fs",
+    "graceful",
+    "load"
+  ],
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "z@kochan.io",
+    "url": "https://www.kochan.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/master/read-json5-file#readme",
+  "dependencies": {
+    "graceful-fs": "^4.1.15",
+    "json5": "^2.1.0",
+    "pify": "^4.0.1",
+    "strip-bom": "^3.0.0"
+  },
+  "devDependencies": {
+    "mos": "^2.0.0-alpha.3",
+    "mos-plugin-readme": "^1.0.4",
+    "standard": "^12.0.1",
+    "tape": "^4.10.1"
+  }
+}
