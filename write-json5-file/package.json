@@ -1,0 +1,54 @@
+{
+  "name": "write-json5-file",
+  "version": "1.0.0",
+  "description": "Stringify and write JSON to a file atomically",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "mos t && standard && tape test.js",
+    "md": "mos"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/master/write-json5-file",
+  "mos": {
+    "plugins": [
+      "readme"
+    ],
+    "installation": {
+      "useShortAlias": true
+    }
+  },
+  "keywords": [
+    "write",
+    "json5",
+    "stringify",
+    "file",
+    "fs",
+    "graceful",
+    "atomic",
+    "atomically"
+  ],
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "z@kochan.io",
+    "url": "https://www.kochan.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/master/write-json5-file#readme",
+  "dependencies": {
+    "graceful-fs": "^4.1.11",
+    "json5": "^0.5.1",
+    "mkdirp": "^0.5.1",
+    "pify": "^3.0.0",
+    "sort-keys": "^2.0.0",
+    "write-file-atomic": "^2.0.0"
+  },
+  "devDependencies": {
+    "mos": "^2.0.0-alpha.3",
+    "mos-plugin-readme": "^1.0.4",
+    "standard": "^10.0.2",
+    "tape": "^4.6.3",
+    "tempfile": "^2.0.0"
+  }
+}
