@@ -11,7 +11,7 @@ Cross-platform. Works correctly on Windows, where directory paths can start with
 ## Installation
 
 ```sh
-npm i -S is-subdir
+<npm|yarn|pnpm> add is-subdir
 ```
 
 ## Usage

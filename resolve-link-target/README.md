@@ -7,7 +7,7 @@
 ## Installation
 
 ```
-npm install resolve-link-target
+<npm|yarn|pnpm> add resolve-link-target
 ```
 
 ## Usage

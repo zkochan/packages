@@ -63,7 +63,7 @@ Default `438` _(0666 in octal)_
 
 ## Related
 
-- [load-json5-file](../read-json5-file) - Read and parse a JSON5 file
+- [read-json5-file](../read-json5-file) - Read and parse a JSON5 file
 - [write-json-file](https://github.com/sindresorhus/write-json-file) - Stringify and write JSON to a file atomically
 - [json5](https://github.com/json5/json5) - JSON for the ES5 era
 

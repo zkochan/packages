@@ -9,7 +9,7 @@
 ## Installation
 
 ```sh
-npm i -S can-link
+<npm|yarn|pnpm> add can-link
 ```
 
 ## Usage

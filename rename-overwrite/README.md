@@ -7,7 +7,7 @@
 Install it via npm.
 
 ```
-npm install rename-overwrite
+<npm|yarn|pnpm> add rename-overwrite
 ```
 
 ## Usage

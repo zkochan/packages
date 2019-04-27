@@ -9,7 +9,7 @@
 ## Installation
 
 ```sh
-npm i -S read-ini-file
+<npm|yarn|pnpm> add read-ini-file
 ```
 
 ## Usage

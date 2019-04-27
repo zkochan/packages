@@ -9,7 +9,7 @@
 ## Installation
 
 ```sh
-npm i -S better-path-resolve
+<npm|yarn|pnpm> add better-path-resolve
 ```
 
 ## Usage

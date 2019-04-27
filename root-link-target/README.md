@@ -9,7 +9,7 @@
 ## Installation
 
 ```sh
-npm i -S root-link-target
+<npm|yarn|pnpm> add root-link-target
 ```
 
 ## Usage

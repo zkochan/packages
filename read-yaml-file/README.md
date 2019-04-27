@@ -7,7 +7,7 @@
 ## Installation
 
 ```sh
-npm install --save read-yaml-file
+<npm|yarn|pnpm> add read-yaml-file
 ```
 
 ## Usage

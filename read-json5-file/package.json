@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "description": "Read and parse a JSON5 file",
   "main": "index.js",
+  "engines": {
+    "node": ">=8.15"
+  },
   "files": [
     "index.js"
   ],

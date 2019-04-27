@@ -5,7 +5,7 @@
 ## Installation
 
 ```
-pnpm i run-groups
+<npm|yarn|pnpm> add run-groups
 ```
 
 ## Usage

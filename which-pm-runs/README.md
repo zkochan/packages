@@ -7,7 +7,7 @@
 ## Installation
 
 ```
-npm i which-pm-runs
+<npm|yarn|pnpm> add which-pm-runs
 ```
 
 ## Usage

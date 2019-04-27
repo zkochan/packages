@@ -7,7 +7,7 @@
     "index.js"
   ],
   "scripts": {
-    "test": "mos t && node test",
+    "test": "node test",
     "md": "mos"
   },
   "engines": {

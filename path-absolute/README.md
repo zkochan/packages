@@ -9,7 +9,7 @@
 ## Installation
 
 ```sh
-npm i -S path-absolute
+<npm|yarn|pnpm> add path-absolute
 ```
 
 ## Usage

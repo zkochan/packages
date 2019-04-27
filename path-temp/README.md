@@ -12,7 +12,7 @@ process ID.
 ## Installation
 
 ```sh
-npm i -S path-temp
+<npm|yarn|pnpm> add path-temp
 ```
 
 ## Usage

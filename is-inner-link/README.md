@@ -9,7 +9,7 @@
 ## Installation
 
 ```sh
-npm i -S is-inner-link
+<npm|yarn|pnpm> add is-inner-link
 ```
 
 ## Usage

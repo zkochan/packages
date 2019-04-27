@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "pretest": "rimraf .tmp",
-    "test": "mos t && standard && preview && node test",
+    "test": "standard && preview && node test",
     "md": "mos"
   },
   "repository": "https://github.com/zkochan/packages/tree/master/is-inner-link",

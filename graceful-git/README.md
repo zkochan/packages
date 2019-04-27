@@ -9,7 +9,7 @@
 ## Installation
 
 ```sh
-npm i -S graceful-git
+<npm|yarn|pnpm> add graceful-git
 ```
 
 ## Usage

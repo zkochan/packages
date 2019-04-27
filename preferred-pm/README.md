@@ -7,7 +7,7 @@
 ## Installation
 
 ```
-npm i preferred-pm
+<npm|yarn|pnpm> add preferred-pm
 ```
 
 ## Usage

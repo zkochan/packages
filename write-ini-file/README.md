@@ -9,7 +9,7 @@
 ## Installation
 
 ```sh
-npm i -S write-ini-file
+<npm|yarn|pnpm> add write-ini-file
 ```
 
 ## Usage

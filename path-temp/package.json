@@ -9,7 +9,7 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "standard && mos t && preview && node test",
+    "test": "standard && preview && node test",
     "md": "mos"
   },
   "repository": "https://github.com/zkochan/packages/tree/master/path-temp",
