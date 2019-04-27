@@ -1,10 +1,10 @@
 'use strict'
 const path = require('path')
 const fs = require('graceful-fs')
-const writeFileAtomic = require('write-file-atomic')
+const { promisify } = require('util')
+const writeFileAtomic = promisify(require('write-file-atomic'))
 const sortKeys = require('sort-keys')
-const mkdirp = require('mkdirp')
-const pify = require('pify')
+const mkdirp = promisify(require('mkdirp'))
 const JSON5 = require('json5')
 
 const main = (fn, fp, data, opts) => {
@@ -33,9 +33,10 @@ const main = (fn, fp, data, opts) => {
   return fn(fp, `${json}\n`, { mode: opts.mode })
 }
 
-module.exports = (fp, data, opts) =>
-  pify(mkdirp)(path.dirname(fp), { fs })
-    .then(() => main(pify(writeFileAtomic), fp, data, opts))
+module.exports = async (fp, data, opts) => {
+  await mkdirp(path.dirname(fp), { fs })
+  return main(writeFileAtomic, fp, data, opts)
+}
 
 module.exports.sync = (fp, data, opts) => {
   mkdirp.sync(path.dirname(fp), { fs })
