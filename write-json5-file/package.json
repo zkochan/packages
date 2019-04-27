@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Stringify and write JSON to a file atomically",
   "main": "index.js",
+  "engines": {
+    "node": ">=8.15"
+  },
   "files": [
     "index.js"
   ],

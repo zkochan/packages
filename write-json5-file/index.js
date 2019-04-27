@@ -30,14 +30,14 @@ const main = (fn, fp, data, opts) => {
 
   const json = JSON5.stringify(data, opts.replacer, opts.indent)
 
-  return fn(fp, `${json}\n`, {mode: opts.mode})
+  return fn(fp, `${json}\n`, { mode: opts.mode })
 }
 
 module.exports = (fp, data, opts) =>
-  pify(mkdirp)(path.dirname(fp), {fs})
+  pify(mkdirp)(path.dirname(fp), { fs })
     .then(() => main(pify(writeFileAtomic), fp, data, opts))
 
 module.exports.sync = (fp, data, opts) => {
-  mkdirp.sync(path.dirname(fp), {fs})
+  mkdirp.sync(path.dirname(fp), { fs })
   main(writeFileAtomic.sync, fp, data, opts)
 }
