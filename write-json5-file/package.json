@@ -38,7 +38,7 @@
   "homepage": "https://github.com/zkochan/packages/tree/master/write-json5-file#readme",
   "dependencies": {
     "graceful-fs": "^4.1.11",
-    "json5": "^0.5.1",
+    "json5": "^2.0.0",
     "mkdirp": "^0.5.1",
     "pify": "^3.0.0",
     "sort-keys": "^2.0.0",
