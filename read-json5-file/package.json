@@ -42,7 +42,7 @@
   "dependencies": {
     "graceful-fs": "^4.1.15",
     "json5": "^2.1.0",
-    "strip-bom": "^3.0.0"
+    "strip-bom": "^4.0.0"
   },
   "devDependencies": {
     "mos": "^2.0.0-alpha.3",

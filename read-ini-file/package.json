@@ -43,7 +43,7 @@
     "graceful-fs": "^4.1.11",
     "ini": "^1.3.4",
     "pify": "^4.0.1",
-    "strip-bom": "^3.0.0"
+    "strip-bom": "^4.0.0"
   },
   "devDependencies": {
     "mos": "^2.0.0-alpha.3",
