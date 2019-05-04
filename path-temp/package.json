@@ -19,7 +19,7 @@
     "unique"
   ],
   "engines": {
-    "node": ">=4"
+    "node": ">=8.15"
   },
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
