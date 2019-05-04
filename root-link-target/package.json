@@ -1,6 +1,6 @@
 {
   "name": "root-link-target",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Gets the shortest directory to which a file can be linked",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -28,7 +28,7 @@
     "can-link": "^1.0.1",
     "graceful-fs": "^4.1.11",
     "next-path": "^1.0.0",
-    "path-temp": "^1.0.0"
+    "path-temp": "2.0.0"
   },
   "devDependencies": {
     "mos": "^2.0.0-alpha.3",

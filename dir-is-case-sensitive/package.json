@@ -1,6 +1,6 @@
 {
   "name": "dir-is-case-sensitive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Returns true, if the specified directory is case sensitive",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@types/graceful-fs": "*",
     "graceful-fs": "^4.1.15",
-    "path-temp": "1.0.0"
+    "path-temp": "2.0.0"
   },
   "devDependencies": {
     "@types/tape": "4.2.33",
