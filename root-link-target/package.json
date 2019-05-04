@@ -28,7 +28,7 @@
     "can-link": "^1.0.1",
     "graceful-fs": "^4.1.11",
     "next-path": "^1.0.0",
-    "path-temp": "^1.0.0"
+    "path-temp": "^2.0.0"
   },
   "devDependencies": {
     "mos": "^2.0.0-alpha.3",
