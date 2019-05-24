@@ -9,7 +9,7 @@ Can detect [npm](https://github.com/npm/cli), [pnpm](https://github.com/pnpm/pnp
 ## Installation
 
 ```bash
-<npm|yarn|pnpm> add which-pm
+<pnpm|yarn|npm> add which-pm
 ```
 
 ## Usage
