@@ -2,7 +2,7 @@ dependencies:
   graceful-fs: 4.1.15
   json5: 2.1.0
   mkdirp: 0.5.1
-  sort-keys: 2.0.0
+  sort-keys: 3.0.0
   write-file-atomic: 3.0.0
 devDependencies:
   mos: 2.0.0-alpha.3
@@ -1397,10 +1397,17 @@ packages:
     resolution:
       integrity: sha1-PkcprB9f3gJc19g6iW2rn09n2w8=
   /is-plain-obj/1.1.0:
+    dev: true
     engines:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-caUMhCnfync8kqOQpKA7OfzVHT4=
+  /is-plain-obj/2.0.0:
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-EYisGhpgSCwspmIuRHGjROWTon2Xp8Z7U03Wubk/bTL5TTRC5R1rGVgyjzBrk9+ULdH6cRD06KRcw/xfqhVYKQ==
   /is-promise/2.1.0:
     dev: true
     resolution:
@@ -2668,14 +2675,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-RBttTTRnmPG05J6JIK37oOVD+a0=
-  /sort-keys/2.0.0:
+  /sort-keys/3.0.0:
     dependencies:
-      is-plain-obj: 1.1.0
+      is-plain-obj: 2.0.0
     dev: false
     engines:
-      node: '>=4'
+      node: '>=8'
     resolution:
-      integrity: sha1-ZYU1WEhh7JfXMNbPQYIuH1ZoQSg=
+      integrity: sha512-77XUKMiZN5LvQXZ9sgWfJza19AvYIDwaDGwGiULM+B5XYru8Z90Oh06JvqDlJczvjjYvssrV0aK1GI6+YXvn5A==
   /source-map-support/0.3.3:
     dependencies:
       source-map: 0.1.32
@@ -3209,7 +3216,7 @@ specifiers:
   mkdirp: ^0.5.1
   mos: ^2.0.0-alpha.3
   mos-plugin-readme: ^1.0.4
-  sort-keys: ^2.0.0
+  sort-keys: ^3.0.0
   standard: ^12.0.0
   tape: ^4.6.3
   tempfile: ^3.0.0
