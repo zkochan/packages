@@ -30,7 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "path-exists": "^4.0.0",
-    "which-pm": "2.0.0"
+    "which-pm": "1.1.0"
   },
   "devDependencies": {
     "package-preview": "2.0.0",
