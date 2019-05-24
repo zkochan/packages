@@ -19,10 +19,16 @@ module.exports = async function preferredPM (pkgPath) {
       version: '*'
     }
   }
+  if (await pathExists(path.join(pkgPath, 'pnpm-lock.yaml'))) {
+    return {
+      name: 'pnpm',
+      version: '>=3'
+    }
+  }
   if (await pathExists(path.join(pkgPath, 'shrinkwrap.yaml'))) {
     return {
       name: 'pnpm',
-      version: '*'
+      version: '1 || 2'
     }
   }
   const pm = await whichPM(pkgPath)

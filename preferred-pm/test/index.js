@@ -18,9 +18,15 @@ test('preferredPM()', async t => {
   t.end()
 })
 
+test('prefer pnpm 1 or 2', async t => {
+  const pm = await preferredPM(path.join(__dirname, 'prefers-pnpm-1-or-2'))
+  t.deepEqual(pm, { name: 'pnpm', version: '1 || 2' })
+  t.end()
+})
+
 test('prefer pnpm', async t => {
   const pm = await preferredPM(path.join(__dirname, 'prefers-pnpm'))
-  t.deepEqual(pm, { name: 'pnpm', version: '*' })
+  t.deepEqual(pm, { name: 'pnpm', version: '>=3' })
   t.end()
 })
 
