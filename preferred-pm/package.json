@@ -1,6 +1,6 @@
 {
   "name": "preferred-pm",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Detects what package manager was used for installation",
   "main": "index.js",
   "files": [
@@ -30,7 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "path-exists": "^4.0.0",
-    "which-pm": "^1.0.1"
+    "which-pm": "2.0.0"
   },
   "devDependencies": {
     "package-preview": "2.0.0",
