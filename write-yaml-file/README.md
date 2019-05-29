@@ -7,7 +7,7 @@ Creates directories for you as needed.
 ## Installation
 
 ```
-<npm|yarn|pnpm> add write-yaml-file
+<pnpm|yarn|npm> add write-yaml-file
 ```
 
 ## Usage
