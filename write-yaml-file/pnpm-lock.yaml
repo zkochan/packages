@@ -1,7 +1,7 @@
 dependencies:
   graceful-fs: 4.1.15
   js-yaml: 3.13.1
-  mkdirp: 0.5.1
+  make-dir: 3.0.0
   pify: 4.0.1
   write-file-atomic: 3.0.0
 devDependencies:
@@ -847,6 +847,14 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
+  /make-dir/3.0.0:
+    dependencies:
+      semver: 6.1.1
+    dev: false
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-grNJDhb8b1Jm1qeqW5R/O63wUo4UXo2v2HMic6YT9i/HBlF93S8jkMgH7yugvY9ABDShH4VZMn8I+U8+fCNegw==
   /mimic-fn/1.2.0:
     dev: true
     engines:
@@ -860,6 +868,7 @@ packages:
     resolution:
       integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
   /minimist/0.0.8:
+    dev: true
     resolution:
       integrity: sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
   /minimist/1.2.0:
@@ -869,6 +878,7 @@ packages:
   /mkdirp/0.5.1:
     dependencies:
       minimist: 0.0.8
+    dev: true
     hasBin: true
     resolution:
       integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
@@ -1191,6 +1201,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Ya52jSX2u7QKghxeoFGpLwCtGlt7j0oY9DYb5apt9nPlJ42ID+ulTXESnt/qAQcoSERyZ5sl3LDIOw0nAn/5DA==
+  /semver/6.1.1:
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-rWYq2e5iYW+fFe/oPPtYJxYgjBm8sC4rmoGdUOgBB7VnwKt6HrL793l2voH1UlsyYZpJ4g0wfjnTEO1s1NP2eQ==
   /shebang-command/1.2.0:
     dependencies:
       shebang-regex: 1.0.0
@@ -1425,7 +1440,7 @@ packages:
 specifiers:
   graceful-fs: ^4.1.11
   js-yaml: ^3.8.1
-  mkdirp: ^0.5.1
+  make-dir: ^3.0.0
   pify: ^4.0.0
   standard: 12.0.1
   write-file-atomic: ^3.0.0

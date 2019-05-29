@@ -4,7 +4,7 @@ const fs = require('graceful-fs')
 const { promisify } = require('util')
 const writeFileAtomic = promisify(require('write-file-atomic'))
 const sortKeys = require('sort-keys')
-const mkdirp = promisify(require('mkdirp'))
+const makeDir = require('make-dir')
 const JSON5 = require('json5')
 
 const main = (fn, fp, data, opts) => {
@@ -34,11 +34,11 @@ const main = (fn, fp, data, opts) => {
 }
 
 module.exports = async (fp, data, opts) => {
-  await mkdirp(path.dirname(fp), { fs })
+  await makeDir(path.dirname(fp), { fs })
   return main(writeFileAtomic, fp, data, opts)
 }
 
 module.exports.sync = (fp, data, opts) => {
-  mkdirp.sync(path.dirname(fp), { fs })
+  makeDir.sync(path.dirname(fp), { fs })
   main(writeFileAtomic.sync, fp, data, opts)
 }

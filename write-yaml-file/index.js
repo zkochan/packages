@@ -2,7 +2,7 @@
 const path = require('path')
 const fs = require('graceful-fs')
 const writeFileAtomic = require('write-file-atomic')
-const mkdirp = require('mkdirp')
+const makeDir = require('make-dir')
 const pify = require('pify')
 const YAML = require('js-yaml')
 
@@ -23,10 +23,10 @@ const main = (fn, fp, data, opts) => {
 }
 
 module.exports = (fp, data, opts) =>
-  pify(mkdirp)(path.dirname(fp), { fs })
+  makeDir(path.dirname(fp), { fs })
     .then(() => main(pify(writeFileAtomic), fp, data, opts))
 
 module.exports.sync = (fp, data, opts) => {
-  mkdirp.sync(path.dirname(fp), { fs })
+  makeDir.sync(path.dirname(fp), { fs })
   main(writeFileAtomic.sync, fp, data, opts)
 }

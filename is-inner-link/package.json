@@ -41,7 +41,7 @@
     "resolve-link-target": "^1.0.0"
   },
   "devDependencies": {
-    "mkdirp": "^0.5.1",
+    "make-dir": "^3.0.0",
     "mos": "^2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
     "package-preview": "2.0.0",
