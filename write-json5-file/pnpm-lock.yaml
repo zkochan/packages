@@ -3,7 +3,7 @@ dependencies:
   json5: 2.1.0
   make-dir: 3.0.0
   sort-keys: 3.0.0
-  write-file-atomic: 3.0.0
+  write-file-atomic: 2.4.3
 devDependencies:
   mos: 2.0.0-alpha.3
   mos-plugin-readme: 1.0.4
@@ -1450,10 +1450,6 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha512-HS8bZ9ox60yCJLH9snBpIwv9pYUAkcuLhSA1oero1UB5y9aiQpRA8y2ex945AOtCZL1lJDeIk3G5LthswI46Lw==
-  /is-typedarray/1.0.0:
-    dev: false
-    resolution:
-      integrity: sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
   /is-url/1.2.4:
     dev: true
     resolution:
@@ -3050,12 +3046,6 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=
-  /typedarray-to-buffer/3.1.5:
-    dependencies:
-      is-typedarray: 1.0.0
-    dev: false
-    resolution:
-      integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
   /uniq/1.0.1:
     dev: true
     resolution:
@@ -3168,15 +3158,14 @@ packages:
     dev: true
     resolution:
       integrity: sha1-+Aek8LHZ6ROuekgRLmzDrxmRtF8=
-  /write-file-atomic/3.0.0:
+  /write-file-atomic/2.4.3:
     dependencies:
+      graceful-fs: 4.1.15
       imurmurhash: 0.1.4
-      is-typedarray: 1.0.0
       signal-exit: 3.0.2
-      typedarray-to-buffer: 3.1.5
     dev: false
     resolution:
-      integrity: sha512-EIgkf60l2oWsffja2Sf2AL384dx328c0B+cIYPTQq5q2rOYuDV00/iPFBOUiDKKwKMOhkymH8AidPaRvzfxY+Q==
+      integrity: sha512-GaETH5wwsX+GcnzhPgKcKjJ6M2Cq3/iZp1WyY/X1CSqrW+jVNM9Y7D8EC2sM4ZG/V8wZlSniJnCKWPmBYAucRQ==
   /write-json-file/1.2.0:
     dependencies:
       graceful-fs: 4.1.15
@@ -3235,4 +3224,4 @@ specifiers:
   standard: ^12.0.0
   tape: ^4.6.3
   tempfile: ^3.0.0
-  write-file-atomic: ^3.0.0
+  write-file-atomic: ^2.4.3

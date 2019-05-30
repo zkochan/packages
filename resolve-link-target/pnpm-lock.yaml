@@ -2,7 +2,7 @@ dependencies:
   graceful-fs: 4.1.15
 devDependencies:
   standard: 12.0.1
-  symlink-dir: 3.0.3
+  symlink-dir: 3.1.0
   tape: 4.10.2
 lockfileVersion: 5
 packages:
@@ -873,6 +873,14 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
+  /make-dir/3.0.0:
+    dependencies:
+      semver: 6.1.1
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-grNJDhb8b1Jm1qeqW5R/O63wUo4UXo2v2HMic6YT9i/HBlF93S8jkMgH7yugvY9ABDShH4VZMn8I+U8+fCNegw==
   /mimic-fn/1.2.0:
     dev: true
     engines:
@@ -893,14 +901,6 @@ packages:
     dev: true
     resolution:
       integrity: sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
-  /mkdirp-promise/5.0.1:
-    dependencies:
-      mkdirp: 0.5.1
-    dev: true
-    engines:
-      node: '>=4'
-    resolution:
-      integrity: sha1-6bj2jlUsaKnBcTuEiD96HdA5uKE=
   /mkdirp/0.5.1:
     dependencies:
       minimist: 0.0.8
@@ -1246,6 +1246,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Ya52jSX2u7QKghxeoFGpLwCtGlt7j0oY9DYb5apt9nPlJ42ID+ulTXESnt/qAQcoSERyZ5sl3LDIOw0nAn/5DA==
+  /semver/6.1.1:
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-rWYq2e5iYW+fFe/oPPtYJxYgjBm8sC4rmoGdUOgBB7VnwKt6HrL793l2voH1UlsyYZpJ4g0wfjnTEO1s1NP2eQ==
   /shebang-command/1.2.0:
     dependencies:
       shebang-regex: 1.0.0
@@ -1391,19 +1396,19 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-g0D8RwLDEi310iKI+IKD9RPT/dQ=
-  /symlink-dir/3.0.3:
+  /symlink-dir/3.1.0:
     dependencies:
       better-path-resolve: 1.0.0
       graceful-fs: 4.1.15
       is-windows: 1.0.2
-      mkdirp-promise: 5.0.1
+      make-dir: 3.0.0
       rename-overwrite: 2.0.1
     dev: true
     engines:
-      node: '>=8'
+      node: '>=8.15'
     hasBin: true
     resolution:
-      integrity: sha512-RC06YFlKqaP2MFXJEUhgNQiD1XrQ9cKN0A4Lvk+Gp3upSXimns80HsCxKwSI5olEfJgOKuG/9uUMEsUp2ErHvQ==
+      integrity: sha512-YngKrxub9zOHgC+c6VSXUGphdlVoX+PneWMHWAeZToK9MqYSwxT9jokHrEpInKqXYjbRHdRvJTqU8ETY+24r/Q==
   /table/4.0.3:
     dependencies:
       ajv: 6.10.0
