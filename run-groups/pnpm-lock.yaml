@@ -2,7 +2,7 @@ dependencies:
   p-limit: 2.2.0
 devDependencies:
   '@types/tape': 4.2.33
-  delay: 4.2.0
+  delay: 4.3.0
   package-preview: 2.0.0
   tape: 4.10.2
   ts-node: 8.1.0_typescript@3.5.2
@@ -223,12 +223,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-yY2bzvdWdBiOEQlpFRGZ45sfppM=
-  /delay/4.2.0:
+  /delay/4.3.0:
     dev: true
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-EBX+pZE4qSowGAMr6M0cLiPRQu2Kus/qTNLO7c+EoXpTPJH9ApFdHX+cQU1WsSHXgwhLyidfZ5Hxuq6ctWhSdw==
+      integrity: sha512-Lwaf3zVFDMBop1yDuFZ19F9WyGcZcGacsbdlZtWjQmM50tOcMntm1njF/Nb/Vjij3KaSvCF+sEYGKrrjObu2NA==
   /detect-indent/5.0.0:
     dev: true
     engines:
@@ -1181,7 +1181,7 @@ packages:
       integrity: sha512-kKfnnYkbTfrAdd0xICNFw7Atm8nKpLcLv9AZGEt+kczL/WQVai4e2V6ZN8U/O+iI6WrNuJjNNOyu4zfhl9D3Hg==
 specifiers:
   '@types/tape': 4.2.33
-  delay: 4.2.0
+  delay: 4.3.0
   p-limit: 2.2.0
   package-preview: 2.0.0
   tape: 4.10.2
