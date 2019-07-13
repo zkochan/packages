@@ -4,7 +4,7 @@ devDependencies:
   standard: 12.0.1
   symlink-dir: 3.1.0
   tape: 4.10.2
-lockfileVersion: 5
+lockfileVersion: 5.1
 packages:
   /acorn-jsx/5.0.1_acorn@6.1.1:
     dependencies:

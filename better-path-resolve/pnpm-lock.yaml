@@ -4,7 +4,7 @@ devDependencies:
   mos: 2.0.0-alpha.3
   mos-plugin-readme: 1.0.4
   tape: 4.10.2
-lockfileVersion: 5
+lockfileVersion: 5.1
 packages:
   /@zkochan/async-replace/0.4.1:
     dependencies:
