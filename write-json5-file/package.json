@@ -44,7 +44,7 @@
     "graceful-fs": "^4.1.11",
     "json5": "^2.0.0",
     "make-dir": "^3.0.0",
-    "sort-keys": "^3.0.0",
+    "sort-keys": "^4.0.0",
     "write-file-atomic": "^2.4.3"
   },
   "devDependencies": {
