@@ -1,0 +1,33 @@
+{
+  "name": "@zkochan/rimraf",
+  "version": "0.0.0",
+  "description": "rm -rf for Node. Similar to rimraf but returns a promise",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "standard"
+  },
+  "engines": {
+    "node": ">=8.15"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/master/rimraf",
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "z@kochan.io",
+    "url": "https://www.kochan.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/master/rimraf#readme",
+  "devDependencies": {
+    "standard": "13.1.0"
+  },
+  "dependencies": {
+    "@types/glob": "*",
+    "@types/node": "*",
+    "rimraf": "^3.0.0"
+  }
+}
