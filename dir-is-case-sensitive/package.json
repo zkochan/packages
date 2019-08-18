@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@types/graceful-fs": "*",
+    "@types/node": "12.7.2",
     "@types/tape": "4.2.33",
     "package-preview": "2.0.0",
     "tape": "4.11.0",
