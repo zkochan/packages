@@ -2,7 +2,7 @@ devDependencies:
   execa: 2.0.4
   npm: 6.10.3
   package-preview: 2.0.0
-  pnpm: 3.7.0
+  pnpm: 3.7.3
   tape: 4.11.0
   yarn: 1.17.3
 lockfileVersion: 5.1
@@ -921,13 +921,13 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
-  /pnpm/3.7.0:
+  /pnpm/3.7.3:
     dev: true
     engines:
       node: '>=8.15'
     hasBin: true
     resolution:
-      integrity: sha512-afPv7koLIZX5hWq9u5ZDfjmVRhODDzBEs1FkvfxVVtkhR4fUpZSDyRqJHWyYEkgxxFkBkxnz91ldnKek0OzQbg==
+      integrity: sha512-Bx+ymeJwxvYcKeNwTLFdH+kDIMrdzmTqpnui7YXcesdOFZkE39YKUV9YK4xjcD0hOqHQhcnbnSCutg9ilB/utA==
   /process-nextick-args/2.0.1:
     dev: true
     resolution:
@@ -1320,6 +1320,6 @@ specifiers:
   execa: ^2.0.0
   npm: ^6.0.0
   package-preview: 2.0.0
-  pnpm: ^3.0.0
+  pnpm: ^3.7.3
   tape: ^4.6.3
   yarn: ^1.0.1
