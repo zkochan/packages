@@ -40,6 +40,6 @@
     "write-file-atomic": "^2.4.3"
   },
   "devDependencies": {
-    "standard": "13.1.0"
+    "standard": "14.0.2"
   }
 }
