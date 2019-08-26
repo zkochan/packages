@@ -12,7 +12,7 @@ packages:
     dependencies:
       '@pnpm/self-installer': 2.0.8
       '@types/got': 8.3.5
-      '@types/node': 10.14.15
+      '@types/node': 10.14.16
       command-exists: 1.2.8
       cross-spawn: 6.0.5
     dev: true
@@ -48,10 +48,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-cy3yebKhrHuOcrJGkfwNHhpTXQLgmXSv1BX+4p32j+VUQ6aP2eJ5cL7OvGcAQx75fCTFaAIIAKewvqL+iwSd4g==
-  /@types/node/10.14.15:
+  /@types/node/10.14.16:
     dev: true
     resolution:
-      integrity: sha512-CBR5avlLcu0YCILJiDIXeU2pTw7UK/NIxfC63m7d7CVamho1qDEzXKkOtEauQRPMy6MI8mLozth+JJkas7HY6g==
+      integrity: sha512-/opXIbfn0P+VLt+N8DE4l8Mn8rbhiJgabU96ZJ0p9mxOkIks5gh6RUnpHak7Yh0SFkyjO/ODbxsQQPV2bpMmyA==
   /@types/node/12.7.2:
     dev: true
     resolution:
@@ -1888,7 +1888,7 @@ packages:
       '@pnpm/exec': 1.1.5
       '@types/fs-extra': 5.1.0
       '@types/mz': 0.0.32
-      '@types/node': 10.14.15
+      '@types/node': 10.14.16
       cross-spawn: 6.0.5
       find-down: 0.1.4
       fs-extra: 7.0.1
@@ -2803,7 +2803,7 @@ packages:
   /unpack-stream/4.0.2:
     dependencies:
       '@types/is-windows': 0.2.0
-      '@types/node': 10.14.15
+      '@types/node': 10.14.16
       decompress-maybe: 1.0.0
       is-windows: 1.0.2
       ssri: 6.0.1
