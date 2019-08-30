@@ -7,8 +7,8 @@ devDependencies:
   '@types/tape': 4.2.33
   package-preview: 2.0.0
   tape: 4.11.0
-  ts-node: 8.3.0_typescript@3.5.3
-  typescript: 3.5.3
+  ts-node: 8.3.0_typescript@3.6.2
+  typescript: 3.6.2
 lockfileVersion: 5.1
 packages:
   /@pnpm/exec/1.1.5:
@@ -122,13 +122,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==
-  /buffer/5.4.0:
+  /buffer/5.4.2:
     dependencies:
       base64-js: 1.3.1
       ieee754: 1.1.13
     dev: true
     resolution:
-      integrity: sha512-Xpgy0IwHK2N01ncykXTy6FpCWuM+CJSHoPVBLyNqyrWxsedpLvwsYUhf0ME3WRFNUhos0dMamz9cOS/xRDtU5g==
+      integrity: sha512-iy9koArjAFCzGnx3ZvNA6Z0clIbbFgbdWQ0mKD3hO0krOrZh8UgA6qMKcZvwLJxS+D6iVR76+5/pV56yMNYTag==
   /bzip2-maybe/1.0.0:
     dependencies:
       is-bzip2: 1.0.0
@@ -1068,13 +1068,13 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-tAPQuRvlDDMd/EuC7s6yLD3hbSA=
-  /ts-node/8.3.0_typescript@3.5.3:
+  /ts-node/8.3.0_typescript@3.6.2:
     dependencies:
       arg: 4.1.1
       diff: 4.0.1
       make-error: 1.3.5
       source-map-support: 0.5.13
-      typescript: 3.5.3
+      typescript: 3.6.2
       yn: 3.1.1
     dev: true
     engines:
@@ -1090,16 +1090,16 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-cUGJnCdr4STbePCgqNFbpVNCepa+kAVohJs1sLhxzdH+gnEoOd8VhbYa7pD3zZYGiURWM2xzEII3fQcRizDkYQ==
-  /typescript/3.5.3:
+  /typescript/3.6.2:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
+      integrity: sha512-lmQ4L+J6mnu3xweP8+rOrUwzmN+MRAj7TgtJtDaXE5PMyX2kCrklhg3rvOsOIfNeAWMQWO2F1GPc1kMD2vLAfw==
   /unbzip2-stream/1.3.3:
     dependencies:
-      buffer: 5.4.0
+      buffer: 5.4.2
       through: 2.3.8
     dev: true
     resolution:
@@ -1201,4 +1201,4 @@ specifiers:
   path-temp: 2.0.0
   tape: 4.11.0
   ts-node: 8.3.0
-  typescript: 3.5.3
+  typescript: 3.6.2
