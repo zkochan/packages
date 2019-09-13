@@ -1,0 +1,31 @@
+{
+  "name": "promise-share",
+  "version": "1.0.0",
+  "description": "Creates a getter function for a promise result",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "node test"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/master/promise-share",
+  "keywords": [
+    "promise"
+  ],
+  "author": {
+    "name": "Zoltan Kochan",
+    "url": "https://www.kochan.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/master/promise-share#readme",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "p-reflect": "^2.1.0"
+  }
+}
