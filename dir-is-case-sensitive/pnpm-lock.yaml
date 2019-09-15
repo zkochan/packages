@@ -1216,8 +1216,8 @@ packages:
       integrity: sha512-Ux4ygGWsu2c7isFWe8Yu1YluJmqVhxqK2cLXNQA5AcC3QfbGNpM7fu0Y8b/z16pXLnFxZYvWhd3fhBY9DLmC6Q==
 specifiers:
   '@types/graceful-fs': '*'
-  '@types/node': 12.7.5
-  '@types/tape': 4.2.33
+  '@types/node': '*'
+  '@types/tape': ^4.2.33
   graceful-fs: ^4.1.15
   package-preview: 2.0.0
   path-temp: 2.0.0

@@ -27,7 +27,7 @@
     "p-limit": "2.2.1"
   },
   "devDependencies": {
-    "@types/tape": "4.2.33",
+    "@types/tape": "^4.2.33",
     "delay": "4.3.0",
     "package-preview": "2.0.0",
     "tape": "4.11.0",
