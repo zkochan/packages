@@ -62,7 +62,7 @@ const TABLE_OPTIONS = {
   singleLine: true,
 }
 
-const FIRST_COLUMN = { paddingLeft: 2 }
+const FIRST_COLUMN = { paddingLeft: 2, width: 3 }
 const SHORT_OPTION_COLUMN = { alignment: 'right' as const }
 const LONG_OPTION_COLUMN = { paddingLeft: 0 }
 const DESCRIPTION_COLUMN = {
@@ -73,7 +73,7 @@ const DESCRIPTION_COLUMN = {
 function renderDescriptionList (descriptionItems: DescriptionItem[]) {
   const data = descriptionItems
     .sort((item1, item2) => item1.name.localeCompare(item2.name))
-    .map(({ shortAlias, name, description }) => [shortAlias && `${shortAlias},` || '', name, description || ''])
+    .map(({ shortAlias, name, description }) => [shortAlias && `${shortAlias},` || ' ', name, description || ''])
   const firstColumnMaxWidth = getColumnMaxWidth(data, 0)
   const descriptionColumnWidth = consoleWidth - firstColumnMaxWidth - getColumnMaxWidth(data, 1) - 2 - 2 - 1
   if (firstColumnMaxWidth === 0) {

@@ -2,94 +2,105 @@ import { stripIndent } from 'common-tags'
 import helpOutput from '../src'
 
 test('single usage', () => {
-    const output = helpOutput({ usages: ['foo [command] [options]'] })
-    expect(output).toBe('Usage: foo [command] [options]')
+  const output = helpOutput({ usages: ['foo [command] [options]'] })
+  expect(output).toBe('Usage: foo [command] [options]')
 })
 
 test('multiple usages', () => {
-    const output = helpOutput({
-        usages: [
-            'foo [command] [options]',
-            'foo --version',
-        ] })
+  const output = helpOutput({
+    usages: [
+      'foo [command] [options]',
+      'foo --version',
+    ] })
     expect(output).toBe(stripIndent`
       Usage: foo [command] [options]
              foo --version
     `)
-})
+  })
 
-test('single usage with description', () => {
+  test('single usage with description', () => {
     const output = helpOutput({
-        description: 'Lorem ipsum.',
-        usages: ['foo [command] [options]'],
+      description: 'Lorem ipsum.',
+      usages: ['foo [command] [options]'],
     })
     expect(output).toBe(stripIndent`
       Usage: foo [command] [options]
-      
+
       Lorem ipsum.
     `)
-})
+  })
 
-test('one alias', () => {
+  test('one alias', () => {
     const output = helpOutput({ aliases: ['f'], usages: ['foo [command] [options]'] })
     expect(output).toBe(stripIndent`
-        Usage: foo [command] [options]
+    Usage: foo [command] [options]
 
-        Alias: f
+    Alias: f
     `)
-})
+  })
 
-test('two aliases', () => {
+  test('two aliases', () => {
     const output = helpOutput({ aliases: ['f', 'fo'], usages: ['foo [command] [options]'] })
     expect(output).toBe(stripIndent`
-        Usage: foo [command] [options]
+      Usage: foo [command] [options]
 
-        Aliases: f, fo
+      Aliases: f, fo
     `)
-})
+  })
 
-test('description list', () => {
+  test('description list', () => {
     const output = helpOutput({
-        descriptionLists: [
+      descriptionLists: [
+        {
+          title: 'Options',
+          list: [
             {
-                title: 'Options',
-                list: [
-                    {
-                         description: 'This forces something',
-                         name: '--force',
-                         shortAlias: '-f',
-                    },
-                    {
-                        description: 'Bar',
-                        name: '--bar'
-                    },
-                    {
-                        name: '--qar'
-                    }
-                ]                
+              description: 'This forces something',
+              name: '--force',
+              shortAlias: '-f',
             },
             {
-                title: 'Commands',
-                list: [
-                    {
-                        description: 'Foo',
-                        name: 'foo',
-                        shortAlias: 'f'
-                    }
-                ]
+              description: 'Bar',
+              name: '--bar'
+            },
+            {
+              name: '--qar'
             }
-        ],
-        usages: ['foo [command] [options]'],
+          ]
+        },
+        {
+          title: 'Commands',
+          list: [
+            {
+              description: 'Foo',
+              name: 'foo',
+              shortAlias: 'f'
+            }
+          ]
+        },
+        {
+          title: 'Basic',
+          list: [
+            {
+              name: '--boo'
+            }
+          ]
+        }
+      ],
+      usages: ['foo [command] [options]'],
     })
     expect(output).toBe(stripIndent`
-        Usage: foo [command] [options]
+      Usage: foo [command] [options]
 
-        Options:
-              --bar    Bar
-          -f, --force  This forces something
-              --qar
-        
-        Commands:
-          f, foo  Foo
+      Options:
+            --bar    Bar
+        -f, --force  This forces something
+            --qar
+
+      Commands:
+         f, foo  Foo
+
+      Basic:
+            --boo
     `)
-})
+  })
