@@ -1,18 +1,20 @@
 import { table } from 'table'
 
-const consoleWidth = process.stdout.columns || 80
+const DEFAULT_WIDTH = process.stdout.columns || 80
 
 type DescriptionItem = { shortAlias?: string, name: string, description?: string }
 
-export default function renderHelp (
+export default function helpOutput (
   config: {
     aliases?: string[],
     descriptionLists?: Array<{ title: string, list: DescriptionItem[] }>,
     description?: string,
     usages: string[],
     url?: string,
+    width?: number,
   }
 ) {
+  const width = config.width || DEFAULT_WIDTH
   let outputSections = []
 
   if (config.usages.length > 0) {
@@ -29,7 +31,7 @@ export default function renderHelp (
   if (config.description) outputSections.push(`${config.description}`)
   if (config.descriptionLists) {
     for (let { title, list } of config.descriptionLists) {
-      outputSections.push(`${title}:\n` + renderDescriptionList(list))
+      outputSections.push(`${title}:\n` + renderDescriptionList(list, width))
     }
   }
   if (config.url) {
@@ -70,27 +72,13 @@ const DESCRIPTION_COLUMN = {
   wrapWord: true,
 }
 
-function renderDescriptionList (descriptionItems: DescriptionItem[]) {
+function renderDescriptionList (descriptionItems: DescriptionItem[], width: number) {
   const data = descriptionItems
     .sort((item1, item2) => item1.name.localeCompare(item2.name))
     .map(({ shortAlias, name, description }) => [shortAlias && `${shortAlias},` || ' ', name, description || ''])
   const firstColumnMaxWidth = getColumnMaxWidth(data, 0)
-  const descriptionColumnWidth = consoleWidth - firstColumnMaxWidth - getColumnMaxWidth(data, 1) - 2 - 2 - 1
-  if (firstColumnMaxWidth === 0) {
-    return multiTrim(table(data.map(([, ...row]) => row), {
-      ...TABLE_OPTIONS,
-      columns: [
-        {
-          ...LONG_OPTION_COLUMN,
-          ...FIRST_COLUMN,
-        },
-        {
-          width: descriptionColumnWidth,
-          ...DESCRIPTION_COLUMN,
-        },
-      ],
-    }))
-  }
+  const nameColumnWidth = Math.max(getColumnMaxWidth(data, 1), 19)
+  const descriptionColumnWidth = width - firstColumnMaxWidth - nameColumnWidth - 2 - 2 - 1
   return multiTrim(table(data, {
     ...TABLE_OPTIONS,
     columns: [
@@ -98,7 +86,10 @@ function renderDescriptionList (descriptionItems: DescriptionItem[]) {
         ...SHORT_OPTION_COLUMN,
         ...FIRST_COLUMN,
       },
-      LONG_OPTION_COLUMN,
+      {
+        width: nameColumnWidth,
+        ...LONG_OPTION_COLUMN,
+      },
       {
         width: descriptionColumnWidth,
         ...DESCRIPTION_COLUMN,
