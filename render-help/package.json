@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Creates a nice output for a CLI --help",
   "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
   "files": [
     "lib"
   ],
@@ -21,6 +22,7 @@
   ],
   "author": {
     "name": "Zoltan Kochan",
+    "email": "z@kochan.io",
     "url": "https://www.kochan.io"
   },
   "license": "MIT",

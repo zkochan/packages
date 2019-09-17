@@ -1,4 +1,4 @@
-import renderHelp from './src'
+const renderHelp = require('./lib')
 
 const output = renderHelp({
   usages: ['pnpm install [options]'],
@@ -9,9 +9,13 @@ const output = renderHelp({
       title: 'Options',
       list: [
         {
-          name: '-force',
+          name: '--force',
           shortAlias: '-f',
           description: 'Do some dangerous things'
+        },
+        {
+          name: '--lockfile-only',
+          description: "Don't create node_modules. Just generate pnpm-lock.yaml"
         }
       ]
     }
