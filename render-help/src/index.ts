@@ -4,7 +4,7 @@ const DEFAULT_WIDTH = process.stdout.columns || 80
 
 type DescriptionItem = { shortAlias?: string, name: string, description?: string }
 
-export default function helpOutput (
+export default function renderHelp (
   config: {
     aliases?: string[],
     descriptionLists?: Array<{ title: string, list: DescriptionItem[] }>,

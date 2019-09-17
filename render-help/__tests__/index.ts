@@ -1,13 +1,13 @@
 import { stripIndent } from 'common-tags'
-import helpOutput from '../src'
+import renderHelp from '../src'
 
 test('single usage', () => {
-  const output = helpOutput({ usages: ['foo [command] [options]'] })
+  const output = renderHelp({ usages: ['foo [command] [options]'] })
   expect(output).toBe('Usage: foo [command] [options]')
 })
 
 test('multiple usages', () => {
-  const output = helpOutput({
+  const output = renderHelp({
     usages: [
       'foo [command] [options]',
       'foo --version',
@@ -20,7 +20,7 @@ test('multiple usages', () => {
 })
 
 test('single usage with description', () => {
-  const output = helpOutput({
+  const output = renderHelp({
     description: 'Lorem ipsum.',
     usages: ['foo [command] [options]'],
   })
@@ -32,7 +32,7 @@ test('single usage with description', () => {
 })
 
 test('one alias', () => {
-  const output = helpOutput({ aliases: ['f'], usages: ['foo [command] [options]'] })
+  const output = renderHelp({ aliases: ['f'], usages: ['foo [command] [options]'] })
   expect(output).toBe(stripIndent`
   Usage: foo [command] [options]
 
@@ -41,7 +41,7 @@ test('one alias', () => {
 })
 
 test('two aliases', () => {
-  const output = helpOutput({ aliases: ['f', 'fo'], usages: ['foo [command] [options]'] })
+  const output = renderHelp({ aliases: ['f', 'fo'], usages: ['foo [command] [options]'] })
   expect(output).toBe(stripIndent`
     Usage: foo [command] [options]
 
@@ -50,7 +50,7 @@ test('two aliases', () => {
 })
 
 test('description list', () => {
-  const output = helpOutput({
+  const output = renderHelp({
     descriptionLists: [
       {
         title: 'Options',
@@ -113,7 +113,7 @@ test('description list', () => {
 })
 
 test('description list should fit the screen', () => {
-  const output = helpOutput({
+  const output = renderHelp({
     descriptionLists: [
       {
         title: 'Options',
@@ -148,7 +148,7 @@ test('description list should fit the screen', () => {
 })
 
 test('URL in the footer', () => {
-  const output = helpOutput({ aliases: ['f', 'fo'], usages: ['foo [command] [options]'], url: 'https://example.com/' })
+  const output = renderHelp({ aliases: ['f', 'fo'], usages: ['foo [command] [options]'], url: 'https://example.com/' })
   expect(output).toBe(stripIndent`
     Usage: foo [command] [options]
 

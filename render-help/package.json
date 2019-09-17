@@ -1,5 +1,5 @@
 {
-  "name": "help-output",
+  "name": "render-help",
   "version": "0.0.0",
   "description": "Creates a nice output for a CLI --help",
   "main": "lib/index.js",
@@ -12,7 +12,7 @@
   "scripts": {
     "test": "jest"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/help-output",
+  "repository": "https://github.com/zkochan/packages/tree/master/render-help",
   "keywords": [
     "cli",
     "help",
@@ -23,7 +23,7 @@
     "url": "https://www.kochan.io"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/help-output#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/master/render-help#readme",
   "dependencies": {
     "table": "^5.4.6"
   },
