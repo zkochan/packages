@@ -85,8 +85,8 @@ test('description list', () => {
         Usage: foo [command] [options]
 
         Options:
-          -f, --force  This forces something
               --bar    Bar
+          -f, --force  This forces something
               --qar
         
         Commands:

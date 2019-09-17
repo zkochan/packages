@@ -71,7 +71,9 @@ const DESCRIPTION_COLUMN = {
 }
 
 function renderDescriptionList (descriptionItems: DescriptionItem[]) {
-  const data = descriptionItems.map(({ shortAlias, name, description }) => [shortAlias && `${shortAlias},` || '', name, description || ''])
+  const data = descriptionItems
+    .sort((item1, item2) => item1.name.localeCompare(item2.name))
+    .map(({ shortAlias, name, description }) => [shortAlias && `${shortAlias},` || '', name, description || ''])
   const firstColumnMaxWidth = getColumnMaxWidth(data, 0)
   const descriptionColumnWidth = consoleWidth - firstColumnMaxWidth - getColumnMaxWidth(data, 1) - 2 - 2 - 1
   if (firstColumnMaxWidth === 0) {
