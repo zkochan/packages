@@ -4,7 +4,7 @@ dependencies:
 devDependencies:
   load-json-file: 6.1.0
   package-preview: 2.0.0
-  standard: 14.3.0
+  standard: 14.3.1
   tape: 4.11.0
   tempy: 0.3.0
   write-json-file: 4.1.0
@@ -1938,7 +1938,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-gJIIRb0LpL7AHyGbN9+hJ4UJns37lxmNTnMGRLC8CFrzQ+oB/K60IQjKNgPBCB2VP60Ypm6f8DFXvhVWdBOO+g==
-  /standard/14.3.0:
+  /standard/14.3.1:
     dependencies:
       eslint: 6.4.0
       eslint-config-standard: 14.1.0_908888e278e6cf5ed19a4a7e77831e63
@@ -1954,7 +1954,7 @@ packages:
       node: '>=8'
     hasBin: true
     resolution:
-      integrity: sha512-F3Su3IAxDrOW+v4O/WiPFp6SZ0FWj+H4NEtGrEI1iaCf5LWD0nIfcXh0GIyKQgpmswQFWBIAvgONihT8U5UM4w==
+      integrity: sha512-TUQwU7znlZLfgKH1Zwn/D84FitWZkUTfbxSiz/vFx+4c9GV+clSfG/qLiLZOlcdyzhw3oF5/pZydNjbNDfHPEw==
   /stream-shift/1.0.0:
     dev: true
     resolution:
@@ -2344,7 +2344,7 @@ specifiers:
   load-json-file: 6.1.0
   package-preview: 2.0.0
   rimraf: ^3.0.0
-  standard: 14.3.0
+  standard: 14.3.1
   tape: ^4.7.0
   tempy: ^0.3.0
   write-json-file: 4.1.0
