@@ -32,7 +32,7 @@
   "devDependencies": {
     "load-json-file": "6.1.0",
     "package-preview": "2.0.0",
-    "standard": "14.3.0",
+    "standard": "14.3.1",
     "tape": "^4.7.0",
     "tempy": "^0.3.0",
     "write-json-file": "4.1.0"
