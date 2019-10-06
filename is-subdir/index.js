@@ -1,8 +1,9 @@
 'use strict'
 const betterPathResolve = require('better-path-resolve')
+const path = require('path')
 
 module.exports = function (parent, dir) {
   const rParent = betterPathResolve(parent)
   const rDir = betterPathResolve(dir)
-  return rDir.startsWith(rParent)
+  return rDir.startsWith(`${rParent}${path.sep}`)
 }
