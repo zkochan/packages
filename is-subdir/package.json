@@ -4,7 +4,8 @@
   "description": "Return whether a directory is a subdirectory of another directory",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "scripts": {
     "test": "node test",
