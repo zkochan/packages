@@ -5,8 +5,8 @@ devDependencies:
   delay: 4.3.0
   package-preview: 3.0.0-0
   tape: 4.11.0
-  ts-node: 8.4.0_typescript@3.6.3
-  typescript: 3.6.3
+  ts-node: 8.4.0_typescript@3.7.2
+  typescript: 3.7.2
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.5.5:
@@ -43,7 +43,7 @@ packages:
       integrity: sha512-AgE3bPlVZxD4kmt7sjTrDlkA8jdtPk4WwW6pJROrW1sK69W6s8kvILbq+urngz5ya73D+i3yuFVQVjTqSINzcQ==
   /@types/got/8.3.5:
     dependencies:
-      '@types/node': 10.17.6
+      '@types/node': 12.12.14
     dev: true
     resolution:
       integrity: sha512-AaXSrIF99SjjtPVNmCmYb388HML+PKEJb/xmj4SbL2ZO0hHuETZZzyDIKfOqaEoAHZEuX4sC+FRFrHYJoIby6A==
@@ -1202,13 +1202,13 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-tAPQuRvlDDMd/EuC7s6yLD3hbSA=
-  /ts-node/8.4.0_typescript@3.6.3:
+  /ts-node/8.4.0_typescript@3.7.2:
     dependencies:
       arg: 4.1.2
       diff: 4.0.1
       make-error: 1.3.5
       source-map-support: 0.5.16
-      typescript: 3.6.3
+      typescript: 3.7.2
       yn: 3.1.1
     dev: true
     engines:
@@ -1230,13 +1230,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
-  /typescript/3.6.3:
+  /typescript/3.7.2:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-N7bceJL1CtRQ2RiG0AQME13ksR7DiuQh/QehubYcghzv20tnh+MQnQIuJddTmsbqYj+dztchykemz0zFzlvdQw==
+      integrity: sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
   /unbzip2-stream/1.3.3:
     dependencies:
       buffer: 5.4.3
@@ -1339,4 +1339,4 @@ specifiers:
   package-preview: 3.0.0-0
   tape: 4.11.0
   ts-node: 8.4.0
-  typescript: 3.6.3
+  typescript: 3.7.2
