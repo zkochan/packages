@@ -26,14 +26,14 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/rename-overwrite#readme",
   "dependencies": {
-    "graceful-fs": "^4.1.11",
+    "graceful-fs": "^4.2.3",
     "rimraf": "^3.0.0"
   },
   "devDependencies": {
     "load-json-file": "6.1.0",
-    "package-preview": "2.0.0",
+    "package-preview": "3.0.0-0",
     "standard": "14.3.1",
-    "tape": "^4.7.0",
+    "tape": "^4.11.0",
     "tempy": "^0.3.0",
     "write-json-file": "4.1.0"
   }

@@ -41,8 +41,8 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/write-json5-file#readme",
   "dependencies": {
-    "graceful-fs": "^4.1.11",
-    "json5": "^2.0.0",
+    "graceful-fs": "^4.2.3",
+    "json5": "^2.1.1",
     "make-dir": "^3.0.0",
     "sort-keys": "^4.0.0",
     "write-file-atomic": "^2.4.3"
@@ -51,7 +51,7 @@
     "mos": "^2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
     "standard": "14.3.1",
-    "tape": "^4.6.3",
+    "tape": "^4.11.0",
     "tempfile": "^3.0.0"
   }
 }

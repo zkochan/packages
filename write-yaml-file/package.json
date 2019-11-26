@@ -33,10 +33,10 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/write-yaml-file#readme",
   "dependencies": {
-    "graceful-fs": "^4.1.11",
-    "js-yaml": "^3.8.1",
+    "graceful-fs": "^4.2.3",
+    "js-yaml": "^3.13.1",
     "make-dir": "^3.0.0",
-    "pify": "^4.0.0",
+    "pify": "^4.0.1",
     "write-file-atomic": "^2.4.3"
   },
   "devDependencies": {

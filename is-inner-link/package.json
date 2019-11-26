@@ -36,18 +36,18 @@
   },
   "homepage": "https://github.com/zkochan/packages/tree/master/is-inner-link#readme",
   "dependencies": {
-    "graceful-fs": "^4.1.11",
-    "is-subdir": "^1.0.0",
-    "resolve-link-target": "^1.0.0"
+    "graceful-fs": "^4.2.3",
+    "is-subdir": "^1.1.1",
+    "resolve-link-target": "^1.0.1"
   },
   "devDependencies": {
     "make-dir": "^3.0.0",
     "mos": "^2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "package-preview": "2.0.0",
+    "package-preview": "3.0.0-0",
     "rimraf": "^3.0.0",
     "standard": "14.3.1",
-    "symlink-dir": "^3.0.0",
-    "tape": "^4.6.3"
+    "symlink-dir": "^3.1.1",
+    "tape": "^4.11.0"
   }
 }

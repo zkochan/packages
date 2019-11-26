@@ -27,7 +27,7 @@
   "devDependencies": {
     "execa": "^2.1.0",
     "npm": "^6.13.1",
-    "package-preview": "2.0.0",
+    "package-preview": "3.0.0-0",
     "pnpm": "4.3.0",
     "tape": "^4.11.0",
     "yarn": "^1.19.2"
