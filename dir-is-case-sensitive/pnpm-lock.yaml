@@ -7,7 +7,7 @@ devDependencies:
   '@types/tape': 4.2.33
   package-preview: 3.0.0-0
   tape: 4.11.0
-  ts-node: 8.4.0_typescript@3.6.3
+  ts-node: 8.5.2_typescript@3.6.3
   typescript: 3.6.3
 lockfileVersion: 5.1
 packages:
@@ -1203,7 +1203,7 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-tAPQuRvlDDMd/EuC7s6yLD3hbSA=
-  /ts-node/8.4.0_typescript@3.6.3:
+  /ts-node/8.5.2_typescript@3.6.3:
     dependencies:
       arg: 4.1.2
       diff: 4.0.1
@@ -1218,7 +1218,7 @@ packages:
     peerDependencies:
       typescript: '>=2.0'
     resolution:
-      integrity: sha512-yGSU5gwuDC3Kigr9kszHcMOhTc4AaeBkHTbDMt2qFYFJxGh3Qho/gq7tWEI6DjVsQUdzO+QrccuuNh8Ylk5KYg==
+      integrity: sha512-W1DK/a6BGoV/D4x/SXXm6TSQx6q3blECUzd5TN+j56YEMX3yPVMpHsICLedUw3DvGF3aTQ8hfdR9AKMaHjIi+A==
   /type-fest/0.6.0:
     dev: true
     engines:
@@ -1349,5 +1349,5 @@ specifiers:
   package-preview: 3.0.0-0
   path-temp: 2.0.0
   tape: 4.11.0
-  ts-node: 8.4.0
+  ts-node: 8.5.2
   typescript: 3.6.3
