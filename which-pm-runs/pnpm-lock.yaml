@@ -1,5 +1,5 @@
 devDependencies:
-  execa: 2.1.0
+  execa: 3.4.0
   npm: 6.13.1
   package-preview: 3.0.0-0
   pnpm: 4.3.0
@@ -41,7 +41,7 @@ packages:
       integrity: sha512-AgE3bPlVZxD4kmt7sjTrDlkA8jdtPk4WwW6pJROrW1sK69W6s8kvILbq+urngz5ya73D+i3yuFVQVjTqSINzcQ==
   /@types/got/8.3.5:
     dependencies:
-      '@types/node': 10.17.6
+      '@types/node': 12.12.14
     dev: true
     resolution:
       integrity: sha512-AaXSrIF99SjjtPVNmCmYb388HML+PKEJb/xmj4SbL2ZO0hHuETZZzyDIKfOqaEoAHZEuX4sC+FRFrHYJoIby6A==
@@ -49,6 +49,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-0a2X6cgN3RdPBL2MIlR6Lt0KlM7fOFsutuXcdglcOq6WvLnYXgPQSh0Mx6tO1KCAE8MxbHSOSTWDoUxRq+l3DA==
+  /@types/node/12.12.14:
+    dev: true
+    resolution:
+      integrity: sha512-u/SJDyXwuihpwjXy7hOOghagLEV1KdAST6syfnOk6QZAMzZuWZqXy5aYYZbh8Jdpd4escVFP0MvftHNDb9pruA==
   /@types/ssri/6.0.1:
     dev: true
     resolution:
@@ -313,13 +317,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
-  /execa/2.1.0:
+  /execa/3.4.0:
     dependencies:
       cross-spawn: 7.0.1
       get-stream: 5.1.0
+      human-signals: 1.1.1
       is-stream: 2.0.0
       merge-stream: 2.0.0
-      npm-run-path: 3.1.0
+      npm-run-path: 4.0.0
       onetime: 5.1.0
       p-finally: 2.0.1
       signal-exit: 3.0.2
@@ -328,7 +333,7 @@ packages:
     engines:
       node: ^8.12.0 || >=9.7.0
     resolution:
-      integrity: sha512-Y/URAVapfbYy2Xp/gb6A0E7iR8xeqOCXsuuaoMn7A5PzrXUK84E1gyiEfq0wQd/GHA6GsoHWwhNq8anb0mleIw==
+      integrity: sha512-r9vdGQk4bmCuK1yKQu1KTwcT2zwfWdbdaXfCtAh+5nU/4fSX+JAb7vZGvI5naJrQlvONrEB20jeruESI69530g==
   /figgy-pudding/3.5.1:
     dev: true
     resolution:
@@ -437,6 +442,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-kssjab8CvdXfcXMXVcvsXum4Hwdq9XGtRD3TteMEvEbq0LXyiNQr6AprqKqfeaDXze7SxWvRxdpwE6ku7ikLkg==
+  /human-signals/1.1.1:
+    dev: true
+    engines:
+      node: '>=8.12.0'
+    resolution:
+      integrity: sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
   /ieee754/1.1.13:
     dev: true
     resolution:
@@ -703,14 +714,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==
-  /npm-run-path/3.1.0:
+  /npm-run-path/4.0.0:
     dependencies:
       path-key: 3.1.1
     dev: true
     engines:
       node: '>=8'
     resolution:
-      integrity: sha512-Dbl4A/VfiVGLgQv29URL9xshU8XDY1GeLy+fsaZ1AA8JDSfjvr5P5+pzRbWqRSBxk6/DW7MIh8lTM/PaGnP2kg==
+      integrity: sha512-8eyAOAH+bYXFPSnNnKr3J+yoybe8O87Is5rtAQ8qRczJz1ajcsjg8l2oZqP+Ppx15Ii3S1vUTjQN2h4YO2tWWQ==
   /npm/6.13.1:
     bundledDependencies:
       - abbrev
@@ -1456,7 +1467,7 @@ packages:
     resolution:
       integrity: sha512-OdLN/K/sA+KnW4ggNQwHYK6YJdLkSWxbx6IYd+WIQJ6xDfk8CIYKckBfwGxTBmDaEluWs83InzjFCmUqPtpY+w==
 specifiers:
-  execa: ^2.1.0
+  execa: ^3.0.0
   npm: ^6.13.1
   package-preview: 3.0.0-0
   pnpm: 4.3.0
