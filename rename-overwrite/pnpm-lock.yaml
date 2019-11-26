@@ -7,7 +7,7 @@ devDependencies:
   standard: 14.3.1
   tape: 4.11.0
   tempy: 0.3.0
-  write-json-file: 4.1.0
+  write-json-file: 4.2.1
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.5.5:
@@ -44,7 +44,7 @@ packages:
       integrity: sha512-AgE3bPlVZxD4kmt7sjTrDlkA8jdtPk4WwW6pJROrW1sK69W6s8kvILbq+urngz5ya73D+i3yuFVQVjTqSINzcQ==
   /@types/got/8.3.5:
     dependencies:
-      '@types/node': 10.17.6
+      '@types/node': 12.12.14
     dev: true
     resolution:
       integrity: sha512-AaXSrIF99SjjtPVNmCmYb388HML+PKEJb/xmj4SbL2ZO0hHuETZZzyDIKfOqaEoAHZEuX4sC+FRFrHYJoIby6A==
@@ -52,6 +52,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-0a2X6cgN3RdPBL2MIlR6Lt0KlM7fOFsutuXcdglcOq6WvLnYXgPQSh0Mx6tO1KCAE8MxbHSOSTWDoUxRq+l3DA==
+  /@types/node/12.12.14:
+    dev: true
+    resolution:
+      integrity: sha512-u/SJDyXwuihpwjXy7hOOghagLEV1KdAST6syfnOk6QZAMzZuWZqXy5aYYZbh8Jdpd4escVFP0MvftHNDb9pruA==
   /@types/ssri/6.0.1:
     dev: true
     resolution:
@@ -2313,18 +2317,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-JPStrIyyVJ6oCSz/691fAjFtefZ6q+fP6tm+OS4Qw6o+TGQxNp1ziY2PgS+X/m0V8OWhZiO/m4xSj+Pr4RrZvw==
-  /write-json-file/4.1.0:
-    dependencies:
-      detect-indent: 6.0.0
-      graceful-fs: 4.2.3
-      make-dir: 3.0.0
-      sort-keys: 3.0.0
-      write-file-atomic: 3.0.1
-    dev: true
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha512-6k5DbY25RqGahOesErT6rLynAVorm4HhG7+40NkYyPpMApwQDsnx8jP3/tY84iMIb3WmbXlhpoHGNEPAbE1y1w==
   /write-json-file/4.2.1:
     dependencies:
       detect-indent: 6.0.0
@@ -2366,4 +2358,4 @@ specifiers:
   standard: 14.3.1
   tape: ^4.11.0
   tempy: ^0.3.0
-  write-json-file: 4.1.0
+  write-json-file: 4.2.1
