@@ -37,7 +37,7 @@
     "@types/table": "4.0.7",
     "common-tags": "1.8.0",
     "jest": "^24.9.0",
-    "ts-jest": "24.1.0",
+    "ts-jest": "24.2.0",
     "typescript": "3.6.3"
   },
   "jest": {

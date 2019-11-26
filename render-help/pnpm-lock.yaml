@@ -7,7 +7,7 @@ devDependencies:
   '@types/table': 4.0.7
   common-tags: 1.8.0
   jest: 24.9.0
-  ts-jest: 24.1.0_jest@24.9.0
+  ts-jest: 24.2.0_jest@24.9.0
   typescript: 3.6.3
 lockfileVersion: 5.1
 packages:
@@ -1104,6 +1104,12 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-lpGEQOMEGnpBT4xS48V06zw+HgU=
+  /extsprintf/1.4.0:
+    dev: true
+    engines:
+      '0': node >=0.6.0
+    resolution:
+      integrity: sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
   /fast-deep-equal/2.0.1:
     resolution:
       integrity: sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk=
@@ -3214,7 +3220,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
-  /ts-jest/24.1.0_jest@24.9.0:
+  /ts-jest/24.2.0_jest@24.9.0:
     dependencies:
       bs-logger: 0.2.6
       buffer-from: 1.1.1
@@ -3234,7 +3240,7 @@ packages:
     peerDependencies:
       jest: '>=24 <25'
     resolution:
-      integrity: sha512-HEGfrIEAZKfu1pkaxB9au17b1d9b56YZSqz5eCVE8mX68+5reOvlM93xGOzzCREIov9mdH7JBG+s0UyNAqr0tQ==
+      integrity: sha512-Yc+HLyldlIC9iIK8xEN7tV960Or56N49MDP7hubCZUeI7EbIOTsas6rXCMB4kQjLACJ7eDOF4xWEO5qumpKsag==
   /tunnel-agent/0.6.0:
     dependencies:
       safe-buffer: 5.2.0
@@ -3329,7 +3335,7 @@ packages:
     dependencies:
       assert-plus: 1.0.0
       core-util-is: 1.0.2
-      extsprintf: 1.3.0
+      extsprintf: 1.4.0
     dev: true
     engines:
       '0': node >=0.6.0
@@ -3472,5 +3478,5 @@ specifiers:
   common-tags: 1.8.0
   jest: ^24.9.0
   table: ^5.4.6
-  ts-jest: 24.1.0
+  ts-jest: 24.2.0
   typescript: 3.6.3
