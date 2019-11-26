@@ -2,7 +2,7 @@ dependencies:
   graceful-fs: 4.2.3
   rimraf: 3.0.0
 devDependencies:
-  load-json-file: 6.1.0
+  load-json-file: 6.2.0
   package-preview: 3.0.0
   standard: 14.3.1
   tape: 4.11.0
@@ -44,7 +44,7 @@ packages:
       integrity: sha512-AgE3bPlVZxD4kmt7sjTrDlkA8jdtPk4WwW6pJROrW1sK69W6s8kvILbq+urngz5ya73D+i3yuFVQVjTqSINzcQ==
   /@types/got/8.3.5:
     dependencies:
-      '@types/node': 10.17.6
+      '@types/node': 12.12.14
     dev: true
     resolution:
       integrity: sha512-AaXSrIF99SjjtPVNmCmYb388HML+PKEJb/xmj4SbL2ZO0hHuETZZzyDIKfOqaEoAHZEuX4sC+FRFrHYJoIby6A==
@@ -52,6 +52,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-0a2X6cgN3RdPBL2MIlR6Lt0KlM7fOFsutuXcdglcOq6WvLnYXgPQSh0Mx6tO1KCAE8MxbHSOSTWDoUxRq+l3DA==
+  /@types/node/12.12.14:
+    dev: true
+    resolution:
+      integrity: sha512-u/SJDyXwuihpwjXy7hOOghagLEV1KdAST6syfnOk6QZAMzZuWZqXy5aYYZbh8Jdpd4escVFP0MvftHNDb9pruA==
   /@types/ssri/6.0.1:
     dev: true
     resolution:
@@ -1144,17 +1148,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-cJGP40Jc/VXUsp8/OrnyKyTZ1y6v/dphm3bioS+RrKXjK2BB6wHUd6JptZEFDGgGahMT+InnZO5i1Ei9mpC8Bw==
-  /load-json-file/6.1.0:
-    dependencies:
-      graceful-fs: 4.2.3
-      parse-json: 4.0.0
-      strip-bom: 4.0.0
-      type-fest: 0.5.2
-    dev: true
-    engines:
-      node: '>=8'
-    resolution:
-      integrity: sha512-Oxzrf5BMvKyMOwuAXwDUdTO1kBo646k1rc644wfr2xZWqXHKj70DHtLeU1COKFqPX0aUGflj2mOUMTJZfSMMyg==
   /load-json-file/6.2.0:
     dependencies:
       graceful-fs: 4.2.3
@@ -2204,12 +2197,6 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-cUGJnCdr4STbePCgqNFbpVNCepa+kAVohJs1sLhxzdH+gnEoOd8VhbYa7pD3zZYGiURWM2xzEII3fQcRizDkYQ==
-  /type-fest/0.5.2:
-    dev: true
-    engines:
-      node: '>=6'
-    resolution:
-      integrity: sha512-DWkS49EQKVX//Tbupb9TFa19c7+MK1XmzkrZUR8TAktmE/DizXoaoJV6TZ/tSIPXipqNiRI6CyAe7x69Jb6RSw==
   /type-fest/0.6.0:
     dev: true
     engines:
@@ -2360,7 +2347,7 @@ packages:
       integrity: sha512-VCIyR1wJoEBZUqk5PA+oOBF6ypbwh5aNB3I50guxAL/quggdfs4TtNHQrSazFA3fYZ+tEqfs0zIGlv0c/rgjbQ==
 specifiers:
   graceful-fs: ^4.2.3
-  load-json-file: 6.1.0
+  load-json-file: 6.2.0
   package-preview: 3.0.0
   rimraf: ^3.0.0
   standard: 14.3.1
