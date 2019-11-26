@@ -25,11 +25,11 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/which-pm-runs#readme",
   "devDependencies": {
-    "execa": "^2.0.0",
-    "npm": "^6.0.0",
+    "execa": "^2.1.0",
+    "npm": "^6.13.1",
     "package-preview": "2.0.0",
-    "pnpm": "^3.7.3",
-    "tape": "^4.6.3",
-    "yarn": "^1.0.1"
+    "pnpm": "4.3.0",
+    "tape": "^4.11.0",
+    "yarn": "^1.19.2"
   }
 }
