@@ -19,5 +19,5 @@ jobs:
     displayName: 'Install pnpm'
   - script: pnpm recursive install
     displayName: 'Install dependencies'
-  - script: pnpm recursive test --workspace-concurrency 1
+  - script: pnpm recursive test
     displayName: 'Run tests'
