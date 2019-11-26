@@ -3,7 +3,7 @@ dependencies:
 devDependencies:
   mos: 2.0.0-alpha.3
   mos-plugin-readme: 1.0.4
-  package-preview: 3.0.0-0
+  package-preview: 3.0.0
   standard: 14.3.1
   tape: 4.11.0
 lockfileVersion: 5.1
@@ -2558,7 +2558,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-DRW9Z9HLvduyyiIv8u24a8sxqLs=
-  /package-preview/3.0.0-0:
+  /package-preview/3.0.0:
     dependencies:
       '@pnpm/exec': 1.1.5
       cross-spawn: 7.0.1
@@ -2576,7 +2576,7 @@ packages:
       node: '>=8'
     hasBin: true
     resolution:
-      integrity: sha512-09UsGEgRjXWbCTpX+hZ2VSulEal/XDgWeM4q2gxAPW2SSuSaVIeHPl+EwvRi/40rJwb0r7WfMjMmuNAMySYmAA==
+      integrity: sha512-hPTp6ZoH3pWxQ3FT46nq1fq4k/YTzK6oHKntj54aWxxdIjlwhOR67XX3NK1X1P5Zxb1VZoRERwdzODU8QXtMIw==
   /pako/0.2.9:
     dev: true
     resolution:
@@ -3989,6 +3989,6 @@ specifiers:
   graceful-fs: ^4.2.3
   mos: ^2.0.0-alpha.3
   mos-plugin-readme: ^1.0.4
-  package-preview: 3.0.0-0
+  package-preview: 3.0.0
   standard: 14.3.1
   tape: ^4.11.0

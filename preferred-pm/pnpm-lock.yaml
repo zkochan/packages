@@ -2,7 +2,7 @@ dependencies:
   path-exists: 4.0.0
   which-pm: 2.0.0
 devDependencies:
-  package-preview: 3.0.0-0
+  package-preview: 3.0.0
   standard: 14.3.1
   tape: 4.11.0
 lockfileVersion: 5.1
@@ -1455,7 +1455,7 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
-  /package-preview/3.0.0-0:
+  /package-preview/3.0.0:
     dependencies:
       '@pnpm/exec': 1.1.5
       cross-spawn: 7.0.1
@@ -1473,7 +1473,7 @@ packages:
       node: '>=8'
     hasBin: true
     resolution:
-      integrity: sha512-09UsGEgRjXWbCTpX+hZ2VSulEal/XDgWeM4q2gxAPW2SSuSaVIeHPl+EwvRi/40rJwb0r7WfMjMmuNAMySYmAA==
+      integrity: sha512-hPTp6ZoH3pWxQ3FT46nq1fq4k/YTzK6oHKntj54aWxxdIjlwhOR67XX3NK1X1P5Zxb1VZoRERwdzODU8QXtMIw==
   /pako/0.2.9:
     dev: true
     resolution:
@@ -2321,7 +2321,7 @@ packages:
     resolution:
       integrity: sha512-VCIyR1wJoEBZUqk5PA+oOBF6ypbwh5aNB3I50guxAL/quggdfs4TtNHQrSazFA3fYZ+tEqfs0zIGlv0c/rgjbQ==
 specifiers:
-  package-preview: 3.0.0-0
+  package-preview: 3.0.0
   path-exists: ^4.0.0
   standard: ^14.3.1
   tape: ^4.11.0

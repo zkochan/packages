@@ -2,13 +2,13 @@ dependencies:
   table: 5.4.6
 devDependencies:
   '@types/common-tags': 1.8.0
-  '@types/jest': 24.0.18
-  '@types/node': 12.7.11
+  '@types/jest': 24.0.23
+  '@types/node': 12.12.14
   '@types/table': 4.0.7
   common-tags: 1.8.0
   jest: 24.9.0
-  ts-jest: 24.1.0_jest@24.9.0
-  typescript: 3.6.3
+  ts-jest: 24.2.0_jest@24.9.0
+  typescript: 3.7.2
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.5.5:
@@ -351,23 +351,16 @@ packages:
     dev: true
     resolution:
       integrity: sha512-UpYjBi8xefVChsCoBpKShdxTllC9pwISirfoZsUa2AAdQg/Jd2KQGtSbw+ya7GPo7x/wAPlH6JBhKhAsXUEZNA==
-  /@types/jest-diff/24.3.0:
+  /@types/jest/24.0.23:
     dependencies:
       jest-diff: 24.9.0
-    deprecated: 'This is a stub types definition. jest-diff provides its own type definitions, so you do not need this installed.'
     dev: true
     resolution:
-      integrity: sha512-vx1CRDeDUwQ0Pc7v+hS61O1ETA81kD04IMEC0hS1kPyVtHDdZrokAvpF7MT9VI/fVSzicelUZNCepDvhRV1PeA==
-  /@types/jest/24.0.18:
-    dependencies:
-      '@types/jest-diff': 24.3.0
+      integrity: sha512-L7MBvwfNpe7yVPTXLn32df/EK+AMBFAFvZrRuArGs7npEWnlziUXK+5GMIUTI4NIuwok3XibsjXCs5HxviYXjg==
+  /@types/node/12.12.14:
     dev: true
     resolution:
-      integrity: sha512-jcDDXdjTcrQzdN06+TSVsPPqxvsZA/5QkYfIZlq1JMw7FdP5AZylbOc+6B/cuDurctRe+MziUMtQ3xQdrbjqyQ==
-  /@types/node/12.7.11:
-    dev: true
-    resolution:
-      integrity: sha512-Otxmr2rrZLKRYIybtdG/sgeO+tHY20GxeDjcGmUnmmlCWyEnv2a2x1ZXBo3BTec4OiTXMQCiazB8NMBf0iRlFw==
+      integrity: sha512-u/SJDyXwuihpwjXy7hOOghagLEV1KdAST6syfnOk6QZAMzZuWZqXy5aYYZbh8Jdpd4escVFP0MvftHNDb9pruA==
   /@types/stack-utils/1.0.1:
     dev: true
     resolution:
@@ -3214,7 +3207,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
-  /ts-jest/24.1.0_jest@24.9.0:
+  /ts-jest/24.2.0_jest@24.9.0:
     dependencies:
       bs-logger: 0.2.6
       buffer-from: 1.1.1
@@ -3234,7 +3227,7 @@ packages:
     peerDependencies:
       jest: '>=24 <25'
     resolution:
-      integrity: sha512-HEGfrIEAZKfu1pkaxB9au17b1d9b56YZSqz5eCVE8mX68+5reOvlM93xGOzzCREIov9mdH7JBG+s0UyNAqr0tQ==
+      integrity: sha512-Yc+HLyldlIC9iIK8xEN7tV960Or56N49MDP7hubCZUeI7EbIOTsas6rXCMB4kQjLACJ7eDOF4xWEO5qumpKsag==
   /tunnel-agent/0.6.0:
     dependencies:
       safe-buffer: 5.2.0
@@ -3253,13 +3246,13 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=
-  /typescript/3.6.3:
+  /typescript/3.7.2:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-N7bceJL1CtRQ2RiG0AQME13ksR7DiuQh/QehubYcghzv20tnh+MQnQIuJddTmsbqYj+dztchykemz0zFzlvdQw==
+      integrity: sha512-ml7V7JfiN2Xwvcer+XAf2csGO1bPBdRbFCkYBczNZggrBZ9c7G3riSUeJmqEU5uOtXNPMhE3n+R4FA/3YOAWOQ==
   /uglify-js/3.7.0:
     dependencies:
       commander: 2.20.3
@@ -3466,11 +3459,11 @@ packages:
       integrity: sha512-2eehun/8ALW8TLoIl7MVaRUrg+yCnenu8B4kBlRxj3GJGDKU1Og7sMXPNm1BYyM1DOJmTZ4YeN/Nwxv+8XJsUA==
 specifiers:
   '@types/common-tags': 1.8.0
-  '@types/jest': 24.0.18
-  '@types/node': 12.7.11
+  '@types/jest': ^24.0.23
+  '@types/node': ^12.12.14
   '@types/table': 4.0.7
   common-tags: 1.8.0
   jest: ^24.9.0
   table: ^5.4.6
-  ts-jest: 24.1.0
-  typescript: 3.6.3
+  ts-jest: ^24.2.0
+  typescript: ^3.7.2
