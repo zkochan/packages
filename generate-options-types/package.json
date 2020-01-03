@@ -1,0 +1,47 @@
+{
+  "name": "generate-nopts-types",
+  "version": "0.0.0",
+  "description": "Creates a nice output for a CLI --help",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=8.15"
+  },
+  "scripts": {
+    "test": "jest",
+    "prepublishOnly": "tsc"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/master/render-help",
+  "keywords": [
+    "cli",
+    "help",
+    "bin"
+  ],
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "z@kochan.io",
+    "url": "https://www.kochan.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/master/render-help#readme",
+  "dependencies": {
+    "camelcase": "5.3.1",
+    "ts-node": "8.5.4"
+  },
+  "devDependencies": {
+    "@types/common-tags": "1.8.0",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "common-tags": "1.8.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
+}
