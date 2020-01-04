@@ -37,5 +37,6 @@ function generateFlagType (flagType: Object): string {
   if (flagType[flagType.length - 1] === Array) {
     return `Array<${flagType.slice(0, flagType.length - 1).map((subType) => generateFlagType(subType)).join(' | ')}>`
   }
+  if (flagType.length === 0) return 'unknown'
   return flagType.map((subType) => generateFlagType(subType)).join(' | ')
 }

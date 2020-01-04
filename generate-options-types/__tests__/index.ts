@@ -18,6 +18,7 @@ test('generating types', () => {
     carr2: ['foo', 'bar', Array],
     u: url,
     p: path,
+    empty: [],
   })).toBe(stripIndent`
     export type Options = {
       b: Boolean,
@@ -33,5 +34,6 @@ test('generating types', () => {
       carr2: Array<"foo" | "bar">,
       u: String,
       p: String,
+      empty: unknown,
     }`)
 })
