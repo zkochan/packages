@@ -9,7 +9,7 @@ const typesFile = path.resolve(process.argv[2])
 const types = require(typesFile).default
 const typeName = process.argv[3]
 
-const generatedCode = generateOptionsTypes(typeName, types)
+const generatedCode = `// tslint:disable\n${generateOptionsTypes(typeName, types)}`
 
 const outputDir = path.dirname(typesFile)
 const generatedFile = path.join(outputDir, `${typeName}.generated.ts`)
