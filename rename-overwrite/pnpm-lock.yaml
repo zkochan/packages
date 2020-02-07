@@ -7,7 +7,7 @@ devDependencies:
   standard: 14.3.1
   tape: 4.11.0
   tempy: 0.3.0
-  write-json-file: 4.2.1
+  write-json-file: 4.3.0
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.5.5:
@@ -1030,6 +1030,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-EYisGhpgSCwspmIuRHGjROWTon2Xp8Z7U03Wubk/bTL5TTRC5R1rGVgyjzBrk9+ULdH6cRD06KRcw/xfqhVYKQ==
+  /is-plain-obj/2.1.0:
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==
   /is-promise/2.1.0:
     dev: true
     resolution:
@@ -1902,6 +1908,14 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-77XUKMiZN5LvQXZ9sgWfJza19AvYIDwaDGwGiULM+B5XYru8Z90Oh06JvqDlJczvjjYvssrV0aK1GI6+YXvn5A==
+  /sort-keys/4.0.0:
+    dependencies:
+      is-plain-obj: 2.1.0
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-hlJLzrn/VN49uyNkZ8+9b+0q9DjmmYcYOnbMQtpkLrYpPwRApDPZfmqbUfJnAA3sb/nRib+nDot7Zi/1ER1fuA==
   /spdx-correct/3.1.0:
     dependencies:
       spdx-expression-parse: 3.0.0
@@ -2313,6 +2327,19 @@ packages:
       node: '>=8.3'
     resolution:
       integrity: sha512-nkmp9weFMmE0Zev48m6sr9zU2iHO2BemwqfIasXny4DzIKIoKt9WEbgdMW0pwk9DmzC8jzSwixkjgK2vu1zw4g==
+  /write-json-file/4.3.0:
+    dependencies:
+      detect-indent: 6.0.0
+      graceful-fs: 4.2.3
+      is-plain-obj: 2.1.0
+      make-dir: 3.0.0
+      sort-keys: 4.0.0
+      write-file-atomic: 3.0.1
+    dev: true
+    engines:
+      node: '>=8.3'
+    resolution:
+      integrity: sha512-PxiShnxf0IlnQuMYOPPhPkhExoCQuTUNPOa/2JWCYTmBquU9njyyDuwRKN26IZBlp4yn1nt+Agh2HOOBl+55HQ==
   /write/1.0.3:
     dependencies:
       mkdirp: 0.5.1
@@ -2341,4 +2368,4 @@ specifiers:
   standard: 14.3.1
   tape: ^4.11.0
   tempy: ^0.3.0
-  write-json-file: 4.2.1
+  write-json-file: 4.3.0
