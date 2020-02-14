@@ -44,7 +44,7 @@
     "graceful-fs": "^4.2.3",
     "ini": "^1.3.5",
     "make-dir": "^3.0.0",
-    "pify": "^4.0.1",
+    "pify": "^5.0.0",
     "write-file-atomic": "^2.4.3"
   },
   "devDependencies": {
