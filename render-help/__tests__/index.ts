@@ -1,6 +1,12 @@
 import { stripIndent } from 'common-tags'
 import renderHelp from '../src'
 
+const originalColumns = process.stdout.columns
+
+beforeEach(() => {
+  process.stdout.columns = originalColumns
+})
+
 test('single usage', () => {
   const output = renderHelp({ usages: ['foo [command] [options]'] })
   expect(output).toBe('Usage: foo [command] [options]')
@@ -155,5 +161,28 @@ test('URL in the footer', () => {
     Aliases: f, fo
 
     Visit https://example.com/ for documentation about this command.
+  `)
+})
+
+test('console width is very narrow', () => {
+  process.stdout.columns = 5
+  const output = renderHelp({
+    descriptionLists: [
+      {
+        title: 'Options',
+        list: [
+          {
+            name: '--qar'
+          }
+        ]
+      },
+    ],
+    usages: ['foo [command] [options]'],
+  })
+  expect(output).toBe(stripIndent`
+    Usage: foo [command] [options]
+
+    Options:
+          --qar
   `)
 })

@@ -1,7 +1,5 @@
 import { table } from 'table'
 
-const DEFAULT_WIDTH = process.stdout.columns || 80
-
 type DescriptionItem = { shortAlias?: string, name: string, description?: string }
 
 export = function renderHelp (
@@ -14,7 +12,7 @@ export = function renderHelp (
     width?: number,
   }
 ) {
-  const width = config.width || DEFAULT_WIDTH
+  const width = config.width ?? process.stdout.columns ?? 80
   let outputSections = []
 
   if (config.usages.length > 0) {
@@ -78,7 +76,7 @@ function renderDescriptionList (descriptionItems: DescriptionItem[], width: numb
     .map(({ shortAlias, name, description }) => [shortAlias && `${shortAlias},` || ' ', name, description || ''])
   const firstColumnMaxWidth = getColumnMaxWidth(data, 0)
   const nameColumnWidth = Math.max(getColumnMaxWidth(data, 1), 19)
-  const descriptionColumnWidth = width - firstColumnMaxWidth - nameColumnWidth - 2 - 2 - 1
+  const descriptionColumnWidth = Math.max(2, width - firstColumnMaxWidth - nameColumnWidth - 2 - 2 - 1)
   return multiTrim(table(data, {
     ...TABLE_OPTIONS,
     columns: [
