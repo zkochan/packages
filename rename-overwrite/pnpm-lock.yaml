@@ -6,7 +6,7 @@ devDependencies:
   package-preview: 3.0.0
   standard: 14.3.1
   tape: 4.11.0
-  tempy: 0.4.0
+  tempy: 0.5.0
   write-json-file: 4.2.1
 lockfileVersion: 5.1
 packages:
@@ -1042,6 +1042,12 @@ packages:
       node: '>= 0.4'
     resolution:
       integrity: sha1-VRdIm1RwkbCTDglWVM7SXul+lJE=
+  /is-stream/2.0.0:
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-XCoy+WlUr7d1+Z8GgSuXmpuUFC9fOhRXglJMx+dwLKTkL44Cjd4W1Z5P+BQZpr+cR93aGP4S/s7Ftw6Nd/kiEw==
   /is-symbol/1.0.3:
     dependencies:
       has-symbols: 1.0.1
@@ -2126,16 +2132,17 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==
-  /tempy/0.4.0:
+  /tempy/0.5.0:
     dependencies:
+      is-stream: 2.0.0
       temp-dir: 2.0.0
-      type-fest: 0.10.0
+      type-fest: 0.12.0
       unique-string: 2.0.0
     dev: true
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-mKnScm8aXv+cG6l1Nzp6mERGgC4UblbPnSDeQp83JgZ7xqDcnl+7u3+6zXnf1UE7YluDUTEIna1iKYwCSaOk9g==
+      integrity: sha512-VEY96x7gbIRfsxqsafy2l5yVxxp3PhwAGoWMyC2D2Zt5DmEv+2tGiPOrquNRpf21hhGnKLVEsuqleqiZmKG/qw==
   /text-table/0.2.0:
     dev: true
     resolution:
@@ -2191,12 +2198,12 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha1-WITKtRLPHTVeP7eE8wgEsrUg23I=
-  /type-fest/0.10.0:
+  /type-fest/0.12.0:
     dev: true
     engines:
-      node: '>=8'
+      node: '>=10'
     resolution:
-      integrity: sha512-EUV9jo4sffrwlg8s0zDhP0T2WD3pru5Xi0+HTE3zTUmBaZNhfkite9PdSJwdXLwPVW0jnAHT56pZHIOYckPEiw==
+      integrity: sha512-53RyidyjvkGpnWPMF9bQgFtWp+Sl8O2Rp13VavmJgfAP9WWG6q6TkrKU8iyJdnwnfgHI6k2hTlgqH4aSdjoTbg==
   /type-fest/0.3.1:
     dev: true
     engines:
@@ -2346,5 +2353,5 @@ specifiers:
   rimraf: ^3.0.0
   standard: 14.3.1
   tape: ^4.11.0
-  tempy: ^0.4.0
+  tempy: ^0.5.0
   write-json-file: 4.2.1
