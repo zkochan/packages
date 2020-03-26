@@ -41,13 +41,13 @@
   "homepage": "https://github.com/zkochan/packages/tree/master/read-json5-file#readme",
   "dependencies": {
     "graceful-fs": "^4.2.3",
-    "json5": "^2.1.1",
+    "json5": "^2.1.2",
     "strip-bom": "^4.0.0"
   },
   "devDependencies": {
     "mos": "^2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "standard": "^14.3.1",
-    "tape": "^4.11.0"
+    "standard": "^14.3.3",
+    "tape": "^4.13.2"
   }
 }

@@ -28,6 +28,6 @@
   "dependencies": {
     "@types/glob": "*",
     "@types/node": "*",
-    "rimraf": "^3.0.0"
+    "rimraf": "^3.0.2"
   }
 }

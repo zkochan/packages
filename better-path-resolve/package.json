@@ -35,6 +35,6 @@
   "devDependencies": {
     "mos": "^2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "tape": "^4.11.0"
+    "tape": "^4.13.2"
   }
 }
