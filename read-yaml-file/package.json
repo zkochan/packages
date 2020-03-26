@@ -14,7 +14,7 @@
   },
   "repository": "https://github.com/zkochan/packages/tree/master/read-yaml-file",
   "engines": {
-    "node": ">=6"
+    "node": ">=10.13"
   },
   "files": [
     "index.js",
@@ -26,7 +26,7 @@
   "dependencies": {
     "graceful-fs": "^4.2.3",
     "js-yaml": "^3.13.1",
-    "pify": "^4.0.1",
+    "pify": "^5.0.0",
     "strip-bom": "^4.0.0"
   },
   "devDependencies": {

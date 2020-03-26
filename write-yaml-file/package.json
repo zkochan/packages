@@ -5,7 +5,7 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "engines": {
-    "node": ">=8.15"
+    "node": ">=10.13"
   },
   "files": [
     "index.js",
@@ -36,7 +36,7 @@
     "graceful-fs": "^4.2.3",
     "js-yaml": "^3.13.1",
     "make-dir": "^3.0.2",
-    "pify": "^4.0.1",
+    "pify": "^5.0.0",
     "write-file-atomic": "^2.4.3"
   },
   "devDependencies": {
