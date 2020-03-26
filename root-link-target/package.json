@@ -34,7 +34,7 @@
     "mos": "^2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
     "package-preview": "3.0.0",
-    "standard": "14.3.1",
+    "standard": "14.3.3",
     "tape": "^4.13.2"
   },
   "mos": {

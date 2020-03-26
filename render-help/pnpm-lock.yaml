@@ -2,12 +2,12 @@ dependencies:
   table: 5.4.6
 devDependencies:
   '@types/common-tags': 1.8.0
-  '@types/jest': 25.1.3
+  '@types/jest': 25.1.4
   '@types/node': 12.12.31
   '@types/table': 4.0.7
   common-tags: 1.8.0
-  jest: 25.1.0
-  ts-jest: 25.2.1_jest@25.1.0
+  jest: 25.2.3
+  ts-jest: 25.2.1_jest@25.2.3
   typescript: 3.8.2
 lockfileVersion: 5.1
 packages:
@@ -452,13 +452,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-UpYjBi8xefVChsCoBpKShdxTllC9pwISirfoZsUa2AAdQg/Jd2KQGtSbw+ya7GPo7x/wAPlH6JBhKhAsXUEZNA==
-  /@types/jest/25.1.3:
+  /@types/jest/25.1.4:
     dependencies:
       jest-diff: 25.2.3
       pretty-format: 25.2.3
     dev: true
     resolution:
-      integrity: sha512-jqargqzyJWgWAJCXX96LBGR/Ei7wQcZBvRv0PLEu9ZByMfcs23keUJrKv9FMR6YZf9YCbfqDqgmY+JUBsnqhrg==
+      integrity: sha512-QDDY2uNAhCV7TMCITrxz+MRk1EizcsevzfeS6LykIlq2V1E5oO4wXG8V2ZEd9w7Snxeeagk46YbMgZ8ESHx3sw==
   /@types/node/12.12.31:
     dev: true
     resolution:
@@ -2136,7 +2136,7 @@ packages:
       node: '>= 8.3'
     resolution:
       integrity: sha512-IHnpekk8H/hCUbBlfeaPZzU6v75bqwJp3n4dUrQuQOAgOneI4tx3jV2o8pvlXnDfcRsfkFIUD//HWXpCmR+evQ==
-  /jest/25.1.0:
+  /jest/25.2.3:
     dependencies:
       '@jest/core': 25.2.3
       import-local: 3.0.2
@@ -2146,7 +2146,7 @@ packages:
       node: '>= 8.3'
     hasBin: true
     resolution:
-      integrity: sha512-FV6jEruneBhokkt9MQk0WUFoNTwnF76CLXtwNMfsc0um0TlB/LG2yxUd0KqaFjEJ9laQmVWQWS0sG/t2GsuI0w==
+      integrity: sha512-UbUmyGeZt0/sCIj/zsWOY0qFfQsx2qEFIZp0iEj8yVH6qASfR22fJOf12gFuSPsdSufam+llZBB0MdXWCg6EEQ==
   /js-tokens/4.0.0:
     dev: true
     resolution:
@@ -3320,12 +3320,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
-  /ts-jest/25.2.1_jest@25.1.0:
+  /ts-jest/25.2.1_jest@25.2.3:
     dependencies:
       bs-logger: 0.2.6
       buffer-from: 1.1.1
       fast-json-stable-stringify: 2.1.0
-      jest: 25.1.0
+      jest: 25.2.3
       json5: 2.1.2
       lodash.memoize: 4.1.2
       make-error: 1.3.6
@@ -3597,11 +3597,11 @@ packages:
       integrity: sha512-92O1HWEjw27sBfgmXiixJWT5hRBp2eobqXicLtPBIDBhYB+1HpwZlXmbW2luivBJHBzki+7VyCLRtAkScbTBQA==
 specifiers:
   '@types/common-tags': 1.8.0
-  '@types/jest': 25.1.3
+  '@types/jest': 25.1.4
   '@types/node': ^12.12.31
   '@types/table': 4.0.7
   common-tags: 1.8.0
-  jest: 25.1.0
+  jest: 25.2.3
   table: ^5.4.6
   ts-jest: 25.2.1
   typescript: 3.8.2
