@@ -1,6 +1,6 @@
 {
   "name": "realpath-missing",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Canonicalize by following every symlink in every component of the given name recursively, without requirements on components existence",
   "main": "index.js",
   "files": [
