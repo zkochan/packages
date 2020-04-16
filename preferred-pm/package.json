@@ -29,6 +29,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "find-yarn-workspace-root2": "^1.2.11",
     "path-exists": "^4.0.0",
     "which-pm": "2.0.0"
   },

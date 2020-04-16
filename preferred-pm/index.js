@@ -1,4 +1,5 @@
 'use strict'
+const findYarnWorkspaceRoot = require('find-yarn-workspace-root2')
 const path = require('path')
 const pathExists = require('path-exists')
 const whichPM = require('which-pm')
@@ -29,6 +30,12 @@ module.exports = async function preferredPM (pkgPath) {
     return {
       name: 'pnpm',
       version: '1 || 2'
+    }
+  }
+  if (typeof findYarnWorkspaceRoot(pkgPath) === 'string') {
+    return {
+      name: 'yarn',
+      version: '*'
     }
   }
   const pm = await whichPM(pkgPath)
