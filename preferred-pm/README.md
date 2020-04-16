@@ -4,6 +4,13 @@
 
 [![npm version](https://img.shields.io/npm/v/preferred-pm.svg)](https://www.npmjs.com/package/preferred-pm)
 
+* Inside a Yarn workspace, Yarn is preferred.
+* Inside a pnpm workspace, pnpm is preferred.
+* If a `package-lock.json` is present, npm is preferred.
+* If a `yarn.lock` is present, Yarn is preferred.
+* If a `pnpm-lock.yaml` is present, pnpm is preferred.
+* If a `node_modules` is present, tries to detect which package manager installed it.
+
 ## Installation
 
 ```
