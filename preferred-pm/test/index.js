@@ -1,7 +1,12 @@
 'use strict'
+const ncpcb = require('ncp')
 const test = require('tape')
 const path = require('path')
 const preferredPM = require('preferred-pm')
+const tempy = require('tempy')
+const { promisify } = require('util')
+
+const ncp = promisify(ncpcb)
 
 test('preferredPM()', async t => {
   t.plan(2)
@@ -30,6 +35,12 @@ test('prefer pnpm', async t => {
   t.end()
 })
 
+test('prefer pnpm inside a pnpm workspace', async t => {
+  const pm = await preferredPM(path.join(__dirname, 'pnpm-workspace/packages/pkg'))
+  t.deepEqual(pm, { name: 'pnpm', version: '>=3' })
+  t.end()
+})
+
 test('prefer Yarn', async t => {
   const pm = await preferredPM(path.join(__dirname, 'prefers-yarn'))
   t.deepEqual(pm, { name: 'yarn', version: '*' })
@@ -37,7 +48,9 @@ test('prefer Yarn', async t => {
 })
 
 test('prefer Yarn inside a Yarn workspace', async t => {
-  const pm = await preferredPM(path.join(__dirname, 'yarn-workspace/packages/pkg'))
+  const dir = tempy.directory()
+  await ncp(path.join(__dirname, 'yarn-workspace'), dir)
+  const pm = await preferredPM(path.join(dir, 'packages/pkg'))
   t.deepEqual(pm, { name: 'yarn', version: '*' })
   t.end()
 })
@@ -49,13 +62,17 @@ test('prefer npm 5', async t => {
 })
 
 test('prefer npm', async t => {
-  const pm = await preferredPM(path.join(__dirname, 'prefers-npm'))
+  const dir = tempy.directory()
+  await ncp(path.join(__dirname, 'prefers-npm'), dir)
+  const pm = await preferredPM(dir)
   t.deepEqual(pm, { name: 'npm', version: '*' })
   t.end()
 })
 
 test('prefer nothing', async t => {
-  const pm = await preferredPM(path.join(__dirname, 'prefers-nothing'))
+  const dir = tempy.directory()
+  await ncp(path.join(__dirname, 'prefers-nothing'), dir)
+  const pm = await preferredPM(dir)
   t.equal(pm, null)
   t.end()
 })
