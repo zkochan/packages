@@ -4,7 +4,8 @@
   "description": "Detects what package manager was used for installation",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "scripts": {
     "test": "standard && preview && node test"
