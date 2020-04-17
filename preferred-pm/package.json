@@ -10,7 +10,7 @@
     "test": "standard && preview && node test"
   },
   "engines": {
-    "node": ">=8.15"
+    "node": ">=10"
   },
   "repository": "https://github.com/zkochan/packages/tree/master/preferred-pm",
   "bugs": {
