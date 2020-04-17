@@ -7,7 +7,7 @@ devDependencies:
   '@types/table': 4.0.7
   common-tags: 1.8.0
   jest: 25.2.4
-  ts-jest: 25.2.1_jest@25.2.4
+  ts-jest: 25.4.0_jest@25.2.4+typescript@3.8.2
   typescript: 3.8.2
 lockfileVersion: 5.1
 packages:
@@ -2234,6 +2234,15 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-MoUOQ4WdiN3yxhm7NEVJSJrieAo5hNSLQ5sj05OTRHPL9HOBy8u4Bu88jsC1jvqAdN+E1bJmsUcZH+1HQxliqQ==
+  /json5/2.1.3:
+    dependencies:
+      minimist: 1.2.5
+    dev: true
+    engines:
+      node: '>=6'
+    hasBin: true
+    resolution:
+      integrity: sha512-KXPvOm8K9IJKFM0bmdn8QXh7udDh1g/giieX0NLCaMnb4hEiVFqnop2ImTXCc5e0/oHz3LTqmHGtExn5hfMkOA==
   /jsprim/1.4.1:
     dependencies:
       assert-plus: 1.0.0
@@ -2423,14 +2432,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-WRoDn//mXBiJ1H40rqa3vH0toePwSsGb45iInWlTySa+Uu4k3tYUSxa2v1KqAiLtvlrSzaExqS1gtk96A9zvEA==
-  /mkdirp/0.5.4:
-    dependencies:
-      minimist: 1.2.5
-    deprecated: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+  /mkdirp/1.0.4:
     dev: true
+    engines:
+      node: '>=10'
     hasBin: true
     resolution:
-      integrity: sha512-iG9AK/dJLtJ0XNgTuDbSyNS3zECqDlAhnQW4CsNxBG3LQJBbHmRX1egw39DmtOdCAqY+dKXV+sgPgilNWUKMVw==
+      integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
   /ms/2.0.0:
     dev: true
     resolution:
@@ -2865,6 +2873,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-84oo6ZTtoTUpjgNEr5SJyzQhzL72gaRodsSfyxC/AXRvwu0Yse9H8eF9IpGo7b8YetZhlI6v7ZQ6bKBFV/6S7w==
+  /resolve/1.16.0:
+    dependencies:
+      path-parse: 1.0.6
+    dev: true
+    resolution:
+      integrity: sha512-LarL/PIKJvc09k1jaeT4kQb/8/7P+qV4qSnN2K80AES+OHdfZELAKVOBjxsvtToT/uLOfFbvYvKfZmV8cee7nA==
   /ret/0.1.15:
     dev: true
     engines:
@@ -3327,27 +3341,30 @@ packages:
     dev: true
     resolution:
       integrity: sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=
-  /ts-jest/25.2.1_jest@25.2.4:
+  /ts-jest/25.4.0_jest@25.2.4+typescript@3.8.2:
     dependencies:
       bs-logger: 0.2.6
       buffer-from: 1.1.1
       fast-json-stable-stringify: 2.1.0
       jest: 25.2.4
-      json5: 2.1.2
+      json5: 2.1.3
       lodash.memoize: 4.1.2
       make-error: 1.3.6
-      mkdirp: 0.5.4
-      resolve: 1.15.1
-      semver: 5.7.1
-      yargs-parser: 16.1.0
+      micromatch: 4.0.2
+      mkdirp: 1.0.4
+      resolve: 1.16.0
+      semver: 6.3.0
+      typescript: 3.8.2
+      yargs-parser: 18.1.3
     dev: true
     engines:
-      node: '>= 6'
+      node: '>= 8'
     hasBin: true
     peerDependencies:
       jest: '>=25 <26'
+      typescript: '>=3.4 <4.0'
     resolution:
-      integrity: sha512-TnntkEEjuXq/Gxpw7xToarmHbAafgCaAzOpnajnFC6jI7oo1trMzAHA04eWpc3MhV6+yvhE8uUBAmN+teRJh0A==
+      integrity: sha512-+0ZrksdaquxGUBwSdTIcdX7VXdwLIlSRsyjivVA9gcO+Cvr6ByqDhu/mi5+HCcb6cMkiQp5xZ8qRO7/eCqLeyw==
   /tunnel-agent/0.6.0:
     dependencies:
       safe-buffer: 5.2.0
@@ -3569,13 +3586,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==
-  /yargs-parser/16.1.0:
-    dependencies:
-      camelcase: 5.3.1
-      decamelize: 1.2.0
-    dev: true
-    resolution:
-      integrity: sha512-H/V41UNZQPkUMIT5h5hiwg4QKIY1RPvoBV4XcjUbRM8Bk2oKqqyZ0DIEbTFZB0XjbtSPG8SAa/0DxCQmiRgzKg==
   /yargs-parser/18.1.2:
     dependencies:
       camelcase: 5.3.1
@@ -3585,6 +3595,15 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-hlIPNR3IzC1YuL1c2UwwDKpXlNFBqD1Fswwh1khz5+d8Cq/8yc/Mn0i+rQXduu8hcrFKvO7Eryk+09NecTQAAQ==
+  /yargs-parser/18.1.3:
+    dependencies:
+      camelcase: 5.3.1
+      decamelize: 1.2.0
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-o50j0JeToy/4K6OZcaQmW6lyXXKhq7csREXcDwk2omFPJEwUNOVtJKvmDr9EI1fAJZUyZcRF7kxGBWmRXudrCQ==
   /yargs/15.3.1:
     dependencies:
       cliui: 6.0.0
@@ -3611,5 +3630,5 @@ specifiers:
   common-tags: 1.8.0
   jest: 25.2.4
   table: ^5.4.6
-  ts-jest: 25.2.1
+  ts-jest: 25.4.0
   typescript: 3.8.2
