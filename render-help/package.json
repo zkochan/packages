@@ -38,7 +38,7 @@
     "common-tags": "1.8.0",
     "jest": "25.2.4",
     "ts-jest": "25.2.1",
-    "typescript": "3.8.2"
+    "typescript": "3.8.3"
   },
   "jest": {
     "preset": "ts-jest",

@@ -8,7 +8,7 @@ devDependencies:
   common-tags: 1.8.0
   jest: 25.2.4
   ts-jest: 25.2.1_jest@25.2.4
-  typescript: 3.8.2
+  typescript: 3.8.3
 lockfileVersion: 5.1
 packages:
   /@babel/code-frame/7.8.3:
@@ -3384,13 +3384,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==
-  /typescript/3.8.2:
+  /typescript/3.8.3:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-EgOVgL/4xfVrCMbhYKUQTdF37SQn4Iw73H5BgCrF1Abdun7Kwy/QZsE/ssAy0y4LxBbvua3PIbFsbRczWWnDdQ==
+      integrity: sha512-MYlEfn5VrLNsgudQTVJeNaQFUAI7DkhnOjdpAp4T+ku1TfQClewlbSuTVHiA+8skNBgaf02TL/kLOvig4y3G8w==
   /union-value/1.0.1:
     dependencies:
       arr-union: 3.1.0
@@ -3612,4 +3612,4 @@ specifiers:
   jest: 25.2.4
   table: ^5.4.6
   ts-jest: 25.2.1
-  typescript: 3.8.2
+  typescript: 3.8.3
