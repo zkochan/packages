@@ -1,5 +1,5 @@
 devDependencies:
-  '@changesets/cli': 2.6.4
+  '@changesets/cli': 2.6.5
 lockfileVersion: 5.1
 packages:
   /@babel/runtime/7.9.2:
@@ -25,22 +25,22 @@ packages:
     dev: true
     resolution:
       integrity: sha512-669J0pdG5/0hnj3h0azYMsD5LjVLtwnKzPp/LIWpapezuHvZFX+nogGT4ZWr9VwRgWTuaPiWttZbbL3HhEPc+Q==
-  /@changesets/assemble-release-plan/2.0.1:
+  /@changesets/assemble-release-plan/2.0.2:
     dependencies:
       '@babel/runtime': 7.9.2
       '@changesets/errors': 0.1.4
-      '@changesets/get-dependents-graph': 1.1.1
+      '@changesets/get-dependents-graph': 1.1.2
       '@changesets/types': 2.0.1
       '@manypkg/get-packages': 1.0.1
       semver: 5.7.1
     dev: true
     resolution:
-      integrity: sha512-blQgiivP+7mMOQPxUVDArDTG76nNuD5Mh2nAJTyeelV0OBzkrVw6GwHaZAw3YVXp7STOI3kYO7XbqGfHOjs4Gw==
-  /@changesets/cli/2.6.4:
+      integrity: sha512-luWSta8yUcYxCXJw2IrCDhsBE+AilONt1iZ7Ifj7a9qprcgX9NiPY6R6zyX1KLWB7F3HHj90XD3N4+jNni66SA==
+  /@changesets/cli/2.6.5:
     dependencies:
       '@babel/runtime': 7.9.2
       '@changesets/apply-release-plan': 2.0.1
-      '@changesets/assemble-release-plan': 2.0.1
+      '@changesets/assemble-release-plan': 2.0.2
       '@changesets/config': 1.0.3
       '@changesets/errors': 0.1.4
       '@changesets/get-release-plan': 1.0.3
@@ -61,6 +61,7 @@ packages:
       meow: 5.0.0
       outdent: 0.5.0
       p-limit: 2.3.0
+      preferred-pm: 3.0.0
       semver: 5.7.1
       spawndamnit: 2.0.0
       term-size: 2.2.0
@@ -68,7 +69,7 @@ packages:
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-DEOtdun3nLEJtQbB0jcbAmKcmfCcrr2CeMm2OG+Ai/YHO91j4S/2OgOP4oGS6im6twqtDUUtdKPT2x5iKHkEKg==
+      integrity: sha512-vy6FET6o0Y29uGxnYfOjj6Sclx6FYDLtmfI2aL3s6JV+FAQSZVfecENtJtFiwvBO6VL5h3hVP5SensjFVXiDRA==
   /@changesets/config/1.0.3:
     dependencies:
       '@changesets/errors': 0.1.4
@@ -85,7 +86,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-HAcqPF7snsUJ/QzkWoKfRfXushHTu+K5KZLJWPb34s4eCZShIf8BFO3fwq6KU8+G7L5KdtN2BzQAXOSXEyiY9Q==
-  /@changesets/get-dependents-graph/1.1.1:
+  /@changesets/get-dependents-graph/1.1.2:
     dependencies:
       '@changesets/types': 2.0.1
       '@manypkg/get-packages': 1.0.1
@@ -94,11 +95,11 @@ packages:
       semver: 5.7.1
     dev: true
     resolution:
-      integrity: sha512-kxK7I7+qQ6zANu1j9c6LRVtX7/SQ+yG6fVtGJA0Bx8dQ8lG137W1EW08Wb3HlVrdayQqrLy2KhlFwh3FLKbIzg==
+      integrity: sha512-E6r4vMAdiT3qI8pzbK4bcKzeE5tvWB54FClyBKsqA5E8WyD8eDbipYTshaBWnKy0GefTGuhkML2k4U+1d7PCOA==
   /@changesets/get-release-plan/1.0.3:
     dependencies:
       '@babel/runtime': 7.9.2
-      '@changesets/assemble-release-plan': 2.0.1
+      '@changesets/assemble-release-plan': 2.0.2
       '@changesets/config': 1.0.3
       '@changesets/pre': 1.0.3
       '@changesets/read': 0.4.5
@@ -174,7 +175,7 @@ packages:
   /@manypkg/find-root/1.0.0:
     dependencies:
       '@babel/runtime': 7.9.2
-      '@types/node': 12.12.35
+      '@types/node': 12.12.37
       find-up: 4.1.0
       fs-extra: 8.1.0
     dev: true
@@ -218,10 +219,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
-  /@types/node/12.12.35:
+  /@types/node/12.12.37:
     dev: true
     resolution:
-      integrity: sha512-ASYsaKecA7TUsDrqIGPNk3JeEox0z/0XR/WsJJ8BIX/9+SkMSImQXKWfU/yBrSyc7ZSE/NPqLu36Nur0miCFfQ==
+      integrity: sha512-4mXKoDptrXAwZErQHrLzpe0FN/0Wmf5JRniSVIdwUrtDf9wnmEV1teCNLBo/TwuXhkK/bVegoEn/wmb+x0AuPg==
   /@types/semver/6.2.1:
     dev: true
     resolution:
@@ -418,19 +419,19 @@ packages:
     dev: true
     resolution:
       integrity: sha512-qNM9eqlxd53TWJeGtY1IQPj90b563Zx49eZs8e0uMyEvPgvNVmX1uZDtdzAcflB3PniuH9creAzcFOdyJ9YGvA==
-  /csv-parse/4.8.8:
+  /csv-parse/4.8.9:
     dev: true
     resolution:
-      integrity: sha512-Kv3Ilz2GV58dOoHBXRCTF8ijxlLjl80bG3d67XPI6DNqffb3AnbPbKr/WvCUMJq5V0AZYi6sukOaOQAVpfuVbg==
-  /csv-stringify/5.3.6:
+      integrity: sha512-uDxIDIDLb89gxqixSgGqDj3EA5A8D0pgUeyp9Qut8u+eCIC8IXkTtaxJEnnWDb6N2HqBY64suSlcOGg5ZBtsAQ==
+  /csv-stringify/5.4.3:
     dev: true
     resolution:
-      integrity: sha512-kPcRbMvo5NLLD71TAqW5K+g9kbM2HpIZJLAzm73Du8U+5TXmDp9YtXKCBLyxEh0q3Jbg8QhNFBz3b5VJzjZ/jw==
+      integrity: sha512-WJLgRJQcVjPK45jXS1xfnkwVbw9bOjg2F2BQRa9OkG7Di2W/geclPZNlcQTwxbzn1nEDI2ane2AubTdTd6gCvw==
   /csv/5.3.2:
     dependencies:
       csv-generate: 3.2.4
-      csv-parse: 4.8.8
-      csv-stringify: 5.3.6
+      csv-parse: 4.8.9
+      csv-stringify: 5.4.3
       stream-transform: 2.0.1
     dev: true
     engines:
@@ -567,6 +568,13 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==
+  /find-yarn-workspace-root2/1.2.11:
+    dependencies:
+      micromatch: 4.0.2
+      pkg-dir: 4.2.0
+    dev: true
+    resolution:
+      integrity: sha512-TkwH3kDD1Z8X9LnrU3gbyYw8KtLZZjsym6c2YIRFCDIMJD1JL9+Blkzpm07db+Q6ZVLISqrW9cN0CvXN4rr5ag==
   /fs-extra/7.0.1:
     dependencies:
       graceful-fs: 4.2.3
@@ -748,6 +756,17 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-L19Fq5HjMhYjT9U62rZo607AmTs=
+  /load-yaml-file/0.2.0:
+    dependencies:
+      graceful-fs: 4.2.3
+      js-yaml: 3.13.1
+      pify: 4.0.1
+      strip-bom: 3.0.0
+    dev: true
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-OfCBkGEw4nN6JLtgRidPX6QxjBQGQf72q3si2uvqyFEMbycSFFHwAZeXx6cJgFM9wmLrf9zBwCP3Ivqa+LLZPw==
   /locate-path/2.0.0:
     dependencies:
       p-locate: 2.0.0
@@ -846,7 +865,7 @@ packages:
   /normalize-package-data/2.5.0:
     dependencies:
       hosted-git-info: 2.8.8
-      resolve: 1.16.0
+      resolve: 1.17.0
       semver: 5.7.1
       validate-npm-package-license: 3.0.4
     dev: true
@@ -991,6 +1010,25 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
+  /pkg-dir/4.2.0:
+    dependencies:
+      find-up: 4.1.0
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==
+  /preferred-pm/3.0.0:
+    dependencies:
+      find-up: 4.1.0
+      find-yarn-workspace-root2: 1.2.11
+      path-exists: 4.0.0
+      which-pm: 2.0.0
+    dev: true
+    engines:
+      node: '>=10'
+    resolution:
+      integrity: sha512-NbN+2UuqjakJpyHamsuIWyeFdQcFUQHF9nkw16hpFE++z3px+/KDsj+AF1h0BlnsBJi1Z5U4EKBW7XnHriny8g==
   /prettier/1.19.1:
     dev: true
     engines:
@@ -1067,12 +1105,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==
-  /resolve/1.16.0:
+  /resolve/1.17.0:
     dependencies:
       path-parse: 1.0.6
     dev: true
     resolution:
-      integrity: sha512-LarL/PIKJvc09k1jaeT4kQb/8/7P+qV4qSnN2K80AES+OHdfZELAKVOBjxsvtToT/uLOfFbvYvKfZmV8cee7nA==
+      integrity: sha512-ic+7JYiV8Vi2yzQGFWOkiZD5Z9z7O2Zhm9XMaTxdJExKasieFCr+yXZ/WmXsckHiKl12ar0y6XiXDx3m4RHn1w==
   /reusify/1.0.4:
     dev: true
     engines:
@@ -1143,13 +1181,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-lr2EZCctC2BNR7j7WzJ2FpDznxky1sjfxvvYEyzxNyb6lZXHODmEoJeFu4JupYlkfha1KZpJyoqiJ7pgA1qq8Q==
-  /spdx-exceptions/2.2.0:
+  /spdx-exceptions/2.3.0:
     dev: true
     resolution:
-      integrity: sha512-2XQACfElKi9SlVb1CYadKDXvoajPgBVPn/gOQLrTvHdElaVhr7ZEbqJaRnJLVNeaI4cMEAgVCeBMKF6MWRDCRA==
+      integrity: sha512-/tTrYOC7PPI1nUAgx34hUpqXuyJG+DTHJTnIULG4rDygi4xu/tfgmq1e1cIRwRzwZgo4NLySi+ricLkZkw4i5A==
   /spdx-expression-parse/3.0.0:
     dependencies:
-      spdx-exceptions: 2.2.0
+      spdx-exceptions: 2.3.0
       spdx-license-ids: 3.0.5
     dev: true
     resolution:
@@ -1302,6 +1340,15 @@ packages:
     dev: true
     resolution:
       integrity: sha1-2e8H3Od7mQK4o6j6SzHD4/fm6Ho=
+  /which-pm/2.0.0:
+    dependencies:
+      load-yaml-file: 0.2.0
+      path-exists: 4.0.0
+    dev: true
+    engines:
+      node: '>=8.15'
+    resolution:
+      integrity: sha512-Lhs9Pmyph0p5n5Z3mVnN0yWcbQYUAD7rbQUiMsQxOJ3T57k7RFe35SUwWMf7dsbDZks1uOmw4AecB/JMDj3v/w==
   /which/1.3.1:
     dependencies:
       isexe: 2.0.0
@@ -1369,4 +1416,4 @@ packages:
     resolution:
       integrity: sha512-92O1HWEjw27sBfgmXiixJWT5hRBp2eobqXicLtPBIDBhYB+1HpwZlXmbW2luivBJHBzki+7VyCLRtAkScbTBQA==
 specifiers:
-  '@changesets/cli': 2.6.4
+  '@changesets/cli': 2.6.5
