@@ -48,6 +48,6 @@
     "mos": "^2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
     "standard": "^14.3.3",
-    "tape": "^4.13.2"
+    "tape": "^5.0.0"
   }
 }

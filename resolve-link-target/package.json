@@ -32,7 +32,7 @@
   "devDependencies": {
     "standard": "14.3.3",
     "symlink-dir": "^3.1.2",
-    "tape": "^4.13.2"
+    "tape": "^5.0.0"
   },
   "dependencies": {
     "graceful-fs": "^4.2.3"
