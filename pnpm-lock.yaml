@@ -254,7 +254,7 @@ importers:
       '@types/common-tags': 1.8.0
       '@types/jest': 25.1.4
       '@types/node': 12.12.35
-      '@types/table': 4.0.7
+      '@types/table': 5.0.0
       common-tags: 1.8.0
       jest: 25.4.0
       ts-jest: 25.4.0_jest@25.4.0+typescript@3.8.3
@@ -263,7 +263,7 @@ importers:
       '@types/common-tags': ^1.8.0
       '@types/jest': ^25.1.4
       '@types/node': ^12.12.31
-      '@types/table': ^4.0.7
+      '@types/table': '5'
       common-tags: ^1.8.0
       jest: ^25.4.0
       table: ^5.4.6
@@ -359,7 +359,7 @@ importers:
       execa: 4.0.0
       npm: ^6.14.4
       package-preview: 3.0.0
-      pnpm: 4.12.1
+      pnpm: '4'
       tape: ^5.0.0
       yarn: ^1.22.4
   write-ini-file:
@@ -1238,10 +1238,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
-  /@types/table/4.0.7:
+  /@types/table/5.0.0:
     dev: true
     resolution:
-      integrity: sha512-HKtXvBxU8U8evZCSlUi9HbfT/SFW7nSGCoiBEheB06jAhXeW6JbGh8biEAqIFG5rZo9f8xeJVdIn455sddmIcw==
+      integrity: sha512-fQLtGLZXor264zUPWI95WNDsZ3QV43/c0lJpR/h1hhLJumXRmHNsrvBfEzW2YMhb0EWCsn4U6h82IgwsajAuTA==
   /@types/tape/4.13.0:
     dependencies:
       '@types/node': 12.12.35
