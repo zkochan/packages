@@ -257,7 +257,7 @@ importers:
       '@types/table': 4.0.7
       common-tags: 1.8.0
       jest: 25.4.0
-      ts-jest: 25.2.1_jest@25.4.0
+      ts-jest: 25.4.0_jest@25.4.0+typescript@3.8.3
       typescript: 3.8.3
     specifiers:
       '@types/common-tags': ^1.8.0
@@ -267,7 +267,7 @@ importers:
       common-tags: ^1.8.0
       jest: ^25.4.0
       table: ^5.4.6
-      ts-jest: ^25.2.1
+      ts-jest: ^25.4.0
       typescript: ^3.8.3
   resolve-link-target:
     dependencies:
@@ -5258,6 +5258,13 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
+  /mkdirp/1.0.4:
+    dev: true
+    engines:
+      node: '>=10'
+    hasBin: true
+    resolution:
+      integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
   /mos-core/1.0.2:
     dependencies:
       babel-run-async: 1.0.0
@@ -7939,7 +7946,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-WFhUf2spB1fulczMZm+1AITEYN0=
-  /ts-jest/25.2.1_jest@25.4.0:
+  /ts-jest/25.4.0_jest@25.4.0+typescript@3.8.3:
     dependencies:
       bs-logger: 0.2.6
       buffer-from: 1.1.1
@@ -7948,18 +7955,21 @@ packages:
       json5: 2.1.3
       lodash.memoize: 4.1.2
       make-error: 1.3.6
-      mkdirp: 0.5.5
+      micromatch: 4.0.2
+      mkdirp: 1.0.4
       resolve: 1.17.0
-      semver: 5.7.1
-      yargs-parser: 16.1.0
+      semver: 6.3.0
+      typescript: 3.8.3
+      yargs-parser: 18.1.3
     dev: true
     engines:
-      node: '>= 6'
+      node: '>= 8'
     hasBin: true
     peerDependencies:
       jest: '>=25 <26'
+      typescript: '>=3.4 <4.0'
     resolution:
-      integrity: sha512-TnntkEEjuXq/Gxpw7xToarmHbAafgCaAzOpnajnFC6jI7oo1trMzAHA04eWpc3MhV6+yvhE8uUBAmN+teRJh0A==
+      integrity: sha512-+0ZrksdaquxGUBwSdTIcdX7VXdwLIlSRsyjivVA9gcO+Cvr6ByqDhu/mi5+HCcb6cMkiQp5xZ8qRO7/eCqLeyw==
   /ts-node/8.9.0_typescript@3.8.3:
     dependencies:
       arg: 4.1.3
@@ -8501,13 +8511,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-VCIyR1wJoEBZUqk5PA+oOBF6ypbwh5aNB3I50guxAL/quggdfs4TtNHQrSazFA3fYZ+tEqfs0zIGlv0c/rgjbQ==
-  /yargs-parser/16.1.0:
-    dependencies:
-      camelcase: 5.3.1
-      decamelize: 1.2.0
-    dev: true
-    resolution:
-      integrity: sha512-H/V41UNZQPkUMIT5h5hiwg4QKIY1RPvoBV4XcjUbRM8Bk2oKqqyZ0DIEbTFZB0XjbtSPG8SAa/0DxCQmiRgzKg==
   /yargs-parser/18.1.3:
     dependencies:
       camelcase: 5.3.1
