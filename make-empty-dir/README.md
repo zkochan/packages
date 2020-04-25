@@ -6,7 +6,7 @@
 
 Ensures that a directory is empty. Deletes directory contents if the directory is not empty. If the directory does not exist, it is created. The directory itself is not deleted.
 
-It works faster than `emptyDir()` of `fs-extra` because the contents of the directory is not read before the creation of the directory.
+It works faster than `emptyDir()` of `fs-extra` because the contents of the directory are not read before the creation of the directory.
 
 ## Installation
 
@@ -32,12 +32,15 @@ await makeEmptyDir('dir/subdir', { recursive: true })
 
 **Arguments:**
 
-* `dir` - *Path* - the path of the directory
+* `dir` - *Path* - the path of the directory.
 * `opts.recursive` - *Boolean* - Optional. If true, parent directories will be created.
 
 **Returns:**
 
-A string is returned. `'created'` if there was no directory. `'emptied'` if there was a directory and the its contents were removed.
+A string is returned.
+
+* `'created'` - if there was no directory
+* `'emptied'` - if there was a directory and the its contents were removed.
 
 ## License
 
