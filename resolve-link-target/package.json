@@ -31,7 +31,7 @@
   "homepage": "https://github.com/zkochan/packages/tree/master/resolve-link-target#readme",
   "devDependencies": {
     "standard": "14.3.3",
-    "symlink-dir": "^3.1.2",
+    "symlink-dir": "^4.0.1",
     "tape": "^5.0.0"
   },
   "dependencies": {
