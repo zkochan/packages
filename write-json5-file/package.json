@@ -4,7 +4,7 @@
   "description": "Stringify and write JSON to a file atomically",
   "main": "index.js",
   "engines": {
-    "node": ">=8.15"
+    "node": ">=10.12"
   },
   "files": [
     "index.js",
@@ -43,7 +43,6 @@
   "dependencies": {
     "graceful-fs": "^4.2.3",
     "json5": "^2.1.2",
-    "make-dir": "^3.0.2",
     "sort-keys": "^4.0.0",
     "write-file-atomic": "^2.4.3"
   },
