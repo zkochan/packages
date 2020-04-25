@@ -1,0 +1,38 @@
+{
+  "name": "make-empty-dir",
+  "version": "0.0.0",
+  "description": "Ensures that a directory is empty",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "node test"
+  },
+  "engines": {
+    "node": ">=10.12"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/master/make-empty-dir",
+  "keywords": [
+    "directory",
+    "folder",
+    "mkdir",
+    "make-dir",
+    "empty"
+  ],
+  "author": {
+    "name": "Zoltan Kochan",
+    "url": "https://www.kochan.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/master/make-empty-dir#readme",
+  "devDependencies": {
+    "tape": "^5.0.0",
+    "tempy": "^0.5.0"
+  },
+  "dependencies": {
+    "graceful-fs": "^4.2.3",
+    "rimraf": "^3.0.2"
+  }
+}

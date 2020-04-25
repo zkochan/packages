@@ -110,6 +110,18 @@ importers:
       mos: ^2.0.0-alpha.3
       mos-plugin-readme: ^1.0.4
       tape: ^5.0.0
+  make-empty-dir:
+    dependencies:
+      graceful-fs: 4.2.3
+      rimraf: 3.0.2
+    devDependencies:
+      tape: 5.0.0
+      tempy: 0.5.0
+    specifiers:
+      graceful-fs: ^4.2.3
+      rimraf: ^3.0.2
+      tape: ^5.0.0
+      tempy: ^0.5.0
   path-absolute:
     devDependencies:
       standard: 14.3.3
