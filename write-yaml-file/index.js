@@ -1,10 +1,12 @@
 'use strict'
 const path = require('path')
 const fs = require('graceful-fs')
-const writeFileAtomic = require('write-file-atomic')
-const makeDir = require('make-dir')
-const pify = require('pify')
+const _writeFileAtomic = require('write-file-atomic')
 const YAML = require('js-yaml')
+const { promisify } = require('util')
+
+const writeFileAtomic = promisify(_writeFileAtomic)
+const mkdir = promisify(fs.mkdir)
 
 const main = (fn, fp, data, opts) => {
   if (!fp) {
@@ -22,11 +24,12 @@ const main = (fn, fp, data, opts) => {
   return fn(fp, yaml, { mode: opts.mode })
 }
 
-module.exports = (fp, data, opts) =>
-  makeDir(path.dirname(fp), { fs })
-    .then(() => main(pify(writeFileAtomic), fp, data, opts))
+module.exports = async (fp, data, opts) => {
+  await mkdir(path.dirname(fp), { recursive: true })
+  return main(writeFileAtomic, fp, data, opts)
+}
 
 module.exports.sync = (fp, data, opts) => {
-  makeDir.sync(path.dirname(fp), { fs })
+  fs.mkdirSync(path.dirname(fp), { recursive: true })
   main(writeFileAtomic.sync, fp, data, opts)
 }
