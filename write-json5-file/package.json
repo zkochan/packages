@@ -1,6 +1,6 @@
 {
   "name": "write-json5-file",
-  "version": "2.1.2",
+  "version": "3.0.0",
   "description": "Stringify and write JSON to a file atomically",
   "main": "index.js",
   "engines": {
