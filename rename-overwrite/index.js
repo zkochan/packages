@@ -25,7 +25,7 @@ module.exports = async function renameOverwrite (oldPath, newPath) {
         await rename(oldPath, newPath)
         break
       case 'ENOENT':
-        mkdir(path.dirname(newPath), { recursive: true })
+        await mkdir(path.dirname(newPath), { recursive: true })
         await rename(oldPath, newPath)
         break
       default:
