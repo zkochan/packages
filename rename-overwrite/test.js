@@ -96,3 +96,25 @@ test('sync rename directory when no overwrite is needed', t => {
   t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
   t.end()
 })
+
+test('create target directory, if it does not exist', async t => {
+  process.chdir(tempy.directory())
+
+  writeJsonFile.sync('dir/foo.json', 1)
+
+  await renameOverwrite('dir', 'newdir/subdir')
+
+  t.equal(loadJsonFile.sync('newdir/subdir/foo.json'), 1)
+  t.end()
+})
+
+test('sync create target directory, if it does not exist', t => {
+  process.chdir(tempy.directory())
+
+  writeJsonFile.sync('dir/foo.json', 1)
+
+  renameOverwrite.sync('dir', 'newdir/subdir')
+
+  t.equal(loadJsonFile.sync('newdir/subdir/foo.json'), 1)
+  t.end()
+})
