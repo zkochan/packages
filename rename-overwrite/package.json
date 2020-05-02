@@ -8,7 +8,7 @@
     "index.d.ts"
   ],
   "engines": {
-    "node": ">=10.13"
+    "node": ">=10.12"
   },
   "scripts": {
     "test": "standard && preview && node test"
