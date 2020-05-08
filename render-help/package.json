@@ -36,7 +36,7 @@
     "@types/node": "^12.12.31",
     "@types/table": "5",
     "common-tags": "^1.8.0",
-    "jest": "^25.4.0",
+    "jest": "^26.0.0",
     "ts-jest": "^25.4.0",
     "typescript": "^3.8.3"
   },
