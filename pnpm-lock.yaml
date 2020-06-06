@@ -329,7 +329,7 @@ importers:
       tape: ^5.0.1
   run-groups:
     dependencies:
-      p-limit: 3.0.0
+      p-limit: 3.0.1
     devDependencies:
       '@types/tape': 4.13.0
       delay: 4.3.0
@@ -340,7 +340,7 @@ importers:
     specifiers:
       '@types/tape': ^4.13.0
       delay: 4.3.0
-      p-limit: ^3.0.0
+      p-limit: ^3.0.1
       package-preview: 3.0.0
       tape: ^5.0.1
       ts-node: ^8.10.2
@@ -6043,14 +6043,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==
-  /p-limit/3.0.0:
+  /p-limit/3.0.1:
     dependencies:
       p-try: 2.2.0
     dev: false
     engines:
       node: '>=10'
     resolution:
-      integrity: sha512-2FnzNu8nBx8Se231yrvScYw34Is5J5MtvKOQt7Lii+DGpM89xnCT7kIH/HJwniNkQpjB7zy/O3LckEfMVqYvFg==
+      integrity: sha512-mw/p92EyOzl2MhauKodw54Rx5ZK4624rNfgNaBguFZkHzyUG9WsDzFF5/yQVEJinbJDdP4jEfMN+uBquiGnaLg==
   /p-locate/2.0.0:
     dependencies:
       p-limit: 1.3.0

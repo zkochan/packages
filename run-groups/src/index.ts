@@ -1,4 +1,4 @@
-import pLimit from 'p-limit'
+import pLimit = require('p-limit')
 
 export default async (concurrency: number, groups: (() => Promise<void>)[][]) => {
   const limitRun = pLimit(concurrency)
