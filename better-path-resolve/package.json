@@ -33,8 +33,8 @@
     "is-windows": "^1.0.2"
   },
   "devDependencies": {
-    "mos": "^2.0.0-alpha.3",
+    "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "tape": "^5.0.0"
+    "tape": "^5.0.1"
   }
 }

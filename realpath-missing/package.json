@@ -22,9 +22,9 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/realpath-missing#readme",
   "dependencies": {
-    "graceful-fs": "4"
+    "graceful-fs": "^4.2.4"
   },
   "devDependencies": {
-    "tape": "5.0.0"
+    "tape": "5.0.1"
   }
 }

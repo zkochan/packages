@@ -26,16 +26,16 @@
   "homepage": "https://github.com/zkochan/packages/tree/master/root-link-target#readme",
   "dependencies": {
     "can-link": "^1.0.2",
-    "graceful-fs": "^4.2.3",
+    "graceful-fs": "^4.2.4",
     "next-path": "^1.0.0",
     "path-temp": "2.0.0"
   },
   "devDependencies": {
-    "mos": "^2.0.0-alpha.3",
+    "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
     "package-preview": "3.0.0",
-    "standard": "14.3.3",
-    "tape": "^5.0.0"
+    "standard": "14.3.4",
+    "tape": "^5.0.1"
   },
   "mos": {
     "plugins": [

@@ -23,7 +23,7 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/promise-share#readme",
   "devDependencies": {
-    "tape": "^5.0.0"
+    "tape": "^5.0.1"
   },
   "dependencies": {
     "p-reflect": "^2.1.0"
