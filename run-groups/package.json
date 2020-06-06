@@ -1,15 +1,13 @@
 {
   "name": "run-groups",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Runs a sequence of concurrent task groups",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "engines": {
     "node": ">=10"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
     "test": "preview && ts-node test",
     "tsc": "tsc",
