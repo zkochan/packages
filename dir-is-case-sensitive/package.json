@@ -35,7 +35,7 @@
     "@types/node": "*",
     "@types/tape": "^4.13.0",
     "package-preview": "3.0.0",
-    "tape": "5.0.1",
+    "tape": "^5.0.1",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
   }

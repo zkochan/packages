@@ -30,7 +30,7 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/resolve-link-target#readme",
   "devDependencies": {
-    "standard": "14.3.4",
+    "standard": "^14.3.4",
     "symlink-dir": "^4.1.0",
     "tape": "^5.0.1"
   },

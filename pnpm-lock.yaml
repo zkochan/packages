@@ -30,7 +30,7 @@ importers:
       mos: 2.0.0-alpha.3
       mos-plugin-readme: ^1.0.4
       package-preview: 3.0.0
-      standard: 14.3.4
+      standard: ^14.3.4
       tape: ^5.0.1
   dir-is-case-sensitive:
     dependencies:
@@ -51,7 +51,7 @@ importers:
       graceful-fs: ^4.2.4
       package-preview: 3.0.0
       path-temp: 2.0.0
-      tape: 5.0.1
+      tape: ^5.0.1
       ts-node: ^8.10.2
       typescript: ^3.9.5
   graceful-git:
@@ -93,7 +93,7 @@ importers:
       package-preview: 3.0.0
       resolve-link-target: ^1.0.1
       rimraf: ^3.0.2
-      standard: 14.3.4
+      standard: ^14.3.4
       symlink-dir: ^4.1.0
       tape: ^5.0.1
   is-subdir:
@@ -126,7 +126,7 @@ importers:
     devDependencies:
       standard: 14.3.4
     specifiers:
-      standard: 14.3.4
+      standard: ^14.3.4
   path-temp:
     dependencies:
       unique-string: 2.0.0
@@ -140,7 +140,7 @@ importers:
       mos: 2.0.0-alpha.3
       mos-plugin-readme: ^1.0.4
       package-preview: 3.0.0
-      standard: 14.3.4
+      standard: ^14.3.4
       tape: ^5.0.1
       unique-string: ^2.0.0
   preferred-pm:
@@ -238,7 +238,7 @@ importers:
       tape: 5.0.1
     specifiers:
       graceful-fs: ^4.2.4
-      tape: 5.0.1
+      tape: ^5.0.1
   rename-overwrite:
     dependencies:
       graceful-fs: 4.2.4
@@ -255,10 +255,10 @@ importers:
       load-json-file: 6.2.0
       package-preview: 3.0.0
       rimraf: ^3.0.2
-      standard: 14.3.4
+      standard: ^14.3.4
       tape: ^5.0.1
       tempy: ^0.5.0
-      write-json-file: 4.3.0
+      write-json-file: ^4.3.0
   render-help:
     dependencies:
       table: 5.4.6
@@ -290,7 +290,7 @@ importers:
       tape: 5.0.1
     specifiers:
       graceful-fs: ^4.2.4
-      standard: 14.3.4
+      standard: ^14.3.4
       symlink-dir: ^4.1.0
       tape: ^5.0.1
   rimraf:
@@ -304,7 +304,7 @@ importers:
       '@types/glob': '*'
       '@types/node': '*'
       rimraf: ^3.0.2
-      standard: 14.3.4
+      standard: ^14.3.4
   root-link-target:
     dependencies:
       can-link: 1.0.2
@@ -325,7 +325,7 @@ importers:
       next-path: ^1.0.0
       package-preview: 3.0.0
       path-temp: 2.0.0
-      standard: 14.3.4
+      standard: ^14.3.4
       tape: ^5.0.1
   run-groups:
     dependencies:
@@ -342,7 +342,7 @@ importers:
       delay: 4.3.0
       p-limit: ^3.0.0
       package-preview: 3.0.0
-      tape: 5.0.1
+      tape: ^5.0.1
       ts-node: ^8.10.2
       typescript: ^3.9.5
   which-pm:
@@ -418,7 +418,7 @@ importers:
       mos: 2.0.0-alpha.3
       mos-plugin-readme: ^1.0.4
       sort-keys: ^4.0.0
-      standard: 14.3.4
+      standard: ^14.3.4
       tape: ^5.0.1
       tempfile: ^3.0.0
       write-file-atomic: ^2.4.3
@@ -432,7 +432,7 @@ importers:
     specifiers:
       graceful-fs: ^4.2.4
       js-yaml: ^3.14.0
-      standard: 14.3.4
+      standard: ^14.3.4
       write-file-atomic: ^2.4.3
 lockfileVersion: 5.1
 packages:

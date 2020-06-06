@@ -25,6 +25,6 @@
     "graceful-fs": "^4.2.4"
   },
   "devDependencies": {
-    "tape": "5.0.1"
+    "tape": "^5.0.1"
   }
 }
