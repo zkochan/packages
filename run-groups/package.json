@@ -24,7 +24,7 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/run-groups#readme",
   "dependencies": {
-    "p-limit": "2.3.0"
+    "p-limit": "3.0.0"
   },
   "devDependencies": {
     "@types/tape": "^4.2.34",
