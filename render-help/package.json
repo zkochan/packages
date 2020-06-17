@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@types/common-tags": "^1.8.0",
-    "@types/jest": "^25.2.3",
+    "@types/jest": "^26.0.0",
     "@types/node": "^14.0.13",
     "@types/table": "^5.0.0",
     "common-tags": "^1.8.0",
