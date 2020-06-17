@@ -23,11 +23,11 @@ canWriteToDir.sync('C:\\')
 
 ## API
 
-### `canLink.sync(dir): Boolean`
+### `canWriteToDir.sync(dir): Boolean`
 
 Returns `true` if `fs.writeFileSync` is able to create a file.
 
-### `canLink(dir): Promise<Boolean>`
+### `canWriteToDir(dir): Promise<Boolean>`
 
 Returns `true` if `fs.writeFile` is able to create a file.
 
