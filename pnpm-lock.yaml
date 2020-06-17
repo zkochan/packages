@@ -32,6 +32,20 @@ importers:
       package-preview: 3.0.0
       standard: ^14.3.4
       tape: ^5.0.1
+  can-write-to-dir:
+    dependencies:
+      graceful-fs: 4.2.4
+      path-temp: 2.0.0
+    devDependencies:
+      package-preview: 3.0.0
+      standard: 14.3.4
+      tape: 5.0.1
+    specifiers:
+      graceful-fs: ^4.2.4
+      package-preview: 3.0.0
+      path-temp: ^2.0.0
+      standard: ^14.3.4
+      tape: ^5.0.1
   dir-is-case-sensitive:
     dependencies:
       graceful-fs: 4.2.4
@@ -1213,7 +1227,7 @@ packages:
       integrity: sha512-VgNIkxK+j7Nz5P7jvUZlRvhuPSmsEfS03b0alKcq5V/STUKAa3Plemsn5mrQUO7am6OErJ4rhGEGJbACclrtRA==
   /@types/got/8.3.5:
     dependencies:
-      '@types/node': 10.17.26
+      '@types/node': 14.0.13
     dev: true
     resolution:
       integrity: sha512-AaXSrIF99SjjtPVNmCmYb388HML+PKEJb/xmj4SbL2ZO0hHuETZZzyDIKfOqaEoAHZEuX4sC+FRFrHYJoIby6A==
