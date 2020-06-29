@@ -31,7 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "find-up": "^4.1.0",
-    "find-yarn-workspace-root2": "^1.2.16",
+    "find-yarn-workspace-root2": "1.2.16",
     "path-exists": "^4.0.0",
     "which-pm": "2.0.0"
   },

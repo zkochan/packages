@@ -171,7 +171,7 @@ importers:
       tempy: 0.5.0
     specifiers:
       find-up: ^4.1.0
-      find-yarn-workspace-root2: ^1.2.16
+      find-yarn-workspace-root2: 1.2.16
       ncp: ^2.0.0
       package-preview: 3.0.0
       path-exists: ^4.0.0
@@ -456,6 +456,12 @@ packages:
     dev: true
     resolution:
       integrity: sha512-IGhtTmpjGbYzcEDOw7DcQtbQSXcG9ftmAXtWTu9V936vDye4xjjekktFAtgZsWpzTj/X01jocB46mTywm/4SZw==
+  /@babel/code-frame/7.10.3:
+    dependencies:
+      '@babel/highlight': 7.10.3
+    dev: true
+    resolution:
+      integrity: sha512-fDx9eNW0qz0WkUeqL6tXEXzVlPh6Y5aCDEZesl0xBGA8ndRukX91Uk44ZqnkECp01NAZUdCAl+aiQNGi0k88Eg==
   /@babel/core/7.10.2:
     dependencies:
       '@babel/code-frame': 7.10.1
@@ -562,6 +568,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-5vW/JXLALhczRCWP0PnFDMCJAchlBvM7f4uk/jXritBnIa6E1KmqmtrS3yn1LAnxFBypQ3eneLuXjsnfQsgILw==
+  /@babel/helper-validator-identifier/7.10.3:
+    dev: true
+    resolution:
+      integrity: sha512-bU8JvtlYpJSBPuj1VUmKpFGaDZuLxASky3LhaKj3bmpSTY6VWooSM8msk+Z0CZoErFye2tlABF6yDkT3FOPAXw==
   /@babel/helpers/7.10.1:
     dependencies:
       '@babel/template': 7.10.1
@@ -578,6 +588,14 @@ packages:
     dev: true
     resolution:
       integrity: sha512-8rMof+gVP8mxYZApLF/JgNDAkdKa+aJt3ZYxF8z6+j/hpeXL7iMsKCPHa2jNMHu/qqBwzQF4OHNoYi8dMA/rYg==
+  /@babel/highlight/7.10.3:
+    dependencies:
+      '@babel/helper-validator-identifier': 7.10.3
+      chalk: 2.4.2
+      js-tokens: 4.0.0
+    dev: true
+    resolution:
+      integrity: sha512-Ih9B/u7AtgEnySE2L2F0Xm0GaM729XqqLfHkalTsbjXGyqmf/6M0Cu0WpvqueUlW+xk88BHw9Nkpj49naU+vWw==
   /@babel/parser/7.10.2:
     dev: true
     engines:
@@ -1227,7 +1245,7 @@ packages:
       integrity: sha512-VgNIkxK+j7Nz5P7jvUZlRvhuPSmsEfS03b0alKcq5V/STUKAa3Plemsn5mrQUO7am6OErJ4rhGEGJbACclrtRA==
   /@types/got/8.3.5:
     dependencies:
-      '@types/node': 14.0.13
+      '@types/node': 10.17.26
     dev: true
     resolution:
       integrity: sha512-AaXSrIF99SjjtPVNmCmYb388HML+PKEJb/xmj4SbL2ZO0hHuETZZzyDIKfOqaEoAHZEuX4sC+FRFrHYJoIby6A==
@@ -1276,6 +1294,10 @@ packages:
   /@types/node/14.0.13:
     resolution:
       integrity: sha512-rouEWBImiRaSJsVA+ITTFM6ZxibuAlTuNOCyxVbwreu6k6+ujs7DfnU9o+PShFhET78pMBl3eH+AGSI5eOTkPA==
+  /@types/node/14.0.14:
+    dev: true
+    resolution:
+      integrity: sha512-syUgf67ZQpaJj01/tRTknkMNoBBLWJOBODF0Zm4NrXmiSuxjymFrxnTu1QVYRubhVkRcZLYZG8STTwJRdVm/WQ==
   /@types/normalize-package-data/2.4.0:
     dev: true
     resolution:
@@ -1290,7 +1312,7 @@ packages:
       integrity: sha512-+beqKQOh9PYxuHvijhVl+tIHvT6tuwOrE9m14zd+MT2A38KoKZhh7pYJ0SNleLtwDsiIxHDsIk9bv01oOxvSvA==
   /@types/ssri/6.0.3:
     dependencies:
-      '@types/node': 14.0.13
+      '@types/node': 14.0.14
     dev: true
     resolution:
       integrity: sha512-mYh0G0jytNFBi/tT91pg7wKtcaoy5G07YBDkR4Sq9Z+2fX1ZJgRGNKDnaRWQQuNDo9r9wJ22J6oqnElZmV+qLQ==
@@ -2837,7 +2859,7 @@ packages:
       has-symbols: 1.0.1
       is-callable: 1.2.0
       is-regex: 1.1.0
-      object-inspect: 1.7.0
+      object-inspect: 1.8.0
       object-keys: 1.1.1
       object.assign: 4.1.0
       string.prototype.trimend: 1.0.1
@@ -3030,21 +3052,21 @@ packages:
       integrity: sha512-iiGRvtxWqgtx5m8EyQUJihBloE4EnYeGE/bz1wSPwJE6tZuJUtHlhqDM4Xj2ukE8Dyy1+HCZ4hE0fzIVMzb58w==
   /eslint-utils/1.4.3:
     dependencies:
-      eslint-visitor-keys: 1.2.0
+      eslint-visitor-keys: 1.3.0
     dev: true
     engines:
       node: '>=6'
     resolution:
       integrity: sha512-fbBN5W2xdY45KulGXmLHZ3c3FHfVYmKg0IrAKGOkT/464PQsx2UeIzfz1RmEci+KLm1bBaAzZAh8+/E+XAeZ8Q==
-  /eslint-visitor-keys/1.2.0:
+  /eslint-visitor-keys/1.3.0:
     dev: true
     engines:
       node: '>=4'
     resolution:
-      integrity: sha512-WFb4ihckKil6hu3Dp798xdzSfddwKKU3+nGniKF6HfeW6OLd2OUDEPP7TcHtB5+QXOKg2s6B2DaMPE1Nn/kxKQ==
+      integrity: sha512-6J72N8UNa462wa/KFODt/PJ3IU60SDpC3QXC1Hjc1BXXpfL2C9R5+AU7jhe0F6GREqVMh4Juu+NY7xn+6dipUQ==
   /eslint/6.8.0:
     dependencies:
-      '@babel/code-frame': 7.10.1
+      '@babel/code-frame': 7.10.3
       ajv: 6.12.2
       chalk: 2.4.2
       cross-spawn: 6.0.5
@@ -3052,7 +3074,7 @@ packages:
       doctrine: 3.0.0
       eslint-scope: 5.1.0
       eslint-utils: 1.4.3
-      eslint-visitor-keys: 1.2.0
+      eslint-visitor-keys: 1.3.0
       espree: 6.2.1
       esquery: 1.3.1
       esutils: 2.0.3
@@ -3091,7 +3113,7 @@ packages:
     dependencies:
       acorn: 7.3.1
       acorn-jsx: 5.2.0_acorn@7.3.1
-      eslint-visitor-keys: 1.2.0
+      eslint-visitor-keys: 1.3.0
     dev: true
     engines:
       node: '>=6.0.0'
@@ -5908,10 +5930,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-NLymRKgPlPi6QaD50JhOr2Os8U0=
-  /object-inspect/1.7.0:
+  /object-inspect/1.8.0:
     dev: true
     resolution:
-      integrity: sha512-a7pEHdh1xKIAgTySUGgLMx/xwDZskN1Ud6egYYN3EdRW4ZMPNEDUTF+hwy2LUC+Bl+SyLXANnwz/jyh/qutKUw==
+      integrity: sha512-jLdtEOB112fORuypAyl/50VRVIBIdVQOSUUGQHzJ4xBSbit81zRarz7GThkEFZy1RceYrWYcPcBFPQwHyAc1gA==
   /object-is/1.1.2:
     dependencies:
       define-properties: 1.1.3
@@ -6195,7 +6217,7 @@ packages:
       integrity: sha1-vjX1Qlvh9/bHRxhPmKeIy5lHfuA=
   /parse-json/5.0.0:
     dependencies:
-      '@babel/code-frame': 7.10.1
+      '@babel/code-frame': 7.10.3
       error-ex: 1.3.2
       json-parse-better-errors: 1.0.2
       lines-and-columns: 1.1.6
@@ -7209,7 +7231,7 @@ packages:
   /side-channel/1.0.2:
     dependencies:
       es-abstract: 1.17.6
-      object-inspect: 1.7.0
+      object-inspect: 1.8.0
     dev: true
     resolution:
       integrity: sha512-7rL9YlPHg7Ancea1S96Pa8/QWb4BtXL/TZvS6B8XFetGBeuhAsfmUspK6DokBeZ64+Kj9TCNRD/30pVz1BvQNA==
@@ -7796,7 +7818,7 @@ packages:
       inherits: 2.0.4
       is-regex: 1.1.0
       minimist: 1.2.5
-      object-inspect: 1.7.0
+      object-inspect: 1.8.0
       object-is: 1.1.2
       object.assign: 4.1.0
       resolve: 1.17.0
