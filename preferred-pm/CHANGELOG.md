@@ -1,5 +1,11 @@
 # preferred-pm
 
+## 3.0.2
+
+### Patch Changes
+
+- 17d5363: Update find-up to v5.
+
 ## 3.0.1
 
 ### Patch Changes
