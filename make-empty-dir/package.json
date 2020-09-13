@@ -29,7 +29,7 @@
   "homepage": "https://github.com/zkochan/packages/tree/master/make-empty-dir#readme",
   "devDependencies": {
     "tape": "^5.0.1",
-    "tempy": "^0.5.0"
+    "tempy": "^0.7.0"
   },
   "dependencies": {
     "graceful-fs": "^4.2.4",
