@@ -28,13 +28,13 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/render-help#readme",
   "dependencies": {
-    "table": "^5.4.6"
+    "table": "^6.0.0"
   },
   "devDependencies": {
     "@types/common-tags": "^1.8.0",
     "@types/jest": "^25.2.3",
     "@types/node": "^14.0.13",
-    "@types/table": "^5.0.0",
+    "@types/table": "^6.0.0",
     "common-tags": "^1.8.0",
     "jest": "^26.0.1",
     "ts-jest": "^26.1.0",
