@@ -1,12 +1,10 @@
 {
   "name": "render-help",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates a nice output for a CLI --help",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "engines": {
     "node": ">=10"
   },
