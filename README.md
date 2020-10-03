@@ -5,4 +5,4 @@
 ## Development Setup
 
 1. clone the repo
-1. run `pnpm recursive install`
+1. run `pnpm install`
