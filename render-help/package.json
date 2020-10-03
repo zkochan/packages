@@ -28,7 +28,7 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/render-help#readme",
   "dependencies": {
-    "table": "^5.4.6"
+    "table": "^6.0.3"
   },
   "devDependencies": {
     "@types/common-tags": "^1.8.0",
