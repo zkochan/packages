@@ -35,7 +35,7 @@
     "package-preview": "3.0.0",
     "standard": "^14.3.4",
     "tape": "^5.0.1",
-    "tempy": "^0.7.1",
+    "tempy": "^1.0.0",
     "write-json-file": "^4.3.0"
   }
 }
