@@ -1,11 +1,10 @@
 'use strict'
 const path = require('path')
 const fs = require('graceful-fs')
-const _writeFileAtomic = require('write-file-atomic')
+const writeFileAtomic = require('write-file-atomic')
 const YAML = require('js-yaml')
 const { promisify } = require('util')
 
-const writeFileAtomic = promisify(_writeFileAtomic)
 const mkdir = promisify(fs.mkdir)
 
 const main = (fn, fp, data, opts) => {

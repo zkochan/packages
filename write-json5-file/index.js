@@ -2,7 +2,7 @@
 const path = require('path')
 const fs = require('graceful-fs')
 const { promisify } = require('util')
-const writeFileAtomic = promisify(require('write-file-atomic'))
+const writeFileAtomic = require('write-file-atomic')
 const sortKeys = require('sort-keys')
 const JSON5 = require('json5')
 
