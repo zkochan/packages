@@ -46,7 +46,7 @@
     "mos-plugin-readme": "^1.0.4",
     "package-preview": "3.0.0",
     "rimraf": "^3.0.2",
-    "standard": "^14.3.4",
+    "standard": "^16.0.1",
     "symlink-dir": "^4.1.0",
     "tape": "^5.0.1"
   }
