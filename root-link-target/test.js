@@ -7,11 +7,8 @@ test('rootLinkTarget.sync()', t => {
   t.end()
 })
 
-test('rootLinkTarget.sync()', t => {
-  rootLinkTarget('package.json')
-    .then(root => {
-      t.equal(typeof root, 'string')
-      t.end()
-    })
-    .catch(t.end)
+test('rootLinkTarget.sync()', async t => {
+  const root = await rootLinkTarget('package.json')
+  t.equal(typeof root, 'string')
+  t.end()
 })
