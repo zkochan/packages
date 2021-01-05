@@ -20,9 +20,9 @@ test('isSubdir()', t => {
 })
 
 test('isSubdir.strict()', t => {
-
   t.notOk(isSubdir.strict(process.cwd(), process.cwd()))
   t.notOk(isSubdir.strict('node_modules/tape', '../tape'))
+  t.ok(isSubdir.strict('node_modules', path.resolve('node_modules', 'tape')))
 
   t.end()
 })
