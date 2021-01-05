@@ -8,7 +8,7 @@
 
 Cross-platform. Works correctly on Windows, where directory paths can start with disk drive letters in different casings. Like `c:\foo` and `C:\foo\bar`.
 
-Returns `true` when the directories match.
+Returns `true` when the directories match. The `isSubdir.strict()` variant only returns true if the second parameter is a strict subdir of the first and not the same.
 
 ## Installation
 
@@ -25,11 +25,14 @@ const isSubdir = require('is-subdir')
 
 console.log(isSubdir(process.cwd(), path.resolve('node_modules')))
 //> true
+console.log(isSubdir.strict('node_modules/tape', '../tape'))
+//> false
 ```
 
 ## API
 
 ### `isSubdir(parentDir, subdir): boolean`
+### `isSubdir.strict(parentDir, subdir): boolean`
 
 ## License
 

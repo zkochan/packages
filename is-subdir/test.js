@@ -18,3 +18,11 @@ test('isSubdir()', t => {
 
   t.end()
 })
+
+test('isSubdir.strict()', t => {
+
+  t.notOk(isSubdir.strict(process.cwd(), process.cwd()))
+  t.notOk(isSubdir.strict('node_modules/tape', '../tape'))
+
+  t.end()
+})
