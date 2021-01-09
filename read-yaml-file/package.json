@@ -26,7 +26,6 @@
   "dependencies": {
     "graceful-fs": "^4.2.4",
     "js-yaml": "^4.0.0",
-    "pify": "^5.0.0",
     "strip-bom": "^4.0.0"
   },
   "devDependencies": {

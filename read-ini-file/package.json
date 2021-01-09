@@ -42,7 +42,6 @@
   "dependencies": {
     "graceful-fs": "^4.2.4",
     "ini": "^1.3.5",
-    "pify": "^5.0.0",
     "strip-bom": "^4.0.0"
   },
   "devDependencies": {
