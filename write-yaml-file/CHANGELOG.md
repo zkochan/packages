@@ -1,5 +1,11 @@
 # write-yaml-file
 
+## 4.1.3
+
+### Patch Changes
+
+- 75dbec3: Fix stringifying the Yaml object.
+
 ## 4.1.2
 
 ### Patch Changes
