@@ -1,6 +1,6 @@
 {
   "name": "write-ini-file",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Stringify and write ini to a file atomically",
   "main": "index.js",
   "engines": {

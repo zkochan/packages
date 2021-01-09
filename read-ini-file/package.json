@@ -1,6 +1,6 @@
 {
   "name": "read-ini-file",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Read and parse an ini file",
   "main": "index.js",
   "files": [

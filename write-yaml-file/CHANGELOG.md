@@ -1,5 +1,11 @@
 # write-yaml-file
 
+## 4.1.2
+
+### Patch Changes
+
+- 5f01634: Update js-yaml to version 4.
+
 ## 4.1.1
 
 ### Patch Changes
