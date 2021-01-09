@@ -5,7 +5,7 @@ const pify = require('pify')
 const stripBom = require('strip-bom')
 const yaml = require('js-yaml')
 
-const parse = data => yaml.safeLoad(stripBom(data))
+const parse = data => yaml.load(stripBom(data))
 
 const readYamlFile = fp => pify(fs.readFile)(fp, 'utf8').then(data => parse(data))
 
