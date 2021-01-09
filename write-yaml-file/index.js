@@ -18,7 +18,7 @@ const main = (fn, fp, data, opts) => {
 
   opts = opts || {}
 
-  const yaml = YAML.safeDump(data, opts)
+  const yaml = YAML.dump(data, opts)
 
   return fn(fp, yaml, { mode: opts.mode })
 }
