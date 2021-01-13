@@ -1,6 +1,6 @@
 {
   "name": "can-write-to-dir",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Returns true if the current process has permission to write to the specified directory",
   "main": "index.js",
   "typings": "index.d.ts",
