@@ -12,7 +12,7 @@ module.exports = (dir, customFs) => {
         resolve(true)
         return
       }
-      if (err.code === 'EACCES' || err.code === 'EPERM') {
+      if (err.code === 'EACCES' || err.code === 'EPERM' || err.code === 'EROFS') {
         resolve(false)
         return
       }
