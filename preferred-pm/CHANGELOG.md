@@ -1,5 +1,11 @@
 # preferred-pm
 
+## 3.0.3
+
+### Patch Changes
+
+- 094cecc: Fix types.
+
 ## 3.0.2
 
 ### Patch Changes
