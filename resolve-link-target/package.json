@@ -12,7 +12,7 @@
     "test": "standard && tape test.js"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=10"
   },
   "repository": "https://github.com/zkochan/packages/tree/master/resolve-link-target",
   "keywords": [
@@ -30,8 +30,8 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/resolve-link-target#readme",
   "devDependencies": {
-    "standard": "^16.0.1",
+    "standard": "^16.0.3",
     "symlink-dir": "^4.1.0",
-    "tape": "^5.0.1"
+    "tape": "^5.1.1"
   }
 }

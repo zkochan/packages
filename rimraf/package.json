@@ -23,7 +23,7 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/rimraf#readme",
   "devDependencies": {
-    "standard": "^16.0.1"
+    "standard": "^16.0.3"
   },
   "dependencies": {
     "@types/glob": "*",

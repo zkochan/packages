@@ -37,6 +37,6 @@
     "write-file-atomic": "^3.0.3"
   },
   "devDependencies": {
-    "standard": "^16.0.1"
+    "standard": "^16.0.3"
   }
 }

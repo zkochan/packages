@@ -18,7 +18,7 @@
     "hardlink"
   ],
   "engines": {
-    "node": ">=12"
+    "node": ">=10"
   },
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
@@ -27,8 +27,8 @@
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
     "package-preview": "3.0.0",
-    "standard": "^16.0.1",
-    "tape": "^5.0.1"
+    "standard": "^16.0.3",
+    "tape": "^5.1.1"
   },
   "mos": {
     "plugins": [
