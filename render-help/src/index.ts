@@ -79,20 +79,20 @@ function renderDescriptionList (descriptionItems: DescriptionItem[], width: numb
   const descriptionColumnWidth = Math.max(2, width - firstColumnMaxWidth - nameColumnWidth - 2 - 2 - 1)
   return multiTrim(table(data, {
     ...TABLE_OPTIONS,
-    columns: [
-      {
+    columns: {
+      0: {
         ...SHORT_OPTION_COLUMN,
         ...FIRST_COLUMN,
       },
-      {
+      1: {
         width: nameColumnWidth,
         ...LONG_OPTION_COLUMN,
       },
-      {
+      2: {
         width: descriptionColumnWidth,
         ...DESCRIPTION_COLUMN,
       },
-    ],
+    },
   }))
 }
 
