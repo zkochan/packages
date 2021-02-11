@@ -24,7 +24,6 @@
     "test": "standard && preview && node test"
   },
   "dependencies": {
-    "graceful-fs": "^4.2.4",
     "js-yaml": "^4.0.0",
     "strip-bom": "^4.0.0"
   },

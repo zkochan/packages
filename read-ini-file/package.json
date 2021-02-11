@@ -40,7 +40,6 @@
   },
   "homepage": "https://github.com/zkochan/packages/tree/master/read-ini-file#readme#readme",
   "dependencies": {
-    "graceful-fs": "^4.2.4",
     "ini": "^2.0.0",
     "strip-bom": "^4.0.0"
   },

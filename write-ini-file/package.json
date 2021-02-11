@@ -44,7 +44,6 @@
   },
   "homepage": "https://github.com/zkochan/packages/tree/master/write-ini-file#readme#readme",
   "dependencies": {
-    "graceful-fs": "^4.2.4",
     "ini": "^2.0.0",
     "make-dir": "^3.1.0",
     "write-file-atomic": "^3.0.3"

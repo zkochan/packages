@@ -25,7 +25,6 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/can-write-to-dir#readme",
   "dependencies": {
-    "graceful-fs": "^4.2.4",
     "path-temp": "^2.0.0"
   },
   "devDependencies": {

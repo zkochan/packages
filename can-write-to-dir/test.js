@@ -34,16 +34,20 @@ test('canWriteToDir() returns true', async t => {
 
 test('canWriteToDir() returns false on EACCES error', async t => {
   t.notOk(await canWriteToDir('/', {
-    writeFile: (a1, a2, a3, cb) => cb(eaccesErr),
-    unlink: (p, cb) => cb()
+    promises: {
+      writeFile: (a1, a2, a3, cb) => Promise.reject(eaccesErr),
+      unlink: (p, cb) => Promise.resolve()
+    }
   }))
   t.end()
 })
 
 test('canWriteToDir() returns false on EACCES error', async t => {
   t.notOk(await canWriteToDir('/', {
-    writeFile: (a1, a2, a3, cb) => cb(epermErr),
-    unlink: (p, cb) => cb()
+    promises: {
+      writeFile: (a1, a2, a3, cb) => Promise.reject(epermErr),
+      unlink: (p, cb) => Promise.resolve()
+    }
   }))
   t.end()
 })

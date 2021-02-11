@@ -1,11 +1,8 @@
-const fs = require('graceful-fs')
-const { promisify } = require('util')
-
-const realpath = promisify(fs.realpath)
+const fs = require('fs')
 
 module.exports = async function realpathMissing (path) {
   try {
-    return await realpath(path)
+    return await fs.promises.realpath(path)
   } catch (err) {
     if (err.code === 'ENOENT') {
       return path

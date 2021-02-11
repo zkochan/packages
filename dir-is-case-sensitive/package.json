@@ -27,11 +27,9 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/dir-is-case-sensitive#readme",
   "dependencies": {
-    "graceful-fs": "^4.2.4",
     "path-temp": "2.0.0"
   },
   "devDependencies": {
-    "@types/graceful-fs": "*",
     "@types/node": "*",
     "@types/tape": "^4.13.0",
     "package-preview": "3.0.0",

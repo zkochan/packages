@@ -33,8 +33,5 @@
     "standard": "^16.0.1",
     "symlink-dir": "^4.1.0",
     "tape": "^5.0.1"
-  },
-  "dependencies": {
-    "graceful-fs": "^4.2.4"
   }
 }

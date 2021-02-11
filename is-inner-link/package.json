@@ -36,7 +36,6 @@
   },
   "homepage": "https://github.com/zkochan/packages/tree/master/is-inner-link#readme",
   "dependencies": {
-    "graceful-fs": "^4.2.4",
     "is-subdir": "^1.1.1",
     "resolve-link-target": "^1.0.1"
   },

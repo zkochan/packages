@@ -1,12 +1,9 @@
 'use strict'
 const path = require('path')
-const fs = require('graceful-fs')
-const { promisify } = require('util')
+const fs = require('fs')
 const writeFileAtomic = require('write-file-atomic')
 const sortKeys = require('sort-keys')
 const JSON5 = require('json5')
-
-const mkdir = promisify(fs.mkdir)
 
 const main = (fn, fp, data, opts) => {
   if (!fp) {
@@ -35,7 +32,7 @@ const main = (fn, fp, data, opts) => {
 }
 
 module.exports = async (fp, data, opts) => {
-  await mkdir(path.dirname(fp), { recursive: true })
+  await fs.promises.mkdir(path.dirname(fp), { recursive: true })
   return main(writeFileAtomic, fp, data, opts)
 }
 

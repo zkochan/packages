@@ -1,21 +1,14 @@
 'use strict'
-const fs = require('graceful-fs')
+const fs = require('fs')
 const path = require('path')
 
 module.exports = getLinkTarget
 module.exports.sync = getLinkTargetSync
 
-function getLinkTarget (linkPath) {
+async function getLinkTarget (linkPath) {
   linkPath = path.resolve(linkPath)
-  return new Promise((resolve, reject) => {
-    fs.readlink(linkPath, (err, target) => {
-      if (err) {
-        reject(err)
-        return
-      }
-      resolve(_resolveLink(linkPath, target))
-    })
-  })
+  const target = await fs.promises.readlink(linkPath)
+  return _resolveLink(linkPath, target)
 }
 
 function getLinkTargetSync (linkPath) {

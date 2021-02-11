@@ -1,6 +1,5 @@
 'use strict'
 const path = require('path')
-const fs = require('graceful-fs')
 const writeFileAtomic = require('write-file-atomic')
 const makeDir = require('make-dir')
 const ini = require('ini')
@@ -22,10 +21,10 @@ const main = (fn, fp, data, opts) => {
 }
 
 module.exports = (fp, data, opts) =>
-  makeDir(path.dirname(fp), { fs })
+  makeDir(path.dirname(fp))
     .then(() => main(writeFileAtomic, fp, data, opts))
 
 module.exports.sync = (fp, data, opts) => {
-  makeDir.sync(path.dirname(fp), { fs })
+  makeDir.sync(path.dirname(fp))
   main(writeFileAtomic.sync, fp, data, opts)
 }

@@ -18,14 +18,11 @@
     "hardlink"
   ],
   "engines": {
-    "node": ">=4"
+    "node": ">=12"
   },
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/can-link#readme",
-  "dependencies": {
-    "graceful-fs": "^4.2.4"
-  },
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",

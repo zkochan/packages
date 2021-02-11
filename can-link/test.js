@@ -45,8 +45,10 @@ test('canLink() returns true', t => {
 
 test('canLink() returns false', t => {
   canLink('package.json', 'node_modules/package.json', {
-    link: (existingPath, newPath, cb) => cb(exdevErr),
-    unlink: (p, cb) => cb()
+    promises: {
+      link: (existingPath, newPath, cb) => Promise.reject(exdevErr),
+      unlink: (p, cb) => Promise.resolve()
+    }
   })
     .then(can => {
       t.notOk(can)
@@ -57,8 +59,10 @@ test('canLink() returns false', t => {
 
 test('canLink() returns false on EACCES error', t => {
   canLink('package.json', 'node_modules/package.json', {
-    link: (existingPath, newPath, cb) => cb(eaccesErr),
-    unlink: (p, cb) => cb()
+    promises: {
+      link: (existingPath, newPath, cb) => Promise.reject(eaccesErr),
+      unlink: (p, cb) => Promise.resolve()
+    }
   })
     .then(can => {
       t.notOk(can)
@@ -67,21 +71,22 @@ test('canLink() returns false on EACCES error', t => {
     .catch(t.end)
 })
 
-test('canLink() returns false on EPERM error', t => {
-  canLink('package.json', 'node_modules/package.json', {
-    link: (existingPath, newPath, cb) => cb(epermErr),
-    unlink: (p, cb) => cb()
+test('canLink() returns false on EPERM error', async t => {
+  const can = await canLink('package.json', 'node_modules/package.json', {
+    promises: {
+      link: (existingPath, newPath, cb) => Promise.reject(epermErr),
+      unlink: (p, cb) => cb()
+    }
   })
-    .then(can => {
-      t.notOk(can)
-      t.end()
-    })
-    .catch(t.end)
+  t.notOk(can)
+  t.end()
 })
 
 test('canLink() non-exdev error passed through', t => {
   canLink('package.json', 'node_modules/package.json', {
-    link: (existingPath, newPath, cb) => cb(new Error('Error'))
+    promises: {
+      link: (existingPath, newPath, cb) => Promise.reject(new Error('Error'))
+    }
   })
     .then(can => {
       t.fail('should have failed')

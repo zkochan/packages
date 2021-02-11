@@ -1,26 +1,26 @@
 'use strict'
-const gracefulFs = require('graceful-fs')
+const defaultFS = require('fs')
 
-module.exports = (existingPath, newPath, customFs) => {
-  const fs = customFs || gracefulFs
-  return new Promise((resolve, reject) => {
-    fs.link(existingPath, newPath, err => {
-      if (!err) {
-        fs.unlink(newPath, () => {})
-        resolve(true)
-        return
-      }
-      if (err.code === 'EXDEV' || err.code === 'EACCES' || err.code === 'EPERM') {
-        resolve(false)
-        return
-      }
-      reject(err)
-    })
-  })
+module.exports = async (existingPath, newPath, customFS) => {
+  const fs = customFS || defaultFS
+  try {
+    await fs.promises.link(existingPath, newPath)
+    fs.promises.unlink(newPath).catch(() => {})
+    return true
+  } catch (err) {
+    if (
+      err.code === 'EXDEV' ||
+      err.code === 'EACCES' ||
+      err.code === 'EPERM'
+    ) {
+      return false
+    }
+    throw err
+  }
 }
 
-module.exports.sync = (existingPath, newPath, customFs) => {
-  const fs = customFs || gracefulFs
+module.exports.sync = (existingPath, newPath, customFS) => {
+  const fs = customFS || defaultFS
   try {
     fs.linkSync(existingPath, newPath)
     fs.unlinkSync(newPath)

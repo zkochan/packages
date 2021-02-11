@@ -32,7 +32,6 @@
     "tempy": "^1.0.0"
   },
   "dependencies": {
-    "graceful-fs": "^4.2.4",
     "rimraf": "^3.0.2"
   }
 }
