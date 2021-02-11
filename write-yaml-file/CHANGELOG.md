@@ -1,5 +1,11 @@
 # write-yaml-file
 
+## 4.2.0
+
+### Minor Changes
+
+- bba9985: graceful-fs and mz removed from dependencies.
+
 ## 4.1.3
 
 ### Patch Changes

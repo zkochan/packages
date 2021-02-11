@@ -1,6 +1,6 @@
 {
   "name": "is-inner-link",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Returns true if a link targets a directory inside its parent directory",
   "main": "index.js",
   "files": [
@@ -37,7 +37,7 @@
   "homepage": "https://github.com/zkochan/packages/tree/master/is-inner-link#readme",
   "dependencies": {
     "is-subdir": "^1.2.0",
-    "resolve-link-target": "^1.0.1"
+    "resolve-link-target": "workspace:^2.0.0"
   },
   "devDependencies": {
     "make-dir": "^3.1.0",

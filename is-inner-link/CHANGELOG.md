@@ -1,6 +1,9 @@
-# root-link-target
+# is-inner-link
 
-## 3.1.0
+## 4.0.0
+### Major Changes
+
+- bba9985: Support of Node.js versions older than 10 is dropped.
 
 ### Minor Changes
 
@@ -10,10 +13,4 @@
 
 - Updated dependencies [bba9985]
 - Updated dependencies [bba9985]
-  - can-link@2.0.0
-
-## 3.0.0
-
-### Major Changes
-
-- ce3290e: Drop Node.js 8 support and use async/await syntax.
+  - resolve-link-target@2.0.0

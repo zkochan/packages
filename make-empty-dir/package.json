@@ -1,6 +1,6 @@
 {
   "name": "make-empty-dir",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Ensures that a directory is empty",
   "main": "index.js",
   "files": [

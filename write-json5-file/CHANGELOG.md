@@ -1,5 +1,11 @@
 # write-json5-file
 
+## 3.1.0
+
+### Minor Changes
+
+- bba9985: graceful-fs and mz removed from dependencies.
+
 ## 3.0.1
 
 ### Patch Changes
