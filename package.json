@@ -2,5 +2,10 @@
   "devDependencies": {
     "@changesets/cli": "^2.14.1"
   },
-  "private": true
+  "private": true,
+  "pnpm": {
+    "overrides": {
+      "@types/node": "14.14.6"
+    }
+  }
 }
