@@ -8,6 +8,8 @@ jobs:
         node_version: 10.x
       node_12_x:
         node_version: 12.x
+      node_14_x:
+        node_version: 14.x
     maxParallel: 3
   steps:
   - task: NodeTool@0
@@ -17,7 +19,7 @@ jobs:
 
   - script: npm install -g pnpm
     displayName: 'Install pnpm'
-  - script: pnpm recursive install
+  - script: pnpm install
     displayName: 'Install dependencies'
-  - script: pnpm recursive test
+  - script: pnpm -r --no-bail test
     displayName: 'Run tests'
