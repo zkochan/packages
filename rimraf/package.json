@@ -1,6 +1,6 @@
 {
   "name": "@zkochan/rimraf",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "rm -rf for Node. Similar to rimraf but returns a promise",
   "main": "index.js",
   "typings": "index.d.ts",
