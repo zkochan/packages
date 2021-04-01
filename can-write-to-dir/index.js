@@ -25,7 +25,7 @@ module.exports.sync = (dir, customFS) => {
     fs.unlinkSync(tempFile)
     return true
   } catch (err) {
-    if (err.code === 'EACCES' || err.code === 'EPERM') {
+    if (err.code === 'EACCES' || err.code === 'EPERM' || err.code === 'EROFS') {
       return false
     }
     throw err
