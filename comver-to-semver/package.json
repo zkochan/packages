@@ -1,0 +1,30 @@
+{
+  "name": "comver-to-semver",
+  "version": "1.0.0",
+  "description": "Converts a comver (compatible version) to a semver (semantic version).",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/master/comver-to-semver",
+  "keywords": [
+    "comver",
+    "semver"
+  ],
+  "engines": {
+    "node": ">=12.17"
+  },
+  "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/master/comver-to-semver#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "tape": "^5.1.1"
+  }
+}

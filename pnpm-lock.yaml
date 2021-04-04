@@ -51,6 +51,12 @@ importers:
       standard: 16.0.3
       tape: 5.2.2
 
+  comver-to-semver:
+    specifiers:
+      tape: ^5.1.1
+    devDependencies:
+      tape: 5.2.2
+
   dir-is-case-sensitive:
     specifiers:
       '@types/node': 14.14.6
