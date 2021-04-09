@@ -26,6 +26,6 @@
     "tape": "^5.1.1"
   },
   "dependencies": {
-    "p-reflect": "^2.1.0"
+    "p-reflect": "^3.0.0"
   }
 }
