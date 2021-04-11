@@ -13,17 +13,32 @@ module.exports = async function renameOverwrite (oldPath, newPath) {
       case 'ENOTEMPTY':
       case 'EEXIST':
         await rimraf(newPath)
-        await fs.promises.rename(oldPath, newPath)
+        await renameOverwrite(oldPath, newPath)
         break
-      // weird Windows stuff
+      // Windows Antivirus issues
       case 'EPERM':
-        await new Promise(resolve => setTimeout(resolve, 200))
+      case 'EACCESS': {
         await rimraf(newPath)
-        await fs.promises.rename(oldPath, newPath)
-        break
+        const start = Date.now()
+        let backoff = 0
+        let lastError = err
+        while (Date.now() - start < 60000 && (lastError.code === 'EPERM' || lastError.code === 'EACCESS')) {
+          await new Promise(resolve => setTimeout(resolve, backoff))
+          try {
+            await fs.promises.rename(oldPath, newPath)
+            return
+          } catch (err) {
+            lastError = err
+          }
+          if (backoff < 100) {
+            backoff += 10
+          }
+        }
+        throw lastError
+      }
       case 'ENOENT':
         await fs.promises.mkdir(path.dirname(newPath), { recursive: true })
-        await fs.promises.rename(oldPath, newPath)
+        await renameOverwrite(oldPath, newPath)
         break
       default:
         throw err
