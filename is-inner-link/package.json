@@ -45,7 +45,7 @@
     "mos-plugin-readme": "^1.0.4",
     "package-preview": "3.0.0",
     "standard": "^16.0.3",
-    "symlink-dir": "^4.1.0",
+    "symlink-dir": "^5.0.0",
     "tape": "^5.1.1"
   }
 }
