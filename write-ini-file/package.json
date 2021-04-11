@@ -51,7 +51,7 @@
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "package-preview": "3.0.0",
+    "package-preview": "4.0.0",
     "standard": "^16.0.3",
     "tape": "^5.1.1",
     "tempfile": "^3.0.0"
