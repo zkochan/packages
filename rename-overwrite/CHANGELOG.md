@@ -1,5 +1,11 @@
 # rename-overwrite
 
+## 4.0.0
+
+### Breaking Changes
+
+- Drop Node.js 10 support
+
 ## 3.1.0
 
 ### Minor Changes

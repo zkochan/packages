@@ -258,15 +258,15 @@ importers:
 
   rename-overwrite:
     specifiers:
+      '@zkochan/rimraf': ^2.1.0
       load-json-file: 6.2.0
       package-preview: 3.0.0
-      rimraf: ^3.0.2
       standard: ^16.0.3
       tape: ^5.2.2
       tempy: ^1.0.1
       write-json-file: ^4.3.0
     dependencies:
-      rimraf: 3.0.2
+      '@zkochan/rimraf': 2.1.0
     devDependencies:
       load-json-file: 6.2.0
       package-preview: 3.0.0
@@ -1359,6 +1359,11 @@ packages:
       babel-run-async: 1.0.0
       babel-runtime: 6.26.0
     dev: true
+
+  /@zkochan/rimraf/2.1.0:
+    resolution: {integrity: sha512-a8yw+qEmQszHCD4ghIjZ3jbbQvjQAfFa7PBgAGRYK0YGoG8sHTe+VeoGuiy91ad7Ksvh3rFjxiPzBPRCVDCcGQ==}
+    engines: {node: '>=12.10'}
+    dev: false
 
   /abab/2.0.5:
     resolution: {integrity: sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==}

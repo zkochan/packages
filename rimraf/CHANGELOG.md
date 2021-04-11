@@ -1,5 +1,10 @@
 # @zkochan/rimraf
 
+## 2.1.0
+### Minor Changes
+
+- sync function added.
+
 ## 1.0.1
 ### Patch Changes
 

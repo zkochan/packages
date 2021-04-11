@@ -1,9 +1,7 @@
 'use strict'
 const fs = require('fs')
 const path = require('path')
-const promisify = require('util').promisify
-const rimraf = promisify(require('rimraf'))
-const rimrafSync = require('rimraf').sync
+const rimraf = require('@zkochan/rimraf')
 
 module.exports = async function renameOverwrite (oldPath, newPath) {
   try {
@@ -62,7 +60,7 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath) {
       case 'ENOTEMPTY':
       case 'EEXIST':
       case 'EPERM': // weird Windows stuff
-        rimrafSync(newPath)
+        rimraf.sync(newPath)
         fs.renameSync(oldPath, newPath)
         return
       case 'ENOENT':
