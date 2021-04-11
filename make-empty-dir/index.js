@@ -1,8 +1,7 @@
 'use strict'
 const fs = require('fs').promises
 const path = require('path')
-const { promisify } = require('util')
-const rimraf = promisify(require('rimraf'))
+const rimraf = require('@zkochan/rimraf')
 
 module.exports = async function makeEmptyDir (dir, opts) {
   if (opts && opts.recursive) {

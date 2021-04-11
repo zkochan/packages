@@ -11,7 +11,7 @@
     "test": "node test"
   },
   "engines": {
-    "node": ">=10.12"
+    "node": ">=12.10"
   },
   "repository": "https://github.com/zkochan/packages/tree/master/make-empty-dir",
   "keywords": [
@@ -32,6 +32,6 @@
     "tempy": "^1.0.0"
   },
   "dependencies": {
-    "rimraf": "^3.0.2"
+    "@zkochan/rimraf": "^2.1.0"
   }
 }

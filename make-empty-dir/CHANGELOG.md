@@ -1,5 +1,11 @@
 # make-empty-dir
 
+## 2.0.0
+
+### Major Changes
+
+- Deprecate Node.js 10
+
 ## 1.1.0
 
 ### Minor Changes
