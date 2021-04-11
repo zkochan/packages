@@ -37,6 +37,14 @@ module.exports = async function renameOverwrite (oldPath, newPath) {
         throw lastError
       }
       case 'ENOENT':
+        try {
+          await fs.promises.stat(oldPath)
+        } catch (statErr) {
+          // If the source file does not exist, we cannot possible rename it
+          if (statErr.code === 'ENOENT') {
+            throw statErr
+          }
+        }
         await fs.promises.mkdir(path.dirname(newPath), { recursive: true })
         await renameOverwrite(oldPath, newPath)
         break
