@@ -29,7 +29,7 @@
   "devDependencies": {
     "@types/tape": "^4.13.0",
     "delay": "4.4.0",
-    "package-preview": "3.0.0",
+    "package-preview": "4.0.0",
     "tape": "^5.1.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.5"
