@@ -1,8 +1,11 @@
-const { promises: fs, rmdirSync } = require('fs')
+const fs = require('fs')
+
+const rm = fs.promises.rm ? fs.promises.rm : fs.promises.rmdir
+const rmdirSync = fs.rmSync ? fs.rmSync : fs.rmdirSync
 
 module.exports = async (p) => {
   try {
-    await fs.rmdir(p, { recursive: true, maxRetries: 3 })
+    await rm(p, { recursive: true, maxRetries: 3 })
   } catch (err) {
     if (err.code === 'ENOTDIR' || err.code === 'ENOENT') return
     throw err
