@@ -30,7 +30,7 @@
     "path-temp": "2.0.0"
   },
   "devDependencies": {
-    "@types/node": "14.14.6",
+    "@types/node": "14.14.44",
     "@types/tape": "^4.13.0",
     "package-preview": "3.0.0",
     "tape": "^5.1.1",
