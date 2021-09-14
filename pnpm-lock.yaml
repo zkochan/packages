@@ -78,6 +78,7 @@ importers:
 
   graceful-git:
     specifiers:
+      '@zkochan/which': ^2.0.3
       execa: ^5.0.0
       mos: 2.0.0-alpha.3
       mos-plugin-readme: ^1.0.4
@@ -85,6 +86,7 @@ importers:
       retry: ^0.12.0
       tape: ^5.1.1
     dependencies:
+      '@zkochan/which': 2.0.3
       execa: 5.0.0
       retry: 0.12.0
     devDependencies:
@@ -1361,6 +1363,14 @@ packages:
   /@zkochan/rimraf/2.1.0:
     resolution: {integrity: sha512-a8yw+qEmQszHCD4ghIjZ3jbbQvjQAfFa7PBgAGRYK0YGoG8sHTe+VeoGuiy91ad7Ksvh3rFjxiPzBPRCVDCcGQ==}
     engines: {node: '>=12.10'}
+
+  /@zkochan/which/2.0.3:
+    resolution: {integrity: sha512-C1ReN7vt2/2O0fyTsx5xnbQuxBrmG5NMSbcIkPKCCfCTJgpZBsuRYzFXHj3nVq8vTfK7vxHUmzfCpSHgO7j4rg==}
+    engines: {node: '>= 8'}
+    hasBin: true
+    dependencies:
+      isexe: 2.0.0
+    dev: false
 
   /abab/2.0.5:
     resolution: {integrity: sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==}

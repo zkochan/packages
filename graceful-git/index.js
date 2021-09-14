@@ -1,8 +1,9 @@
 'use strict'
+const which = require('@zkochan/which');
 const execa = require('execa')
 const retry = require('retry')
 
-const execGit = execa.bind(null, 'git')
+let gitLocation
 
 const RETRY_OPTIONS = {
   retries: 3,
@@ -11,12 +12,13 @@ const RETRY_OPTIONS = {
   randomize: true,
 }
 
-module.exports = (args, opts) => {
+module.exports = async (args, opts) => {
+  gitLocation = gitLocation || await which('git')
   opts = opts || {}
   const operation = retry.operation(Object.assign({}, RETRY_OPTIONS, opts))
   return new Promise((resolve, reject) => {
     operation.attempt(currentAttempt => {
-      execGit(args, {cwd: opts.cwd || process.cwd()})
+      execa(gitLocation, args, {cwd: opts.cwd || process.cwd()})
         .then(resolve)
         .catch(err => {
           if (operation.retry(err)) {

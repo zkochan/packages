@@ -1,6 +1,8 @@
 # graceful-git
 
-> Executes git commands gracefully. Retries on errors
+> Executes Git commands gracefully. Retries on errors
+
+Git is called by absolute path to avoid binary planting attacks on Windows.
 
 <!--@shields('npm')-->
 [![npm version](https://img.shields.io/npm/v/graceful-git.svg)](https://www.npmjs.com/package/graceful-git)
