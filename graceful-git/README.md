@@ -41,6 +41,10 @@ gracefulGit(['status', 'README.md'])
 - `opts.cwd` - _Path_ - the directory in which the Git command should be executed
 - `...opts` - _object_ - optional. Parameters used by [retry](https://www.npmjs.com/package/retry) when git operation fails.
 
+### `git.noRetry(args, [opts]) => Promise`
+
+Same as `git()` but without retries.
+
 ## License
 
 [MIT](./LICENSE) © [Zoltan Kochan](https://www.kochan.io)

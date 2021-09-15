@@ -12,14 +12,15 @@ const RETRY_OPTIONS = {
   randomize: true,
 }
 
-module.exports = async (args, opts) => {
-  gitLocation = gitLocation || await which('git')
+module.exports = gracefulGit
+module.exports.noRetry = noRetry
+
+async function gracefulGit (args, opts) {
   opts = opts || {}
   const operation = retry.operation(Object.assign({}, RETRY_OPTIONS, opts))
   return new Promise((resolve, reject) => {
     operation.attempt(currentAttempt => {
-      execa(gitLocation, args, {cwd: opts.cwd || process.cwd()})
-        .then(resolve)
+      noRetry(args, opts).then(resolve)
         .catch(err => {
           if (operation.retry(err)) {
             return
@@ -28,4 +29,10 @@ module.exports = async (args, opts) => {
         })
     })
   })
+}
+
+async function noRetry (args, opts) {
+  opts = opts || {}
+  gitLocation = gitLocation || await which('git')
+  return execa(gitLocation, args, {cwd: opts.cwd || process.cwd()})
 }

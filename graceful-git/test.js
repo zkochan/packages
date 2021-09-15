@@ -7,3 +7,9 @@ test('git command successfully completes', t => {
     .then(() => t.end())
     .catch(t.end)
 })
+
+test('git command successfully completes with no retries as well', t => {
+  git.noRetry(['status'])
+    .then(() => t.end())
+    .catch(t.end)
+})
