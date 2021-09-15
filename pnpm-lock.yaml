@@ -80,17 +80,15 @@ importers:
 
   graceful-git:
     specifiers:
-      '@zkochan/which': ^2.0.3
-      execa: ^5.0.0
       mos: 2.0.0-alpha.3
       mos-plugin-readme: ^1.0.4
       package-preview: 3.0.0
       retry: ^0.12.0
+      safe-execa: ^0.0.1
       tape: ^5.1.1
     dependencies:
-      '@zkochan/which': 2.0.3
-      execa: 5.0.0
       retry: 0.12.0
+      safe-execa: 0.0.1
     devDependencies:
       mos: 2.0.0-alpha.3
       mos-plugin-readme: 1.0.4
@@ -7159,6 +7157,15 @@ packages:
   /safe-buffer/5.2.1:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
     dev: true
+
+  /safe-execa/0.0.1:
+    resolution: {integrity: sha512-VFUtOFdSgEL5PRssuS+Ay8JZzlUey6BQ+Po2UpTxyzL983/HgP58QYTdMycWb6fXPhqd0BOVybkMH2IYYgRJyA==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@zkochan/which': 2.0.3
+      execa: 5.0.0
+      path-name: 1.0.0
+    dev: false
 
   /safe-regex/1.1.0:
     resolution: {integrity: sha1-QKNmnzsHfR6UPURinhV91IAjvy4=}

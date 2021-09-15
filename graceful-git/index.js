@@ -1,9 +1,6 @@
 'use strict'
-const which = require('@zkochan/which');
-const execa = require('execa')
+const execa = require('safe-execa').default
 const retry = require('retry')
-
-let gitLocation
 
 const RETRY_OPTIONS = {
   retries: 3,
@@ -33,6 +30,5 @@ async function gracefulGit (args, opts) {
 
 async function noRetry (args, opts) {
   opts = opts || {}
-  gitLocation = gitLocation || await which('git')
-  return execa(gitLocation, args, {cwd: opts.cwd || process.cwd()})
+  return execa('git', args, {cwd: opts.cwd || process.cwd()})
 }

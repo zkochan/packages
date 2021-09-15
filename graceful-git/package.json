@@ -1,6 +1,6 @@
 {
   "name": "graceful-git",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Executes git commands gracefully. Retries them on errors",
   "main": "index.js",
   "files": [
@@ -35,9 +35,8 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/graceful-git#readme",
   "dependencies": {
-    "@zkochan/which": "^2.0.3",
-    "execa": "^5.0.0",
-    "retry": "^0.12.0"
+    "retry": "^0.12.0",
+    "safe-execa": "^0.0.1"
   },
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
