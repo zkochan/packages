@@ -1,18 +1,19 @@
 {
   "compilerOptions": {
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
     "declaration": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
     "noImplicitAny": false,
     "noImplicitReturns": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
-    "target": "es2017",
     "outDir": "lib",
-    "module": "commonjs",
-    "moduleResolution": "node"
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es2019"
   },
   "include": [
     "src/**/*.ts"
