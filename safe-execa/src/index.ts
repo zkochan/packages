@@ -16,6 +16,7 @@ export function	sync (
 function getCommandAbsolutePathSync (file: string, options?: {
 		readonly env?: NodeJS.ProcessEnv;
 }) {
+  if (file.includes('\\') || file.includes('/')) return file
   const path = options?.env?.[PATH] ?? process.env[PATH]
   const key = JSON.stringify([path, file])
   let fileAbsolutePath = pathCache.get(key)
@@ -41,6 +42,7 @@ export default async function (
 async function getCommandAbsolutePath (file: string, options?: {
 		readonly env?: NodeJS.ProcessEnv;
 }) {
+  if (file.includes('\\') || file.includes('/')) return file
   const path = options?.env?.[PATH] ?? process.env[PATH]
   const key = JSON.stringify([path, file])
   let fileAbsolutePath = pathCache.get(key)

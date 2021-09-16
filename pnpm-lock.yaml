@@ -84,11 +84,11 @@ importers:
       mos-plugin-readme: ^1.0.4
       package-preview: 3.0.0
       retry: ^0.12.0
-      safe-execa: ^0.0.1
+      safe-execa: ^0.1.0
       tape: ^5.1.1
     dependencies:
       retry: 0.12.0
-      safe-execa: 0.0.1
+      safe-execa: 0.1.0
     devDependencies:
       mos: 2.0.0-alpha.3
       mos-plugin-readme: 1.0.4
@@ -7158,8 +7158,8 @@ packages:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
     dev: true
 
-  /safe-execa/0.0.1:
-    resolution: {integrity: sha512-VFUtOFdSgEL5PRssuS+Ay8JZzlUey6BQ+Po2UpTxyzL983/HgP58QYTdMycWb6fXPhqd0BOVybkMH2IYYgRJyA==}
+  /safe-execa/0.1.0:
+    resolution: {integrity: sha512-JLcPfxsmCqsEPnKiKotMJoAp7/2rrkxSGNT9C3E85EwBQubkuQcT/me9ve6UN5Tj4pY4WwGmS9woEykHiUdDvQ==}
     engines: {node: '>=12'}
     dependencies:
       '@zkochan/which': 2.0.3
