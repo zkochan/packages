@@ -30,28 +30,11 @@ function getCommandAbsolutePathSync (file: string, options?: {
   return fileAbsolutePath
 }
 
-export default async function (
+export default function (
   file: string,
   args?: readonly string[],
   options?: execa.Options
 ) {
-  const fileAbsolutePath = await getCommandAbsolutePath(file, options)
+  const fileAbsolutePath = getCommandAbsolutePathSync(file, options)
   return execa(fileAbsolutePath, args, options)
-}
-
-async function getCommandAbsolutePath (file: string, options?: {
-		readonly env?: NodeJS.ProcessEnv;
-}) {
-  if (file.includes('\\') || file.includes('/')) return file
-  const path = options?.env?.[PATH] ?? process.env[PATH]
-  const key = JSON.stringify([path, file])
-  let fileAbsolutePath = pathCache.get(key)
-  if (fileAbsolutePath == null) {
-    fileAbsolutePath = await which(file, { path })
-    pathCache.set(key, fileAbsolutePath)
-  }
-  if (fileAbsolutePath == null) {
-    throw new Error(`Couldn't find ${file}`)
-  }
-  return fileAbsolutePath
 }
