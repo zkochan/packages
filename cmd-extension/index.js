@@ -9,4 +9,4 @@ if (process.PATHEXT) {
     .find(ext => ext.toUpperCase() === '.CMD')
 }
 
-module.exports = cmdExtension ?? '.cmd'
+module.exports = cmdExtension || '.cmd'
