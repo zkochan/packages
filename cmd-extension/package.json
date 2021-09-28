@@ -1,6 +1,6 @@
 {
   "name": "cmd-extension",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Gets the right command file extension on Windows",
   "main": "index.js",
   "files": [

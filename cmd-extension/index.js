@@ -3,7 +3,7 @@ const path = require('path')
 
 let cmdExtension
 
-if (process.PATHEXT) {
+if (process.env.PATHEXT) {
   cmdExtension = process.env.PATHEXT
     .split(path.delimiter)
     .find(ext => ext.toUpperCase() === '.CMD')
