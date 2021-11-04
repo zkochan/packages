@@ -10,7 +10,7 @@
     "index.js"
   ],
   "scripts": {
-    "test": "standard && preview && tape test.js",
+    "test": "standard && tape test.js",
     "test:readme": "mos t",
     "md": "mos"
   },
@@ -43,6 +43,11 @@
     "url": "https://github.com/zkochan/write-ini-file/issues"
   },
   "homepage": "https://github.com/zkochan/packages/tree/master/write-ini-file#readme#readme",
+  "dependenciesMeta": {
+    "write-ini-file": {
+      "injected": true
+    }
+  },
   "dependencies": {
     "ini": "^2.0.0",
     "make-dir": "^3.1.0",
@@ -51,9 +56,9 @@
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "package-preview": "3.0.0",
     "standard": "^16.0.3",
     "tape": "^5.1.1",
-    "tempfile": "^3.0.0"
+    "tempfile": "^3.0.0",
+    "write-ini-file": "link:"
   }
 }

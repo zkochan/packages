@@ -47,7 +47,6 @@
     "graceful-git": "link:",
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "package-preview": "3.0.0",
     "tape": "^5.1.1"
   }
 }
