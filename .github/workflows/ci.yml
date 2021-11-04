@@ -31,7 +31,7 @@ jobs:
       run: git branch -f main origin/main
     - name: install pnpm
       run: |
-        curl -L https://get.pnpm.io/v6.16.js | node - add --global pnpm@6
+        curl -L https://get.pnpm.io/v6.16.js | node - add --global @pnpm/exe@6
     - name: pnpm install
       run: pnpm install
     - name: run tests

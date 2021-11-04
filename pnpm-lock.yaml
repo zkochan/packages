@@ -8,7 +8,7 @@ importers:
   .:
     specifiers:
       '@changesets/cli': ^2.14.1
-      typescript: ^4.1.5
+      typescript: ^4.2.3
     devDependencies:
       '@changesets/cli': 2.14.1
       typescript: 4.2.3
@@ -87,11 +87,11 @@ importers:
       mos-plugin-readme: ^1.0.4
       package-preview: 3.0.0
       retry: ^0.12.0
-      safe-execa: ^0.1.0
+      safe-execa: ^0.1.1
       tape: ^5.1.1
     dependencies:
       retry: 0.12.0
-      safe-execa: 0.1.0
+      safe-execa: 0.1.1
     devDependencies:
       mos: 2.0.0-alpha.3
       mos-plugin-readme: 1.0.4
@@ -833,7 +833,7 @@ packages:
       meow: 6.1.1
       outdent: 0.5.0
       p-limit: 2.3.0
-      preferred-pm: 3.0.2
+      preferred-pm: 3.0.3
       semver: 5.7.1
       spawndamnit: 2.0.0
       term-size: 2.2.1
@@ -5935,8 +5935,8 @@ packages:
     hasBin: true
     dev: true
 
-  /preferred-pm/3.0.2:
-    resolution: {integrity: sha512-yGIxyBkK/OWOppgCXfOeOXOeNrddyK1DzqS6XpOokRZb2ogXTpHRhKDTO7d0pjF/2p2sV9pEkKL4e0tNZI1y2A==}
+  /preferred-pm/3.0.3:
+    resolution: {integrity: sha512-+wZgbxNES/KlJs9q40F/1sfOd/j7f1O9JaHcW5Dsn3aUUOZg3L2bjpVUcKV2jvtElYfoTuQiNeMfQJ4kwUAhCQ==}
     engines: {node: '>=10'}
     dependencies:
       find-up: 5.0.0
@@ -6478,8 +6478,8 @@ packages:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
     dev: true
 
-  /safe-execa/0.1.0:
-    resolution: {integrity: sha512-JLcPfxsmCqsEPnKiKotMJoAp7/2rrkxSGNT9C3E85EwBQubkuQcT/me9ve6UN5Tj4pY4WwGmS9woEykHiUdDvQ==}
+  /safe-execa/0.1.1:
+    resolution: {integrity: sha512-2KPID7iC4AMoJVozDPtcLGV+7LdpE0sR1hPkJUCaEnRsiYSZH2wgOFvxZ9UOtj1r8hNk8pVWn1tgmaEyyFZ4NA==}
     engines: {node: '>=12'}
     dependencies:
       '@zkochan/which': 2.0.3
