@@ -83,6 +83,7 @@ importers:
 
   graceful-git:
     specifiers:
+      graceful-git: 'link:'
       mos: 2.0.0-alpha.3
       mos-plugin-readme: ^1.0.4
       package-preview: 3.0.0
@@ -93,6 +94,7 @@ importers:
       retry: 0.12.0
       safe-execa: 0.1.1
     devDependencies:
+      graceful-git: file:graceful-git
       mos: 2.0.0-alpha.3
       mos-plugin-readme: 1.0.4
       package-preview: 3.0.0
@@ -1383,7 +1385,6 @@ packages:
     hasBin: true
     dependencies:
       isexe: 2.0.0
-    dev: false
 
   /abab/2.0.5:
     resolution: {integrity: sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==}
@@ -5812,7 +5813,6 @@ packages:
 
   /path-name/1.0.0:
     resolution: {integrity: sha1-jKBjpj3nmC36lXYO2v/RAhRJTyQ=}
-    dev: false
 
   /path-parse/1.0.6:
     resolution: {integrity: sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==}
@@ -6399,7 +6399,6 @@ packages:
   /retry/0.12.0:
     resolution: {integrity: sha1-G0KmJmoh8HQh0bC1S33BZ7AcATs=}
     engines: {node: '>= 4'}
-    dev: false
 
   /reusify/1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
@@ -6485,7 +6484,6 @@ packages:
       '@zkochan/which': 2.0.3
       execa: 5.0.0
       path-name: 1.0.0
-    dev: false
 
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
@@ -7869,3 +7867,13 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+  file:graceful-git:
+    resolution: {directory: graceful-git, type: directory}
+    name: graceful-git
+    version: 3.1.2
+    engines: {node: '>=10'}
+    dependencies:
+      retry: 0.12.0
+      safe-execa: 0.1.1
+    dev: true

@@ -10,8 +10,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "test": "preview && tape test.js",
-    "md": "preview && mos"
+    "test": "tape test.js",
+    "md": "mos"
   },
   "mos": {
     "plugins": [
@@ -34,11 +34,17 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/graceful-git#readme",
+  "dependenciesMeta": {
+    "graceful-git": {
+      "injected": true
+    }
+  },
   "dependencies": {
     "retry": "^0.12.0",
     "safe-execa": "^0.1.1"
   },
   "devDependencies": {
+    "graceful-git": "link:",
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
     "package-preview": "3.0.0",
