@@ -1,0 +1,38 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        node:
+          - '10'
+          - '12'
+          - '14'
+          - '16'
+        platform:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+
+    name: '${{matrix.platform}} / Node.js ${{ matrix.node }}'
+    runs-on: ${{matrix.platform}}
+
+    steps:
+    - name: Checkout Commit
+      uses: actions/checkout@v1
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node }}
+    - name: checkout main
+      run: git branch -f main origin/main
+    - name: install pnpm
+      run: |
+        curl -L https://get.pnpm.io/v6.16.js | node - add --global pnpm@6
+    - name: pnpm install
+      run: pnpm install
+    - name: run tests
+      run: pnpm -r --no-bail test
