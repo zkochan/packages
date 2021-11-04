@@ -33,6 +33,6 @@ jobs:
       run: |
         curl -L https://get.pnpm.io/v6.16.js | node - add --global @pnpm/exe@6
     - name: pnpm install
-      run: pnpm install
+      run: pnpm install --no-frozen-lockfile
     - name: run tests
       run: pnpm -r --no-bail test
