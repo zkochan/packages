@@ -106,6 +106,9 @@ importers:
       mos: 2.0.0-alpha.3
       mos-plugin-readme: 1.0.4
       tape: 5.3.1
+    dependenciesMeta:
+      graceful-git:
+        injected: true
 
   is-inner-link:
     specifiers:
@@ -433,6 +436,9 @@ importers:
       tape: 5.3.1
       which-pm-runs: file:which-pm-runs
       yarn: 1.22.17
+    dependenciesMeta:
+      which-pm-runs:
+        injected: true
 
   write-ini-file:
     specifiers:
@@ -4512,7 +4518,6 @@ packages:
     dependencies:
       chalk: 0.5.1
     dev: true
-    bundledDependencies: []
 
   /jsonfile/4.0.0:
     resolution: {integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=}
