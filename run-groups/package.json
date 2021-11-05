@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@types/tape": "^4.13.0",
-    "delay": "4.4.0",
+    "delay": "5.0.0",
     "run-groups": "link:",
     "tape": "^5.1.1",
     "ts-node": "^10.4.0",
