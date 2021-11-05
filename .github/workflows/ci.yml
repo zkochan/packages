@@ -8,7 +8,6 @@ jobs:
       fail-fast: false
       matrix:
         node:
-          - '10'
           - '12'
           - '14'
           - '16'
@@ -30,9 +29,8 @@ jobs:
     - name: checkout main
       run: git branch -f main origin/main
     - name: install pnpm
-      run: |
-        curl -L https://get.pnpm.io/v6.16.js | node - add --global pnpm@6
+      run: npm install --global @pnpm/exe@6
     - name: pnpm install
-      run: pnpm install
+      run: pnpm install --no-frozen-lockfile
     - name: run tests
       run: pnpm -r --no-bail test

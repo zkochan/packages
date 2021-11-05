@@ -9,7 +9,7 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "standard && preview && node test",
+    "test": "standard && node test",
     "md": "mos"
   },
   "repository": "https://github.com/zkochan/packages/tree/master/path-temp",
@@ -24,13 +24,18 @@
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/master/path-temp#readme",
+  "dependenciesMeta": {
+    "path-temp": {
+      "injected": true
+    }
+  },
   "dependencies": {
     "unique-string": "^2.0.0"
   },
   "devDependencies": {
+    "path-temp": "link:",
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "package-preview": "3.0.0",
     "standard": "^16.0.3",
     "tape": "^5.1.1"
   },
