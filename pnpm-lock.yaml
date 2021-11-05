@@ -95,11 +95,11 @@ importers:
       graceful-git: 'link:'
       mos: 2.0.0-alpha.3
       mos-plugin-readme: ^1.0.4
-      retry: ^0.12.0
+      retry: ^0.13.0
       safe-execa: ^0.1.1
       tape: ^5.1.1
     dependencies:
-      retry: 0.12.0
+      retry: 0.13.1
       safe-execa: 0.1.1
     devDependencies:
       graceful-git: file:graceful-git
@@ -6077,8 +6077,8 @@ packages:
       through: 2.3.8
     dev: true
 
-  /retry/0.12.0:
-    resolution: {integrity: sha1-G0KmJmoh8HQh0bC1S33BZ7AcATs=}
+  /retry/0.13.1:
+    resolution: {integrity: sha512-XQBQ3I8W1Cge0Seh+6gjj03LbmRFWuoszgK9ooCpwYIrhhoO80pfq4cUkU5DkknwfOfFteRwlZ56PYOGYyFWdg==}
     engines: {node: '>= 4'}
 
   /reusify/1.0.4:
@@ -7406,7 +7406,7 @@ packages:
     version: 3.1.2
     engines: {node: '>=10'}
     dependencies:
-      retry: 0.12.0
+      retry: 0.13.1
       safe-execa: 0.1.1
     dev: true
 
