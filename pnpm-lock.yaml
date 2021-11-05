@@ -371,7 +371,7 @@ importers:
   run-groups:
     specifiers:
       '@types/tape': ^4.13.0
-      delay: 4.4.0
+      delay: 4.4.1
       p-limit: ^3.1.0
       run-groups: 'link:'
       tape: ^5.1.1
@@ -381,7 +381,7 @@ importers:
       p-limit: 3.1.0
     devDependencies:
       '@types/tape': 4.13.2
-      delay: 4.4.0
+      delay: 4.4.1
       run-groups: file:run-groups
       tape: 5.3.1
       ts-node: 9.1.1_typescript@4.4.4
@@ -2517,8 +2517,8 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /delay/4.4.0:
-    resolution: {integrity: sha512-txgOrJu3OdtOfTiEOT2e76dJVfG/1dz2NZ4F0Pyt4UGZJryssMRp5vdM5wQoLwSOBNdrJv3F9PAhp/heqd7vrA==}
+  /delay/4.4.1:
+    resolution: {integrity: sha512-aL3AhqtfhOlT/3ai6sWXeqwnw63ATNpnUiN4HL7x9q+My5QtHlO3OIkasmug9LKzpheLdmUKGRKnYXYAS7FQkQ==}
     engines: {node: '>=6'}
     dev: true
 
