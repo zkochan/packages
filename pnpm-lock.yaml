@@ -422,14 +422,14 @@ importers:
     specifiers:
       execa: ^5.0.0
       npm: ^6.14.11
-      pnpm: ^5.17.1
+      pnpm: ^6.0.0
       tape: ^5.1.1
       which-pm-runs: 'link:'
       yarn: ^1.22.10
     devDependencies:
       execa: 5.1.1
       npm: 6.14.15
-      pnpm: 5.18.10
+      pnpm: 6.20.2
       tape: 5.3.1
       which-pm-runs: file:which-pm-runs
       yarn: 1.22.17
@@ -5672,9 +5672,9 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /pnpm/5.18.10:
-    resolution: {integrity: sha512-M3oH42XqtUZv0Hnfp4A1klTFQT3/9ghBkDrPHh0GTd9nP39I14/GDjN+BiHx95hH60CigOip+oK/h389GhizeQ==}
-    engines: {node: '>=10.16'}
+  /pnpm/6.20.2:
+    resolution: {integrity: sha512-G0hjGnROVLQ3hkVWL0FQkliKX5Mc/p2RBUL3oEHSn+AOHbXwE3ILd2pyAATt8BQ+OFnJt7ZCwMTFx+nFWOq04g==}
+    engines: {node: '>=12.17'}
     hasBin: true
     dev: true
 
