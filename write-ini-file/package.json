@@ -14,7 +14,7 @@
     "test:readme": "mos t",
     "md": "mos"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/write-ini-file",
+  "repository": "https://github.com/zkochan/packages/tree/main/write-ini-file",
   "mos": {
     "plugins": [
       "readme"
@@ -42,7 +42,7 @@
   "bugs": {
     "url": "https://github.com/zkochan/write-ini-file/issues"
   },
-  "homepage": "https://github.com/zkochan/packages/tree/master/write-ini-file#readme#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/write-ini-file#readme#readme",
   "dependenciesMeta": {
     "write-ini-file": {
       "injected": true

@@ -11,7 +11,7 @@
     "test": "standard && tape test",
     "md": "mos"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/read-ini-file",
+  "repository": "https://github.com/zkochan/packages/tree/main/read-ini-file",
   "mos": {
     "plugins": [
       "readme"
@@ -38,7 +38,7 @@
   "bugs": {
     "url": "https://github.com/zkochan/packages/issues"
   },
-  "homepage": "https://github.com/zkochan/packages/tree/master/read-ini-file#readme#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/read-ini-file#readme#readme",
   "dependenciesMeta": {
     "read-ini-file": {
       "injected": true

@@ -14,14 +14,14 @@
   "engines": {
     "node": ">=12.10"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/rimraf",
+  "repository": "https://github.com/zkochan/packages/tree/main/rimraf",
   "author": {
     "name": "Zoltan Kochan",
     "email": "z@kochan.io",
     "url": "https://www.kochan.io"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/rimraf#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/rimraf#readme",
   "devDependencies": {
     "standard": "^16.0.3"
   }

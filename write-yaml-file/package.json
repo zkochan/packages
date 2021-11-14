@@ -14,7 +14,7 @@
   "scripts": {
     "test": "standard"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/write-yaml-file",
+  "repository": "https://github.com/zkochan/packages/tree/main/write-yaml-file",
   "keywords": [
     "write",
     "yaml",
@@ -31,7 +31,7 @@
     "email": "z@kochan.io"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/write-yaml-file#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/write-yaml-file#readme",
   "dependencies": {
     "js-yaml": "^4.0.0",
     "write-file-atomic": "^3.0.3"

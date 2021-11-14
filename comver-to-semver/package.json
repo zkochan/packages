@@ -11,7 +11,7 @@
   "scripts": {
     "test": "node test"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/comver-to-semver",
+  "repository": "https://github.com/zkochan/packages/tree/main/comver-to-semver",
   "keywords": [
     "comver",
     "semver"
@@ -21,7 +21,7 @@
   },
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/comver-to-semver#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/comver-to-semver#readme",
   "dependencies": {
   },
   "devDependencies": {

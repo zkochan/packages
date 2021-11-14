@@ -14,7 +14,7 @@
     "test": "jest",
     "prepublishOnly": "tsc"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/render-help",
+  "repository": "https://github.com/zkochan/packages/tree/main/render-help",
   "keywords": [
     "cli",
     "help",
@@ -26,7 +26,7 @@
     "url": "https://www.kochan.io"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/render-help#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/render-help#readme",
   "dependencies": {
     "table": "^6.0.7"
   },

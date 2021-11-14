@@ -33,7 +33,7 @@ Returns the parsed YAML.
 
 ## Related
 
-- [write-yaml-file](https://github.com/zkochan/packages/tree/master/write-yaml-file) - Stringify and write YAML to a file atomically
+- [write-yaml-file](https://github.com/zkochan/packages/tree/main/write-yaml-file) - Stringify and write YAML to a file atomically
 
 ## License
 

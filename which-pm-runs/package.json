@@ -12,7 +12,7 @@
   "scripts": {
     "test": "tape test"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/which-pm-runs",
+  "repository": "https://github.com/zkochan/packages/tree/main/which-pm-runs",
   "bugs": {
     "url": "https://github.com/zkochan/packages/labels/package%3A%20which-pm-runs"
   },
@@ -23,7 +23,7 @@
   ],
   "author": "Zoltan Kochan",
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/which-pm-runs#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/which-pm-runs#readme",
   "dependenciesMeta": {
     "which-pm-runs": {
       "injected": true

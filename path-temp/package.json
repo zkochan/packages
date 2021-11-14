@@ -12,7 +12,7 @@
     "test": "standard && node test",
     "md": "mos"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/path-temp",
+  "repository": "https://github.com/zkochan/packages/tree/main/path-temp",
   "keywords": [
     "path",
     "temp",
@@ -23,7 +23,7 @@
   },
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/path-temp#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/path-temp#readme",
   "dependenciesMeta": {
     "path-temp": {
       "injected": true

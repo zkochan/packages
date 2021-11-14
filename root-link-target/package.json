@@ -12,7 +12,7 @@
     "test": "standard && node test",
     "md": "mos"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/root-link-target",
+  "repository": "https://github.com/zkochan/packages/tree/main/root-link-target",
   "keywords": [
     "link",
     "hardlink",
@@ -23,7 +23,7 @@
   },
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/root-link-target#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/root-link-target#readme",
   "dependenciesMeta": {
     "root-link-target": {
       "injected": true

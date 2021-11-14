@@ -45,7 +45,7 @@ Default `438` _(0666 in octal)_
 
 ## Related
 
-- [read-ini-file](https://github.com/zkochan/packages/tree/master/read-ini-file) - Read and parse an ini file
+- [read-ini-file](https://github.com/zkochan/packages/tree/main/read-ini-file) - Read and parse an ini file
 - [ini](https://github.com/npm/ini) - An ini parser/serializer in JavaScript
 
 ## License

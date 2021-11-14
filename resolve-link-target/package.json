@@ -14,7 +14,7 @@
   "engines": {
     "node": ">=10"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/resolve-link-target",
+  "repository": "https://github.com/zkochan/packages/tree/main/resolve-link-target",
   "keywords": [
     "symlink",
     "junction",
@@ -28,7 +28,7 @@
   ],
   "author": "Zoltan Kochan",
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/resolve-link-target#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/resolve-link-target#readme",
   "devDependencies": {
     "standard": "^16.0.3",
     "symlink-dir": "^5.0.0",

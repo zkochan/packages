@@ -12,7 +12,7 @@
   "engines": {
     "node": ">=8"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/promise-share",
+  "repository": "https://github.com/zkochan/packages/tree/main/promise-share",
   "keywords": [
     "promise"
   ],
@@ -21,7 +21,7 @@
     "url": "https://www.kochan.io"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/promise-share#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/promise-share#readme",
   "devDependencies": {
     "tape": "^5.1.1"
   },

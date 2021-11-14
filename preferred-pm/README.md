@@ -30,8 +30,8 @@ preferredPM(process.cwd())
 
 ## Related
 
-* [which-pm](https://github.com/zkochan/packages/tree/master/which-pm) - Detects what package manager was used for installation
-* [which-pm-runs](https://github.com/zkochan/packages/tree/master/which-pm-runs) - Detects what package manager executes the process
+* [which-pm](https://github.com/zkochan/packages/tree/main/which-pm) - Detects what package manager was used for installation
+* [which-pm-runs](https://github.com/zkochan/packages/tree/main/which-pm-runs) - Detects what package manager executes the process
 
 ## License
 

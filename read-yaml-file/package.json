@@ -12,7 +12,7 @@
     "name": "Zoltan Kochan",
     "email": "z@kochan.io"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/read-yaml-file",
+  "repository": "https://github.com/zkochan/packages/tree/main/read-yaml-file",
   "engines": {
     "node": ">=10.13"
   },

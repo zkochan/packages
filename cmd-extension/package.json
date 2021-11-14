@@ -10,10 +10,10 @@
   "engines": {
     "node": ">=10"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/cmd-extension",
+  "repository": "https://github.com/zkochan/packages/tree/main/cmd-extension",
   "author": {
     "name": "Zoltan Kochan"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/cmd-extension#readme"
+  "homepage": "https://github.com/zkochan/packages/tree/main/cmd-extension#readme"
 }

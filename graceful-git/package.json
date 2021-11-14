@@ -21,7 +21,7 @@
       "useShortAlias": true
     }
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/graceful-git",
+  "repository": "https://github.com/zkochan/packages/tree/main/graceful-git",
   "keywords": [
     "git",
     "retry",
@@ -33,7 +33,7 @@
     "url": "https://www.kochan.io"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/graceful-git#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/graceful-git#readme",
   "dependenciesMeta": {
     "graceful-git": {
       "injected": true

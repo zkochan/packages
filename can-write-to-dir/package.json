@@ -11,7 +11,7 @@
   "scripts": {
     "test": "standard && node test"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/can-write-to-dir",
+  "repository": "https://github.com/zkochan/packages/tree/main/can-write-to-dir",
   "keywords": [
     "access",
     "permission",
@@ -23,7 +23,7 @@
   },
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/can-write-to-dir#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/can-write-to-dir#readme",
   "dependenciesMeta": {
     "can-write-to-dir": {
       "injected": true

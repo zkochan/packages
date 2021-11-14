@@ -13,7 +13,7 @@
   "engines": {
     "node": ">=4"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/better-path-resolve",
+  "repository": "https://github.com/zkochan/packages/tree/main/better-path-resolve",
   "keywords": [],
   "author": {
     "name": "Zoltan Kochan",
@@ -28,7 +28,7 @@
     }
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/better-path-resolve#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/better-path-resolve#readme",
   "dependencies": {
     "is-windows": "^1.0.2"
   },

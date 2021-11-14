@@ -12,7 +12,7 @@
     "test": "standard && node test",
     "md": "mos"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/can-link",
+  "repository": "https://github.com/zkochan/packages/tree/main/can-link",
   "keywords": [
     "link",
     "hardlink"
@@ -22,7 +22,7 @@
   },
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/can-link#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/can-link#readme",
   "dependenciesMeta": {
     "can-link": {
       "injected": true
