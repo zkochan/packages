@@ -26,8 +26,8 @@ whichpm(process.cwd())
 
 ## Related
 
-* [preferred-pm](https://github.com/zkochan/packages/tree/master/preferred-pm) - Returns the preferred package manager of a project
-* [which-pm-runs](https://github.com/zkochan/packages/tree/master/which-pm-runs) - Detects what package manager executes the process
+* [preferred-pm](https://github.com/zkochan/packages/tree/main/preferred-pm) - Returns the preferred package manager of a project
+* [which-pm-runs](https://github.com/zkochan/packages/tree/main/which-pm-runs) - Detects what package manager executes the process
 
 ## License
 

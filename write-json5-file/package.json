@@ -14,7 +14,7 @@
     "test": "standard && tape test.js",
     "md": "mos"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/write-json5-file",
+  "repository": "https://github.com/zkochan/packages/tree/main/write-json5-file",
   "mos": {
     "plugins": [
       "readme"
@@ -39,7 +39,7 @@
     "url": "https://www.kochan.io"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/write-json5-file#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/write-json5-file#readme",
   "dependencies": {
     "json5": "^2.2.0",
     "sort-keys": "^4.2.0",

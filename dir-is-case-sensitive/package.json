@@ -15,7 +15,7 @@
     "tsc": "tsc",
     "prepublishOnly": "pnpm run tsc"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/dir-is-case-sensitive",
+  "repository": "https://github.com/zkochan/packages/tree/main/dir-is-case-sensitive",
   "keywords": [
     "filesystem",
     "case"
@@ -25,7 +25,7 @@
     "email": "z@kochan.io"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/dir-is-case-sensitive#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/dir-is-case-sensitive#readme",
   "dependenciesMeta": {
     "dir-is-case-sensitive": {
       "injected": true

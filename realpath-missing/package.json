@@ -13,14 +13,14 @@
   "engines": {
     "node": ">=10"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/realpath-missing",
+  "repository": "https://github.com/zkochan/packages/tree/main/realpath-missing",
   "keywords": [],
   "author": {
     "name": "Zoltan Kochan",
     "url": "https://www.kochan.io"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/realpath-missing#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/realpath-missing#readme",
   "devDependencies": {
     "tape": "^5.1.1"
   }

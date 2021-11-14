@@ -14,7 +14,7 @@
   "engines": {
     "node": ">=4"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/is-subdir",
+  "repository": "https://github.com/zkochan/packages/tree/main/is-subdir",
   "keywords": [
     "subdirectory",
     "subfolder",
@@ -36,7 +36,7 @@
     }
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/is-subdir#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/is-subdir#readme",
   "devDependencies": {
     "is-windows": "1.0.2",
     "mos": "2.0.0-alpha.3",

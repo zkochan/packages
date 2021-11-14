@@ -14,14 +14,14 @@
     "tsc": "tsc",
     "prepublishOnly": "pnpm run tsc"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/safe-execa",
+  "repository": "https://github.com/zkochan/packages/tree/main/safe-execa",
   "keywords": [],
   "author": {
     "name": "Zoltan Kochan",
     "email": "z@kochan.io"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/safe-execa#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/safe-execa#readme",
   "dependencies": {
     "@zkochan/which": "^2.0.3",
     "execa": "^5.0.0",

@@ -15,14 +15,14 @@
     "tsc": "tsc",
     "prepublishOnly": "pnpm run tsc"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/run-groups",
+  "repository": "https://github.com/zkochan/packages/tree/main/run-groups",
   "keywords": [],
   "author": {
     "name": "Zoltan Kochan",
     "email": "z@kochan.io"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/run-groups#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/run-groups#readme",
   "dependenciesMeta": {
     "run-groups": {
       "injected": true

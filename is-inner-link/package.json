@@ -11,7 +11,7 @@
     "test": "standard && node test",
     "md": "mos"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/is-inner-link",
+  "repository": "https://github.com/zkochan/packages/tree/main/is-inner-link",
   "keywords": [
     "link",
     "symlink",
@@ -34,7 +34,7 @@
       "useShortAlias": true
     }
   },
-  "homepage": "https://github.com/zkochan/packages/tree/master/is-inner-link#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/is-inner-link#readme",
   "dependenciesMeta": {
     "is-inner-link": {
       "injected": true

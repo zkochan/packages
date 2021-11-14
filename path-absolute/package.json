@@ -11,7 +11,7 @@
   "scripts": {
     "test": "standard"
   },
-  "repository": "https://github.com/zkochan/packages/tree/master/path-absolute",
+  "repository": "https://github.com/zkochan/packages/tree/main/path-absolute",
   "keywords": [
     "path",
     "absolute",
@@ -26,7 +26,7 @@
     "node": ">=4"
   },
   "license": "MIT",
-  "homepage": "https://github.com/zkochan/packages/tree/master/path-absolute#readme",
+  "homepage": "https://github.com/zkochan/packages/tree/main/path-absolute#readme",
   "devDependencies": {
     "standard": "^16.0.3"
   }
