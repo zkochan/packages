@@ -28,10 +28,10 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/make-empty-dir#readme",
   "devDependencies": {
-    "tape": "^5.1.1",
-    "tempy": "^1.0.0"
+    "tape": "^5.3.2",
+    "tempy": "^1.0.1"
   },
   "dependencies": {
-    "@zkochan/rimraf": "^2.1.0"
+    "@zkochan/rimraf": "^2.1.1"
   }
 }

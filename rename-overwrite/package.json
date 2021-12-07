@@ -32,14 +32,14 @@
     }
   },
   "devDependencies": {
-    "rename-overwrite": "link:",
     "load-json-file": "6.2.0",
-    "standard": "^16.0.3",
-    "tape": "^5.2.2",
+    "rename-overwrite": "file:",
+    "standard": "^16.0.4",
+    "tape": "^5.3.2",
     "tempy": "^1.0.1",
     "write-json-file": "^4.3.0"
   },
   "dependencies": {
-    "@zkochan/rimraf": "^2.1.0"
+    "@zkochan/rimraf": "^2.1.1"
   }
 }
