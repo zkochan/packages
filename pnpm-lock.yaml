@@ -155,12 +155,12 @@ importers:
     specifiers:
       '@zkochan/rimraf': ^2.1.1
       tape: ^5.3.2
-      tempy: ^1.0.1
+      tempy: ^2.0.0
     dependencies:
       '@zkochan/rimraf': 2.1.1
     devDependencies:
       tape: 5.3.2
-      tempy: 1.0.1
+      tempy: 2.0.0
 
   path-absolute:
     specifiers:
@@ -197,7 +197,7 @@ importers:
       preferred-pm: 'file:'
       standard: ^16.0.4
       tape: ^5.3.2
-      tempy: ^1.0.1
+      tempy: ^2.0.0
       which-pm: 2.0.0
     dependencies:
       find-up: 5.0.0
@@ -209,7 +209,7 @@ importers:
       preferred-pm: file:preferred-pm
       standard: 16.0.4
       tape: 5.3.2
-      tempy: 1.0.1
+      tempy: 2.0.0
     dependenciesMeta:
       preferred-pm:
         injected: true
@@ -293,7 +293,7 @@ importers:
       rename-overwrite: 'file:'
       standard: ^16.0.4
       tape: ^5.3.2
-      tempy: ^1.0.1
+      tempy: ^2.0.0
       write-json-file: ^4.3.0
     dependencies:
       '@zkochan/rimraf': 2.1.1
@@ -302,7 +302,7 @@ importers:
       rename-overwrite: file:rename-overwrite
       standard: 16.0.4
       tape: 5.3.2
-      tempy: 1.0.1
+      tempy: 2.0.0
       write-json-file: 4.3.0
     dependenciesMeta:
       rename-overwrite:
@@ -2389,6 +2389,13 @@ packages:
     resolution: {integrity: sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==}
     engines: {node: '>=8'}
 
+  /crypto-random-string/4.0.0:
+    resolution: {integrity: sha512-x8dy3RnvYdlUcPOjkEHqozhiwzKNSq7GcPuXFbnyMOCHxX8V3OgIg/pYuabl2sbUPfIJaeAQB7PMOK8DFIdoRA==}
+    engines: {node: '>=12'}
+    dependencies:
+      type-fest: 1.4.0
+    dev: true
+
   /cssom/0.3.8:
     resolution: {integrity: sha512-b0tGHbfegbhPJpxpiBPU2sCkigAqtM9O121le6bbOlgyV+NyGyCmVfJ6QW9eRjz8CpNfWEOYBIMIGRYkLwsIYg==}
     dev: true
@@ -3953,6 +3960,11 @@ packages:
     resolution: {integrity: sha512-hFoiJiTl63nn+kstHGBtewWSKnQLpyb155KHheA1l39uvtO9nWIop1p3udqPcUd/xbF1VLMO4n7OI6p7RbngDg==}
     engines: {node: '>=8'}
 
+  /is-stream/3.0.0:
+    resolution: {integrity: sha512-LnQR4bZ9IADDRSkvpqMGvt/tEJWclzklNgSw48V5EAaAeDd6qGvN8ei6k5p0tvxSR171VmGyHuTiAOfxAbr8kA==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: true
+
   /is-string/1.0.7:
     resolution: {integrity: sha512-tE2UXzivje6ofPW7l23cjDOMa09gb7xlAqG6jG5ej6uPV32TlWP3NKPigtaGeHNu9fohccRYvIiZMfOOnOYUtg==}
     engines: {node: '>= 0.4'}
@@ -4679,6 +4691,7 @@ packages:
     dependencies:
       chalk: 0.5.1
     dev: true
+    bundledDependencies: []
 
   /jsonfile/4.0.0:
     resolution: {integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=}
@@ -6831,15 +6844,15 @@ packages:
       uuid: 3.4.0
     dev: true
 
-  /tempy/1.0.1:
-    resolution: {integrity: sha512-biM9brNqxSc04Ee71hzFbryD11nX7VPhQQY32AdDmjFvodsRFz/3ufeoTZ6uYkRFfGo188tENcASNs3vTdsM0w==}
-    engines: {node: '>=10'}
+  /tempy/2.0.0:
+    resolution: {integrity: sha512-m+QReZVhpa0Y56fmfoLFRZN4aDFdd3qVd8a9k3RfyTw/1utVYNg+Ar4BY6l4/TlkhYCCJFfhYWt9uy0127buJg==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       del: 6.0.0
-      is-stream: 2.0.1
+      is-stream: 3.0.0
       temp-dir: 2.0.0
-      type-fest: 0.16.0
-      unique-string: 2.0.0
+      type-fest: 2.8.0
+      unique-string: 3.0.0
     dev: true
 
   /term-size/1.2.0:
@@ -7102,11 +7115,6 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /type-fest/0.16.0:
-    resolution: {integrity: sha512-eaBzG6MxNzEn9kiwvtre90cXaNLkmadMWa1zQMs3XORCXNbsH/OewwbxC5ia9dCxIxnTAsSxXJaa/p5y8DlvJg==}
-    engines: {node: '>=10'}
-    dev: true
-
   /type-fest/0.21.3:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
     engines: {node: '>=10'}
@@ -7125,6 +7133,16 @@ packages:
   /type-fest/0.8.1:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
+    dev: true
+
+  /type-fest/1.4.0:
+    resolution: {integrity: sha512-yGSza74xk0UG8k+pLh5oeoYirvIiWo5t0/o3zHHAO2tRDiZcxWP7fywNlXhqb6/r6sWvwi+RsyQMWhVLe4BVuA==}
+    engines: {node: '>=10'}
+    dev: true
+
+  /type-fest/2.8.0:
+    resolution: {integrity: sha512-O+V9pAshf9C6loGaH0idwsmugI2LxVNR7DtS40gVo2EXZVYFgz9OuNtOhgHLdHdapOEWNdvz9Ob/eeuaWwwlxA==}
+    engines: {node: '>=12.20'}
     dev: true
 
   /typedarray-to-buffer/3.1.5:
@@ -7152,6 +7170,13 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       crypto-random-string: 2.0.0
+
+  /unique-string/3.0.0:
+    resolution: {integrity: sha512-VGXBUVwxKMBUznyffQweQABPRRW1vHZAbadFZud4pLFAqRGvv/96vafgjWFqzourzr8YonlQiPgH0YCJfawoGQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      crypto-random-string: 4.0.0
+    dev: true
 
   /unist-util-is/3.0.0:
     resolution: {integrity: sha512-sVZZX3+kspVNmLWBPAB6r+7D9ZgAFPNWm66f7YNb420RlQSbn+n8rG8dGZSkrER7ZIXGQYNm5pqC3v3HopH24A==}

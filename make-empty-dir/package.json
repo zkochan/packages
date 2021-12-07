@@ -29,7 +29,7 @@
   "homepage": "https://github.com/zkochan/packages/tree/main/make-empty-dir#readme",
   "devDependencies": {
     "tape": "^5.3.2",
-    "tempy": "^1.0.1"
+    "tempy": "^2.0.0"
   },
   "dependencies": {
     "@zkochan/rimraf": "^2.1.1"
