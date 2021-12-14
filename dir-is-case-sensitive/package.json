@@ -35,7 +35,7 @@
     "path-temp": "2.0.0"
   },
   "devDependencies": {
-    "@types/node": "14.14.6",
+    "@types/node": "16.11.13",
     "@types/tape": "^4.13.2",
     "dir-is-case-sensitive": "file:",
     "tape": "^5.3.2",

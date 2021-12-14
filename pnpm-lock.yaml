@@ -4679,6 +4679,7 @@ packages:
     dependencies:
       chalk: 0.5.1
     dev: true
+    bundledDependencies: []
 
   /jsonfile/4.0.0:
     resolution: {integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=}
