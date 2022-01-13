@@ -1,5 +1,11 @@
 # rename-overwrite
 
+## 4.0.1
+
+### Patch Changes
+
+- d36ad80: If the target file is a symlink, override it.
+
 ## 4.0.0
 
 ### Breaking Changes
