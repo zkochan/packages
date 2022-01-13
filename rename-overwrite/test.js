@@ -1,8 +1,11 @@
 'use strict'
+const fs = require('fs')
+const path = require('path')
 const test = require('tape')
 const writeJsonFile = require('write-json-file')
 const loadJsonFile = require('load-json-file')
 const renameOverwrite = require('rename-overwrite')
+const symlinkDir = require('symlink-dir')
 const tempy = require('tempy')
 
 test('overwrite directory', async t => {
@@ -116,5 +119,29 @@ test('sync create target directory, if it does not exist', t => {
   renameOverwrite.sync('dir', 'newdir/subdir')
 
   t.equal(loadJsonFile.sync('newdir/subdir/foo.json'), 1)
+  t.end()
+})
+
+test('overwrite a symlink', async t => {
+  process.chdir(tempy.directory())
+
+  fs.mkdirSync('target')
+  await symlinkDir(path.resolve('target'), 'newdir')
+  writeJsonFile.sync('dir/foo.json', 1)
+
+  await renameOverwrite('dir', 'newdir')
+  t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
+  t.end()
+})
+
+test('sync overwrite a symlink', async t => {
+  process.chdir(tempy.directory())
+
+  fs.mkdirSync('target')
+  await symlinkDir(path.resolve('target'), 'newdir')
+  writeJsonFile.sync('dir/foo.json', 1)
+
+  renameOverwrite.sync('dir', 'newdir')
+  t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
   t.end()
 })

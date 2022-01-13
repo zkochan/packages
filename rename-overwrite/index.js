@@ -10,6 +10,7 @@ module.exports = async function renameOverwrite (oldPath, newPath) {
     switch (err.code) {
       case 'ENOTEMPTY':
       case 'EEXIST':
+      case 'ENOTDIR':
         await rimraf(newPath)
         await renameOverwrite(oldPath, newPath)
         break
@@ -60,6 +61,7 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath) {
       case 'ENOTEMPTY':
       case 'EEXIST':
       case 'EPERM': // weird Windows stuff
+      case 'ENOTDIR':
         rimraf.sync(newPath)
         fs.renameSync(oldPath, newPath)
         return

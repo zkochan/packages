@@ -33,8 +33,9 @@
   },
   "devDependencies": {
     "load-json-file": "6.2.0",
-    "rename-overwrite": "file:",
+    "rename-overwrite": "link:",
     "standard": "^16.0.4",
+    "symlink-dir": "^5.0.1",
     "tape": "^5.3.2",
     "tempy": "^1.0.1",
     "write-json-file": "^4.3.0"
