@@ -1,5 +1,11 @@
 # @zkochan/rimraf
 
+## 2.1.2
+
+### Patch Changes
+
+- 1d97370: rimraf should remove a broken symlink.
+
 ## 2.1.1
 
 ### Patch Changes

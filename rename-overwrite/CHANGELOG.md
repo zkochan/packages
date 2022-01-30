@@ -1,5 +1,13 @@
 # rename-overwrite
 
+## 4.0.2
+
+### Patch Changes
+
+- 2fd2422: Limit the number of retries.
+- Updated dependencies [1d97370]
+  - @zkochan/rimraf@2.1.2
+
 ## 4.0.1
 
 ### Patch Changes

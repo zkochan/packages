@@ -288,7 +288,7 @@ importers:
 
   rename-overwrite:
     specifiers:
-      '@zkochan/rimraf': ^2.1.1
+      '@zkochan/rimraf': ^2.1.2
       load-json-file: 6.2.0
       rename-overwrite: 'link:'
       standard: ^16.0.4
@@ -297,7 +297,7 @@ importers:
       tempy: ^1.0.1
       write-json-file: ^4.3.0
     dependencies:
-      '@zkochan/rimraf': 2.1.1
+      '@zkochan/rimraf': 2.1.2
     devDependencies:
       load-json-file: 6.2.0
       rename-overwrite: file:rename-overwrite
@@ -1457,6 +1457,13 @@ packages:
   /@zkochan/rimraf/2.1.1:
     resolution: {integrity: sha512-TgiZpFi4XSvS8wY2/JzoJQYqgpOeBfVMPLC93cRXjbqYSXr1PGyQagS1Wyztuq1uMA1Cqd+EYLa5HESrJwH0Kw==}
     engines: {node: '>=12.10'}
+    dev: false
+
+  /@zkochan/rimraf/2.1.2:
+    resolution: {integrity: sha512-Lc2oK51J6aQWcLWTloobJun5ZF41BbTDdLvE+aMcexoVWFoFqvZmnZoyXR2IZk6NJEVoZW8tjgtvQLfTsmRs2Q==}
+    engines: {node: '>=12.10'}
+    dependencies:
+      rimraf: 3.0.2
 
   /@zkochan/which/2.0.3:
     resolution: {integrity: sha512-C1ReN7vt2/2O0fyTsx5xnbQuxBrmG5NMSbcIkPKCCfCTJgpZBsuRYzFXHj3nVq8vTfK7vxHUmzfCpSHgO7j4rg==}
@@ -6110,7 +6117,7 @@ packages:
     resolution: {integrity: sha512-YVw/sYT9zqsTSC0aNZvwV7wwYLlnZDKtNBTVVRI4/iPLxlm+M+seD5aTIZ991mTryC9Gsvfr0xwtHvw8WP0HAw==}
     engines: {node: '>=12.10'}
     dependencies:
-      '@zkochan/rimraf': 2.1.1
+      '@zkochan/rimraf': 2.1.2
     dev: true
 
   /repeat-string/1.6.1:
@@ -7642,10 +7649,10 @@ packages:
   file:rename-overwrite:
     resolution: {directory: rename-overwrite, type: directory}
     name: rename-overwrite
-    version: 4.0.1
+    version: 4.0.2
     engines: {node: '>=12.10'}
     dependencies:
-      '@zkochan/rimraf': 2.1.1
+      '@zkochan/rimraf': 2.1.2
     dev: true
 
   file:root-link-target:
