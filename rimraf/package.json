@@ -24,5 +24,8 @@
   "homepage": "https://github.com/zkochan/packages/tree/main/rimraf#readme",
   "devDependencies": {
     "standard": "^16.0.4"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
   }
 }

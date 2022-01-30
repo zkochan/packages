@@ -145,3 +145,25 @@ test('sync overwrite a symlink', async t => {
   t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
   t.end()
 })
+
+test('overwrite a broken symlink', async t => {
+  process.chdir(tempy.directory())
+
+  await symlinkDir(path.resolve('target'), 'newdir')
+  writeJsonFile.sync('dir/foo.json', 1)
+
+  await renameOverwrite('dir', 'newdir')
+  t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
+  t.end()
+})
+
+test('sync overwrite a broken symlink', async t => {
+  process.chdir(tempy.directory())
+
+  await symlinkDir(path.resolve('target'), 'newdir')
+  writeJsonFile.sync('dir/foo.json', 1)
+
+  renameOverwrite.sync('dir', 'newdir')
+  t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
+  t.end()
+})

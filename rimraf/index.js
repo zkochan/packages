@@ -1,11 +1,11 @@
-const fs = require('fs')
+const rimraf = require('rimraf')
+const { promisify } = require('util')
 
-const rm = fs.promises.rm ? fs.promises.rm : fs.promises.rmdir
-const rmdirSync = fs.rmSync ? fs.rmSync : fs.rmdirSync
+const rimrafP = promisify(rimraf)
 
 module.exports = async (p) => {
   try {
-    await rm(p, { recursive: true, maxRetries: 3 })
+    await rimrafP(p)
   } catch (err) {
     if (err.code === 'ENOTDIR' || err.code === 'ENOENT') return
     throw err
@@ -14,7 +14,7 @@ module.exports = async (p) => {
 
 module.exports.sync = (p) => {
   try {
-    rmdirSync(p, { recursive: true, maxRetries: 3 })
+    rimraf.sync(p)
   } catch (err) {
     if (err.code === 'ENOTDIR' || err.code === 'ENOENT') return
     throw err
