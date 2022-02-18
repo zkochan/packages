@@ -24,3 +24,9 @@ test('detects pnpm', t => {
     .then(() => t.end())
     .catch(t.end)
 })
+
+test('detects cnpm', t => {
+  execa('cnpm', ['install'], { cwd: path.join(fixturesDir, 'cnpm') })
+    .then(() => t.end())
+    .catch(t.end)
+})

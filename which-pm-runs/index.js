@@ -10,8 +10,9 @@ module.exports = function () {
 function pmFromUserAgent (userAgent) {
   const pmSpec = userAgent.split(' ')[0]
   const separatorPos = pmSpec.lastIndexOf('/')
+  const name = pmSpec.substring(0, separatorPos)
   return {
-    name: pmSpec.substring(0, separatorPos),
+    name: name === 'npminstall' ? 'cnpm' : name,
     version: pmSpec.substring(separatorPos + 1)
   }
 }
