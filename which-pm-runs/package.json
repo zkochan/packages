@@ -19,7 +19,8 @@
   "keywords": [
     "npm",
     "pnpm",
-    "yarn"
+    "yarn",
+    "cnpm"
   ],
   "author": "Zoltan Kochan",
   "license": "MIT",
