@@ -1,12 +1,12 @@
 import pShare from 'promise-share'
 
-export interface SafeDeferredPromise<T> {
+export interface SafePromiseDefer<T> {
   (): Promise<T>
   resolve: (v: T) => void
   reject: (err: Error) => void
 }
 
-export default function safeDeferredPromise<T> (): SafeDeferredPromise<T> {
+export default function safeDeferredPromise<T> (): SafePromiseDefer<T> {
   let _resolve!: (v: T) => void
   let _reject!: (err: Error) => void
 

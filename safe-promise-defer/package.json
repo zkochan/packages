@@ -1,6 +1,6 @@
 {
   "name": "safe-promise-defer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a deferred promise that is wrappened in a function",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
