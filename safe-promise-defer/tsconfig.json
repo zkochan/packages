@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "outDir": "lib",
+    "preserveConstEnums": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es2017"
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  },
+  "types": [
+    "jest"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "safe-promise-defer",
+  "version": "1.0.0",
+  "description": "Create a deferred promise that is wrappened in a function",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "jest",
+    "tsc": "tsc",
+    "prepublishOnly": "pnpm run tsc"
+  },
+  "repository": "https://github.com/zkochan/packages/tree/main/safe-promise-defer",
+  "keywords": [],
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "z@kochan.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/zkochan/packages/tree/main/safe-promise-defer#readme",
+  "dependencies": {
+    "promise-share": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "jest": "^27.4.3",
+    "ts-jest": "^27.1.0",
+    "typescript": "^4.5.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
+}
