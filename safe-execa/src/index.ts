@@ -9,6 +9,15 @@ export function	sync (
   args?: readonly string[],
   options?: execa.SyncOptions
 ): execa.ExecaSyncReturnValue {
+  try {
+    which.sync(file, { path: options?.cwd ?? process.cwd })
+  } catch (err: any) {
+    // If the command is not found in the current directory, there is no need to resolve the command to full location
+    // as there is no danger of binary planting attack on Windows
+    if (err.code === 'ENOENT') {
+      return execa.sync(file, args, options)
+    }
+  }
   const fileAbsolutePath = getCommandAbsolutePathSync(file, options)
   return execa.sync(fileAbsolutePath, args, options)
 }
@@ -35,6 +44,15 @@ export default function (
   args?: readonly string[],
   options?: execa.Options
 ) {
+  try {
+    which.sync(file, { path: options?.cwd ?? process.cwd })
+  } catch (err: any) {
+    // If the command is not found in the current directory, there is no need to resolve the command to full location
+    // as there is no danger of binary planting attack on Windows
+    if (err.code === 'ENOENT') {
+      return execa(file, args, options)
+    }
+  }
   const fileAbsolutePath = getCommandAbsolutePathSync(file, options)
   return execa(fileAbsolutePath, args, options)
 }
