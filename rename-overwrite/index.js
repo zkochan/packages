@@ -49,6 +49,18 @@ module.exports = async function renameOverwrite (oldPath, newPath, retry = 0) {
         await fs.promises.mkdir(path.dirname(newPath), { recursive: true })
         await renameOverwrite(oldPath, newPath, retry)
         break
+      // Crossing filesystem boundaries so rename is not available
+      case 'EXDEV':
+        try {
+          await rimraf(newPath)
+        } catch (rimrafErr) {
+          if (rimrafErr.code !== 'ENOENT') {
+            throw rimrafErr;
+          }
+        }
+        await fs.promises.copyFile(oldPath, newPath)
+        await rimraf(oldPath)
+        break;
       default:
         throw err
     }
@@ -73,6 +85,18 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
         fs.mkdirSync(path.dirname(newPath), { recursive: true })
         renameOverwriteSync(oldPath, newPath, retry)
         return
+      // Crossing filesystem boundaries so rename is not available
+      case 'EXDEV':
+        try {
+          rimraf.sync(newPath)
+        } catch (rimrafErr) {
+          if (rimrafErr.code !== 'ENOENT') {
+            throw rimrafErr;
+          }
+        }
+        fs.copyFileSync(oldPath, newPath)
+        rimraf.sync(oldPath)
+        break;
       default:
         throw err
     }
