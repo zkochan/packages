@@ -41,6 +41,7 @@
     "write-json-file": "^4.3.0"
   },
   "dependencies": {
-    "@zkochan/rimraf": "^2.1.2"
+    "@zkochan/rimraf": "^2.1.2",
+    "fs-extra": "^10.1.0"
   }
 }

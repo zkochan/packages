@@ -1,5 +1,7 @@
 'use strict'
 const fs = require('fs')
+const copySync = require('fs-extra/lib/copy/copy-sync')
+const copy = require('fs-extra/lib/copy/copy')
 const path = require('path')
 const rimraf = require('@zkochan/rimraf')
 
@@ -58,7 +60,7 @@ module.exports = async function renameOverwrite (oldPath, newPath, retry = 0) {
             throw rimrafErr
           }
         }
-        await fs.promises.copyFile(oldPath, newPath)
+        await copy(oldPath, newPath)
         await rimraf(oldPath)
         break
       default:
@@ -94,7 +96,7 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
             throw rimrafErr
           }
         }
-        fs.copyFileSync(oldPath, newPath)
+        copySync(oldPath, newPath)
         rimraf.sync(oldPath)
         break
       default:
