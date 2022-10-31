@@ -1,14 +1,13 @@
 'use strict'
 const fs = require('fs')
 const path = require('path')
-const test = require('tape')
 const writeJsonFile = require('write-json-file')
 const loadJsonFile = require('load-json-file')
 const renameOverwrite = require('rename-overwrite')
 const symlinkDir = require('symlink-dir')
 const tempy = require('tempy')
 
-test('overwrite directory', async t => {
+test('overwrite directory', async () => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('1/foo.json', 1)
@@ -16,11 +15,10 @@ test('overwrite directory', async t => {
 
   await renameOverwrite('1', '2')
 
-  t.equal(loadJsonFile.sync('2/foo.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('2/foo.json')).toBe(1)
 })
 
-test('overwrite file', async t => {
+test('overwrite file', async () => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('1.json', 1)
@@ -28,33 +26,30 @@ test('overwrite file', async t => {
 
   await renameOverwrite('1.json', '2.json')
 
-  t.equal(loadJsonFile.sync('2.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('2.json')).toBe(1)
 })
 
-test('rename file when no overwrite is needed', async t => {
+test('rename file when no overwrite is needed', async () => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('1.json', 1)
 
   await renameOverwrite('1.json', '2.json')
 
-  t.equal(loadJsonFile.sync('2.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('2.json')).toBe(1)
 })
 
-test('rename directory when no overwrite is needed', async t => {
+test('rename directory when no overwrite is needed', async () => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('dir/foo.json', 1)
 
   await renameOverwrite('dir', 'newdir')
 
-  t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('newdir/foo.json')).toBe(1)
 })
 
-test('sync overwrite directory', t => {
+test('sync overwrite directory', () => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('1/foo.json', 1)
@@ -62,11 +57,10 @@ test('sync overwrite directory', t => {
 
   renameOverwrite.sync('1', '2')
 
-  t.equal(loadJsonFile.sync('2/foo.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('2/foo.json')).toBe(1)
 })
 
-test('sync overwrite file', t => {
+test('sync overwrite file', () => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('1.json', 1)
@@ -74,55 +68,50 @@ test('sync overwrite file', t => {
 
   renameOverwrite.sync('1.json', '2.json')
 
-  t.equal(loadJsonFile.sync('2.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('2.json')).toBe(1)
 })
 
-test('sync rename file when no overwrite is needed', t => {
+test('sync rename file when no overwrite is needed', () => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('1.json', 1)
 
   renameOverwrite.sync('1.json', '2.json')
 
-  t.equal(loadJsonFile.sync('2.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('2.json')).toBe(1)
 })
 
-test('sync rename directory when no overwrite is needed', t => {
+test('sync rename directory when no overwrite is needed', () => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('dir/foo.json', 1)
 
   renameOverwrite.sync('dir', 'newdir')
 
-  t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('newdir/foo.json')).toBe(1)
 })
 
-test('create target directory, if it does not exist', async t => {
+test('create target directory, if it does not exist', async () => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('dir/foo.json', 1)
 
   await renameOverwrite('dir', 'newdir/subdir')
 
-  t.equal(loadJsonFile.sync('newdir/subdir/foo.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('newdir/subdir/foo.json')).toBe(1)
 })
 
-test('sync create target directory, if it does not exist', t => {
+test('sync create target directory, if it does not exist', () => {
   process.chdir(tempy.directory())
 
   writeJsonFile.sync('dir/foo.json', 1)
 
   renameOverwrite.sync('dir', 'newdir/subdir')
 
-  t.equal(loadJsonFile.sync('newdir/subdir/foo.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('newdir/subdir/foo.json')).toBe(1)
 })
 
-test('overwrite a symlink', async t => {
+test('overwrite a symlink', async () => {
   process.chdir(tempy.directory())
 
   fs.mkdirSync('target')
@@ -130,11 +119,10 @@ test('overwrite a symlink', async t => {
   writeJsonFile.sync('dir/foo.json', 1)
 
   await renameOverwrite('dir', 'newdir')
-  t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('newdir/foo.json')).toBe(1)
 })
 
-test('sync overwrite a symlink', async t => {
+test('sync overwrite a symlink', async () => {
   process.chdir(tempy.directory())
 
   fs.mkdirSync('target')
@@ -142,28 +130,25 @@ test('sync overwrite a symlink', async t => {
   writeJsonFile.sync('dir/foo.json', 1)
 
   renameOverwrite.sync('dir', 'newdir')
-  t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('newdir/foo.json')).toBe(1)
 })
 
-test('overwrite a broken symlink', async t => {
+test('overwrite a broken symlink', async () => {
   process.chdir(tempy.directory())
 
   await symlinkDir(path.resolve('target'), 'newdir')
   writeJsonFile.sync('dir/foo.json', 1)
 
   await renameOverwrite('dir', 'newdir')
-  t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('newdir/foo.json')).toBe(1)
 })
 
-test('sync overwrite a broken symlink', async t => {
+test('sync overwrite a broken symlink', async () => {
   process.chdir(tempy.directory())
 
   await symlinkDir(path.resolve('target'), 'newdir')
   writeJsonFile.sync('dir/foo.json', 1)
 
   renameOverwrite.sync('dir', 'newdir')
-  t.equal(loadJsonFile.sync('newdir/foo.json'), 1)
-  t.end()
+  expect(loadJsonFile.sync('newdir/foo.json')).toBe(1)
 })
