@@ -291,7 +291,7 @@ importers:
   rename-overwrite:
     specifiers:
       '@zkochan/rimraf': ^2.1.2
-      fs-extra: ^10.1.0
+      fs-extra: 10.1.0
       jest: ^27.4.3
       load-json-file: 6.2.0
       rename-overwrite: 'link:'
@@ -5268,7 +5268,7 @@ packages:
     bundledDependencies: []
 
   /jsonfile/4.0.0:
-    resolution: {integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=}
+    resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
     optionalDependencies:
       graceful-fs: 4.2.10
     dev: true

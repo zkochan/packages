@@ -42,6 +42,6 @@
   },
   "dependencies": {
     "@zkochan/rimraf": "^2.1.2",
-    "fs-extra": "^10.1.0"
+    "fs-extra": "10.1.0"
   }
 }
