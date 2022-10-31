@@ -1,5 +1,8 @@
 'use strict'
 const fs = require('fs')
+const { promisify } = require('util')
+const copySync = require('fs-extra/lib/copy/copy-sync')
+const copy = promisify(require('fs-extra/lib/copy/copy'))
 const path = require('path')
 const rimraf = require('@zkochan/rimraf')
 
@@ -49,6 +52,18 @@ module.exports = async function renameOverwrite (oldPath, newPath, retry = 0) {
         await fs.promises.mkdir(path.dirname(newPath), { recursive: true })
         await renameOverwrite(oldPath, newPath, retry)
         break
+      // Crossing filesystem boundaries so rename is not available
+      case 'EXDEV':
+        try {
+          await rimraf(newPath)
+        } catch (rimrafErr) {
+          if (rimrafErr.code !== 'ENOENT') {
+            throw rimrafErr
+          }
+        }
+        await copy(oldPath, newPath)
+        await rimraf(oldPath)
+        break
       default:
         throw err
     }
@@ -73,6 +88,18 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
         fs.mkdirSync(path.dirname(newPath), { recursive: true })
         renameOverwriteSync(oldPath, newPath, retry)
         return
+      // Crossing filesystem boundaries so rename is not available
+      case 'EXDEV':
+        try {
+          rimraf.sync(newPath)
+        } catch (rimrafErr) {
+          if (rimrafErr.code !== 'ENOENT') {
+            throw rimrafErr
+          }
+        }
+        copySync(oldPath, newPath)
+        rimraf.sync(oldPath)
+        break
       default:
         throw err
     }
