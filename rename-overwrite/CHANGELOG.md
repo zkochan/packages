@@ -1,5 +1,11 @@
 # rename-overwrite
 
+## 4.0.3
+
+### Patch Changes
+
+- 0300ee6: Support moving files and directories across devices.
+
 ## 4.0.2
 
 ### Patch Changes
