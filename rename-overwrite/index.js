@@ -55,12 +55,12 @@ module.exports = async function renameOverwrite (oldPath, newPath, retry = 0) {
           await rimraf(newPath)
         } catch (rimrafErr) {
           if (rimrafErr.code !== 'ENOENT') {
-            throw rimrafErr;
+            throw rimrafErr
           }
         }
         await fs.promises.copyFile(oldPath, newPath)
         await rimraf(oldPath)
-        break;
+        break
       default:
         throw err
     }
@@ -91,12 +91,12 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
           rimraf.sync(newPath)
         } catch (rimrafErr) {
           if (rimrafErr.code !== 'ENOENT') {
-            throw rimrafErr;
+            throw rimrafErr
           }
         }
         fs.copyFileSync(oldPath, newPath)
         rimraf.sync(oldPath)
-        break;
+        break
       default:
         throw err
     }
