@@ -164,6 +164,18 @@ importers:
       tape: 5.5.3
       tempy: 1.0.1
 
+  p-map-values:
+    specifiers:
+      '@types/jest': ^27.0.3
+      jest: ^27.4.3
+      ts-jest: ^27.1.0
+      typescript: ^4.5.2
+    devDependencies:
+      '@types/jest': 27.5.0
+      jest: 27.5.1
+      ts-jest: 27.1.4_3y7pzupgu3ueocdatbfldfrs3i
+      typescript: 4.6.4
+
   path-absolute:
     specifiers:
       standard: ^16.0.4
@@ -1720,7 +1732,7 @@ packages:
     dev: true
 
   /ansi-regex/0.2.1:
-    resolution: {integrity: sha1-DY6UaWej2BQ/k+JOKYUl/BsiNfk=}
+    resolution: {integrity: sha512-sGwIGMjhYdW26/IhwK2gkWWI8DRCVO6uj3hYgHT+zD+QL1pa37tM3ujhyfcJIYSbsxp7Gxhy7zrRW/1AHm4BmA==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -1734,7 +1746,7 @@ packages:
     engines: {node: '>=8'}
 
   /ansi-styles/1.1.0:
-    resolution: {integrity: sha1-6uy/Zs1waIJ2Cy9GkVgrj1XXp94=}
+    resolution: {integrity: sha512-f2PKUkN5QngiSemowa6Mrk9MPCdtFiOSmibjZ+j1qhLGHHYsqZwmBMRF3IRMVXo8sybDqx2fJl2d/8OphBoWkA==}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -2394,7 +2406,7 @@ packages:
     dev: true
 
   /chalk/0.5.1:
-    resolution: {integrity: sha1-Zjs6ZItotV0EaQ1JFnqoN4WPIXQ=}
+    resolution: {integrity: sha512-bIKA54hP8iZhyDT81TOsJiQvR1gW+ZYSXFaZUAvoD4wCHdbHY2actmpTE4x344ZlFqHbvoxKOaESULTZN2gstg==}
     engines: {node: '>=0.10.0'}
     dependencies:
       ansi-styles: 1.1.0
@@ -5482,7 +5494,7 @@ packages:
     dev: true
 
   /lru-cache/2.7.3:
-    resolution: {integrity: sha1-bUUk6LlV+V1PW1iFHOId1y+06VI=}
+    resolution: {integrity: sha512-WpibWJ60c3AgAz8a2iYErDrcT2C7OmKnsWhIcHOjkUHFjkXncJhtLxNSqUmxRxRunpb5I8Vprd7aNSd2NtksJQ==}
     dev: true
 
   /lru-cache/4.1.5:
@@ -7641,7 +7653,7 @@ packages:
     dev: true
 
   /semver/5.3.0:
-    resolution: {integrity: sha1-myzl094C0XxgEq0yaqa00M9U+U8=}
+    resolution: {integrity: sha512-mfmm3/H9+67MCVix1h+IXTpDwL6710LyHuk7+cWC9T1mE0qz4iHhh6r4hU2wrIT9iTsAAC2XQRvfblL028cpLw==}
     hasBin: true
     dev: true
 
@@ -8105,7 +8117,7 @@ packages:
     dev: true
 
   /supports-color/0.2.0:
-    resolution: {integrity: sha1-2S3iaU6z9nMjlz1649i1W0wiGQo=}
+    resolution: {integrity: sha512-tdCZ28MnM7k7cJDJc7Eq80A9CsRFAAOZUy41npOZCs++qSjfIy7o5Rh46CBk+Dk5FbKJ33X3Tqg4YrV07N5RaA==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     dev: true
@@ -9043,7 +9055,7 @@ packages:
     dev: true
 
   /yallist/2.1.2:
-    resolution: {integrity: sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=}
+    resolution: {integrity: sha512-ncTzHV7NvsQZkYe1DW7cbDLm0YpzHmZF5r/iyP3ZnQtMiJ+pjzisCiMNI+Sj+xQF5pXhSHxSB3uDbsBTzY/c2A==}
     dev: true
 
   /yallist/3.1.1:
