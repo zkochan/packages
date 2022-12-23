@@ -9,7 +9,7 @@
 ## Installation
 
 ```sh
-<npm|yarn|pnpm> add read-ini-file
+pnpm add read-ini-file
 ```
 
 ## Usage
@@ -17,7 +17,7 @@
 <!--@example('./example/index.js')-->
 ```js
 'use strict'
-const loadIniFile = require('read-ini-file')
+const { readIniFile } = require('read-ini-file')
 const path = require('path')
 
 const fixture = path.join(__dirname, 'currencies.ini')
@@ -29,11 +29,11 @@ console.log(currencies)
 
 ## API
 
-### `loadIniFile(filepath)`
+### `readIniFile(filepath)`
 
 Returns a promise for the parsed ini.
 
-### `loadIniFile.sync(filepath)`
+### `readIniFileSync(filepath)`
 
 Returns the parsed ini.
 

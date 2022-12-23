@@ -239,7 +239,7 @@ importers:
 
   read-ini-file:
     specifiers:
-      ini: ^2.0.0
+      ini: ^3.0.1
       mos: 2.0.0-alpha.3
       mos-plugin-readme: ^1.0.4
       read-ini-file: 'file:'
@@ -247,7 +247,7 @@ importers:
       strip-bom: ^4.0.0
       tape: ^5.3.2
     dependencies:
-      ini: 2.0.0
+      ini: 3.0.1
       strip-bom: 4.0.0
     devDependencies:
       mos: 2.0.0-alpha.3
@@ -4285,6 +4285,7 @@ packages:
   /ini/2.0.0:
     resolution: {integrity: sha512-7PnF4oN3CvZF23ADhA5wRaYEQpJ8qygSkbtTXWBeXWXmEVRXK+1ITciHWwHhsjv1TmW0MgacIv6hEi5pX5NQdA==}
     engines: {node: '>=10'}
+    dev: true
 
   /ini/3.0.1:
     resolution: {integrity: sha512-it4HyVAUTKBc6m8e1iXWvXSTdndF7HbdN713+kvLrymxTaU4AUBWrJ4vEooP+V7fexnVD3LKcBshjGGPefSMUQ==}
@@ -8085,7 +8086,7 @@ packages:
     dev: true
 
   /strip-bom/3.0.0:
-    resolution: {integrity: sha1-IzTBjpx1n3vdVv3vfprj1YjmjtM=}
+    resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
     engines: {node: '>=4'}
 
   /strip-bom/4.0.0:

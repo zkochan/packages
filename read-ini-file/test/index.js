@@ -1,12 +1,12 @@
 'use strict'
 const path = require('path')
 const test = require('tape')
-const m = require('read-ini-file')
+const { readIniFile, readIniFileSync } = require('read-ini-file')
 
 const fixture = path.join(__dirname, 'fixture.ini')
 
 test('async', t => {
-  m(fixture)
+  readIniFile(fixture)
     .then(data => {
       t.equal(data.name, 'read-ini-file')
       t.end()
@@ -15,6 +15,6 @@ test('async', t => {
 })
 
 test('sync', t => {
-  t.equal(m.sync(fixture).name, 'read-ini-file')
+  t.equal(readIniFileSync(fixture).name, 'read-ini-file')
   t.end()
 })

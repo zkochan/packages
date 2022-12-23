@@ -1,5 +1,11 @@
 # read-ini-file
 
+## 4.0.0
+
+### Breaking Changes
+
+- Node.js 14 is required
+
 ## 3.1.0
 
 ### Minor Changes
