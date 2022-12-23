@@ -15,7 +15,7 @@
 ## Usage
 
 ```js
-const writeIniFile = require('write-ini-file')
+const { writeIniFile } = require('write-ini-file')
 
 writeIniFile('foo.ini', {foo: true}).then(() => {
 	console.log('done')
@@ -28,7 +28,7 @@ writeIniFile('foo.ini', {foo: true}).then(() => {
 
 Returns a promise.
 
-### `writeIniFile.sync(filepath, data, [options])`
+### `writeIniFileSync(filepath, data, [options])`
 
 #### options
 

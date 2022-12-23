@@ -1,6 +1,6 @@
 declare namespace readIniFile {
-  declare function readIniFile (filePath: string): Promise<Object>
-  declare function readIniFileSync (filePath: string): Promise<Object>
+  function readIniFile (filePath: string): Promise<Object>
+  function readIniFileSync (filePath: string): Object
 }
 
 export = readIniFile
