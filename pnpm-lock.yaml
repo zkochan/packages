@@ -488,7 +488,7 @@ importers:
       mos-plugin-readme: ^1.0.4
       standard: ^16.0.4
       tape: ^5.3.2
-      tempfile: ^3.0.0
+      tempfile: ^4.0.0
       write-file-atomic: ^5.0.0
       write-ini-file: 'file:'
     dependencies:
@@ -500,7 +500,7 @@ importers:
       mos-plugin-readme: 1.0.4
       standard: 16.0.4
       tape: 5.5.3
-      tempfile: 3.0.0
+      tempfile: 4.0.0
       write-ini-file: file:write-ini-file
     dependenciesMeta:
       write-ini-file:
@@ -514,7 +514,7 @@ importers:
       sort-keys: ^4.2.0
       standard: ^16.0.4
       tape: ^5.3.2
-      tempfile: ^3.0.0
+      tempfile: ^4.0.0
       write-file-atomic: ^3.0.3
     dependencies:
       json5: 2.2.1
@@ -525,7 +525,7 @@ importers:
       mos-plugin-readme: 1.0.4
       standard: 16.0.4
       tape: 5.5.3
-      tempfile: 3.0.0
+      tempfile: 4.0.0
 
   write-yaml-file:
     specifiers:
@@ -4289,7 +4289,6 @@ packages:
   /ini/3.0.1:
     resolution: {integrity: sha512-it4HyVAUTKBc6m8e1iXWvXSTdndF7HbdN713+kvLrymxTaU4AUBWrJ4vEooP+V7fexnVD3LKcBshjGGPefSMUQ==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
-    dev: false
 
   /internal-slot/1.0.3:
     resolution: {integrity: sha512-O0DB1JC/sPyZl7cIo78n5dR7eUSwwpYPiXRhTzNxZVAMUuB8vlnRFyLxdrVToks6XPLVnFfbzaVd5WLjhgg+vA==}
@@ -8275,12 +8274,12 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /tempfile/3.0.0:
-    resolution: {integrity: sha512-uNFCg478XovRi85iD42egu+eSFUmmka750Jy7L5tfHI5hQKKtbPnxaSaXAbBqCDYrw3wx4tXjKwci4/QmsZJxw==}
-    engines: {node: '>=8'}
+  /tempfile/4.0.0:
+    resolution: {integrity: sha512-dNH6UWyI8kijDmLVb0IJvCG4JZ5uOmy40CLoi/dVySL49v0f0Y+jIN2rE6Hj85y8mIIya1vwpKZlL9jASs5ktg==}
+    engines: {node: '>=12.20'}
     dependencies:
       temp-dir: 2.0.0
-      uuid: 3.4.0
+      uuid: 8.3.2
     dev: true
 
   /tempy/1.0.1:
@@ -8745,13 +8744,18 @@ packages:
     dev: true
 
   /uuid/2.0.3:
-    resolution: {integrity: sha1-Z+LoY3lyFVMN/zGOW/nc6/1Hsho=}
+    resolution: {integrity: sha512-FULf7fayPdpASncVy4DLh3xydlXEJJpvIELjYjNeQWYUZ9pclcpvCZSr2gkmN2FrrGcI7G/cJsIEwk5/8vfXpg==}
     deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
     dev: true
 
   /uuid/3.4.0:
     resolution: {integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==}
     deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+    hasBin: true
+    dev: true
+
+  /uuid/8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
     hasBin: true
     dev: true
 
@@ -8982,7 +8986,6 @@ packages:
     dependencies:
       imurmurhash: 0.1.4
       signal-exit: 3.0.7
-    dev: false
 
   /write-json-file/1.2.0:
     resolution: {integrity: sha1-LV3+lqvDyIkFfJOXGqQAXvtUgTQ=}
@@ -9263,10 +9266,10 @@ packages:
   file:write-ini-file:
     resolution: {directory: write-ini-file, type: directory}
     name: write-ini-file
-    version: 3.1.0
-    engines: {node: '>=10.13'}
+    version: 4.0.0
+    engines: {node: '>=14.6'}
     dependencies:
-      ini: 2.0.0
+      ini: 3.0.1
       make-dir: 3.1.0
-      write-file-atomic: 3.0.3
+      write-file-atomic: 5.0.0
     dev: true
