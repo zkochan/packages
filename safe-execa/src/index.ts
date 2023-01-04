@@ -10,7 +10,7 @@ export function	sync (
   options?: execa.SyncOptions
 ): execa.ExecaSyncReturnValue {
   try {
-    which.sync(file, { path: options?.cwd ?? process.cwd })
+    which.sync(file, { path: options?.cwd ?? process.cwd() })
   } catch (err: any) {
     // If the command is not found in the current directory, there is no need to resolve the command to full location
     // as there is no danger of binary planting attack on Windows
@@ -45,7 +45,7 @@ export default function (
   options?: execa.Options
 ) {
   try {
-    which.sync(file, { path: options?.cwd ?? process.cwd })
+    which.sync(file, { path: options?.cwd ?? process.cwd() })
   } catch (err: any) {
     // If the command is not found in the current directory, there is no need to resolve the command to full location
     // as there is no danger of binary planting attack on Windows
