@@ -11,6 +11,8 @@
 ### Minor Changes
 
 - bba9985: graceful-fs and mz removed from dependencies.
+- Breaking Change: `readIniFile.sync` changes to `readIniFileSync`
+- Breaking Change: `import readIniFile` changes to `import { readIniFile, readIniFileSync }` (where you choose what you use)
 
 ## 3.0.1
 
