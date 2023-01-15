@@ -62,10 +62,11 @@ const TABLE_OPTIONS = {
   singleLine: true,
 }
 
-const FIRST_COLUMN = { paddingLeft: 2, width: 3 }
+const FIRST_COLUMN = { paddingLeft: 2, paddingRight: 0 }
 const SHORT_OPTION_COLUMN = { alignment: 'right' as const }
-const LONG_OPTION_COLUMN = { paddingLeft: 0 }
+const LONG_OPTION_COLUMN = { paddingLeft: 1, paddingRight: 2 }
 const DESCRIPTION_COLUMN = {
+  paddingLeft: 0,
   paddingRight: 0,
   wrapWord: true,
 }
@@ -74,18 +75,30 @@ function renderDescriptionList (descriptionItems: DescriptionItem[], width: numb
   const data = descriptionItems
     .sort((item1, item2) => item1.name.localeCompare(item2.name))
     .map(({ shortAlias, name, description }) => [shortAlias && `${shortAlias},` || ' ', name, description || ''])
-  const firstColumnMaxWidth = getColumnMaxWidth(data, 0)
-  const nameColumnWidth = Math.max(getColumnMaxWidth(data, 1), 19)
-  const descriptionColumnWidth = Math.max(2, width - firstColumnMaxWidth - nameColumnWidth - 2 - 2 - 1)
+  const firstColumnMaxWidth = Math.max(getColumnMaxWidth(data, 0), 3)
+  const nameColumnMaxWidth = Math.max(getColumnMaxWidth(data, 1), 19)
+  const descriptionColumnWidth = Math.max(
+    width -
+      (FIRST_COLUMN.paddingLeft +
+        firstColumnMaxWidth +
+        FIRST_COLUMN.paddingRight +
+        LONG_OPTION_COLUMN.paddingLeft +
+        nameColumnMaxWidth +
+        LONG_OPTION_COLUMN.paddingRight +
+        DESCRIPTION_COLUMN.paddingLeft +
+        DESCRIPTION_COLUMN.paddingRight),
+    2
+  )
   return multiTrim(table(data, {
     ...TABLE_OPTIONS,
     columns: {
       0: {
+        width: firstColumnMaxWidth,
         ...SHORT_OPTION_COLUMN,
         ...FIRST_COLUMN,
       },
       1: {
-        width: nameColumnWidth,
+        width: nameColumnMaxWidth,
         ...LONG_OPTION_COLUMN,
       },
       2: {
