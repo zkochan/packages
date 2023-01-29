@@ -138,6 +138,15 @@ test('description list should fit the screen', () => {
           }
         ]
       },
+      {
+        title: 'Options 2',
+        list: [
+          {
+            description: 'Bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar',
+            name: '--bar'
+          }
+        ]
+      },
     ],
     usages: ['foo [command] [options]'],
     width: 100,
@@ -150,6 +159,10 @@ test('description list should fit the screen', () => {
                                bar bar bar bar bar bar bar bar bar bar
       -f, --force              This forces something
           --qar
+
+    Options 2:
+          --bar                Bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar bar
+                               bar bar bar bar bar bar bar bar bar bar
   `)
 })
 
