@@ -1,5 +1,11 @@
 # render-help
 
+## 1.0.3
+
+### Patch Changes
+
+- Fix description width when no short aliases are provided.
+
 ## 1.0.2
 
 ### Patch Changes
