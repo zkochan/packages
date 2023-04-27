@@ -21,11 +21,15 @@ const main = (fn, fp, data, opts) => {
 }
 
 module.exports = async (fp, data, opts) => {
-  await fs.promises.mkdir(path.dirname(fp), { recursive: true })
+  if (opts?.makeDir ?? true) {
+    await fs.promises.mkdir(path.dirname(fp), { recursive: true })
+  }
   return main(writeFileAtomic, fp, data, opts)
 }
 
 module.exports.sync = (fp, data, opts) => {
-  fs.mkdirSync(path.dirname(fp), { recursive: true })
+  if (opts?.makeDir ?? true) {
+    fs.mkdirSync(path.dirname(fp), { recursive: true })
+  }
   main(writeFileAtomic.sync, fp, data, opts)
 }

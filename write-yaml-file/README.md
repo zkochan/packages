@@ -39,6 +39,13 @@ Default `438` *(0666 in octal)*
 
 [Mode](https://en.wikipedia.org/wiki/File_system_permissions#Numeric_notation) used when writing the file.
 
+#### makeDir
+
+Type: `boolean`
+Default: `true`
+
+Creates the directory to which the YAML file is written.
+
 ## Related
 
 - [load-yaml-file](https://github.com/LinusU/load-yaml-file) - Read and parse a YAML file

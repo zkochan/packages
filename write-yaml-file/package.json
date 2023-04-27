@@ -1,11 +1,11 @@
 {
   "name": "write-yaml-file",
-  "version": "4.2.0",
+  "version": "5.0.0",
   "description": "Stringify and write YAML to a file atomically",
   "main": "index.js",
   "typings": "index.d.ts",
   "engines": {
-    "node": ">=10.13"
+    "node": ">=16.14"
   },
   "files": [
     "index.js",
@@ -34,7 +34,7 @@
   "homepage": "https://github.com/zkochan/packages/tree/main/write-yaml-file#readme",
   "dependencies": {
     "js-yaml": "^4.1.0",
-    "write-file-atomic": "^3.0.3"
+    "write-file-atomic": "^5.0.1"
   },
   "devDependencies": {
     "standard": "^16.0.4"
