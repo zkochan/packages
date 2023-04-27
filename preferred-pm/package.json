@@ -35,7 +35,7 @@
     }
   },
   "dependencies": {
-    "find-up": "^5.0.0",
+    "find-up": "^6.0.0",
     "find-yarn-workspace-root2": "1.2.16",
     "path-exists": "^4.0.0",
     "which-pm": "2.0.0"
