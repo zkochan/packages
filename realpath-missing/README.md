@@ -1,6 +1,6 @@
 # realpath-missing
 
-> Canonicalize by following every symlink in every component of the given name recursively, without requirements on components existence
+> `realpath-missing` resolves the absolute path of a file or directory by following every symbolic link in every component of the given name recursively, even if some of the components do not exist.
 
 <!--@shields('npm')-->
 [![npm version](https://img.shields.io/npm/v/realpath-missing.svg)](https://www.npmjs.com/package/realpath-missing)
