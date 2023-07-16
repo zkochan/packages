@@ -5,3 +5,7 @@ const uniqueString = require('unique-string')
 module.exports = function pathTemp (folder) {
   return path.join(folder, `_tmp_${process.pid}_${uniqueString()}`)
 }
+
+module.exports.fastPathTemp = function pathTempFast (file) {
+  return path.join(path.dirname(file), `${path.basename(file)}_tmp_${process.pid}`)
+}
