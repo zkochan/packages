@@ -28,8 +28,11 @@ jobs:
         node-version: ${{ matrix.node }}
     - name: checkout main
       run: git branch -f main origin/main
-    - name: install pnpm
-      run: npm install --global @pnpm/exe@8
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2.4.0
+      with:
+        version: next-8
+        standalone: true
     - name: pnpm install
       run: pnpm install
     - name: run tests
