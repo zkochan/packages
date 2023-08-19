@@ -1,2 +1,7 @@
-declare function rimraf(path: string): Promise<void>
+declare function rimraf (p: string): Promise<void>
+
+declare namespace rimraf {
+  function sync(p: string): void
+}
+
 export = rimraf
