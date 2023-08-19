@@ -1,5 +1,11 @@
 # @zkochan/rimraf
 
+## 2.1.3
+
+### Patch Changes
+
+- 1b6d04d: Add `sync` to `index.d.ts`.
+
 ## 2.1.2
 
 ### Patch Changes

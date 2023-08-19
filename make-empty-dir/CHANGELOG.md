@@ -1,5 +1,16 @@
 # make-empty-dir
 
+## 2.1.0
+
+### Minor Changes
+
+- 59f06c5: Add a sync function.
+
+### Patch Changes
+
+- Updated dependencies [1b6d04d]
+  - @zkochan/rimraf@2.1.3
+
 ## 2.0.0
 
 ### Major Changes

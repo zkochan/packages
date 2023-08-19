@@ -193,8 +193,8 @@ importers:
   make-empty-dir:
     dependencies:
       '@zkochan/rimraf':
-        specifier: ^2.1.1
-        version: 2.1.2
+        specifier: ^2.1.3
+        version: 2.1.3
     devDependencies:
       tape:
         specifier: ^5.3.2
@@ -2021,6 +2021,13 @@ packages:
 
   /@zkochan/rimraf@2.1.2:
     resolution: {integrity: sha512-Lc2oK51J6aQWcLWTloobJun5ZF41BbTDdLvE+aMcexoVWFoFqvZmnZoyXR2IZk6NJEVoZW8tjgtvQLfTsmRs2Q==}
+    engines: {node: '>=12.10'}
+    dependencies:
+      rimraf: 3.0.2
+    dev: false
+
+  /@zkochan/rimraf@2.1.3:
+    resolution: {integrity: sha512-mCfR3gylCzPC+iqdxEA6z5SxJeOgzgbwmyxanKriIne5qZLswDe/M43aD3p5MNzwzXRhbZg/OX+MpES6Zk1a6A==}
     engines: {node: '>=12.10'}
     dependencies:
       rimraf: 3.0.2
@@ -7867,7 +7874,7 @@ packages:
     resolution: {integrity: sha512-L1sgBgagVgOgb1Z6QZr1yJgSMHI4SXQqAH0l/UbeyHnLKxECvKIlyVEmBo4BqsCAZGg0SBSyjCh68lis5PgC7g==}
     engines: {node: '>=12.10'}
     dependencies:
-      '@zkochan/rimraf': 2.1.2
+      '@zkochan/rimraf': 2.1.3
     dev: true
 
   /repeat-string@1.6.1:

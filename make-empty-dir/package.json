@@ -1,6 +1,6 @@
 {
   "name": "make-empty-dir",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Ensures that a directory is empty",
   "main": "index.js",
   "files": [
@@ -32,6 +32,6 @@
     "tempy": "^1.0.1"
   },
   "dependencies": {
-    "@zkochan/rimraf": "^2.1.1"
+    "@zkochan/rimraf": "^2.1.3"
   }
 }
