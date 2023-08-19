@@ -575,6 +575,9 @@ importers:
 
   which-pm-runs:
     devDependencies:
+      '@pnpm/exe':
+        specifier: ^8.6.12
+        version: 8.6.12
       cnpm:
         specifier: ^7.1.1
         version: 7.1.1
@@ -584,9 +587,6 @@ importers:
       npm:
         specifier: ^8.2.0
         version: 8.9.0
-      pnpm:
-        specifier: ^8.6.12
-        version: 8.6.12
       tape:
         specifier: ^5.3.2
         version: 5.5.3
@@ -1796,6 +1796,57 @@ packages:
       node-gyp: 7.1.2
       read-package-json-fast: 2.0.3
     dev: true
+
+  /@pnpm/exe@8.6.12:
+    resolution: {integrity: sha512-Njxku/XZ1NS5Id5Hoie3aaHY8RAfbzFPzOkItb4Ac6F/Bay2p20Gh1v65FJDhrXj16nnuyHBBUDp4Dn2lfEvRA==}
+    hasBin: true
+    optionalDependencies:
+      '@pnpm/linux-arm64': 8.6.12
+      '@pnpm/linux-x64': 8.6.12
+      '@pnpm/macos-arm64': 8.6.12
+      '@pnpm/macos-x64': 8.6.12
+      '@pnpm/win-x64': 8.6.12
+    dev: true
+
+  /@pnpm/linux-arm64@8.6.12:
+    resolution: {integrity: sha512-WeRhgTQKKRXx8MSijXw6HHicGSzjJEDsiZk9pT7HJb51KJcJGhdZeRoHEALDCZJ/OhdclGErXTThJGCxVt0Wwg==}
+    cpu: [arm64]
+    os: [linux]
+    hasBin: true
+    dev: true
+    optional: true
+
+  /@pnpm/linux-x64@8.6.12:
+    resolution: {integrity: sha512-3Iedhhx+Dxj6KD8R+PeHqPoFMZ2mU6R+YVVYO4C9Raqj3LQu0mzmJVxuXsXhnuDrBqEWHLXAc/+7+0DLt/RKyQ==}
+    cpu: [x64]
+    os: [linux]
+    hasBin: true
+    dev: true
+    optional: true
+
+  /@pnpm/macos-arm64@8.6.12:
+    resolution: {integrity: sha512-/ovnwqzOw6pv0SIDxBBk3p5pXLcs1QpHgWUth4I8xoCpF+CKSMaeF8W8CXAfiQ9vV8p3j/edUsX7ikZY2p62AQ==}
+    cpu: [arm64]
+    os: [darwin]
+    hasBin: true
+    dev: true
+    optional: true
+
+  /@pnpm/macos-x64@8.6.12:
+    resolution: {integrity: sha512-ThvCuIp1V0ZCh2Vah0fSSkdS9ix4oTHBhP8pzFOJq/8Xn0waBjz/0wcRS9lrsve2E7W5/znM+asFKRV+ESGm5w==}
+    cpu: [x64]
+    os: [darwin]
+    hasBin: true
+    dev: true
+    optional: true
+
+  /@pnpm/win-x64@8.6.12:
+    resolution: {integrity: sha512-5MLWVmPQW2ruCxmj6G+VAcnJNM1z1hXtqkZR3Ceb2WwzGtAhl5hcHGproLpB0v61/jbSxe/YDA9+Na6QgwHfrw==}
+    cpu: [x64]
+    os: [win32]
+    hasBin: true
+    dev: true
+    optional: true
 
   /@sinonjs/commons@1.8.3:
     resolution: {integrity: sha512-xkNcLAn/wZaX14RPlwizcKicDk9G3F8m2nU3L7Ukm5zBgTwiT0wsoFAHx9Jq56fJA1z/7uKGtCRu16sOUCLIHQ==}
@@ -7412,12 +7463,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /pnpm@8.6.12:
-    resolution: {integrity: sha512-Eza4C5SO/Xl5IYozupbZ5NOA5leBRPYxmXmXfe7G4/4uCkRLhks84rB33aitxNZU/uMrnDGGjwrLktoKvPjqHA==}
-    engines: {node: '>=16.14'}
-    hasBin: true
-    dev: true
-
   /preferred-pm@3.0.3:
     resolution: {integrity: sha512-+wZgbxNES/KlJs9q40F/1sfOd/j7f1O9JaHcW5Dsn3aUUOZg3L2bjpVUcKV2jvtElYfoTuQiNeMfQJ4kwUAhCQ==}
     engines: {node: '>=10'}
@@ -9613,14 +9658,12 @@ packages:
   file:can-link:
     resolution: {directory: can-link, type: directory}
     name: can-link
-    version: 2.0.0
     engines: {node: '>=10'}
     dev: true
 
   file:can-write-to-dir:
     resolution: {directory: can-write-to-dir, type: directory}
     name: can-write-to-dir
-    version: 1.1.1
     engines: {node: '>=10.13'}
     dependencies:
       path-temp: 2.0.0
@@ -9629,7 +9672,6 @@ packages:
   file:dir-is-case-sensitive:
     resolution: {directory: dir-is-case-sensitive, type: directory}
     name: dir-is-case-sensitive
-    version: 2.0.0
     engines: {node: '>=10'}
     dependencies:
       path-temp: 2.0.0
@@ -9638,7 +9680,6 @@ packages:
   file:graceful-git:
     resolution: {directory: graceful-git, type: directory}
     name: graceful-git
-    version: 3.1.2
     engines: {node: '>=10'}
     dependencies:
       retry: 0.13.1
@@ -9648,7 +9689,6 @@ packages:
   file:is-inner-link:
     resolution: {directory: is-inner-link, type: directory}
     name: is-inner-link
-    version: 4.0.0
     engines: {node: '>=10'}
     dependencies:
       is-subdir: 1.2.0
@@ -9658,7 +9698,6 @@ packages:
   file:path-temp:
     resolution: {directory: path-temp, type: directory}
     name: path-temp
-    version: 2.0.0
     engines: {node: '>=8.15'}
     dependencies:
       unique-string: 2.0.0
@@ -9667,7 +9706,6 @@ packages:
   file:preferred-pm:
     resolution: {directory: preferred-pm, type: directory}
     name: preferred-pm
-    version: 3.0.3
     engines: {node: '>=10'}
     dependencies:
       find-up: 5.0.0
@@ -9679,7 +9717,6 @@ packages:
   file:read-ini-file:
     resolution: {directory: read-ini-file, type: directory}
     name: read-ini-file
-    version: 4.0.0
     engines: {node: '>=14.6'}
     dependencies:
       ini: 3.0.1
@@ -9689,7 +9726,6 @@ packages:
   file:read-yaml-file:
     resolution: {directory: read-yaml-file, type: directory}
     name: read-yaml-file
-    version: 2.1.0
     engines: {node: '>=10.13'}
     dependencies:
       js-yaml: 4.1.0
@@ -9699,7 +9735,6 @@ packages:
   file:root-link-target:
     resolution: {directory: root-link-target, type: directory}
     name: root-link-target
-    version: 3.1.0
     engines: {node: '>=10'}
     dependencies:
       can-link: link:can-link
@@ -9710,7 +9745,6 @@ packages:
   file:run-groups:
     resolution: {directory: run-groups, type: directory}
     name: run-groups
-    version: 3.0.1
     engines: {node: '>=10'}
     dependencies:
       p-limit: 3.1.0
@@ -9719,7 +9753,6 @@ packages:
   file:which-pm:
     resolution: {directory: which-pm, type: directory}
     name: which-pm
-    version: 2.0.0
     engines: {node: '>=8.15'}
     dependencies:
       load-yaml-file: 0.2.0
@@ -9735,7 +9768,6 @@ packages:
   file:write-ini-file:
     resolution: {directory: write-ini-file, type: directory}
     name: write-ini-file
-    version: 4.0.1
     engines: {node: '>=14.6'}
     dependencies:
       ini: 3.0.1
