@@ -13,6 +13,12 @@ test('detects yarn', t => {
     .catch(t.end)
 })
 
+test('detects bun', t => {
+  execa('bun', ['install'], { cwd: path.join(fixturesDir, 'bun') })
+    .then(() => t.end())
+    .catch(t.end)
+})
+
 test('detects npm', t => {
   execa('npm', ['install'], { cwd: path.join(fixturesDir, 'npm') })
     .then(() => t.end())

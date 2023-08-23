@@ -4,7 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/which-pm-runs.svg)](https://www.npmjs.com/package/which-pm-runs)
 
-Supports npm, pnpm, Yarn, cnpm. And also any other package manager that sets the `npm_config_user_agent` env variable.
+Supports npm, pnpm, Yarn, cnpm, and bun. And also any other package manager that sets the `npm_config_user_agent` env variable.
 
 ## Installation
 

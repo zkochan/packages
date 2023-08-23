@@ -55,6 +55,12 @@ test('prefer Yarn inside a Yarn workspace', async t => {
   t.end()
 })
 
+test('prefer Bun', async t => {
+  const pm = await preferredPM(path.join(__dirname, 'prefers-bun'))
+  t.deepEqual(pm, { name: 'bun', version: '*' })
+  t.end()
+})
+
 test('prefer npm 5', async t => {
   const pm = await preferredPM(path.join(__dirname, 'prefers-npm-5'))
   t.deepEqual(pm, { name: 'npm', version: '>=5' })

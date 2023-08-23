@@ -11,6 +11,7 @@ coverage
 
 .tmp
 _docpress
+.DS_Store
 
 # Visual Studio Code configs
 .vscode/
