@@ -21,12 +21,6 @@ module.exports = async function preferredPM (pkgPath) {
       version: '*'
     }
   }
-  if (await pathExists(path.join(pkgPath, 'bun.lockb'))) {
-    return {
-      name: 'bun',
-      version: '*'
-    }
-  }
   if (await pathExists(path.join(pkgPath, 'pnpm-lock.yaml'))) {
     return {
       name: 'pnpm',
@@ -37,6 +31,12 @@ module.exports = async function preferredPM (pkgPath) {
     return {
       name: 'pnpm',
       version: '1 || 2'
+    }
+  }
+  if (await pathExists(path.join(pkgPath, 'bun.lockb'))) {
+    return {
+      name: 'bun',
+      version: '*'
     }
   }
   if (await findUp('pnpm-lock.yaml', { cwd: pkgPath })) {

@@ -8,8 +8,8 @@
 * Inside a pnpm workspace, pnpm is preferred.
 * If a `package-lock.json` is present, npm is preferred.
 * If a `yarn.lock` is present, Yarn is preferred.
-* If a `bun.lockb` is present, Bun is preferred.
 * If a `pnpm-lock.yaml` is present, pnpm is preferred.
+* If a `bun.lockb` is present, Bun is preferred.
 * If a `node_modules` is present, tries to detect which package manager installed it.
 
 ## Installation

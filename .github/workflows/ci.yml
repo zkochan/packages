@@ -28,6 +28,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node }}
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v1
     - name: checkout main
       run: git branch -f main origin/main
     - name: Install pnpm
