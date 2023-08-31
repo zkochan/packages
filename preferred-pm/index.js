@@ -33,6 +33,12 @@ module.exports = async function preferredPM (pkgPath) {
       version: '1 || 2'
     }
   }
+  if (await pathExists(path.join(pkgPath, 'bun.lockb'))) {
+    return {
+      name: 'bun',
+      version: '*'
+    }
+  }
   if (await findUp('pnpm-lock.yaml', { cwd: pkgPath })) {
     return {
       name: 'pnpm',

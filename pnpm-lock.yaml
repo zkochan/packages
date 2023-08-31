@@ -578,6 +578,9 @@ importers:
       '@pnpm/exe':
         specifier: ^8.6.12
         version: 8.6.12
+      bun:
+        specifier: ^0.8.1
+        version: 0.8.1
       cnpm:
         specifier: ^7.1.1
         version: 7.1.1
@@ -1797,6 +1800,48 @@ packages:
       read-package-json-fast: 2.0.3
     dev: true
 
+  /@oven/bun-darwin-aarch64@0.8.1:
+    resolution: {integrity: sha512-rdZ4vqDckP/vKjpz5TIEcj45KxIizS6k5dYO6KUOu2nlMwy+JRAE1wfrKY8qAelQ+nE96VYurD8BjkgKQiR4Iw==}
+    cpu: [arm64]
+    os: [darwin]
+    dev: true
+    optional: true
+
+  /@oven/bun-darwin-x64-baseline@0.8.1:
+    resolution: {integrity: sha512-dSKtbLJ543EqKXgtwKW0h2IjKeInCbpp71GBNKch2azlIl/OSiUDH8xX1XBPq77BjOKSvTv+Morz8TQIFmkXAw==}
+    cpu: [x64]
+    os: [darwin]
+    dev: true
+    optional: true
+
+  /@oven/bun-darwin-x64@0.8.1:
+    resolution: {integrity: sha512-/pys7zKcb9A8uTXXZP08iH+0RzHBTqnuBOoG7jtwIOiGwVYbXk47KhEUoAjnexxa+rOL2EuDk8uGeo5YQHe19Q==}
+    cpu: [x64]
+    os: [darwin]
+    dev: true
+    optional: true
+
+  /@oven/bun-linux-aarch64@0.8.1:
+    resolution: {integrity: sha512-7jTOMZOfWqBm7x4wreh1y9qW9zelUKXNMI+lQRym47LTaHzNs0bSQlfQuARrMaDFjfCsfOP5ks5ALAWwLVxcsw==}
+    cpu: [arm64]
+    os: [linux]
+    dev: true
+    optional: true
+
+  /@oven/bun-linux-x64-baseline@0.8.1:
+    resolution: {integrity: sha512-6wYxr+UD/4vH0r3/weoXaJt4LndcCx9PHNeMlPSDJj+xCytQwkSSz5TCSPTlrs6a4iURs8N5+YJAb1kJ71uG5w==}
+    cpu: [x64]
+    os: [linux]
+    dev: true
+    optional: true
+
+  /@oven/bun-linux-x64@0.8.1:
+    resolution: {integrity: sha512-rSYtKj8yxXHzpZ4u8jclHLsbeqldaN1coLjOzs+1q+4mYJXqY5NiJRriPLya3fsSDXnZ9k2h9w0LWvW9ASnUtg==}
+    cpu: [x64]
+    os: [linux]
+    dev: true
+    optional: true
+
   /@pnpm/exe@8.6.12:
     resolution: {integrity: sha512-Njxku/XZ1NS5Id5Hoie3aaHY8RAfbzFPzOkItb4Ac6F/Bay2p20Gh1v65FJDhrXj16nnuyHBBUDp4Dn2lfEvRA==}
     hasBin: true
@@ -2737,6 +2782,20 @@ packages:
 
   /builtins@1.0.3:
     resolution: {integrity: sha1-y5T662HIaWRR2zZTThQi+U8K7og=}
+    dev: true
+
+  /bun@0.8.1:
+    resolution: {integrity: sha512-bWVEO9ipiG00dSOtCd/iGZ+LyxuO8l1SBE9uExg/npUQpC0B/ZQlK3whnV05grOd5gQ0wY4oxO75Csdt+g3VZA==}
+    cpu: [arm64, x64]
+    os: [darwin, linux]
+    hasBin: true
+    optionalDependencies:
+      '@oven/bun-darwin-aarch64': 0.8.1
+      '@oven/bun-darwin-x64': 0.8.1
+      '@oven/bun-darwin-x64-baseline': 0.8.1
+      '@oven/bun-linux-aarch64': 0.8.1
+      '@oven/bun-linux-x64': 0.8.1
+      '@oven/bun-linux-x64-baseline': 0.8.1
     dev: true
 
   /bytes@3.1.2:
@@ -8194,7 +8253,6 @@ packages:
   /signal-exit@4.0.1:
     resolution: {integrity: sha512-uUWsN4aOxJAS8KOuf3QMyFtgm1pkb6I+KRZbRF/ghdf5T7sM+B1lLLzPDxswUjkmHyxQAVzEgG35E3NzDM9GVw==}
     engines: {node: '>=14'}
-    dev: false
 
   /sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
@@ -9500,6 +9558,7 @@ packages:
     dependencies:
       imurmurhash: 0.1.4
       signal-exit: 3.0.7
+    dev: false
 
   /write-file-atomic@5.0.1:
     resolution: {integrity: sha512-+QU2zd6OTD8XWIJCbffaiQeH9U73qIqafo1x6V1snCWYGJf6cVE0cDR4D8xRzcEnfI21IFrUPzPGtcPf8AC+Rw==}
@@ -9507,7 +9566,6 @@ packages:
     dependencies:
       imurmurhash: 0.1.4
       signal-exit: 4.0.1
-    dev: false
 
   /write-json-file@1.2.0:
     resolution: {integrity: sha1-LV3+lqvDyIkFfJOXGqQAXvtUgTQ=}
@@ -9779,5 +9837,5 @@ packages:
     dependencies:
       ini: 3.0.1
       make-dir: 3.1.0
-      write-file-atomic: 5.0.0
+      write-file-atomic: 5.0.1
     dev: true

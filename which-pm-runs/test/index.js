@@ -2,6 +2,7 @@
 const test = require('tape')
 const execa = require('execa')
 const path = require('path')
+const os = require('os')
 
 delete process.env.npm_config_user_agent
 
@@ -9,6 +10,13 @@ const fixturesDir = path.join(__dirname, 'fixtures')
 
 test('detects yarn', t => {
   execa('yarn', [], { cwd: path.join(fixturesDir, 'yarn') })
+    .then(() => t.end())
+    .catch(t.end)
+})
+
+test('detects bun', t => {
+  if(os.platform() === 'win32') return t.end();
+  execa('bun', ['install'], { cwd: path.join(fixturesDir, 'bun') })
     .then(() => t.end())
     .catch(t.end)
 })
