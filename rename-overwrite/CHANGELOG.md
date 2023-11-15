@@ -1,5 +1,11 @@
 # rename-overwrite
 
+## 4.0.4
+
+### Patch Changes
+
+- Retry on EPERM errors.
+
 ## 4.0.3
 
 ### Patch Changes
