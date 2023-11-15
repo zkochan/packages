@@ -77,9 +77,12 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
     retry++
     if (retry > 3) throw err
     switch (err.code) {
+      case 'EPERM': // weird Windows stuff
+        rimraf.sync(newPath)
+        renameOverwriteSync(oldPath, newPath, retry)
+        return
       case 'ENOTEMPTY':
       case 'EEXIST':
-      case 'EPERM': // weird Windows stuff
       case 'ENOTDIR':
         rimraf.sync(newPath)
         fs.renameSync(oldPath, newPath)
