@@ -77,10 +77,28 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
     retry++
     if (retry > 3) throw err
     switch (err.code) {
-      case 'EPERM': // weird Windows stuff
+      // Windows Antivirus issues
+      case 'EPERM':
+      case 'EACCESS': {
         rimraf.sync(newPath)
-        renameOverwriteSync(oldPath, newPath, retry)
-        return
+        const start = Date.now()
+        let backoff = 0
+        let lastError = err
+        while (Date.now() - start < 60000 && (lastError.code === 'EPERM' || lastError.code === 'EACCESS')) {
+          const waitUntil = Date.now() + backoff
+          while (waitUntil > Date.now()) {}
+          try {
+            fs.renameSync(oldPath, newPath)
+            return
+          } catch (err) {
+            lastError = err
+          }
+          if (backoff < 100) {
+            backoff += 10
+          }
+        }
+        throw lastError
+      }
       case 'ENOTEMPTY':
       case 'EEXIST':
       case 'ENOTDIR':

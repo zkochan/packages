@@ -1,5 +1,9 @@
 # rename-overwrite
 
+## 5.0.0
+
+- Sync rename overwrite locks up the process to wait and retry rename again.
+
 ## 4.0.4
 
 ### Patch Changes
