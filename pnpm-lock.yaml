@@ -384,8 +384,8 @@ importers:
         specifier: ^27.4.3
         version: 27.5.1
       load-json-file:
-        specifier: 6.2.0
-        version: 6.2.0
+        specifier: 7.0.1
+        version: 7.0.1
       rename-overwrite:
         specifier: 'link:'
         version: 'link:'
@@ -5885,7 +5885,7 @@ packages:
     dev: true
 
   /load-json-file@1.1.0:
-    resolution: {integrity: sha1-lWkFcI1YtLq0wiYbBPWfMcmTdMA=}
+    resolution: {integrity: sha512-cy7ZdNRXdablkXYNI049pthVeXFurRyb9+hA/dZzerZ0pGTx42z+y+ssxBaVV2l70t1muq5IdKhn4UtcoGUY9A==}
     engines: {node: '>=0.10.0'}
     dependencies:
       graceful-fs: 4.2.10
@@ -5896,7 +5896,7 @@ packages:
     dev: true
 
   /load-json-file@4.0.0:
-    resolution: {integrity: sha1-L19Fq5HjMhYjT9U62rZo607AmTs=}
+    resolution: {integrity: sha512-Kx8hMakjX03tiGTLAIdJ+lL0htKnXjEZN6hk/tozf/WOuYGdZBJrZ+rCJRbVCugsjB3jMLn9746NsQIf5VjBMw==}
     engines: {node: '>=4'}
     dependencies:
       graceful-fs: 4.2.10
@@ -5916,14 +5916,9 @@ packages:
       type-fest: 0.3.1
     dev: true
 
-  /load-json-file@6.2.0:
-    resolution: {integrity: sha512-gUD/epcRms75Cw8RT1pUdHugZYM5ce64ucs2GEISABwkRsOQr0q2wm/MV2TKThycIe5e0ytRweW2RZxclogCdQ==}
-    engines: {node: '>=8'}
-    dependencies:
-      graceful-fs: 4.2.10
-      parse-json: 5.2.0
-      strip-bom: 4.0.0
-      type-fest: 0.6.0
+  /load-json-file@7.0.1:
+    resolution: {integrity: sha512-Gnxj3ev3mB5TkVBGad0JM6dmLiQL+o0t23JPBZ9sd+yvSLk05mFoqKBw5N8gbbkU4TNXyqCgIrl/VM17OgUIgQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dev: true
 
   /load-yaml-file@0.2.0:
