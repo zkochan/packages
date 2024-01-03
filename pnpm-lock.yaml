@@ -87,8 +87,8 @@ importers:
   dir-is-case-sensitive:
     dependencies:
       path-temp:
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.1.0
+        version: 2.1.0
     devDependencies:
       '@types/node':
         specifier: 14.14.6
@@ -467,8 +467,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       path-temp:
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.1.0
+        version: 2.1.0
     devDependencies:
       mos:
         specifier: 2.0.0-alpha.3
@@ -7433,6 +7433,12 @@ packages:
     dependencies:
       unique-string: 2.0.0
 
+  /path-temp@2.1.0:
+    resolution: {integrity: sha512-cMMJTAZlion/RWRRC48UbrDymEIt+/YSD/l8NqjneyDw2rDOBQcP5yRkMB4CYGn47KMhZvbblBP7Z79OsMw72w==}
+    engines: {node: '>=8.15'}
+    dependencies:
+      unique-string: 2.0.0
+
   /path-type@1.1.0:
     resolution: {integrity: sha1-WcRPfuSR2nBNpBXaWkBwuk+P5EE=}
     engines: {node: '>=0.10.0'}
@@ -9041,7 +9047,7 @@ packages:
     peerDependencies:
       '@swc/core': '>=1.2.50'
       '@swc/wasm': '>=1.2.50'
-      '@types/node': '*'
+      '@types/node': 14.14.6
       typescript: '>=2.7'
     peerDependenciesMeta:
       '@swc/core':
@@ -9739,7 +9745,7 @@ packages:
     name: dir-is-case-sensitive
     engines: {node: '>=10'}
     dependencies:
-      path-temp: 2.0.0
+      path-temp: 2.1.0
     dev: true
 
   file:graceful-git:
@@ -9804,7 +9810,7 @@ packages:
     dependencies:
       can-link: link:can-link
       next-path: 1.0.0
-      path-temp: 2.0.0
+      path-temp: 2.1.0
     dev: true
 
   file:run-groups:
