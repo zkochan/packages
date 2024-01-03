@@ -299,8 +299,8 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1
       strip-bom:
-        specifier: ^4.0.0
-        version: 4.0.0
+        specifier: ^5.0.0
+        version: 5.0.0
     devDependencies:
       mos:
         specifier: 2.0.0-alpha.3
@@ -327,8 +327,8 @@ importers:
         specifier: ^2.2.0
         version: 2.2.1
       strip-bom:
-        specifier: ^4.0.0
-        version: 4.0.0
+        specifier: ^5.0.0
+        version: 5.0.0
     devDependencies:
       mos:
         specifier: 2.0.0-alpha.3
@@ -349,8 +349,8 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0
       strip-bom:
-        specifier: ^4.0.0
-        version: 4.0.0
+        specifier: ^5.0.0
+        version: 5.0.0
     devDependencies:
       read-yaml-file:
         specifier: 'file:'
@@ -8620,6 +8620,11 @@ packages:
   /strip-bom@4.0.0:
     resolution: {integrity: sha512-3xurFv5tEgii33Zi8Jtp55wEIILR9eh34FAW00PZf+JnSsTmV/ioewSgQl97JHvgjoRGwPShsWm+IdrxB35d0w==}
     engines: {node: '>=8'}
+    dev: true
+
+  /strip-bom@5.0.0:
+    resolution: {integrity: sha512-p+byADHF7SzEcVnLvc/r3uognM1hUhObuHXxJcgLCfD194XAkaLbjq3Wzb0N5G2tgIjH0dgT708Z51QxMeu60A==}
+    engines: {node: '>=12'}
 
   /strip-final-newline@2.0.0:
     resolution: {integrity: sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==}
@@ -9785,7 +9790,7 @@ packages:
     engines: {node: '>=14.6'}
     dependencies:
       ini: 3.0.1
-      strip-bom: 4.0.0
+      strip-bom: 5.0.0
     dev: true
 
   file:read-yaml-file:
@@ -9794,7 +9799,7 @@ packages:
     engines: {node: '>=10.13'}
     dependencies:
       js-yaml: 4.1.0
-      strip-bom: 4.0.0
+      strip-bom: 5.0.0
     dev: true
 
   file:root-link-target:
