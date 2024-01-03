@@ -30,7 +30,7 @@
     }
   },
   "dependencies": {
-    "unique-string": "^2.0.0"
+    "unique-string": "^3.0.0"
   },
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
