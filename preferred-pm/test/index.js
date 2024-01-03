@@ -55,6 +55,14 @@ test('prefer Yarn inside a Yarn workspace', async t => {
   t.end()
 })
 
+test('prefer npm inside an npm workspace', async t => {
+  const dir = tempy.directory()
+  await ncp(path.join(__dirname, 'npm-workspace'), dir)
+  const pm = await preferredPM(path.join(dir, 'packages/pkg'))
+  t.deepEqual(pm, { name: 'npm', version: '>=7' })
+  t.end()
+})
+
 test('prefer Bun', async t => {
   const pm = await preferredPM(path.join(__dirname, 'prefers-bun'))
   t.deepEqual(pm, { name: 'bun', version: '*' })
