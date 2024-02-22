@@ -1,4 +1,4 @@
-import { table } from 'table'
+import { table, getBorderCharacters } from 'table'
 
 type DescriptionItem = { shortAlias?: string, name: string, description?: string }
 
@@ -38,27 +38,8 @@ export = function renderHelp (
   return outputSections.join('\n\n')
 }
 
-const NO_BORDERS = {
-  topBody: '',
-  topJoin: '',
-  topLeft: '',
-  topRight: '',
-
-  bottomBody: '',
-  bottomJoin: '',
-  bottomLeft: '',
-  bottomRight: '',
-
-  bodyJoin: '',
-  bodyLeft: '',
-  bodyRight: '',
-
-  joinBody: '',
-  joinLeft: '',
-  joinRight: '',
-}
 const TABLE_OPTIONS = {
-  border: NO_BORDERS,
+  border: getBorderCharacters("void"),
   singleLine: true,
 }
 
