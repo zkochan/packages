@@ -46,7 +46,14 @@ module.exports = async function preferredPM (pkgPath) {
     }
   }
   try {
-    if (typeof findYarnWorkspaceRoot(pkgPath) === 'string') {
+    const workspaceRoot = findYarnWorkspaceRoot(pkgPath)
+    if (typeof workspaceRoot === 'string') {
+      if (await pathExists(path.join(workspaceRoot, 'package-lock.json'))) {
+        return {
+          name: 'npm',
+          version: '>=7'
+        }
+      }
       return {
         name: 'yarn',
         version: '*'
