@@ -2,6 +2,8 @@ import which from '@zkochan/which'
 import execa from 'execa'
 import PATH from 'path-name'
 
+export type { execa }
+
 const pathCache = new Map<string, string | undefined>()
 
 export function	sync (
@@ -43,7 +45,7 @@ export default function (
   file: string,
   args?: readonly string[],
   options?: execa.Options
-) {
+): execa.ExecaChildProcess<string> {
   try {
     which.sync(file, { path: options?.cwd ?? process.cwd() })
   } catch (err: any) {
