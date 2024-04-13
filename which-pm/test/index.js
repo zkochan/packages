@@ -23,6 +23,12 @@ test('identifies yarn installation', async t => {
   t.end()
 })
 
+test('identifies bun installation', async t => {
+  const pm = await whichpm(path.join(fixturesDir, 'bun'))
+  t.deepEqual(pm, { name: 'bun' })
+  t.end()
+})
+
 test('identifies npm installation', async t => {
   const pm = await whichpm(path.join(fixturesDir, 'npm'))
   t.deepEqual(pm, { name: 'npm' })
