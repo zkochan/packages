@@ -37,5 +37,7 @@ jobs:
         standalone: true
     - name: pnpm install
       run: pnpm install
+    - name: Compile
+      run: pnpm -r run prepublishOnly
     - name: run tests
       run: pnpm -r --no-bail test
