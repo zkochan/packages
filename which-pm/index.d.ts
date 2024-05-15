@@ -1,7 +1,7 @@
 declare function whichpm (pkgPath: string): Promise<whichpm.Result>
 
 declare namespace whichpm {
-  type Result = NPM | YARN | PNPM | Other
+  type Result = NPM | YARN | PNPM | BUN | Other
 
   interface NPM {
     readonly name: 'npm'
@@ -14,6 +14,10 @@ declare namespace whichpm {
   interface PNPM {
     readonly name: 'pnpm'
     readonly version: string
+  }
+
+  interface BUN {
+    readonly name: 'bun'
   }
 
   interface Other {

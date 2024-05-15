@@ -8,6 +8,8 @@ module.exports = async function (pkgPath) {
   const exists = await pathExists(path.join(modulesPath, '.yarn-integrity'))
   if (exists) return { name: 'yarn' }
 
+  if (await pathExists(path.join(pkgPath, 'bun.lockb'))) return { name: 'bun' }
+
   try {
     const modules = await loadYamlFile(path.join(modulesPath, '.modules.yaml'))
     return toNameAndVersion(modules.packageManager)

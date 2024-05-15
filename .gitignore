@@ -5,6 +5,7 @@ npm-debug.log*
 
 # Dependency directory
 node_modules
+bun.lockb
 
 # Coverage directory used by tools like istanbul
 coverage

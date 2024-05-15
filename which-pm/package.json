@@ -21,6 +21,7 @@
   "keywords": [
     "npm",
     "pnpm",
+    "bun",
     "yarn"
   ],
   "author": "Zoltan Kochan",
