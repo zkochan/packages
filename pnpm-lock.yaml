@@ -156,6 +156,9 @@ importers:
       mos-plugin-readme:
         specifier: ^1.0.4
         version: 1.0.4
+      rimraf:
+        specifier: ^3.0.2
+        version: 3.0.2
       standard:
         specifier: ^16.0.4
         version: 16.0.4
