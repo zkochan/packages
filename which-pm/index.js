@@ -1,6 +1,6 @@
 'use strict'
 const path = require('path')
-const pathExists = require('path-exists')
+const fs = require('fs')
 const loadYamlFile = require('load-yaml-file')
 
 module.exports = async function (pkgPath) {
@@ -36,3 +36,5 @@ function toNameAndVersion (pkgSpec) {
     version: parts[1]
   }
 }
+
+const pathExists = async path => !!(await fs.promises.stat(path).catch(e => false))

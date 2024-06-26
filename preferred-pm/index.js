@@ -1,7 +1,7 @@
 'use strict'
 const findYarnWorkspaceRoot = require('find-yarn-workspace-root2')
+const fs = require('fs')
 const path = require('path')
-const pathExists = require('path-exists')
 const whichPM = require('which-pm')
 
 module.exports = async function preferredPM (pkgPath) {
@@ -63,3 +63,5 @@ module.exports = async function preferredPM (pkgPath) {
   const pm = await whichPM(pkgPath)
   return pm && { name: pm.name, version: pm.version || '*' }
 }
+
+const pathExists = async path => !!(await fs.promises.stat(path).catch(e => false))
