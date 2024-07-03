@@ -252,9 +252,9 @@ importers:
 
   preferred-pm:
     dependencies:
-      find-up:
-        specifier: ^5.0.0
-        version: 5.0.0
+      find-up-simple:
+        specifier: ^1.0.0
+        version: 1.0.0
       find-yarn-workspace-root2:
         specifier: 1.2.16
         version: 1.2.16
@@ -1545,7 +1545,6 @@ packages:
 
   bun@0.8.1:
     resolution: {integrity: sha512-bWVEO9ipiG00dSOtCd/iGZ+LyxuO8l1SBE9uExg/npUQpC0B/ZQlK3whnV05grOd5gQ0wY4oxO75Csdt+g3VZA==}
-    cpu: [arm64, x64]
     os: [darwin, linux]
     hasBin: true
 
@@ -2284,6 +2283,10 @@ packages:
   filled-array@1.1.0:
     resolution: {integrity: sha1-w8T2xmO5I0WamqKZEtLQMfFQf4Q=}
     engines: {node: '>=0.10.0'}
+
+  find-up-simple@1.0.0:
+    resolution: {integrity: sha512-q7Us7kcjj2VMePAa02hDAF6d+MzsdsAWEwYyOpwUtlerRBkOEPBCRZrAV4XfcSN8fHAgaD0hP7miwoay6DCprw==}
+    engines: {node: '>=18'}
 
   find-up@1.1.2:
     resolution: {integrity: sha512-jvElSjyuo4EMQGoTwo1uJU5pQMwTW5lS1x05zzfJuTIyLR3zwO27LYrxNg+dlvKpGOuGy/MzBdXh80g0ve5+HA==}
@@ -7312,6 +7315,8 @@ snapshots:
       to-regex-range: 5.0.1
 
   filled-array@1.1.0: {}
+
+  find-up-simple@1.0.0: {}
 
   find-up@1.1.2:
     dependencies:
