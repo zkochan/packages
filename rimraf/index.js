@@ -1,11 +1,8 @@
-const rimraf = require('rimraf')
-const { promisify } = require('util')
-
-const rimrafP = promisify(rimraf)
+const { rimraf } = require('rimraf')
 
 module.exports = async (p) => {
   try {
-    await rimrafP(p)
+    await rimraf(p)
   } catch (err) {
     if (err.code === 'ENOTDIR' || err.code === 'ENOENT') return
     throw err

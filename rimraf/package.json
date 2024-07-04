@@ -12,7 +12,7 @@
     "test": "standard"
   },
   "engines": {
-    "node": ">=12.10"
+    "node": ">=18"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/rimraf",
   "author": {
@@ -26,6 +26,6 @@
     "standard": "^16.0.4"
   },
   "dependencies": {
-    "rimraf": "^3.0.2"
+    "rimraf": "^5.0.7"
   }
 }
