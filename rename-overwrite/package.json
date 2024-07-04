@@ -1,6 +1,6 @@
 {
   "name": "rename-overwrite",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Like `fs.rename` but overwrites existing file or directory",
   "main": "index.js",
   "files": [
@@ -41,7 +41,7 @@
     "write-json-file": "^4.3.0"
   },
   "dependencies": {
-    "@zkochan/rimraf": "^2.1.2",
+    "@zkochan/rimraf": "^3.0.0",
     "fs-extra": "10.1.0"
   }
 }

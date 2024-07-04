@@ -1,5 +1,11 @@
 # @zkochan/rimraf
 
+## 3.0.0
+
+### Major Changes
+
+- 3fa8bea: Updates to rimraf 5.x
+
 ## 2.1.3
 
 ### Patch Changes

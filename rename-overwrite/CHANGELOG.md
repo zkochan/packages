@@ -1,5 +1,12 @@
 # rename-overwrite
 
+## 5.0.1
+
+### Patch Changes
+
+- Updated dependencies [3fa8bea]
+  - @zkochan/rimraf@3.0.0
+
 ## 5.0.0
 
 - Sync rename overwrite locks up the process to wait and retry rename again.

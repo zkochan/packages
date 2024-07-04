@@ -1,5 +1,12 @@
 # make-empty-dir
 
+## 3.0.0
+
+### Patch Changes
+
+- Updated dependencies [3fa8bea]
+  - @zkochan/rimraf@3.0.0
+
 ## 2.1.0
 
 ### Minor Changes
