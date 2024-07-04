@@ -1,5 +1,9 @@
 # preferred-pm
 
+## 3.1.4
+
+- Update which-pm
+
 ## 3.0.3
 
 ### Patch Changes

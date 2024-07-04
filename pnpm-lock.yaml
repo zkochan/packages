@@ -262,15 +262,15 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       which-pm:
-        specifier: ^2.2.0
-        version: 2.2.0
+        specifier: workspace:^
+        version: link:../which-pm
     devDependencies:
       ncp:
         specifier: ^2.0.0
         version: 2.0.0
       preferred-pm:
         specifier: 'file:'
-        version: 'link:'
+        version: file:preferred-pm
       standard:
         specifier: ^16.0.4
         version: 16.0.4
@@ -4072,6 +4072,10 @@ packages:
     resolution: {integrity: sha512-MkXsENfftWSRpzCzImcp4FRsCc3y1opwB73CfCNWyzMqArju2CrlMHlqB7VexKiPEOjGMbttv1r9fSCn5S610w==}
     engines: {node: '>=10'}
 
+  preferred-pm@file:preferred-pm:
+    resolution: {directory: preferred-pm, type: directory}
+    engines: {node: '>=10'}
+
   prelude-ls@1.1.2:
     resolution: {integrity: sha512-ESF23V4SKG6lVSGZgYNpbsiaAkdab6ZgOxe52p7+Kid3W3u3bxR4Vfd/o21dmN7jSt0IwgZ4v5MUd26FEtXE9w==}
     engines: {node: '>= 0.8.0'}
@@ -5094,10 +5098,6 @@ packages:
 
   which-pm@2.0.0:
     resolution: {integrity: sha512-Lhs9Pmyph0p5n5Z3mVnN0yWcbQYUAD7rbQUiMsQxOJ3T57k7RFe35SUwWMf7dsbDZks1uOmw4AecB/JMDj3v/w==}
-    engines: {node: '>=8.15'}
-
-  which-pm@2.2.0:
-    resolution: {integrity: sha512-MOiaDbA5ZZgUjkeMWM5EkJp4loW5ZRoa5bc3/aeMox/PJelMhE6t7S/mLuiY43DBupyxH+S0U1bTui9kWUlmsw==}
     engines: {node: '>=8.15'}
 
   which-typed-array@1.1.7:
@@ -9360,6 +9360,13 @@ snapshots:
       path-exists: 4.0.0
       which-pm: 2.0.0
 
+  preferred-pm@file:preferred-pm:
+    dependencies:
+      find-up: 5.0.0
+      find-yarn-workspace-root2: 1.2.16
+      path-exists: 4.0.0
+      which-pm: link:which-pm
+
   prelude-ls@1.1.2: {}
 
   prelude-ls@1.2.1: {}
@@ -10513,11 +10520,6 @@ snapshots:
   which-module@2.0.0: {}
 
   which-pm@2.0.0:
-    dependencies:
-      load-yaml-file: 0.2.0
-      path-exists: 4.0.0
-
-  which-pm@2.2.0:
     dependencies:
       load-yaml-file: 0.2.0
       path-exists: 4.0.0

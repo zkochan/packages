@@ -1,6 +1,6 @@
 {
   "name": "preferred-pm",
-  "version": "3.1.3",
+  "version": "3.1.4",
   "description": "Detects what package manager was used for installation",
   "main": "index.js",
   "files": [
@@ -38,7 +38,7 @@
     "find-up": "^5.0.0",
     "find-yarn-workspace-root2": "1.2.16",
     "path-exists": "^4.0.0",
-    "which-pm": "^2.2.0"
+    "which-pm": "workspace:^"
   },
   "devDependencies": {
     "ncp": "^2.0.0",
