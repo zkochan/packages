@@ -1,4 +1,4 @@
-const {rimraf} = require('rimraf')
+const { rimraf } = require('rimraf')
 
 module.exports = async (p) => {
   try {
