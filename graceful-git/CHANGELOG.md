@@ -1,6 +1,10 @@
 # graceful-git
 
-## 3.1.3
+## 4.0.0
+
+### Major Changes
+
+- Drop Node.js <18 support.
 
 ### Patch Changes
 
