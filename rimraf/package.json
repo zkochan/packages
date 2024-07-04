@@ -1,6 +1,6 @@
 {
   "name": "@zkochan/rimraf",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "rm -rf for Node. Similar to rimraf but returns a promise",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -31,6 +31,9 @@
     "testEnvironment": "node"
   },
   "standard": {
-    "globals": ["test", "expect"]
+    "globals": [
+      "test",
+      "expect"
+    ]
   }
 }

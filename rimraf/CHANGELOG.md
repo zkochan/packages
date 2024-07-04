@@ -1,5 +1,11 @@
 # @zkochan/rimraf
 
+## 3.0.2
+
+### Patch Changes
+
+- b70f4a9: Should be able to remove files too.
+
 ## 3.0.0
 
 ### Major Changes

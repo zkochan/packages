@@ -1,5 +1,12 @@
 # rename-overwrite
 
+## 5.0.3
+
+### Patch Changes
+
+- Updated dependencies [b70f4a9]
+  - @zkochan/rimraf@3.0.2
+
 ## 5.0.1
 
 ### Patch Changes
