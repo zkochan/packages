@@ -1,8 +1,8 @@
-const { rimraf } = require('rimraf')
+const fs = require('fs')
 
 module.exports = async (p) => {
   try {
-    await rimraf(p)
+    await fs.promises.rmdir(p, { recursive: true, force: true })
   } catch (err) {
     if (err.code === 'ENOTDIR' || err.code === 'ENOENT') return
     throw err
@@ -11,7 +11,7 @@ module.exports = async (p) => {
 
 module.exports.sync = (p) => {
   try {
-    rimraf.sync(p)
+    fs.rmdirSync(p, { recursive: true, force: true })
   } catch (err) {
     if (err.code === 'ENOTDIR' || err.code === 'ENOENT') return
     throw err

@@ -1,6 +1,6 @@
 {
   "name": "@zkochan/rimraf",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "rm -rf for Node. Similar to rimraf but returns a promise",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -24,11 +24,8 @@
   "homepage": "https://github.com/zkochan/packages/tree/main/rimraf#readme",
   "devDependencies": {
     "standard": "^16.0.4",
-    "tempy": "^1.0.1"
-  },
-  "dependencies": {
-    "jest": "^27.4.3",
-    "rimraf": "^5.0.7"
+    "tempy": "^1.0.1",
+    "jest": "^27.4.3"
   },
   "jest": {
     "testEnvironment": "node"
