@@ -32,6 +32,6 @@
     "tempy": "^1.0.1"
   },
   "dependencies": {
-    "@zkochan/rimraf": "^3.0.1"
+    "@zkochan/rimraf": "workspace:^"
   }
 }
