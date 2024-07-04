@@ -9,7 +9,7 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "standard"
+    "test": "standard && jest"
   },
   "engines": {
     "node": ">=18.12"
@@ -23,9 +23,17 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/rimraf#readme",
   "devDependencies": {
-    "standard": "^16.0.4"
+    "standard": "^16.0.4",
+    "tempy": "^1.0.1"
   },
   "dependencies": {
+    "jest": "^27.4.3",
     "rimraf": "^5.0.7"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "standard": {
+    "globals": ["test", "expect"]
   }
 }

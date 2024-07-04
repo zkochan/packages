@@ -451,6 +451,9 @@ importers:
 
   rimraf:
     dependencies:
+      jest:
+        specifier: ^27.4.3
+        version: 27.5.1(ts-node@10.7.0(@types/node@14.14.6)(typescript@4.6.4))
       rimraf:
         specifier: ^5.0.7
         version: 5.0.7
@@ -458,6 +461,9 @@ importers:
       standard:
         specifier: ^16.0.4
         version: 16.0.4
+      tempy:
+        specifier: ^1.0.1
+        version: 1.0.1
 
   root-link-target:
     dependencies:
