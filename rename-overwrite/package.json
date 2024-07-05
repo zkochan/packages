@@ -38,7 +38,7 @@
     "standard": "^16.0.4",
     "symlink-dir": "^5.0.1",
     "tempy": "^1.0.1",
-    "write-json-file": "^4.3.0"
+    "write-json-file": "^5.0.0"
   },
   "dependencies": {
     "@zkochan/rimraf": "workspace:^",
