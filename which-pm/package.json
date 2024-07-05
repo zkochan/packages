@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "load-yaml-file": "^0.2.0",
-    "path-exists": "^4.0.0"
+    "path-exists": "^5.0.0"
   },
   "devDependencies": {
     "standard": "^16.0.4",
