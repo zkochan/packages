@@ -1,6 +1,5 @@
 'use strict'
 const findYarnWorkspaceRoot = require('find-yarn-workspace-root2')
-const findUp = require('find-up')
 const path = require('path')
 const pathExists = require('path-exists')
 const whichPM = require('which-pm')
@@ -39,6 +38,7 @@ module.exports = async function preferredPM (pkgPath) {
       version: '*'
     }
   }
+  const { findUp } = await import('find-up-simple')
   if (await findUp('pnpm-lock.yaml', { cwd: pkgPath })) {
     return {
       name: 'pnpm',
