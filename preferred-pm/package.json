@@ -37,7 +37,6 @@
   "dependencies": {
     "find-up-simple": "^1.0.0",
     "find-yarn-workspace-root2": "1.2.16",
-    "path-exists": "^4.0.0",
     "which-pm": "workspace:^"
   },
   "devDependencies": {

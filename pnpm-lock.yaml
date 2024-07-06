@@ -258,9 +258,6 @@ importers:
       find-yarn-workspace-root2:
         specifier: 1.2.16
         version: 1.2.16
-      path-exists:
-        specifier: ^4.0.0
-        version: 4.0.0
       which-pm:
         specifier: workspace:^
         version: link:../which-pm
@@ -559,9 +556,6 @@ importers:
       load-yaml-file:
         specifier: ^0.2.0
         version: 0.2.0
-      path-exists:
-        specifier: ^4.0.0
-        version: 4.0.0
     devDependencies:
       standard:
         specifier: ^16.0.4
@@ -3973,11 +3967,11 @@ packages:
     engines: {node: '>=8.6'}
 
   pify@2.3.0:
-    resolution: {integrity: sha1-7RQaasBDqEnqWISY59yosVMw6Qw=}
+    resolution: {integrity: sha512-udgsAY+fTnvv7kI7aaxbqwWNb0AHiB0qBO89PZKPkoTmGOgdbrHDKD+0B2X4uTfJ/FT1R09r9gTsjUjNJotuog==}
     engines: {node: '>=0.10.0'}
 
   pify@3.0.0:
-    resolution: {integrity: sha1-5aSs0sEB/fPZpNB/DbxNtJ3SgXY=}
+    resolution: {integrity: sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==}
     engines: {node: '>=4'}
 
   pify@4.0.1:
