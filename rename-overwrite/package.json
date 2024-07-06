@@ -1,6 +1,6 @@
 {
   "name": "rename-overwrite",
-  "version": "5.0.3",
+  "version": "6.0.0",
   "description": "Like `fs.rename` but overwrites existing file or directory",
   "main": "index.js",
   "files": [
