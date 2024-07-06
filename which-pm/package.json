@@ -1,6 +1,6 @@
 {
   "name": "which-pm",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "Detects what package manager was used for installation",
   "main": "index.js",
   "types": "index.d.ts",
@@ -12,7 +12,7 @@
     "test": "standard && node test"
   },
   "engines": {
-    "node": ">=8.15"
+    "node": ">=18.12"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/which-pm",
   "bugs": {

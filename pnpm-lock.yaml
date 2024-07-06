@@ -4012,7 +4012,7 @@ packages:
 
   preferred-pm@file:preferred-pm:
     resolution: {directory: preferred-pm, type: directory}
-    engines: {node: '>=10'}
+    engines: {node: '>=18.12'}
 
   prelude-ls@1.1.2:
     resolution: {integrity: sha512-ESF23V4SKG6lVSGZgYNpbsiaAkdab6ZgOxe52p7+Kid3W3u3bxR4Vfd/o21dmN7jSt0IwgZ4v5MUd26FEtXE9w==}
@@ -9180,9 +9180,8 @@ snapshots:
 
   preferred-pm@file:preferred-pm:
     dependencies:
-      find-up: 5.0.0
+      find-up-simple: 1.0.0
       find-yarn-workspace-root2: 1.2.16
-      path-exists: 4.0.0
       which-pm: link:which-pm
 
   prelude-ls@1.1.2: {}
