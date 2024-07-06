@@ -8,31 +8,31 @@ module.exports = async function preferredPM (pkgPath) {
   if (typeof pkgPath !== 'string') {
     throw new TypeError(`pkgPath should be a string, got ${typeof pkgPath}`)
   }
-  if (await pathExists(path.join(pkgPath, 'package-lock.json'))) {
+  if (fs.existsSync(path.join(pkgPath, 'package-lock.json'))) {
     return {
       name: 'npm',
       version: '>=5'
     }
   }
-  if (await pathExists(path.join(pkgPath, 'yarn.lock'))) {
+  if (fs.existsSync(path.join(pkgPath, 'yarn.lock'))) {
     return {
       name: 'yarn',
       version: '*'
     }
   }
-  if (await pathExists(path.join(pkgPath, 'pnpm-lock.yaml'))) {
+  if (fs.existsSync(path.join(pkgPath, 'pnpm-lock.yaml'))) {
     return {
       name: 'pnpm',
       version: '>=3'
     }
   }
-  if (await pathExists(path.join(pkgPath, 'shrinkwrap.yaml'))) {
+  if (fs.existsSync(path.join(pkgPath, 'shrinkwrap.yaml'))) {
     return {
       name: 'pnpm',
       version: '1 || 2'
     }
   }
-  if (await pathExists(path.join(pkgPath, 'bun.lockb'))) {
+  if (fs.existsSync(path.join(pkgPath, 'bun.lockb'))) {
     return {
       name: 'bun',
       version: '*'
@@ -48,7 +48,7 @@ module.exports = async function preferredPM (pkgPath) {
   try {
     const workspaceRoot = findYarnWorkspaceRoot(pkgPath)
     if (typeof workspaceRoot === 'string') {
-      if (await pathExists(path.join(workspaceRoot, 'package-lock.json'))) {
+      if (fs.existsSync(path.join(workspaceRoot, 'package-lock.json'))) {
         return {
           name: 'npm',
           version: '>=7'
@@ -63,5 +63,3 @@ module.exports = async function preferredPM (pkgPath) {
   const pm = await whichPM(pkgPath)
   return pm && { name: pm.name, version: pm.version || '*' }
 }
-
-const pathExists = async path => !!(await fs.promises.stat(path).catch(e => false))

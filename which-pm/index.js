@@ -5,10 +5,10 @@ const loadYamlFile = require('load-yaml-file')
 
 module.exports = async function (pkgPath) {
   const modulesPath = path.join(pkgPath, 'node_modules')
-  const exists = await pathExists(path.join(modulesPath, '.yarn-integrity'))
+  const exists = fs.existsSync(path.join(modulesPath, '.yarn-integrity'))
   if (exists) return { name: 'yarn' }
 
-  if (await pathExists(path.join(pkgPath, 'bun.lockb'))) return { name: 'bun' }
+  if (fs.existsSync(path.join(pkgPath, 'bun.lockb'))) return { name: 'bun' }
 
   try {
     const modules = await loadYamlFile(path.join(modulesPath, '.modules.yaml'))
@@ -17,7 +17,7 @@ module.exports = async function (pkgPath) {
     if (err.code !== 'ENOENT') throw err
   }
 
-  const modulesExists = await pathExists(modulesPath)
+  const modulesExists = fs.existsSync(modulesPath)
   return modulesExists ? { name: 'npm' } : null
 }
 
@@ -36,5 +36,3 @@ function toNameAndVersion (pkgSpec) {
     version: parts[1]
   }
 }
-
-const pathExists = async path => !!(await fs.promises.stat(path).catch(e => false))
