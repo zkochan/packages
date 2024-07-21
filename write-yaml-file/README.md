@@ -30,7 +30,7 @@ Returns a promise.
 
 #### `options`
 
-Same options that can be passed in to [js-yaml](https://www.npmjs.com/package/js-yaml#safedump-object---options-)
+Same options that can be passed in to [yaml](https://eemeli.org/yaml#tostring-options)
 
 ##### mode
 

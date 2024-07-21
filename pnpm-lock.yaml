@@ -664,12 +664,12 @@ importers:
 
   write-yaml-file:
     dependencies:
-      js-yaml:
-        specifier: ^4.1.0
-        version: 4.1.0
       write-file-atomic:
         specifier: ^5.0.1
         version: 5.0.1
+      yaml:
+        specifier: ^2.4.5
+        version: 2.4.5
     devDependencies:
       standard:
         specifier: ^16.0.4
@@ -5106,6 +5106,11 @@ packages:
 
   yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
+
+  yaml@2.4.5:
+    resolution: {integrity: sha512-aBx2bnqDzVOyNKfsysjA2ms5ZlnjSAW2eG3/L5G/CSujfjLJTJsEw1bGw8kCf04KodQWk1pxlGnZ56CRxiawmg==}
+    engines: {node: '>= 14'}
+    hasBin: true
 
   yargs-parser@20.2.9:
     resolution: {integrity: sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==}
@@ -10404,6 +10409,8 @@ snapshots:
   yallist@3.1.1: {}
 
   yallist@4.0.0: {}
+
+  yaml@2.4.5: {}
 
   yargs-parser@20.2.9: {}
 
