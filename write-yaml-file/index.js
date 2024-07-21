@@ -2,7 +2,7 @@
 const path = require('path')
 const fs = require('fs')
 const writeFileAtomic = require('write-file-atomic')
-const YAML = require('js-yaml')
+const YAML = require('yaml')
 
 const main = (fn, fp, data, opts) => {
   if (!fp) {
@@ -15,7 +15,7 @@ const main = (fn, fp, data, opts) => {
 
   opts = opts || {}
 
-  const yaml = YAML.dump(data, opts)
+  const yaml = YAML.stringify(data, opts)
 
   return fn(fp, yaml, { mode: opts.mode })
 }
