@@ -1,7 +1,7 @@
 'use strict'
 const path = require('path')
 const fs = require('fs')
-const loadYamlFile = require('load-yaml-file')
+const yaml = require('js-yaml')
 
 module.exports = async function (pkgPath) {
   const modulesPath = path.join(pkgPath, 'node_modules')
@@ -9,7 +9,8 @@ module.exports = async function (pkgPath) {
   if (exists) return { name: 'yarn' }
 
   try {
-    const modules = await loadYamlFile(path.join(modulesPath, '.modules.yaml'))
+    const modulesYaml = fs.readFileSync(path.join(modulesPath, '.modules.yaml'), 'utf8')
+    const modules = yaml.load(modulesYaml)
     return toNameAndVersion(modules.packageManager)
   } catch (err) {
     if (err.code !== 'ENOENT') throw err
