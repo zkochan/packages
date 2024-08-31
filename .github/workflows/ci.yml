@@ -16,7 +16,14 @@ jobs:
         platform:
           - ubuntu-latest
           - windows-latest
-          - macos-latest
+        include:
+          # node<=14 only works on macos<=13 (x64)
+          - platform: macos-latest
+            node: '16'
+          - platform: macos-latest
+            node: '18'
+          - platform: macos-latest
+            node: '20'
 
     name: '${{matrix.platform}} / Node.js ${{ matrix.node }}'
     runs-on: ${{matrix.platform}}
@@ -25,17 +32,9 @@ jobs:
     - name: Checkout Commit
       uses: actions/checkout@v4
     - name: Setup Node
-      if: matrix.platform != 'macos-latest' || (matrix.node != '12' && matrix.node != '14')
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node }}
-    # https://github.com/actions/setup-node/issues/1017
-    - name: Setup Node (macos, node<=14)
-      if: matrix.platform == 'macos-latest' && (matrix.node == '12' || matrix.node == '14')
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node }}
-        architecture: 'x64'
     - name: Install pnpm
       uses: pnpm/action-setup@v4.0.0
       with:
