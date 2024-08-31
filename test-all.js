@@ -11,7 +11,7 @@ const files = fs.readdirSync(__dirname)
 for (const file of files) {
   try {
     const pkg = require(`./${file}/package.json`)
-    if (pkg.engines?.node) {
+    if (pkg.engines && pkg.engines.node) {
       if (semverSatisfies(nodeVersion, pkg.engines.node)) {
         filteredPackageNames.push(pkg.name)
       } else {
