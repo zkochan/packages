@@ -23,11 +23,19 @@ jobs:
 
     steps:
     - name: Checkout Commit
-      uses: actions/checkout@v1
+      uses: actions/checkout@v4
     - name: Setup Node
-      uses: actions/setup-node@v1
+      if: matrix.platform != 'macos-latest' || (matrix.node != '12' && matrix.node != '14')
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node }}
+    # https://github.com/actions/setup-node/issues/1017
+    - name: Setup Node (macos, node<=14)
+      if: matrix.platform == 'macos-latest' && (matrix.node == '12' || matrix.node == '14')
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node }}
+        architecture: 'x64'
     - name: checkout main
       run: git branch -f main origin/main
     - name: Install pnpm
@@ -40,4 +48,4 @@ jobs:
     - name: Compile
       run: pnpm -r run prepublishOnly
     - name: run tests
-      run: pnpm -r --no-bail test
+      run: pnpm run test-all
