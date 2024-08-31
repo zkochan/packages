@@ -46,8 +46,8 @@ module.exports = async function preferredPM (pkgPath) {
     }
   }
   try {
-    const closestPkgJson = await findUp('package.json', { cwd: pkgPath })
-    const workspaceRoot = findYarnWorkspaceRoot(closestPkgJson)
+    const closestPkgJsonPath = await findUp('package.json', { cwd: pkgPath })
+    const workspaceRoot = findYarnWorkspaceRoot(closestPkgJsonPath)
     if (typeof workspaceRoot === 'string') {
       if (fs.existsSync(path.join(workspaceRoot, 'package-lock.json'))) {
         return {
