@@ -36,8 +36,6 @@ jobs:
       with:
         node-version: ${{ matrix.node }}
         architecture: 'x64'
-    - name: checkout main
-      run: git branch -f main origin/main
     - name: Install pnpm
       uses: pnpm/action-setup@v4.0.0
       with:
