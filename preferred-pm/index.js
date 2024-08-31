@@ -1,5 +1,5 @@
 'use strict'
-const findYarnWorkspaceRoot = require('find-yarn-workspace-root2')
+const findYarnWorkspaceRoot = require('find-yarn-workspace-root')
 const fs = require('fs')
 const path = require('path')
 const whichPM = require('which-pm')
