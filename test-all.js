@@ -24,7 +24,7 @@ for (const file of files) {
 }
 
 cp.spawnSync(
-  'pnpm',
+  process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm',
   [
     ...filteredPackageNames.map((name) => `--filter=${name}`),
     '--no-bail',
