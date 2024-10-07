@@ -1,4 +1,4 @@
-declare function whichpm (pkgPath: string): Promise<whichpm.Result>
+declare function whichpm (pkgPath: string): Promise<whichpm.Result | null>
 
 declare namespace whichpm {
   type Result = NPM | YARN | PNPM | BUN | Other
