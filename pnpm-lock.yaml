@@ -255,9 +255,9 @@ importers:
       find-up-simple:
         specifier: ^1.0.0
         version: 1.0.0
-      find-yarn-workspace-root2:
-        specifier: 1.2.16
-        version: 1.2.16
+      find-yarn-workspace-root:
+        specifier: ^2.0.0
+        version: 2.0.0
       which-pm:
         specifier: workspace:^
         version: link:../which-pm
@@ -2273,6 +2273,9 @@ packages:
 
   find-yarn-workspace-root2@1.2.16:
     resolution: {integrity: sha512-hr6hb1w8ePMpPVUK39S4RlwJzi+xPLuVuG8XlwXU3KD5Yn3qgBWVfy3AzNlDhWvE1EORCE65/Qm26rFQt3VLVA==}
+
+  find-yarn-workspace-root@2.0.0:
+    resolution: {integrity: sha512-1IMnbjt4KzsQfnhnzNd8wUEgXZ44IzZaZmnLYx7D5FZlaHt2gW20Cri8Q+E/t5tIj4+epTBub+2Zxu/vNILzqQ==}
 
   flat-cache@3.0.4:
     resolution: {integrity: sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==}
@@ -7191,6 +7194,10 @@ snapshots:
       micromatch: 4.0.5
       pkg-dir: 4.2.0
 
+  find-yarn-workspace-root@2.0.0:
+    dependencies:
+      micromatch: 4.0.5
+
   flat-cache@3.0.4:
     dependencies:
       flatted: 3.2.5
@@ -9181,7 +9188,7 @@ snapshots:
   preferred-pm@file:preferred-pm:
     dependencies:
       find-up-simple: 1.0.0
-      find-yarn-workspace-root2: 1.2.16
+      find-yarn-workspace-root: 2.0.0
       which-pm: link:which-pm
 
   prelude-ls@1.1.2: {}
