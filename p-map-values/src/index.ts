@@ -3,8 +3,11 @@ export default async function pMapValue<K extends string | number | symbol, V, U
   obj: Record<K, V>
 ): Promise<Record<K, U>> {
   const result: Record<K, U> = {} as Record<K, U>
+  const entries = Object.entries(obj) as [K, V][];
   await Promise.all(
-    Object.entries(obj).map(async ([key, value]: any) => { // eslint-disable-line @typescript-eslint/no-explicit-any
+    entries.map(async ([key, value]) => {
+      // initialize property in the resulting object to guarantee key order
+      result[key] = undefined as unknown as U;
       result[key] = await mapper(value, key, obj)
     })
   )
