@@ -32,7 +32,7 @@ module.exports = async function preferredPM (pkgPath) {
       version: '1 || 2'
     }
   }
-  if (fs.existsSync(path.join(pkgPath, 'bun.lockb'))) {
+  if (fs.existsSync(path.join(pkgPath, 'bun.lockb')) || fs.existsSync(path.join(pkgPath, 'bun.lock'))) {
     return {
       name: 'bun',
       version: '*'
