@@ -2,9 +2,9 @@
 
 const fs = require('fs')
 const stripBom = require('strip-bom')
-const yaml = require('js-yaml')
+const yaml = require('yaml')
 
-const parse = data => yaml.load(stripBom(data))
+const parse = data => yaml.parse(stripBom(data))
 
 const readYamlFile = fp => fs.promises.readFile(fp, 'utf8').then(data => parse(data))
 
