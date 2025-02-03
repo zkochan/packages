@@ -1,5 +1,5 @@
 'use strict'
-const findYarnWorkspaceRoot = require('find-yarn-workspace-root2')
+const findYarnWorkspaceRoot = require('find-yarn-workspace-root')
 const fs = require('fs')
 const path = require('path')
 const whichPM = require('which-pm')
@@ -46,7 +46,8 @@ module.exports = async function preferredPM (pkgPath) {
     }
   }
   try {
-    const workspaceRoot = findYarnWorkspaceRoot(pkgPath)
+    const closestPkgJsonPath = await findUp('package.json', { cwd: pkgPath })
+    const workspaceRoot = findYarnWorkspaceRoot(path.dirname(closestPkgJsonPath))
     if (typeof workspaceRoot === 'string') {
       if (fs.existsSync(path.join(workspaceRoot, 'package-lock.json'))) {
         return {
