@@ -16,7 +16,16 @@ jobs:
         platform:
           - ubuntu-latest
           - windows-latest
-          - macos-latest
+        include:
+          # node<=14 only works on macos<=13 (x64)
+          - platform: macos-latest
+            node: '16'
+          - platform: macos-latest
+            node: '18'
+          - platform: macos-latest
+            node: '20'
+          - platform: macos-latest
+            node: '22'
 
     name: '${{matrix.platform}} / Node.js ${{ matrix.node }}'
     runs-on: ${{matrix.platform}}
@@ -38,4 +47,4 @@ jobs:
     - name: Compile
       run: pnpm -r run prepublishOnly
     - name: run tests
-      run: pnpm -r --no-bail test
+      run: pnpm run test-all
