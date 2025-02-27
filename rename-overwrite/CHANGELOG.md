@@ -1,5 +1,11 @@
 # rename-overwrite
 
+## 6.0.2
+
+### Patch Changes
+
+- 574a558: Only import the exported files from fs-extra.
+
 ## 6.0.1
 
 ### Patch Changes
