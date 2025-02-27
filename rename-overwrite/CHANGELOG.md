@@ -1,5 +1,11 @@
 # rename-overwrite
 
+## 6.0.1
+
+### Patch Changes
+
+- 2af185a: Update fs-extra to v11.
+
 ## 5.0.3
 
 ### Patch Changes
