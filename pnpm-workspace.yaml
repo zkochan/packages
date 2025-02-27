@@ -1,4 +1,12 @@
 packages:
   - '**'
-  - "!**/test/**"
-  - "!resolve-link-target/node_modules_link/**"
+  - '!**/test/**'
+  - '!resolve-link-target/node_modules_link/**'
+overrides:
+  '@types/node': 14.14.6
+onlyBuiltDependencies:
+  - '@pnpm/exe'
+  - bun
+  - yarn
+ignoredBuiltDependencies:
+  - core-js
