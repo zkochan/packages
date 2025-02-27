@@ -1,8 +1,7 @@
 'use strict'
 const fs = require('fs')
-const { promisify } = require('util')
 const copySync = require('fs-extra/lib/copy/copy-sync')
-const copy = promisify(require('fs-extra/lib/copy/copy'))
+const copy = require('fs-extra/lib/copy/copy')
 const path = require('path')
 const rimraf = require('@zkochan/rimraf')
 
