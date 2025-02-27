@@ -375,8 +375,8 @@ importers:
         specifier: workspace:^
         version: link:../rimraf
       fs-extra:
-        specifier: 10.1.0
-        version: 10.1.0
+        specifier: 11.3.0
+        version: 11.3.0
     dependenciesMeta:
       rename-overwrite:
         injected: true
@@ -2305,9 +2305,9 @@ packages:
   formstream@1.1.1:
     resolution: {integrity: sha512-yHRxt3qLFnhsKAfhReM4w17jP+U1OlhUjnKPPtonwKbIJO7oBP0MvoxkRUwb8AU9n0MIkYy5X5dK6pQnbj+R2Q==}
 
-  fs-extra@10.1.0:
-    resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
-    engines: {node: '>=12'}
+  fs-extra@11.3.0:
+    resolution: {integrity: sha512-Z4XaCL6dUDHfP/jT25jJKMmtxvuwbkrD1vNSMFlo9lNLY2c5FHYSQgHPRZUjAB26TpDEoW9HCOgplrdbaPV/ew==}
+    engines: {node: '>=14.14'}
 
   fs-extra@7.0.1:
     resolution: {integrity: sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==}
@@ -7226,7 +7226,7 @@ snapshots:
       mime: 2.6.0
       pause-stream: 0.0.11
 
-  fs-extra@10.1.0:
+  fs-extra@11.3.0:
     dependencies:
       graceful-fs: 4.2.10
       jsonfile: 6.1.0
