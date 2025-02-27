@@ -35,6 +35,9 @@ importers:
         version: 5.5.3
 
   can-link:
+    dependenciesMeta:
+      can-link:
+        injected: true
     devDependencies:
       can-link:
         specifier: 'file:'
@@ -51,15 +54,15 @@ importers:
       tape:
         specifier: ^5.3.2
         version: 5.5.3
-    dependenciesMeta:
-      can-link:
-        injected: true
 
   can-write-to-dir:
     dependencies:
       path-temp:
         specifier: ^2.0.0
         version: 2.0.0
+    dependenciesMeta:
+      can-write-to-dir:
+        injected: true
     devDependencies:
       can-write-to-dir:
         specifier: 'file:'
@@ -70,9 +73,6 @@ importers:
       tape:
         specifier: ^5.3.2
         version: 5.5.3
-    dependenciesMeta:
-      can-write-to-dir:
-        injected: true
 
   cmd-extension: {}
 
@@ -87,6 +87,9 @@ importers:
       path-temp:
         specifier: 2.0.0
         version: 2.0.0
+    dependenciesMeta:
+      dir-is-case-sensitive:
+        injected: true
     devDependencies:
       '@types/node':
         specifier: 14.14.6
@@ -106,9 +109,6 @@ importers:
       typescript:
         specifier: ^4.5.2
         version: 4.6.4
-    dependenciesMeta:
-      dir-is-case-sensitive:
-        injected: true
 
   graceful-git:
     dependencies:
@@ -118,6 +118,9 @@ importers:
       safe-execa:
         specifier: ^0.1.1
         version: 0.1.1
+    dependenciesMeta:
+      graceful-git:
+        injected: true
     devDependencies:
       graceful-git:
         specifier: 'file:'
@@ -131,9 +134,6 @@ importers:
       tape:
         specifier: ^5.3.2
         version: 5.5.3
-    dependenciesMeta:
-      graceful-git:
-        injected: true
 
   is-inner-link:
     dependencies:
@@ -143,6 +143,9 @@ importers:
       resolve-link-target:
         specifier: workspace:^2.0.0
         version: link:../resolve-link-target
+    dependenciesMeta:
+      is-inner-link:
+        injected: true
     devDependencies:
       is-inner-link:
         specifier: 'file:'
@@ -168,9 +171,6 @@ importers:
       tape:
         specifier: ^5.3.2
         version: 5.5.3
-    dependenciesMeta:
-      is-inner-link:
-        injected: true
 
   is-subdir:
     dependencies:
@@ -230,6 +230,9 @@ importers:
       unique-string:
         specifier: ^2.0.0
         version: 2.0.0
+    dependenciesMeta:
+      path-temp:
+        injected: true
     devDependencies:
       mos:
         specifier: 2.0.0-alpha.3
@@ -246,9 +249,6 @@ importers:
       tape:
         specifier: ^5.3.2
         version: 5.5.3
-    dependenciesMeta:
-      path-temp:
-        injected: true
 
   preferred-pm:
     dependencies:
@@ -261,6 +261,9 @@ importers:
       which-pm:
         specifier: workspace:^
         version: link:../which-pm
+    dependenciesMeta:
+      preferred-pm:
+        injected: true
     devDependencies:
       ncp:
         specifier: ^2.0.0
@@ -277,9 +280,6 @@ importers:
       tempy:
         specifier: ^1.0.1
         version: 1.0.1
-    dependenciesMeta:
-      preferred-pm:
-        injected: true
 
   promise-share:
     dependencies:
@@ -299,6 +299,9 @@ importers:
       strip-bom:
         specifier: ^4.0.0
         version: 4.0.0
+    dependenciesMeta:
+      read-ini-file:
+        injected: true
     devDependencies:
       mos:
         specifier: 2.0.0-alpha.3
@@ -315,9 +318,6 @@ importers:
       tape:
         specifier: ^5.3.2
         version: 5.5.3
-    dependenciesMeta:
-      read-ini-file:
-        injected: true
 
   read-json5-file:
     dependencies:
@@ -349,6 +349,9 @@ importers:
       strip-bom:
         specifier: ^4.0.0
         version: 4.0.0
+    dependenciesMeta:
+      read-yaml-file:
+        injected: true
     devDependencies:
       read-yaml-file:
         specifier: 'file:'
@@ -359,9 +362,6 @@ importers:
       tape:
         specifier: ^5.3.2
         version: 5.5.3
-    dependenciesMeta:
-      read-yaml-file:
-        injected: true
 
   realpath-missing:
     devDependencies:
@@ -377,6 +377,9 @@ importers:
       fs-extra:
         specifier: 10.1.0
         version: 10.1.0
+    dependenciesMeta:
+      rename-overwrite:
+        injected: true
     devDependencies:
       jest:
         specifier: ^27.4.3
@@ -399,9 +402,6 @@ importers:
       write-json-file:
         specifier: ^4.3.0
         version: 4.3.0
-    dependenciesMeta:
-      rename-overwrite:
-        injected: true
 
   render-help:
     dependencies:
@@ -469,6 +469,9 @@ importers:
       path-temp:
         specifier: 2.0.0
         version: 2.0.0
+    dependenciesMeta:
+      root-link-target:
+        injected: true
     devDependencies:
       mos:
         specifier: 2.0.0-alpha.3
@@ -485,15 +488,15 @@ importers:
       tape:
         specifier: ^5.3.2
         version: 5.5.3
-    dependenciesMeta:
-      root-link-target:
-        injected: true
 
   run-groups:
     dependencies:
       p-limit:
         specifier: ^3.1.0
         version: 3.1.0
+    dependenciesMeta:
+      run-groups:
+        injected: true
     devDependencies:
       '@types/node':
         specifier: 14.14.6
@@ -516,9 +519,6 @@ importers:
       typescript:
         specifier: ^4.5.2
         version: 4.6.4
-    dependenciesMeta:
-      run-groups:
-        injected: true
 
   safe-execa:
     dependencies:
@@ -556,6 +556,9 @@ importers:
       load-yaml-file:
         specifier: ^0.2.0
         version: 0.2.0
+    dependenciesMeta:
+      which-pm:
+        injected: true
     devDependencies:
       standard:
         specifier: ^16.0.4
@@ -566,11 +569,11 @@ importers:
       which-pm:
         specifier: 'file:'
         version: 'link:'
-    dependenciesMeta:
-      which-pm:
-        injected: true
 
   which-pm-runs:
+    dependenciesMeta:
+      which-pm-runs:
+        injected: true
     devDependencies:
       '@pnpm/exe':
         specifier: ^8.6.12
@@ -596,9 +599,6 @@ importers:
       yarn:
         specifier: ^1.22.17
         version: 1.22.18
-    dependenciesMeta:
-      which-pm-runs:
-        injected: true
 
   write-ini-file:
     dependencies:
@@ -611,6 +611,9 @@ importers:
       write-file-atomic:
         specifier: ^5.0.0
         version: 5.0.0
+    dependenciesMeta:
+      write-ini-file:
+        injected: true
     devDependencies:
       mos:
         specifier: 2.0.0-alpha.3
@@ -630,9 +633,6 @@ importers:
       write-ini-file:
         specifier: 'file:'
         version: file:write-ini-file
-    dependenciesMeta:
-      write-ini-file:
-        injected: true
 
   write-json5-file:
     dependencies:
