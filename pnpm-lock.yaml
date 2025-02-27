@@ -66,7 +66,7 @@ importers:
     devDependencies:
       can-write-to-dir:
         specifier: 'file:'
-        version: 'link:'
+        version: file:can-write-to-dir
       standard:
         specifier: ^16.0.4
         version: 16.0.4
@@ -85,8 +85,8 @@ importers:
   dir-is-case-sensitive:
     dependencies:
       path-temp:
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.1.0
+        version: 2.1.0
     dependenciesMeta:
       dir-is-case-sensitive:
         injected: true
@@ -467,8 +467,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       path-temp:
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.1.0
+        version: 2.1.0
     dependenciesMeta:
       root-link-target:
         injected: true
@@ -1591,6 +1591,10 @@ packages:
   camelcase@6.3.0:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
     engines: {node: '>=10'}
+
+  can-write-to-dir@file:can-write-to-dir:
+    resolution: {directory: can-write-to-dir, type: directory}
+    engines: {node: '>=10.13'}
 
   caniuse-lite@1.0.30001701:
     resolution: {integrity: sha512-faRs/AW3jA9nTwmJBSO1PQ6L/EOgsB5HMQQq4iCu5zhPgVVgO/pZRHlmatwijZKetFw8/Pr4q6dEN8sJuq8qTw==}
@@ -4022,6 +4026,10 @@ packages:
 
   path-temp@2.0.0:
     resolution: {integrity: sha512-92olbatybjsHTGB2CUnAM7s0mU/27gcMfLNA7t09UftndUdxywlQKur3fzXEPpfLrgZD3I2Bt8+UmiL7YDEgXQ==}
+    engines: {node: '>=8.15'}
+
+  path-temp@2.1.0:
+    resolution: {integrity: sha512-cMMJTAZlion/RWRRC48UbrDymEIt+/YSD/l8NqjneyDw2rDOBQcP5yRkMB4CYGn47KMhZvbblBP7Z79OsMw72w==}
     engines: {node: '>=8.15'}
 
   path-type@1.1.0:
@@ -6523,6 +6531,10 @@ snapshots:
   camelcase@5.3.1: {}
 
   camelcase@6.3.0: {}
+
+  can-write-to-dir@file:can-write-to-dir:
+    dependencies:
+      path-temp: 2.1.0
 
   caniuse-lite@1.0.30001701: {}
 
@@ -9311,6 +9323,10 @@ snapshots:
     dependencies:
       unique-string: 2.0.0
 
+  path-temp@2.1.0:
+    dependencies:
+      unique-string: 2.0.0
+
   path-type@1.1.0:
     dependencies:
       graceful-fs: 4.2.11
@@ -9697,7 +9713,7 @@ snapshots:
     dependencies:
       can-link: link:can-link
       next-path: 1.0.0
-      path-temp: 2.0.0
+      path-temp: 2.1.0
 
   run-parallel@1.2.0:
     dependencies:
