@@ -576,8 +576,8 @@ importers:
         injected: true
     devDependencies:
       '@pnpm/exe':
-        specifier: ^8.6.12
-        version: 8.15.9
+        specifier: ^10.0.0
+        version: 10.5.2
       bun:
         specifier: ^0.8.1
         version: 0.8.1
@@ -1070,36 +1070,42 @@ packages:
     cpu: [x64]
     os: [linux]
 
-  '@pnpm/exe@8.15.9':
-    resolution: {integrity: sha512-6kxoqRCikTJAd7WwZhZ+c5JS8exhxjLIJEpfrlB5hAF6XtQkq/PQMft0ME/z23EH7353k1vm3hdm9o7enRSMGA==}
+  '@pnpm/exe@10.5.2':
+    resolution: {integrity: sha512-b9Tfg+DJ2wXdumg6xaRVruuJ6cDZu/OQoyzjFRdz3RwYxPjjQ5COpZfMXhOrv31nj9rGKyr1u7zn1bE3lJ/wYg==}
     hasBin: true
 
-  '@pnpm/linux-arm64@8.15.9':
-    resolution: {integrity: sha512-m7mpNamUs1Rn8sp/NK1fZ/d7Y9VP4LNvnOv2EEeCx7Wd5CD7vkCvsyK/oPfXKdL64ndwvoQZYF3wh4EKoZbwmg==}
+  '@pnpm/linux-arm64@10.5.2':
+    resolution: {integrity: sha512-BieD5BJgu2Gmy/jK6sov+pSDEkHx0xyQpYpvdS/ppFsgXEo8sldCojRkfnADoAGkHCKxmFYGvM0iahNLbownwA==}
     cpu: [arm64]
     os: [linux]
     hasBin: true
 
-  '@pnpm/linux-x64@8.15.9':
-    resolution: {integrity: sha512-ilYWhq5XfMJaF1mAIUrHQX2rEwnYPIRDuZmEF4DgqW89vEFO212f1wnr6KaSrNUBGmQVf3yl1c/8GAK8VgtG8w==}
+  '@pnpm/linux-x64@10.5.2':
+    resolution: {integrity: sha512-XPQ4AJHeGl8aKp9SON3bglj3vmRyqSZyE6SRnp+8HNjJrNDElEvc4yYo5yOXdfM0JXH4bUQoKn6YwJug2YDpAA==}
     cpu: [x64]
     os: [linux]
     hasBin: true
 
-  '@pnpm/macos-arm64@8.15.9':
-    resolution: {integrity: sha512-gDY5v3ReXRnqj4HuyqRBkkYcwe/Ah/AvnrGTkGHFVbRKDsQU7HhoviiUSqktuqFbess66Q7KN5bJ6t9VUaVbGg==}
+  '@pnpm/macos-arm64@10.5.2':
+    resolution: {integrity: sha512-roHPxVRtaIwNkXAQ7SJekqsH9L2jUnThxgEf4wDs8LORzi2xofAnBiMsoPbxbRvNgsV9AK0wzd2ZLFJbV9rgOw==}
     cpu: [arm64]
     os: [darwin]
     hasBin: true
 
-  '@pnpm/macos-x64@8.15.9':
-    resolution: {integrity: sha512-LBJitiaQdUzm+v9hqpr6o5mizBLYU4cvnnAjZ6XQrYydoreiBNs8AOmm7K6B7pBYYgqAofUxxrR7vywqhuDJVw==}
+  '@pnpm/macos-x64@10.5.2':
+    resolution: {integrity: sha512-CB15yhr5CjMKx7IrmIaZuWFyNo6wFpqHomVIBKVxxgVEhISb/r1l3f+mJfg/KbhZwcToB0UB771GgZkJFxdMLA==}
     cpu: [x64]
     os: [darwin]
     hasBin: true
 
-  '@pnpm/win-x64@8.15.9':
-    resolution: {integrity: sha512-WuB7CIryPVLavqQOhPHGY8IDkMY4tdHBxXeQG/lNWQRbtalRJDiPu12sIBLPv+TdRATghvWSa3dW+7t1/mUoiA==}
+  '@pnpm/win-arm64@10.5.2':
+    resolution: {integrity: sha512-S4gpofehawFmSZySlP2HTf4MJ388pI3S7sRPFo8YqgiJCHKRuzsx//GwRl/BJLSEbrCPbxv+ZejwJ421oDI+dA==}
+    cpu: [arm64]
+    os: [win32]
+    hasBin: true
+
+  '@pnpm/win-x64@10.5.2':
+    resolution: {integrity: sha512-BCHfrqiKqSVbGbp+qC4uiMO1YrJNK+26E1Mm6TH4snHOHdc5jSFiGZfUhD1dumcWRD7RIjGj55UsKyvKh910dA==}
     cpu: [x64]
     os: [win32]
     hasBin: true
@@ -5854,27 +5860,31 @@ snapshots:
   '@oven/bun-linux-x64@0.8.1':
     optional: true
 
-  '@pnpm/exe@8.15.9':
+  '@pnpm/exe@10.5.2':
     optionalDependencies:
-      '@pnpm/linux-arm64': 8.15.9
-      '@pnpm/linux-x64': 8.15.9
-      '@pnpm/macos-arm64': 8.15.9
-      '@pnpm/macos-x64': 8.15.9
-      '@pnpm/win-x64': 8.15.9
+      '@pnpm/linux-arm64': 10.5.2
+      '@pnpm/linux-x64': 10.5.2
+      '@pnpm/macos-arm64': 10.5.2
+      '@pnpm/macos-x64': 10.5.2
+      '@pnpm/win-arm64': 10.5.2
+      '@pnpm/win-x64': 10.5.2
 
-  '@pnpm/linux-arm64@8.15.9':
+  '@pnpm/linux-arm64@10.5.2':
     optional: true
 
-  '@pnpm/linux-x64@8.15.9':
+  '@pnpm/linux-x64@10.5.2':
     optional: true
 
-  '@pnpm/macos-arm64@8.15.9':
+  '@pnpm/macos-arm64@10.5.2':
     optional: true
 
-  '@pnpm/macos-x64@8.15.9':
+  '@pnpm/macos-x64@10.5.2':
     optional: true
 
-  '@pnpm/win-x64@8.15.9':
+  '@pnpm/win-arm64@10.5.2':
+    optional: true
+
+  '@pnpm/win-x64@10.5.2':
     optional: true
 
   '@sinonjs/commons@1.8.6':
