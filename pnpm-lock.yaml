@@ -1536,7 +1536,6 @@ packages:
 
   bun@0.8.1:
     resolution: {integrity: sha512-bWVEO9ipiG00dSOtCd/iGZ+LyxuO8l1SBE9uExg/npUQpC0B/ZQlK3whnV05grOd5gQ0wY4oxO75Csdt+g3VZA==}
-    cpu: [arm64, x64]
     os: [darwin, linux]
     hasBin: true
 
@@ -3133,6 +3132,7 @@ packages:
   jsondiffpatch@0.1.43:
     resolution: {integrity: sha512-lvOkGuk7gl9Rr4M/SfN530TslMb9QZG9PM5uznjb6oVwkkHNt7rgPNOBO59mwegJ/0Msx/yjwYzdiuoET6a87Q==}
     hasBin: true
+    bundledDependencies: []
 
   jsonfile@4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
