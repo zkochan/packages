@@ -35,6 +35,6 @@
   "devDependencies": {
     "read-yaml-file": "file:",
     "standard": "^16.0.4",
-    "tape": "^5.3.2"
+    "tape": "^5.9.0"
   }
 }

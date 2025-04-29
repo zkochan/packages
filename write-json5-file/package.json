@@ -41,7 +41,7 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/write-json5-file#readme",
   "dependencies": {
-    "json5": "^2.2.0",
+    "json5": "^2.2.3",
     "sort-keys": "^4.2.0",
     "write-file-atomic": "^3.0.3"
   },
@@ -49,7 +49,7 @@
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
     "standard": "^16.0.4",
-    "tape": "^5.3.2",
+    "tape": "^5.9.0",
     "tempfile": "^3.0.0"
   }
 }

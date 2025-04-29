@@ -28,7 +28,7 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/make-empty-dir#readme",
   "devDependencies": {
-    "tape": "^5.3.2",
+    "tape": "^5.9.0",
     "tempy": "^1.0.1"
   },
   "dependencies": {

@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "is-subdir": "^1.2.0",
-    "resolve-link-target": "workspace:^2.0.0"
+    "resolve-link-target": "workspace:^"
   },
   "devDependencies": {
     "is-inner-link": "file:",
@@ -51,7 +51,7 @@
     "mos-plugin-readme": "^1.0.4",
     "rimraf": "^3.0.2",
     "standard": "^16.0.4",
-    "symlink-dir": "^5.0.1",
-    "tape": "^5.3.2"
+    "symlink-dir": "^5.2.1",
+    "tape": "^5.9.0"
   }
 }

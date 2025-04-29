@@ -23,9 +23,9 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/rimraf#readme",
   "devDependencies": {
+    "jest": "^27.5.1",
     "standard": "^16.0.4",
-    "tempy": "^1.0.1",
-    "jest": "^27.4.3"
+    "tempy": "^1.0.1"
   },
   "jest": {
     "testEnvironment": "node"

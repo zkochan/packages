@@ -30,11 +30,11 @@
     }
   },
   "dependencies": {
-    "path-temp": "^2.0.0"
+    "path-temp": "^2.1.0"
   },
   "devDependencies": {
     "can-write-to-dir": "file:",
     "standard": "^16.0.4",
-    "tape": "^5.3.2"
+    "tape": "^5.9.0"
   }
 }

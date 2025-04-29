@@ -37,7 +37,7 @@
     "mos-plugin-readme": "^1.0.4",
     "path-temp": "file:",
     "standard": "^16.0.4",
-    "tape": "^5.3.2"
+    "tape": "^5.9.0"
   },
   "mos": {
     "plugins": [

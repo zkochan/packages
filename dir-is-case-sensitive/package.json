@@ -35,11 +35,11 @@
     "path-temp": "2.0.0"
   },
   "devDependencies": {
-    "@types/node": "16.11.13",
-    "@types/tape": "^4.13.2",
+    "@types/node": "14.14.6",
+    "@types/tape": "^4.13.4",
     "dir-is-case-sensitive": "file:",
-    "tape": "^5.3.2",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.5.2"
+    "tape": "^5.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
   }
 }
