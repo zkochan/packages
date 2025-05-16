@@ -19,12 +19,13 @@ module.exports = async function renameOverwrite (oldPath, newPath, retry = 0) {
         break
       // Windows Antivirus issues
       case 'EPERM':
-      case 'EACCESS': {
+      case 'EACCESS':
+      case 'EBUSY': {
         await rimraf(newPath)
         const start = Date.now()
         let backoff = 0
         let lastError = err
-        while (Date.now() - start < 60000 && (lastError.code === 'EPERM' || lastError.code === 'EACCESS')) {
+        while (Date.now() - start < 60000 && (lastError.code === 'EPERM' || lastError.code === 'EACCESS' || lastError.code === 'EBUSY')) {
           await new Promise(resolve => setTimeout(resolve, backoff))
           try {
             await fs.promises.rename(oldPath, newPath)
@@ -77,12 +78,13 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
     switch (err.code) {
       // Windows Antivirus issues
       case 'EPERM':
-      case 'EACCESS': {
+      case 'EACCESS':
+      case 'EBUSY': {
         rimraf.sync(newPath)
         const start = Date.now()
         let backoff = 0
         let lastError = err
-        while (Date.now() - start < 60000 && (lastError.code === 'EPERM' || lastError.code === 'EACCESS')) {
+        while (Date.now() - start < 60000 && (lastError.code === 'EPERM' || lastError.code === 'EACCESS' || lastError.code === 'EBUSY')) {
           const waitUntil = Date.now() + backoff
           while (waitUntil > Date.now()) {}
           try {
