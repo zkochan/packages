@@ -4,7 +4,7 @@ packages:
   - '!resolve-link-target/node_modules_link/**'
 
 configDependencies:
-  '@pnpm/plugin-better-defaults': 0.1.0+sha512-aWj7Jv9NcNs/OoazrxP6QspLgKRZ2PHj6wPris6ZCEqmXw+Z8zK59KLzl9NBFGRCO4PNA9pwDWLu+8N3NiqUAQ==
+  '@pnpm/plugin-better-defaults': 0.2.0+sha512-fd/e5+D0PNHFeYPQ8c3Vp/QpR+dR1tYHeNPc+1tHnKWb2hRDpwenedhfawTm66S0EXtdeuLguOc5flmddVqDNA==
 
 ignoredBuiltDependencies:
   - core-js
