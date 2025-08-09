@@ -31,7 +31,6 @@
   },
   "dependencies": {
     "can-link": "workspace:^",
-    "next-path": "^1.0.0",
     "path-temp": "2.0.0"
   },
   "devDependencies": {
