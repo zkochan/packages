@@ -1,11 +1,12 @@
 {
   "name": "safe-execa",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Like execa but prevents binary planting attacks on Windows",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
+  "type": "module",
   "engines": {
-    "node": ">=12"
+    "node": ">=18"
   },
   "files": [
     "lib"
@@ -26,5 +27,8 @@
     "@zkochan/which": "^2.0.3",
     "execa": "^5.1.1",
     "path-name": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "14.14.6"
   }
 }

@@ -533,6 +533,10 @@ importers:
       path-name:
         specifier: ^1.0.0
         version: 1.0.0
+    devDependencies:
+      '@types/node':
+        specifier: 14.14.6
+        version: 14.14.6
 
   safe-promise-defer:
     dependencies:
