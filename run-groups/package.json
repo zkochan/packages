@@ -6,7 +6,7 @@
   "type": "module",
   "typings": "lib/index.d.ts",
   "engines": {
-    "node": ">=10"
+    "node": ">=20.19"
   },
   "files": [
     "lib"
