@@ -9,10 +9,11 @@
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": true,
-    "target": "es2017",
+    "target": "es2022",
     "outDir": "lib",
-    "module": "commonjs",
-    "moduleResolution": "node"
+    "esModuleInterop": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext"
   },
   "include": [
     "src/**/*.ts"

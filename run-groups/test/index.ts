@@ -1,6 +1,6 @@
 import delay from 'delay'
-import runGroups from 'run-groups'
-import test = require('tape')
+import { runGroups } from 'run-groups'
+import test from 'tape'
 
 test('runGroups()', async (t) => {
   t.plan(4)
