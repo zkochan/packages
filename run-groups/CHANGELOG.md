@@ -1,5 +1,11 @@
 # run-groups
 
+## 4.0.0
+
+### Major Changes
+
+- Converted to ESM.
+
 ## 3.0.1
 
 ### Patch Changes
