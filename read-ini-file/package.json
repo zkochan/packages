@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "ini": "^3.0.1",
-    "strip-bom": "^4.0.0"
+    "strip-bom": "^5.0.0"
   },
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
