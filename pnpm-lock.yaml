@@ -7,8 +7,6 @@ settings:
 overrides:
   '@types/node': 14.14.6
 
-pnpmfileChecksum: sha256-UtXZV825NqHOBG69jsYGuWZ97+do7mk2t42sK5gvG2I=
-
 importers:
 
   .:
@@ -87,8 +85,8 @@ importers:
   dir-is-case-sensitive:
     dependencies:
       path-temp:
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.1.0
+        version: 2.1.0
     dependenciesMeta:
       dir-is-case-sensitive:
         injected: true
@@ -469,8 +467,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       path-temp:
-        specifier: 2.0.0
-        version: 2.0.0
+        specifier: 2.1.0
+        version: 2.1.0
     dependenciesMeta:
       root-link-target:
         injected: true
@@ -3143,7 +3141,6 @@ packages:
   jsondiffpatch@0.1.43:
     resolution: {integrity: sha512-lvOkGuk7gl9Rr4M/SfN530TslMb9QZG9PM5uznjb6oVwkkHNt7rgPNOBO59mwegJ/0Msx/yjwYzdiuoET6a87Q==}
     hasBin: true
-    bundledDependencies: []
 
   jsonfile@4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
@@ -4030,10 +4027,6 @@ packages:
 
   path-parse@1.0.7:
     resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
-
-  path-temp@2.0.0:
-    resolution: {integrity: sha512-92olbatybjsHTGB2CUnAM7s0mU/27gcMfLNA7t09UftndUdxywlQKur3fzXEPpfLrgZD3I2Bt8+UmiL7YDEgXQ==}
-    engines: {node: '>=8.15'}
 
   path-temp@2.1.0:
     resolution: {integrity: sha512-cMMJTAZlion/RWRRC48UbrDymEIt+/YSD/l8NqjneyDw2rDOBQcP5yRkMB4CYGn47KMhZvbblBP7Z79OsMw72w==}
@@ -5587,7 +5580,7 @@ snapshots:
       globals: 12.4.0
       ignore: 4.0.6
       import-fresh: 3.3.1
-      js-yaml: 3.14.1
+      js-yaml: 3.14.2
       lodash: 4.17.21
       minimatch: 3.1.2
       strip-json-comments: 3.1.1
@@ -9333,10 +9326,6 @@ snapshots:
 
   path-parse@1.0.7: {}
 
-  path-temp@2.0.0:
-    dependencies:
-      unique-string: 2.0.0
-
   path-temp@2.1.0:
     dependencies:
       unique-string: 2.0.0
@@ -9729,7 +9718,7 @@ snapshots:
     dependencies:
       can-link: link:can-link
       next-path: 1.0.0
-      path-temp: 2.0.0
+      path-temp: 2.1.0
 
   run-parallel@1.2.0:
     dependencies:
