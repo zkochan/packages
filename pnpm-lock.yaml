@@ -7,8 +7,6 @@ settings:
 overrides:
   '@types/node': 14.14.6
 
-pnpmfileChecksum: sha256-UtXZV825NqHOBG69jsYGuWZ97+do7mk2t42sK5gvG2I=
-
 importers:
 
   .:
@@ -387,8 +385,8 @@ importers:
         specifier: ^27.5.1
         version: 27.5.1(ts-node@10.9.2(@types/node@14.14.6)(typescript@4.9.5))
       load-json-file:
-        specifier: 6.2.0
-        version: 6.2.0
+        specifier: 7.0.1
+        version: 7.0.1
       rename-overwrite:
         specifier: 'link:'
         version: 'link:'
@@ -3143,7 +3141,6 @@ packages:
   jsondiffpatch@0.1.43:
     resolution: {integrity: sha512-lvOkGuk7gl9Rr4M/SfN530TslMb9QZG9PM5uznjb6oVwkkHNt7rgPNOBO59mwegJ/0Msx/yjwYzdiuoET6a87Q==}
     hasBin: true
-    bundledDependencies: []
 
   jsonfile@4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
@@ -3200,9 +3197,9 @@ packages:
     resolution: {integrity: sha512-cJGP40Jc/VXUsp8/OrnyKyTZ1y6v/dphm3bioS+RrKXjK2BB6wHUd6JptZEFDGgGahMT+InnZO5i1Ei9mpC8Bw==}
     engines: {node: '>=6'}
 
-  load-json-file@6.2.0:
-    resolution: {integrity: sha512-gUD/epcRms75Cw8RT1pUdHugZYM5ce64ucs2GEISABwkRsOQr0q2wm/MV2TKThycIe5e0ytRweW2RZxclogCdQ==}
-    engines: {node: '>=8'}
+  load-json-file@7.0.1:
+    resolution: {integrity: sha512-Gnxj3ev3mB5TkVBGad0JM6dmLiQL+o0t23JPBZ9sd+yvSLk05mFoqKBw5N8gbbkU4TNXyqCgIrl/VM17OgUIgQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   load-yaml-file@0.2.0:
     resolution: {integrity: sha512-OfCBkGEw4nN6JLtgRidPX6QxjBQGQf72q3si2uvqyFEMbycSFFHwAZeXx6cJgFM9wmLrf9zBwCP3Ivqa+LLZPw==}
@@ -4932,10 +4929,6 @@ packages:
     resolution: {integrity: sha512-cUGJnCdr4STbePCgqNFbpVNCepa+kAVohJs1sLhxzdH+gnEoOd8VhbYa7pD3zZYGiURWM2xzEII3fQcRizDkYQ==}
     engines: {node: '>=6'}
 
-  type-fest@0.6.0:
-    resolution: {integrity: sha512-q+MB8nYR1KDLrgr4G5yemftpMC7/QLqVndBmEEdqzmNj5dcFOO4Oo8qlwZE3ULT3+Zim1F8Kq4cBnikNhlCMlg==}
-    engines: {node: '>=8'}
-
   type-fest@0.8.1:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
@@ -5099,6 +5092,7 @@ packages:
 
   whatwg-encoding@1.0.5:
     resolution: {integrity: sha512-b5lim54JOPN9HtzvK9HFXvBma/rnfFeqsic0hSpjtDbVxR3dJKLc+KB4V6GgiGOvl7CY/KNh8rxSo9DKQrnUEw==}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@2.3.0:
     resolution: {integrity: sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==}
@@ -5587,7 +5581,7 @@ snapshots:
       globals: 12.4.0
       ignore: 4.0.6
       import-fresh: 3.3.1
-      js-yaml: 3.14.1
+      js-yaml: 3.14.2
       lodash: 4.17.21
       minimatch: 3.1.2
       strip-json-comments: 3.1.1
@@ -8502,12 +8496,7 @@ snapshots:
       strip-bom: 3.0.0
       type-fest: 0.3.1
 
-  load-json-file@6.2.0:
-    dependencies:
-      graceful-fs: 4.2.11
-      parse-json: 5.2.0
-      strip-bom: 4.0.0
-      type-fest: 0.6.0
+  load-json-file@7.0.1: {}
 
   load-yaml-file@0.2.0:
     dependencies:
@@ -10339,8 +10328,6 @@ snapshots:
   type-fest@0.21.3: {}
 
   type-fest@0.3.1: {}
-
-  type-fest@0.6.0: {}
 
   type-fest@0.8.1: {}
 
