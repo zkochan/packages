@@ -29,8 +29,8 @@
     }
   },
   "dependencies": {
-    "js-yaml": "^4.1.0",
-    "strip-bom": "^4.0.0"
+    "strip-bom": "^4.0.0",
+    "yaml": "^2.8.1"
   },
   "devDependencies": {
     "read-yaml-file": "file:",

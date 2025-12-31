@@ -345,12 +345,12 @@ importers:
 
   read-yaml-file:
     dependencies:
-      js-yaml:
-        specifier: ^4.1.0
-        version: 4.1.0
       strip-bom:
         specifier: ^4.0.0
         version: 4.0.0
+      yaml:
+        specifier: ^2.8.1
+        version: 2.8.1
     dependenciesMeta:
       read-yaml-file:
         injected: true
@@ -559,9 +559,9 @@ importers:
 
   which-pm:
     dependencies:
-      load-yaml-file:
-        specifier: ^0.2.0
-        version: 0.2.0
+      read-yaml-file:
+        specifier: ^2.1.0
+        version: 2.1.0
     dependenciesMeta:
       which-pm:
         injected: true
@@ -670,12 +670,12 @@ importers:
 
   write-yaml-file:
     dependencies:
-      js-yaml:
-        specifier: ^4.1.0
-        version: 4.1.0
       write-file-atomic:
         specifier: ^5.0.1
         version: 5.0.1
+      yaml:
+        specifier: ^2.8.1
+        version: 2.8.1
     devDependencies:
       standard:
         specifier: ^16.0.4
@@ -3067,16 +3067,12 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
-  js-yaml@3.14.1:
-    resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
-    hasBin: true
-
   js-yaml@3.14.2:
     resolution: {integrity: sha512-PMSmkqxr106Xa156c2M265Z+FTrPl+oxd/rgOQy2tijQeK5TxQ43psO1ZCwhVOSdnn+RzkzlRz/eY4BgJBYVpg==}
     hasBin: true
 
-  js-yaml@4.1.0:
-    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
+  js-yaml@4.1.1:
+    resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
 
   jsbn@0.1.1:
@@ -3203,10 +3199,6 @@ packages:
   load-json-file@6.2.0:
     resolution: {integrity: sha512-gUD/epcRms75Cw8RT1pUdHugZYM5ce64ucs2GEISABwkRsOQr0q2wm/MV2TKThycIe5e0ytRweW2RZxclogCdQ==}
     engines: {node: '>=8'}
-
-  load-yaml-file@0.2.0:
-    resolution: {integrity: sha512-OfCBkGEw4nN6JLtgRidPX6QxjBQGQf72q3si2uvqyFEMbycSFFHwAZeXx6cJgFM9wmLrf9zBwCP3Ivqa+LLZPw==}
-    engines: {node: '>=6'}
 
   locate-path@2.0.0:
     resolution: {integrity: sha512-NCI2kiDkyR7VeEKm27Kda/iQHyKJe1Bu0FlTbYp3CqJu+9IFe9bLyAjMxf5ZDDbEg+iMPzB5zYyUTSm8wVTKmA==}
@@ -4246,6 +4238,10 @@ packages:
     resolution: {integrity: sha512-VIMnQi/Z4HT2Fxuwg5KrY174U1VdUIASQVWXXyqtNRtxSr9IYkn1rsI6Tb6HsrHCmB7gVpNwX6JxPTHcH6IoTA==}
     engines: {node: '>=6'}
 
+  read-yaml-file@2.1.0:
+    resolution: {integrity: sha512-UkRNRIwnhG+y7hpqnycCL/xbTk7+ia9VuVTC0S+zVbwd65DI9eUpRMfsWIGrCWxTU/mi+JW8cHQCrv+zfCbEPQ==}
+    engines: {node: '>=10.13'}
+
   readable-stream@2.3.8:
     resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==}
 
@@ -5219,6 +5215,11 @@ packages:
   yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
 
+  yaml@2.8.1:
+    resolution: {integrity: sha512-lcYcMxX2PO9XMGvAJkJ3OsNMw+/7FKes7/hgerGUYWIoWu5j/+YQqcZr5JnPZWzOsEBgMbSbiSTn/dv/69Mkpw==}
+    engines: {node: '>= 14.6'}
+    hasBin: true
+
   yargs-parser@20.2.9:
     resolution: {integrity: sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==}
     engines: {node: '>=10'}
@@ -5587,7 +5588,7 @@ snapshots:
       globals: 12.4.0
       ignore: 4.0.6
       import-fresh: 3.3.1
-      js-yaml: 3.14.1
+      js-yaml: 3.14.2
       lodash: 4.17.21
       minimatch: 3.1.2
       strip-json-comments: 3.1.1
@@ -7209,7 +7210,7 @@ snapshots:
       import-fresh: 3.3.1
       imurmurhash: 0.1.4
       is-glob: 4.0.3
-      js-yaml: 3.14.1
+      js-yaml: 3.14.2
       json-stable-stringify-without-jsonify: 1.0.1
       levn: 0.4.1
       lodash: 4.17.21
@@ -8346,17 +8347,12 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
-  js-yaml@3.14.1:
-    dependencies:
-      argparse: 1.0.10
-      esprima: 4.0.1
-
   js-yaml@3.14.2:
     dependencies:
       argparse: 1.0.10
       esprima: 4.0.1
 
-  js-yaml@4.1.0:
+  js-yaml@4.1.1:
     dependencies:
       argparse: 2.0.1
 
@@ -8508,13 +8504,6 @@ snapshots:
       parse-json: 5.2.0
       strip-bom: 4.0.0
       type-fest: 0.6.0
-
-  load-yaml-file@0.2.0:
-    dependencies:
-      graceful-fs: 4.2.11
-      js-yaml: 3.14.1
-      pify: 4.0.1
-      strip-bom: 3.0.0
 
   locate-path@2.0.0:
     dependencies:
@@ -9536,6 +9525,11 @@ snapshots:
       js-yaml: 3.14.2
       pify: 4.0.1
       strip-bom: 3.0.0
+
+  read-yaml-file@2.1.0:
+    dependencies:
+      js-yaml: 4.1.1
+      strip-bom: 4.0.0
 
   readable-stream@2.3.8:
     dependencies:
@@ -10677,6 +10671,8 @@ snapshots:
   yallist@3.1.1: {}
 
   yallist@4.0.0: {}
+
+  yaml@2.8.1: {}
 
   yargs-parser@20.2.9: {}
 

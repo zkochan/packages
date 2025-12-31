@@ -32,7 +32,7 @@
     }
   },
   "dependencies": {
-    "load-yaml-file": "^0.2.0"
+    "read-yaml-file": "^2.1.0"
   },
   "devDependencies": {
     "standard": "^16.0.4",
