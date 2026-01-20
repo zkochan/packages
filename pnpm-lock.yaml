@@ -465,9 +465,6 @@ importers:
       can-link:
         specifier: workspace:^
         version: link:../can-link
-      next-path:
-        specifier: ^1.0.0
-        version: 1.0.0
       path-temp:
         specifier: 2.0.0
         version: 2.0.0
@@ -3514,10 +3511,6 @@ packages:
   negotiator@0.6.4:
     resolution: {integrity: sha512-myRT3DiWPHqho5PrJaIRyaMv2kgYf0mUVgBNOYMuCH5Ki1yEiQaf/ZJuQ62nvpc44wL5WDbTX7yGJi1Neevw8w==}
     engines: {node: '>= 0.6'}
-
-  next-path@1.0.0:
-    resolution: {integrity: sha512-oWgXcUL3zi7KsPNoWLM2Z/EVaOMsZO8em4iAzJmqoo08zinMwsMvkrNbeLDztMdaPJryfYJvbx2OBoBYnPQKpg==}
-    engines: {node: '>=6'}
 
   node-gyp@4.0.0:
     resolution: {integrity: sha512-2XiryJ8sICNo6ej8d0idXDEMKfVfFK7kekGCtJAuelGsYHQxhj13KTf95swTCN2dZ/4lTfZ84Fu31jqJEEgjWA==}
@@ -8932,8 +8925,6 @@ snapshots:
 
   negotiator@0.6.4: {}
 
-  next-path@1.0.0: {}
-
   node-gyp@4.0.0:
     dependencies:
       glob: 7.2.3
@@ -9728,7 +9719,6 @@ snapshots:
   root-link-target@file:root-link-target:
     dependencies:
       can-link: link:can-link
-      next-path: 1.0.0
       path-temp: 2.0.0
 
   run-parallel@1.2.0:
