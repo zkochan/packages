@@ -1,6 +1,6 @@
 {
   "name": "path-temp",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Returns a unique temp file name inside the specified folder",
   "main": "index.js",
   "typings": "index.d.ts",
