@@ -9,6 +9,7 @@ test('pathTemp', t => {
 })
 
 test('fastPathTemp', t => {
-  t.equal(pathTemp.fastPathTemp(path.resolve('foo.txt')), path.resolve(`foo.txt_tmp_${process.pid}`))
+  const workerThreads = require('node:worker_threads')
+  t.equal(pathTemp.fastPathTemp(path.resolve('foo.txt')), path.resolve(`foo.txt_tmp_${process.pid}_${workerThreads.threadId}`))
   t.end()
 })
