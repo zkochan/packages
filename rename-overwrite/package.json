@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "jest": "^27.5.1",
-    "load-json-file": "6.2.0",
+    "load-json-file": "7.0.1",
     "rename-overwrite": "link:",
     "standard": "^16.0.4",
     "symlink-dir": "^5.2.1",
