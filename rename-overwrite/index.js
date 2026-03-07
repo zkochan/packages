@@ -1,4 +1,5 @@
 'use strict'
+const crypto = require('crypto')
 const fs = require('fs')
 const { copySync, copy } = require('fs-extra')
 const path = require('path')
@@ -14,8 +15,15 @@ module.exports = async function renameOverwrite (oldPath, newPath, retry = 0) {
       case 'ENOTEMPTY':
       case 'EEXIST':
       case 'ENOTDIR':
-        await rimraf(newPath)
-        await renameOverwrite(oldPath, newPath, retry)
+        try {
+          await rimraf(newPath)
+          await fs.promises.rename(oldPath, newPath)
+        } catch {
+          // If rimraf + rename failed (e.g. parallel process race), fall back
+          // to swap-rename which avoids leaving a window where target is missing.
+          // This was added to solve concurrency issues with pnpm global virtual store
+          await swapRename(oldPath, newPath)
+        }
         break
       // Windows Antivirus issues
       case 'EPERM':
@@ -102,9 +110,15 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
       case 'ENOTEMPTY':
       case 'EEXIST':
       case 'ENOTDIR':
-        rimraf.sync(newPath)
-        fs.renameSync(oldPath, newPath)
-        return
+        try {
+          rimraf.sync(newPath)
+          fs.renameSync(oldPath, newPath)
+        } catch {
+          // If rimraf + rename failed (e.g. parallel process race), fall back
+          // to swap-rename which avoids leaving a window where target is missing.
+          swapRenameSync(oldPath, newPath)
+        }
+        break
       case 'ENOENT':
         fs.mkdirSync(path.dirname(newPath), { recursive: true })
         renameOverwriteSync(oldPath, newPath, retry)
@@ -125,4 +139,41 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
         throw err
     }
   }
+}
+
+function tempPath (p) {
+  return `${p}_${process.pid.toString(16)}_${crypto.randomBytes(4).toString('hex')}`
+}
+
+// Rename the target aside before replacing it. This minimizes the window where
+// the target doesn't exist, which is critical when parallel processes may be
+// reading from the target (e.g. pnpm's global virtual store).
+async function swapRename (oldPath, newPath) {
+  const temp = tempPath(newPath)
+  await fs.promises.rename(newPath, temp)
+  try {
+    await fs.promises.rename(oldPath, newPath)
+  } catch (err) {
+    try {
+      await fs.promises.rename(temp, newPath)
+    } catch {}
+    throw err
+  }
+  rimraf(temp).catch(() => {})
+}
+
+function swapRenameSync (oldPath, newPath) {
+  const temp = tempPath(newPath)
+  fs.renameSync(newPath, temp)
+  try {
+    fs.renameSync(oldPath, newPath)
+  } catch (err) {
+    try {
+      fs.renameSync(temp, newPath)
+    } catch {}
+    throw err
+  }
+  try {
+    rimraf.sync(temp)
+  } catch {}
 }
