@@ -16,13 +16,14 @@ module.exports = async function renameOverwrite (oldPath, newPath, retry = 0) {
       case 'EEXIST':
       case 'ENOTDIR':
         try {
+          // Swap-rename avoids leaving a window where the target doesn't exist,
+          // which is important when parallel processes read from the target.
+          await swapRename(oldPath, newPath)
+        } catch {
+          // If swap-rename failed (e.g. target was already moved by another
+          // process), fall back to rimraf + rename.
           await rimraf(newPath)
           await fs.promises.rename(oldPath, newPath)
-        } catch {
-          // If rimraf + rename failed (e.g. parallel process race), fall back
-          // to swap-rename which avoids leaving a window where target is missing.
-          // This was added to solve concurrency issues with pnpm global virtual store
-          await swapRename(oldPath, newPath)
         }
         break
       // Windows Antivirus issues
@@ -111,12 +112,14 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
       case 'EEXIST':
       case 'ENOTDIR':
         try {
+          // Swap-rename avoids leaving a window where the target doesn't exist,
+          // which is important when parallel processes read from the target.
+          swapRenameSync(oldPath, newPath)
+        } catch {
+          // If swap-rename failed (e.g. target was already moved by another
+          // process), fall back to rimraf + rename.
           rimraf.sync(newPath)
           fs.renameSync(oldPath, newPath)
-        } catch {
-          // If rimraf + rename failed (e.g. parallel process race), fall back
-          // to swap-rename which avoids leaving a window where target is missing.
-          swapRenameSync(oldPath, newPath)
         }
         break
       case 'ENOENT':
