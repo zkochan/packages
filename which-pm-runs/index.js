@@ -1,6 +1,4 @@
-'use strict'
-
-module.exports = function () {
+export function whichPMRuns () {
   if (!process.env.npm_config_user_agent) {
     return undefined
   }

@@ -1,8 +1,7 @@
-'use strict'
-const path = require('path')
-const writeFileAtomic = require('write-file-atomic')
-const fs = require('fs')
-const ini = require('ini')
+import path from 'node:path'
+import writeFileAtomic from 'write-file-atomic'
+import fs from 'node:fs'
+import ini from 'ini'
 
 const main = (fn, fp, data, opts) => {
   if (!fp) {
@@ -20,12 +19,12 @@ const main = (fn, fp, data, opts) => {
   return fn(fp, encodedData, { mode: opts.mode })
 }
 
-module.exports.writeIniFile = async (fp, data, opts) => {
+export async function writeIniFile (fp, data, opts) {
   await fs.promises.mkdir(path.dirname(fp), { recursive: true })
   return main(writeFileAtomic, fp, data, opts)
 }
 
-module.exports.writeIniFileSync = (fp, data, opts) => {
+export function writeIniFileSync (fp, data, opts) {
   fs.mkdirSync(path.dirname(fp), { recursive: true })
   main(writeFileAtomic.sync, fp, data, opts)
 }

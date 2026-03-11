@@ -1,3 +1,1 @@
-export = realpathMissing
-
-declare function realpathMissing (path: string): Promise<string>
+export function realpathMissing (path: string): Promise<string>

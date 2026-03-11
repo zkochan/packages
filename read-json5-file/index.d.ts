@@ -1,6 +1,2 @@
-declare const readJson5File: {
-  <T = unknown>(filePath: string): Promise<T>
-  sync: <T = unknown>(filePath: string) => T
-}
-
-export = readJson5File
+export function readJson5File<T = unknown> (filePath: string): Promise<T>
+export function readJson5FileSync<T = unknown> (filePath: string): T

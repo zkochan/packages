@@ -1,7 +1,2 @@
-export = canLink
-
-declare function canLink (existingPath: string, newPath: string): Promise<boolean>
-
-declare namespace canLink {
-  function sync (existingPath: string, newPath: string): boolean
-}
+export function canLink (existingPath: string, newPath: string): Promise<boolean>
+export function canLinkSync (existingPath: string, newPath: string): boolean

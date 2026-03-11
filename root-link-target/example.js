@@ -1,3 +1,3 @@
-const rootLinkTarget = require('.')
+import { rootLinkTargetSync } from './index.js'
 
-console.log(rootLinkTarget.sync('package.json'))
+console.log(rootLinkTargetSync('package.json'))

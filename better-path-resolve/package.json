@@ -2,7 +2,9 @@
   "name": "better-path-resolve",
   "version": "1.0.0",
   "description": "A better path.resolve() that normalizes paths on Windows",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "files": [
     "index.js"
   ],

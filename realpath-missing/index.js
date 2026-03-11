@@ -1,6 +1,6 @@
-const fs = require('fs')
+import fs from 'node:fs'
 
-module.exports = async function realpathMissing (path) {
+export async function realpathMissing (path) {
   try {
     return await fs.promises.realpath(path)
   } catch (err) {
@@ -10,4 +10,3 @@ module.exports = async function realpathMissing (path) {
     throw err
   }
 }
-

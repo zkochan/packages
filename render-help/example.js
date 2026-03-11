@@ -1,4 +1,4 @@
-const renderHelp = require('./lib')
+import { renderHelp } from './lib/index.js'
 
 const output = renderHelp({
   usages: ['pnpm install [options]'],

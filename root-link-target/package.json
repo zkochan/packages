@@ -2,7 +2,9 @@
   "name": "root-link-target",
   "version": "3.1.0",
   "description": "Gets the shortest directory to which a file can be linked",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "typings": "index.d.ts",
   "files": [
     "index.js",
@@ -24,20 +26,14 @@
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/root-link-target#readme",
-  "dependenciesMeta": {
-    "root-link-target": {
-      "injected": true
-    }
-  },
   "dependencies": {
     "can-link": "workspace:^",
     "next-path": "^1.0.0",
-    "path-temp": "2.0.0"
+    "path-temp": "workspace:^"
   },
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "root-link-target": "file:",
     "standard": "^16.0.4"
   },
   "mos": {

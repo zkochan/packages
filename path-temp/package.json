@@ -2,7 +2,9 @@
   "name": "path-temp",
   "version": "2.1.1",
   "description": "Returns a unique temp file name inside the specified folder",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "typings": "index.d.ts",
   "files": [
     "index.js",
@@ -24,18 +26,12 @@
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/path-temp#readme",
-  "dependenciesMeta": {
-    "path-temp": {
-      "injected": true
-    }
-  },
   "dependencies": {
     "unique-string": "^2.0.0"
   },
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "path-temp": "file:",
     "standard": "^16.0.4"
   },
   "mos": {

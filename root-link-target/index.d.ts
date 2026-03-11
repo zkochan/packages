@@ -1,7 +1,2 @@
-export = rootLinkTarget
-
-declare function rootLinkTarget (filePath: string): Promise<string>
-
-declare namespace rootLinkTarget {
-  function sync (filePath: string): string
-}
+export function rootLinkTarget (filePath: string): Promise<string>
+export function rootLinkTargetSync (filePath: string): string

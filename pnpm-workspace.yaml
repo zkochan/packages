@@ -1,7 +1,7 @@
 packages:
   - '**'
   - '!**/test/**'
-  - '!resolve-link-target/node_modules_link/**'
+  - '!**/node_modules_link/**'
 allowBuilds:
   '@pnpm/exe': true
   bun: true

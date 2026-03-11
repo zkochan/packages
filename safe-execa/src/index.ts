@@ -41,7 +41,7 @@ function getCommandAbsolutePathSync (file: string, options?: {
   return fileAbsolutePath
 }
 
-export default function (
+export function safeExeca (
   file: string,
   args?: readonly string[],
   options?: execa.Options

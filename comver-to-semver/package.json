@@ -2,7 +2,9 @@
   "name": "comver-to-semver",
   "version": "1.0.0",
   "description": "Converts a comver (compatible version) to a semver (semantic version).",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "typings": "index.d.ts",
   "files": [
     "index.js",

@@ -1,7 +1,6 @@
-'use strict'
-const defaultFS = require('fs')
+import defaultFS from 'node:fs'
 
-module.exports = async (existingPath, newPath, customFS) => {
+export async function canLink (existingPath, newPath, customFS) {
   const fs = customFS || defaultFS
   try {
     await fs.promises.link(existingPath, newPath)
@@ -19,7 +18,7 @@ module.exports = async (existingPath, newPath, customFS) => {
   }
 }
 
-module.exports.sync = (existingPath, newPath, customFS) => {
+export function canLinkSync (existingPath, newPath, customFS) {
   const fs = customFS || defaultFS
   try {
     fs.linkSync(existingPath, newPath)

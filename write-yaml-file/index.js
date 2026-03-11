@@ -1,8 +1,7 @@
-'use strict'
-const path = require('path')
-const fs = require('fs')
-const writeFileAtomic = require('write-file-atomic')
-const YAML = require('js-yaml')
+import path from 'node:path'
+import fs from 'node:fs'
+import writeFileAtomic from 'write-file-atomic'
+import YAML from 'js-yaml'
 
 const main = (fn, fp, data, opts) => {
   if (!fp) {
@@ -20,14 +19,14 @@ const main = (fn, fp, data, opts) => {
   return fn(fp, yaml, { mode: opts.mode })
 }
 
-module.exports = async (fp, data, opts) => {
+export async function writeYamlFile (fp, data, opts) {
   if (opts?.makeDir ?? true) {
     await fs.promises.mkdir(path.dirname(fp), { recursive: true })
   }
   return main(writeFileAtomic, fp, data, opts)
 }
 
-module.exports.sync = (fp, data, opts) => {
+export function writeYamlFileSync (fp, data, opts) {
   if (opts?.makeDir ?? true) {
     fs.mkdirSync(path.dirname(fp), { recursive: true })
   }

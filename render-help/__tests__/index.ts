@@ -1,8 +1,7 @@
 import { test, beforeEach } from 'node:test'
 import assert from 'node:assert'
 import { stripIndent } from 'common-tags'
-import renderHelpModule from '../lib/index.js'
-const renderHelp = renderHelpModule.default ?? renderHelpModule
+import { renderHelp } from '../lib/index.js'
 
 const originalColumns = process.stdout.columns
 

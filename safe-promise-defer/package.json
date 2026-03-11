@@ -2,7 +2,9 @@
   "name": "safe-promise-defer",
   "version": "1.0.1",
   "description": "Create a deferred promise that is wrappened in a function",
+  "type": "module",
   "main": "lib/index.js",
+  "exports": "./lib/index.js",
   "typings": "lib/index.d.ts",
   "engines": {
     "node": ">=22.13"
@@ -24,7 +26,7 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/safe-promise-defer#readme",
   "dependencies": {
-    "promise-share": "^1.0.0"
+    "promise-share": "workspace:^"
   },
   "devDependencies": {
     "typescript": "^4.9.5"

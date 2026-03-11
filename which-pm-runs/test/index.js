@@ -1,8 +1,10 @@
-'use strict'
-const { test } = require('node:test')
-const execa = require('execa')
-const path = require('path')
-const os = require('os')
+import { test } from 'node:test'
+import execa from 'execa'
+import path from 'node:path'
+import os from 'node:os'
+import { fileURLToPath } from 'node:url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 delete process.env.npm_config_user_agent
 

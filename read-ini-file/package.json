@@ -2,7 +2,9 @@
   "name": "read-ini-file",
   "version": "4.0.0",
   "description": "Read and parse an ini file",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "files": [
     "index.js",
     "index.d.ts"
@@ -40,11 +42,6 @@
     "url": "https://github.com/zkochan/packages/issues"
   },
   "homepage": "https://github.com/zkochan/packages/tree/main/read-ini-file#readme#readme",
-  "dependenciesMeta": {
-    "read-ini-file": {
-      "injected": true
-    }
-  },
   "dependencies": {
     "ini": "^3.0.1",
     "strip-bom": "^4.0.0"
@@ -52,7 +49,6 @@
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "read-ini-file": "file:",
     "standard": "^16.0.4"
   },
   "engines": {

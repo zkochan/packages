@@ -1,12 +1,11 @@
-'use strict'
-const path = require('path')
+import path from 'node:path'
 
-let cmdExtension
+let _cmdExtension
 
 if (process.env.PATHEXT) {
-  cmdExtension = process.env.PATHEXT
+  _cmdExtension = process.env.PATHEXT
     .split(path.delimiter)
     .find(ext => ext.toUpperCase() === '.CMD')
 }
 
-module.exports = cmdExtension || '.cmd'
+export const cmdExtension = _cmdExtension || '.cmd'

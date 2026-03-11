@@ -1,5 +1,4 @@
-'use strict'
-const path = require('path')
-const isSubdir = require('.')
+import path from 'node:path'
+import { isSubdir } from './index.js'
 
 console.log(isSubdir(process.cwd(), path.resolve('node_modules')))

@@ -1,7 +1,6 @@
-'use strict'
-const { test } = require('node:test')
-const assert = require('node:assert')
-const pShare = require('.')
+import { test } from 'node:test'
+import assert from 'node:assert'
+import { pShare } from './index.js'
 
 test('pShare() success', async () => {
   const getValue = pShare(Promise.resolve(1))

@@ -2,7 +2,9 @@
   "name": "can-write-to-dir",
   "version": "1.1.1",
   "description": "Returns true if the current process has permission to write to the specified directory",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "typings": "index.d.ts",
   "files": [
     "index.js",
@@ -24,16 +26,10 @@
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/can-write-to-dir#readme",
-  "dependenciesMeta": {
-    "can-write-to-dir": {
-      "injected": true
-    }
-  },
   "dependencies": {
-    "path-temp": "^2.1.0"
+    "path-temp": "workspace:^"
   },
   "devDependencies": {
-    "can-write-to-dir": "file:",
     "standard": "^16.0.4"
   }
 }

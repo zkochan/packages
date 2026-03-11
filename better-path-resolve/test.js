@@ -1,7 +1,6 @@
-'use strict'
-const { test } = require('node:test')
-const assert = require('node:assert')
-const betterPathResolve = require('.')
+import { test } from 'node:test'
+import assert from 'node:assert'
+import { betterPathResolve } from './index.js'
 
 test('betterPathResolve()', () => {
   assert.strictEqual(typeof betterPathResolve(), 'string')

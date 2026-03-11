@@ -1,14 +1,13 @@
-'use strict'
-const { test } = require('node:test')
-const assert = require('node:assert')
-const readYamlFile = require('read-yaml-file')
+import { test } from 'node:test'
+import assert from 'node:assert'
+import { readYamlFile, readYamlFileSync } from 'read-yaml-file'
 
 test('readYamlFile()', async () => {
   const data = await readYamlFile('foo.yml')
   assert.deepStrictEqual(data, { foo: true })
 })
 
-test('readYamlFile.sync()', () => {
-  const data = readYamlFile.sync('foo.yml')
+test('readYamlFileSync()', () => {
+  const data = readYamlFileSync('foo.yml')
   assert.deepStrictEqual(data, { foo: true })
 })

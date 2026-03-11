@@ -1,11 +1,10 @@
-'use strict'
-const { test } = require('node:test')
-const git = require('graceful-git')
+import { test } from 'node:test'
+import { gracefulGit, noRetry } from 'graceful-git'
 
 test('git command successfully completes', async () => {
-  await git(['status'])
+  await gracefulGit(['status'])
 })
 
 test('git command successfully completes with no retries as well', async () => {
-  await git.noRetry(['status'])
+  await noRetry(['status'])
 })

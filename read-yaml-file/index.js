@@ -1,13 +1,14 @@
-'use strict'
-
-const fs = require('fs')
-const stripBom = require('strip-bom')
-const yaml = require('js-yaml')
+import fs from 'node:fs'
+import stripBom from 'strip-bom'
+import yaml from 'js-yaml'
 
 const parse = data => yaml.load(stripBom(data))
 
-const readYamlFile = fp => fs.promises.readFile(fp, 'utf8').then(data => parse(data))
+export async function readYamlFile (fp) {
+  const data = await fs.promises.readFile(fp, 'utf8')
+  return parse(data)
+}
 
-module.exports = readYamlFile
-module.exports.default = readYamlFile
-module.exports.sync = fp => parse(fs.readFileSync(fp, 'utf8'))
+export function readYamlFileSync (fp) {
+  return parse(fs.readFileSync(fp, 'utf8'))
+}

@@ -1,3 +1,1 @@
-export = comverToSemver
-
-declare function comverToSemver (comver: string): string
+export function comverToSemver (comver: string): string

@@ -1,17 +1,13 @@
-'use strict'
-const fs = require('fs')
-const path = require('path')
+import fs from 'node:fs'
+import path from 'node:path'
 
-module.exports = getLinkTarget
-module.exports.sync = getLinkTargetSync
-
-async function getLinkTarget (linkPath) {
+export async function resolveLinkTarget (linkPath) {
   linkPath = path.resolve(linkPath)
   const target = await fs.promises.readlink(linkPath)
   return _resolveLink(linkPath, target)
 }
 
-function getLinkTargetSync (linkPath) {
+export function resolveLinkTargetSync (linkPath) {
   linkPath = path.resolve(linkPath)
   const target = fs.readlinkSync(linkPath)
   return _resolveLink(linkPath, target)

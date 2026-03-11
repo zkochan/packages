@@ -1,10 +1,9 @@
-'use strict'
-const findYarnWorkspaceRoot = require('find-yarn-workspace-root2')
-const fs = require('fs')
-const path = require('path')
-const whichPM = require('which-pm')
+import findYarnWorkspaceRoot from 'find-yarn-workspace-root2'
+import fs from 'node:fs'
+import path from 'node:path'
+import { whichPM } from 'which-pm'
 
-module.exports = async function preferredPM (pkgPath) {
+export async function preferredPM (pkgPath) {
   if (typeof pkgPath !== 'string') {
     throw new TypeError(`pkgPath should be a string, got ${typeof pkgPath}`)
   }

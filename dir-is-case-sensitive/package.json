@@ -2,7 +2,9 @@
   "name": "dir-is-case-sensitive",
   "version": "2.0.0",
   "description": "Returns true, if the specified directory is case sensitive",
+  "type": "module",
   "main": "lib/index.js",
+  "exports": "./lib/index.js",
   "typings": "lib/index.d.ts",
   "engines": {
     "node": ">=22.13"
@@ -26,17 +28,11 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/dir-is-case-sensitive#readme",
-  "dependenciesMeta": {
-    "dir-is-case-sensitive": {
-      "injected": true
-    }
-  },
   "dependencies": {
-    "path-temp": "2.0.0"
+    "path-temp": "workspace:^"
   },
   "devDependencies": {
     "@types/node": "14.14.6",
-    "dir-is-case-sensitive": "file:",
     "typescript": "^4.9.5"
   }
 }

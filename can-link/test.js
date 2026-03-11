@@ -1,7 +1,6 @@
-'use strict'
-const { test } = require('node:test')
-const assert = require('node:assert')
-const canLink = require('can-link')
+import { test } from 'node:test'
+import assert from 'node:assert'
+import { canLink, canLinkSync } from 'can-link'
 
 const exdevErr = new Error('EXDEV: cross-device link not permitted')
 exdevErr.code = 'EXDEV'
@@ -12,17 +11,17 @@ eaccesErr.code = 'EACCES'
 const epermErr = new Error('EPERM: permission denied, link')
 epermErr.code = 'EPERM'
 
-test('canLink.sync()', () => {
-  assert.ok(canLink.sync('package.json', 'node_modules/package.json'))
-  assert.ok(!canLink.sync('foo', 'bar', {
+test('canLinkSync()', () => {
+  assert.ok(canLinkSync('package.json', 'node_modules/package.json'))
+  assert.ok(!canLinkSync('foo', 'bar', {
     linkSync: () => { throw exdevErr },
     unlinkSync: () => {}
   }))
-  assert.ok(!canLink.sync('foo', 'bar', {
+  assert.ok(!canLinkSync('foo', 'bar', {
     linkSync: () => { throw eaccesErr },
     unlinkSync: () => {}
   }))
-  assert.ok(!canLink.sync('foo', 'bar', {
+  assert.ok(!canLinkSync('foo', 'bar', {
     linkSync: () => { throw epermErr },
     unlinkSync: () => {}
   }))
@@ -30,7 +29,7 @@ test('canLink.sync()', () => {
     const fsMock = {
       linkSync: () => { throw new Error('Error') }
     }
-    canLink.sync('foo', 'bar', fsMock)
+    canLinkSync('foo', 'bar', fsMock)
   }, /Error/)
 })
 

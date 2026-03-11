@@ -1,4 +1,3 @@
-'use strict'
-const whichpm = require('.')
+import { whichPM } from './index.js'
 
-whichpm(process.cwd()).then(pm => console.log(pm)).catch(err => console.error(err))
+whichPM(process.cwd()).then(pm => console.log(pm)).catch(err => console.error(err))

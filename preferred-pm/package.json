@@ -2,7 +2,9 @@
   "name": "preferred-pm",
   "version": "4.1.1",
   "description": "Detects what package manager was used for installation",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "files": [
     "index.js",
     "index.d.ts"
@@ -28,11 +30,6 @@
     "url": "https://www.kochan.io/"
   },
   "license": "MIT",
-  "dependenciesMeta": {
-    "preferred-pm": {
-      "injected": true
-    }
-  },
   "dependencies": {
     "find-up-simple": "^1.0.1",
     "find-yarn-workspace-root2": "1.2.16",
@@ -40,7 +37,6 @@
   },
   "devDependencies": {
     "ncp": "^2.0.0",
-    "preferred-pm": "file:",
     "standard": "^16.0.4",
     "tempy": "^1.0.1"
   }

@@ -1,9 +1,8 @@
-'use strict'
-const path = require('path')
-const fs = require('fs')
-const loadYamlFile = require('load-yaml-file')
+import path from 'node:path'
+import fs from 'node:fs'
+import loadYamlFile from 'load-yaml-file'
 
-module.exports = async function (pkgPath) {
+export async function whichPM (pkgPath) {
   const modulesPath = path.join(pkgPath, 'node_modules')
   const exists = fs.existsSync(path.join(modulesPath, '.yarn-integrity'))
   if (exists) return { name: 'yarn' }
