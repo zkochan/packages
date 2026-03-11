@@ -32,7 +32,7 @@
   "dependencies": {
     "can-link": "workspace:^",
     "next-path": "^1.0.0",
-    "path-temp": "2.0.0"
+    "path-temp": "2.1.1"
   },
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
