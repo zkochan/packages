@@ -29,7 +29,7 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/rename-overwrite#readme",
   "devDependencies": {
-    "load-json-file": "6.2.0",
+    "load-json-file": "7.0.1",
     "symlink-dir": "^5.2.1",
     "tempy": "^1.0.1",
     "write-json-file": "^4.3.0"
