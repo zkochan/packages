@@ -7,8 +7,6 @@ settings:
 overrides:
   '@types/node': 14.14.6
 
-pnpmfileChecksum: sha256-UtXZV825NqHOBG69jsYGuWZ97+do7mk2t42sK5gvG2I=
-
 importers:
 
   .:
@@ -380,8 +378,8 @@ importers:
   which-pm:
     dependencies:
       load-yaml-file:
-        specifier: ^0.2.0
-        version: 0.2.0
+        specifier: ^1.0.0
+        version: 1.0.0
     devDependencies:
       standard:
         specifier: ^16.0.4
@@ -2232,7 +2230,6 @@ packages:
   jsondiffpatch@0.1.43:
     resolution: {integrity: sha512-lvOkGuk7gl9Rr4M/SfN530TslMb9QZG9PM5uznjb6oVwkkHNt7rgPNOBO59mwegJ/0Msx/yjwYzdiuoET6a87Q==}
     hasBin: true
-    bundledDependencies: []
 
   jsonfile@4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
@@ -2285,9 +2282,9 @@ packages:
     resolution: {integrity: sha512-gUD/epcRms75Cw8RT1pUdHugZYM5ce64ucs2GEISABwkRsOQr0q2wm/MV2TKThycIe5e0ytRweW2RZxclogCdQ==}
     engines: {node: '>=8'}
 
-  load-yaml-file@0.2.0:
-    resolution: {integrity: sha512-OfCBkGEw4nN6JLtgRidPX6QxjBQGQf72q3si2uvqyFEMbycSFFHwAZeXx6cJgFM9wmLrf9zBwCP3Ivqa+LLZPw==}
-    engines: {node: '>=6'}
+  load-yaml-file@1.0.0:
+    resolution: {integrity: sha512-Xw+A/X4c5R6GWu7ZUQgw1rnbfUr1P/hAZbDTrreo+/fP/YSGgxAKoWe2IcT+bt4RHuyIca6S7SMGcWx+QI3WIw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   locate-path@2.0.0:
     resolution: {integrity: sha512-NCI2kiDkyR7VeEKm27Kda/iQHyKJe1Bu0FlTbYp3CqJu+9IFe9bLyAjMxf5ZDDbEg+iMPzB5zYyUTSm8wVTKmA==}
@@ -3654,6 +3651,10 @@ packages:
   strip-bom@4.0.0:
     resolution: {integrity: sha512-3xurFv5tEgii33Zi8Jtp55wEIILR9eh34FAW00PZf+JnSsTmV/ioewSgQl97JHvgjoRGwPShsWm+IdrxB35d0w==}
     engines: {node: '>=8'}
+
+  strip-bom@5.0.0:
+    resolution: {integrity: sha512-p+byADHF7SzEcVnLvc/r3uognM1hUhObuHXxJcgLCfD194XAkaLbjq3Wzb0N5G2tgIjH0dgT708Z51QxMeu60A==}
+    engines: {node: '>=12'}
 
   strip-final-newline@2.0.0:
     resolution: {integrity: sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==}
@@ -6171,12 +6172,11 @@ snapshots:
       strip-bom: 4.0.0
       type-fest: 0.6.0
 
-  load-yaml-file@0.2.0:
+  load-yaml-file@1.0.0:
     dependencies:
       graceful-fs: 4.2.11
-      js-yaml: 3.14.2
-      pify: 4.0.1
-      strip-bom: 3.0.0
+      js-yaml: 4.1.1
+      strip-bom: 5.0.0
 
   locate-path@2.0.0:
     dependencies:
@@ -7623,6 +7623,8 @@ snapshots:
   strip-bom@3.0.0: {}
 
   strip-bom@4.0.0: {}
+
+  strip-bom@5.0.0: {}
 
   strip-final-newline@2.0.0: {}
 
