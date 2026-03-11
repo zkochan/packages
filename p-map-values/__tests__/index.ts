@@ -1,5 +1,7 @@
-import pMapValues from '../src'
+import { test } from 'node:test'
+import assert from 'node:assert'
+import pMapValues from '../src/index.ts'
 
 test('pMapValues', async () => {
-  expect(await pMapValues(async (value: number) => value * 2, {a: 1, b: 2})).toEqual({a: 2, b: 4})
+  assert.deepStrictEqual(await pMapValues(async (value: number) => value * 2, {a: 1, b: 2}), {a: 2, b: 4})
 })

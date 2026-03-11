@@ -1,8 +1,8 @@
 'use strict'
-const test = require('tape')
+const { test } = require('node:test')
+const assert = require('node:assert')
 const betterPathResolve = require('.')
 
-test('betterPathResolve()', (t) => {
-  t.equal(typeof betterPathResolve(), 'string')
-  t.end()
+test('betterPathResolve()', () => {
+  assert.strictEqual(typeof betterPathResolve(), 'string')
 })

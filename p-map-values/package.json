@@ -11,7 +11,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "node --experimental-strip-types --test __tests__/index.ts",
     "tsc": "tsc",
     "prepublishOnly": "pnpm run tsc"
   },
@@ -24,13 +24,6 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/p-map-values#readme",
   "devDependencies": {
-    "@types/jest": "^27.5.2",
-    "jest": "^27.5.1",
-    "ts-jest": "^27.1.5",
     "typescript": "^4.9.5"
-  },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node"
   }
 }

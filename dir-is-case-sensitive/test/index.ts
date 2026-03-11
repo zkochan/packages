@@ -1,11 +1,10 @@
+import { test } from 'node:test'
+import assert from 'node:assert'
 import dirIsCaseSensitiveModule from 'dir-is-case-sensitive'
-import test from 'tape'
 
 const dirIsCaseSensitive = dirIsCaseSensitiveModule.default ?? dirIsCaseSensitiveModule
 
-test('dirIsCaseSensitive()', async (t) => {
+test('dirIsCaseSensitive()', async () => {
   const isCaseSensitive = await dirIsCaseSensitive(import.meta.dirname)
-  t.equal(typeof isCaseSensitive, 'boolean')
-  t.comment(isCaseSensitive ? 'directory is case sensitive' : 'directory is not case sensitive')
-  t.end()
+  assert.strictEqual(typeof isCaseSensitive, 'boolean')
 })

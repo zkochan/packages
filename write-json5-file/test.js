@@ -1,19 +1,19 @@
+'use strict'
 const path = require('path')
 const fs = require('fs')
-const test = require('tape')
+const { test } = require('node:test')
+const assert = require('node:assert')
 const tempfile = require('tempfile')
 const writeJson5File = require('.')
 
-test('async', async t => {
+test('async', async () => {
   const tmp = path.join(tempfile(), 'foo')
   await writeJson5File(tmp, { foo: true }, { indent: 2 })
-  t.equal(fs.readFileSync(tmp, 'utf8'), '{\n  foo: true,\n}\n')
-  t.end()
+  assert.strictEqual(fs.readFileSync(tmp, 'utf8'), '{\n  foo: true,\n}\n')
 })
 
-test('sync', t => {
+test('sync', () => {
   const tmp = path.join(tempfile(), 'foo')
   writeJson5File.sync(tmp, { foo: true }, { indent: 2 })
-  t.equal(fs.readFileSync(tmp, 'utf8'), '{\n  foo: true,\n}\n')
-  t.end()
+  assert.strictEqual(fs.readFileSync(tmp, 'utf8'), '{\n  foo: true,\n}\n')
 })

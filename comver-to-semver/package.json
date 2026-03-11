@@ -9,7 +9,7 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "node test"
+    "test": "node --test test.js"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/comver-to-semver",
   "keywords": [
@@ -23,6 +23,5 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/comver-to-semver#readme",
   "devDependencies": {
-    "tape": "^5.9.0"
   }
 }

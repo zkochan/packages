@@ -12,7 +12,7 @@
     "lib"
   ],
   "scripts": {
-    "test": "ts-node test",
+    "test": "node --experimental-strip-types --test test/index.ts",
     "tsc": "tsc",
     "prepublishOnly": "pnpm run tsc"
   },
@@ -34,11 +34,8 @@
   },
   "devDependencies": {
     "@types/node": "14.14.6",
-    "@types/tape": "^4.13.4",
     "delay": "5.0.0",
     "run-groups": "file:",
-    "tape": "^5.9.0",
-    "ts-node": "^10.9.2",
     "typescript": "^4.9.5"
   }
 }

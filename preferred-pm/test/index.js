@@ -1,6 +1,7 @@
 'use strict'
 const ncpcb = require('ncp')
-const test = require('tape')
+const { test } = require('node:test')
+const assert = require('node:assert')
 const path = require('path')
 const preferredPM = require('preferred-pm')
 const tempy = require('tempy')
@@ -8,85 +9,65 @@ const { promisify } = require('util')
 
 const ncp = promisify(ncpcb)
 
-test('preferredPM()', async t => {
-  t.plan(2)
-  try {
-    await preferredPM()
-  } catch (err) {
-    t.equal(err.message, 'pkgPath should be a string, got undefined')
-  }
-  try {
-    await preferredPM(1)
-  } catch (err) {
-    t.equal(err.message, 'pkgPath should be a string, got number')
-  }
-  t.end()
+test('preferredPM()', async () => {
+  await assert.rejects(preferredPM(), { message: 'pkgPath should be a string, got undefined' })
+  await assert.rejects(preferredPM(1), { message: 'pkgPath should be a string, got number' })
 })
 
-test('prefer pnpm 1 or 2', async t => {
+test('prefer pnpm 1 or 2', async () => {
   const pm = await preferredPM(path.join(__dirname, 'prefers-pnpm-1-or-2'))
-  t.deepEqual(pm, { name: 'pnpm', version: '1 || 2' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'pnpm', version: '1 || 2' })
 })
 
-test('prefer pnpm', async t => {
+test('prefer pnpm', async () => {
   const pm = await preferredPM(path.join(__dirname, 'prefers-pnpm'))
-  t.deepEqual(pm, { name: 'pnpm', version: '>=3' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'pnpm', version: '>=3' })
 })
 
-test('prefer pnpm inside a pnpm workspace', async t => {
+test('prefer pnpm inside a pnpm workspace', async () => {
   const pm = await preferredPM(path.join(__dirname, 'pnpm-workspace/packages/pkg'))
-  t.deepEqual(pm, { name: 'pnpm', version: '>=3' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'pnpm', version: '>=3' })
 })
 
-test('prefer Yarn', async t => {
+test('prefer Yarn', async () => {
   const pm = await preferredPM(path.join(__dirname, 'prefers-yarn'))
-  t.deepEqual(pm, { name: 'yarn', version: '*' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'yarn', version: '*' })
 })
 
-test('prefer Yarn inside a Yarn workspace', async t => {
+test('prefer Yarn inside a Yarn workspace', async () => {
   const dir = tempy.directory()
   await ncp(path.join(__dirname, 'yarn-workspace'), dir)
   const pm = await preferredPM(path.join(dir, 'packages/pkg'))
-  t.deepEqual(pm, { name: 'yarn', version: '*' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'yarn', version: '*' })
 })
 
-test('prefer npm inside an npm workspace', async t => {
+test('prefer npm inside an npm workspace', async () => {
   const dir = tempy.directory()
   await ncp(path.join(__dirname, 'npm-workspace'), dir)
   const pm = await preferredPM(path.join(dir, 'packages/pkg'))
-  t.deepEqual(pm, { name: 'npm', version: '>=7' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'npm', version: '>=7' })
 })
 
-test('prefer Bun', async t => {
+test('prefer Bun', async () => {
   const pm = await preferredPM(path.join(__dirname, 'prefers-bun'))
-  t.deepEqual(pm, { name: 'bun', version: '*' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'bun', version: '*' })
 })
 
-test('prefer npm 5', async t => {
+test('prefer npm 5', async () => {
   const pm = await preferredPM(path.join(__dirname, 'prefers-npm-5'))
-  t.deepEqual(pm, { name: 'npm', version: '>=5' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'npm', version: '>=5' })
 })
 
-test('prefer npm', async t => {
+test('prefer npm', async () => {
   const dir = tempy.directory()
   await ncp(path.join(__dirname, 'prefers-npm'), dir)
   const pm = await preferredPM(dir)
-  t.deepEqual(pm, { name: 'npm', version: '*' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'npm', version: '*' })
 })
 
-test('prefer nothing', async t => {
+test('prefer nothing', async () => {
   const dir = tempy.directory()
   await ncp(path.join(__dirname, 'prefers-nothing'), dir)
   const pm = await preferredPM(dir)
-  t.equal(pm, null)
-  t.end()
+  assert.strictEqual(pm, null)
 })

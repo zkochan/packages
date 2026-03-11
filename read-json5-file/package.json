@@ -11,7 +11,7 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "standard && tape test",
+    "test": "standard && node --test test/index.js",
     "md": "mos"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/read-json5-file",
@@ -46,7 +46,6 @@
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "standard": "^16.0.4",
-    "tape": "^5.9.0"
+    "standard": "^16.0.4"
   }
 }

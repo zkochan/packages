@@ -9,7 +9,7 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "standard && tape test.js"
+    "test": "standard && node --test test.js"
   },
   "engines": {
     "node": ">=22.13"
@@ -31,7 +31,6 @@
   "homepage": "https://github.com/zkochan/packages/tree/main/resolve-link-target#readme",
   "devDependencies": {
     "standard": "^16.0.4",
-    "symlink-dir": "^5.2.1",
-    "tape": "^5.9.0"
+    "symlink-dir": "^5.2.1"
   }
 }

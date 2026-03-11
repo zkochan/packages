@@ -11,7 +11,7 @@
     "node": ">=22.13"
   },
   "scripts": {
-    "test": "jest"
+    "test": "node --test test.js"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/rename-overwrite",
   "keywords": [
@@ -32,10 +32,8 @@
     }
   },
   "devDependencies": {
-    "jest": "^27.5.1",
     "load-json-file": "6.2.0",
     "rename-overwrite": "link:",
-    "standard": "^16.0.4",
     "symlink-dir": "^5.2.1",
     "tempy": "^1.0.1",
     "write-json-file": "^4.3.0"
