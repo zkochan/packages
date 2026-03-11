@@ -1,11 +1,10 @@
-'use strict'
-const fs = require('fs')
-const path = require('path')
-const tempfile = require('tempfile')
-const { test } = require('node:test')
-const assert = require('node:assert')
-const { EOL } = require('os')
-const { writeIniFile, writeIniFileSync } = require('write-ini-file')
+import fs from 'node:fs'
+import path from 'node:path'
+import tempfile from 'tempfile'
+import { test } from 'node:test'
+import assert from 'node:assert'
+import { EOL } from 'node:os'
+import { writeIniFile, writeIniFileSync } from 'write-ini-file'
 
 test('async', async () => {
   const tmp = path.join(tempfile(), 'foo')

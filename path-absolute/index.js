@@ -1,8 +1,7 @@
-'use strict'
-const os = require('os')
-const path = require('path')
+import os from 'node:os'
+import path from 'node:path'
 
-module.exports = function (filepath, cwd) {
+export function pathAbsolute (filepath, cwd) {
   const home = getHomedir()
 
   if (isHomepath(filepath)) {

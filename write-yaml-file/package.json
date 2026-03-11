@@ -2,7 +2,9 @@
   "name": "write-yaml-file",
   "version": "5.0.0",
   "description": "Stringify and write YAML to a file atomically",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "typings": "index.d.ts",
   "engines": {
     "node": ">=22.13"

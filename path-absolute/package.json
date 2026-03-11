@@ -2,7 +2,9 @@
   "name": "path-absolute",
   "version": "1.0.1",
   "description": "Resolves a path to an absolute path. Supports tilde",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "typings": "index.d.ts",
   "files": [
     "index.js",

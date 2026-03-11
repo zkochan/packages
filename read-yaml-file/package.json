@@ -2,7 +2,9 @@
   "name": "read-yaml-file",
   "version": "2.1.0",
   "license": "MIT",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "description": "Read and parse a YAML file",
   "keywords": [
     "yaml",
@@ -23,17 +25,11 @@
   "scripts": {
     "test": "standard && node --test test.js"
   },
-  "dependenciesMeta": {
-    "read-yaml-file": {
-      "injected": true
-    }
-  },
   "dependencies": {
     "js-yaml": "^4.1.0",
     "strip-bom": "^4.0.0"
   },
   "devDependencies": {
-    "read-yaml-file": "file:",
     "standard": "^16.0.4"
   }
 }

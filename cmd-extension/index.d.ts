@@ -1,2 +1,1 @@
-declare const cmdExtension: string
-export = cmdExtension
+export const cmdExtension: string

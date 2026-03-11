@@ -3,6 +3,7 @@
   "version": "4.0.0",
   "description": "Runs a sequence of concurrent task groups",
   "main": "lib/index.js",
+  "exports": "./lib/index.js",
   "type": "module",
   "typings": "lib/index.d.ts",
   "engines": {
@@ -24,18 +25,12 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/run-groups#readme",
-  "dependenciesMeta": {
-    "run-groups": {
-      "injected": true
-    }
-  },
   "dependencies": {
     "p-limit": "^7.2.0"
   },
   "devDependencies": {
     "@types/node": "14.14.6",
     "delay": "5.0.0",
-    "run-groups": "file:",
     "typescript": "^4.9.5"
   }
 }

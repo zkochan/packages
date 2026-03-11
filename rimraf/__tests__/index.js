@@ -1,9 +1,9 @@
-const path = require('path')
-const fs = require('fs')
-const { test } = require('node:test')
-const assert = require('node:assert')
-const tempy = require('tempy')
-const rimraf = require('..')
+import path from 'node:path'
+import fs from 'node:fs'
+import { test } from 'node:test'
+import assert from 'node:assert'
+import tempy from 'tempy'
+import { rimraf, rimrafSync } from '@zkochan/rimraf'
 
 test('rimraf', async () => {
   const dir = tempy.directory()
@@ -17,6 +17,6 @@ test('rimraf sync', () => {
   const dir = tempy.directory()
   fs.writeFileSync(path.join(dir, 'file.txt'), 'foo', 'utf8')
   assert.ok(fs.existsSync(dir))
-  rimraf.sync(dir)
+  rimrafSync(dir)
   assert.ok(!fs.existsSync(dir))
 })

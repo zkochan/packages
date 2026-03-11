@@ -1,6 +1,5 @@
-'use strict'
-const execa = require('safe-execa').default
-const retry = require('retry')
+import { safeExeca } from 'safe-execa'
+import retry from 'retry'
 
 const RETRY_OPTIONS = {
   retries: 3,
@@ -9,10 +8,7 @@ const RETRY_OPTIONS = {
   randomize: true,
 }
 
-module.exports = gracefulGit
-module.exports.noRetry = noRetry
-
-async function gracefulGit (args, opts) {
+export async function gracefulGit (args, opts) {
   opts = opts || {}
   const operation = retry.operation(Object.assign({}, RETRY_OPTIONS, opts))
   return new Promise((resolve, reject) => {
@@ -28,7 +24,7 @@ async function gracefulGit (args, opts) {
   })
 }
 
-async function noRetry (args, opts) {
+export async function noRetry (args, opts) {
   opts = opts || {}
-  return execa('git', args, {cwd: opts.cwd || process.cwd()})
+  return safeExeca('git', args, {cwd: opts.cwd || process.cwd()})
 }

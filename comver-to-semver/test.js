@@ -1,7 +1,6 @@
-'use strict'
-const { test } = require('node:test')
-const assert = require('node:assert')
-const comverToSemver = require('.')
+import { test } from 'node:test'
+import assert from 'node:assert'
+import { comverToSemver } from './index.js'
 
 test('comverToSemver()', () => {
   assert.strictEqual(comverToSemver('2'), '2.0.0')

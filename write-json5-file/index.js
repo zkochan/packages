@@ -1,9 +1,8 @@
-'use strict'
-const path = require('path')
-const fs = require('fs')
-const writeFileAtomic = require('write-file-atomic')
-const sortKeys = require('sort-keys')
-const JSON5 = require('json5')
+import path from 'node:path'
+import fs from 'node:fs'
+import writeFileAtomic from 'write-file-atomic'
+import sortKeys from 'sort-keys'
+import JSON5 from 'json5'
 
 const main = (fn, fp, data, opts) => {
   if (!fp) {
@@ -31,12 +30,12 @@ const main = (fn, fp, data, opts) => {
   return fn(fp, `${json}\n`, { mode: opts.mode })
 }
 
-module.exports = async (fp, data, opts) => {
+export async function writeJson5File (fp, data, opts) {
   await fs.promises.mkdir(path.dirname(fp), { recursive: true })
   return main(writeFileAtomic, fp, data, opts)
 }
 
-module.exports.sync = (fp, data, opts) => {
+export function writeJson5FileSync (fp, data, opts) {
   fs.mkdirSync(path.dirname(fp), { recursive: true })
   main(writeFileAtomic.sync, fp, data, opts)
 }

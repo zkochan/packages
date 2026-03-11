@@ -1,6 +1,6 @@
-const fs = require('fs')
+import fs from 'node:fs'
 
-module.exports = async (p) => {
+export async function rimraf (p) {
   try {
     await fs.promises.rm(p, { recursive: true, force: true, maxRetries: 3 })
   } catch (err) {
@@ -9,7 +9,7 @@ module.exports = async (p) => {
   }
 }
 
-module.exports.sync = (p) => {
+export function rimrafSync (p) {
   try {
     fs.rmSync(p, { recursive: true, force: true, maxRetries: 3 })
   } catch (err) {

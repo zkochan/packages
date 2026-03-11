@@ -1,7 +1,6 @@
-'use strict'
-const pReflect = require('p-reflect')
+import pReflect from 'p-reflect'
 
-module.exports = function pShare (p) {
+export function pShare (p) {
   const reflected = pReflect(p)
   return async () => {
     const reflection = await reflected

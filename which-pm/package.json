@@ -2,7 +2,9 @@
   "name": "which-pm",
   "version": "3.0.1",
   "description": "Detects what package manager was used for installation",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "types": "index.d.ts",
   "files": [
     "index.js",
@@ -26,16 +28,10 @@
   ],
   "author": "Zoltan Kochan",
   "license": "MIT",
-  "dependenciesMeta": {
-    "which-pm": {
-      "injected": true
-    }
-  },
   "dependencies": {
     "load-yaml-file": "^0.2.0"
   },
   "devDependencies": {
-    "standard": "^16.0.4",
-    "which-pm": "file:"
+    "standard": "^16.0.4"
   }
 }

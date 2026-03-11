@@ -1,8 +1,7 @@
-'use strict'
-const path = require('path')
-const isWindows = require('is-windows')
+import path from 'node:path'
+import isWindows from 'is-windows'
 
-module.exports = isWindows() ? winResolve : path.resolve
+export const betterPathResolve = isWindows() ? winResolve : path.resolve
 
 function winResolve (p) {
   if (arguments.length === 0) return path.resolve()

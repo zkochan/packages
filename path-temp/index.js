@@ -1,12 +1,11 @@
-'use strict'
-const path = require('path')
-const uniqueString = require('unique-string')
-const workerThreads = require('node:worker_threads')
+import path from 'node:path'
+import uniqueString from 'unique-string'
+import { threadId } from 'node:worker_threads'
 
-module.exports = function pathTemp (folder) {
+export function pathTemp (folder) {
   return path.join(folder, `_tmp_${process.pid}_${uniqueString()}`)
 }
 
-module.exports.fastPathTemp = function pathTempFast (file) {
-  return path.join(path.dirname(file), `${path.basename(file)}_tmp_${process.pid}_${workerThreads.threadId}`)
+export function fastPathTemp (file) {
+  return path.join(path.dirname(file), `${path.basename(file)}_tmp_${process.pid}_${threadId}`)
 }

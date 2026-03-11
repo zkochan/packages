@@ -1,8 +1,7 @@
-'use strict'
-const defaultFS = require('fs')
-const pathTemp = require('path-temp')
+import defaultFS from 'node:fs'
+import { pathTemp } from 'path-temp'
 
-module.exports = async (dir, customFS) => {
+export async function canWriteToDir (dir, customFS) {
   const fs = customFS || defaultFS
   const tempFile = pathTemp(dir)
   try {
@@ -17,7 +16,7 @@ module.exports = async (dir, customFS) => {
   }
 }
 
-module.exports.sync = (dir, customFS) => {
+export function canWriteToDirSync (dir, customFS) {
   const fs = customFS || defaultFS
   const tempFile = pathTemp(dir)
   try {

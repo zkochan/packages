@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs'
-import pathTemp = require('path-temp')
+import { pathTemp } from 'path-temp'
 
-export default async (dir: string, silent: boolean = true): Promise<boolean | undefined> => {
+export async function dirIsCaseSensitive (dir: string, silent: boolean = true): Promise<boolean | undefined> {
   const tempFile = pathTemp(dir).toLowerCase()
   try {
     await fs.writeFile(tempFile, '', 'utf8')

@@ -1,10 +1,9 @@
-'use strict'
-const { test } = require('node:test')
-const assert = require('node:assert')
-const rootLinkTarget = require('root-link-target')
+import { test } from 'node:test'
+import assert from 'node:assert'
+import { rootLinkTarget, rootLinkTargetSync } from 'root-link-target'
 
-test('rootLinkTarget.sync()', () => {
-  assert.strictEqual(typeof rootLinkTarget.sync('package.json'), 'string')
+test('rootLinkTargetSync()', () => {
+  assert.strictEqual(typeof rootLinkTargetSync('package.json'), 'string')
 })
 
 test('rootLinkTarget()', async () => {

@@ -1,10 +1,9 @@
-'use strict'
-const { test } = require('node:test')
-const assert = require('node:assert')
-const isInnerLink = require('is-inner-link')
-const makeDir = require('make-dir')
-const path = require('path')
-const symlinkDir = require('symlink-dir').default
+import { test } from 'node:test'
+import assert from 'node:assert'
+import { isInnerLink } from 'is-inner-link'
+import makeDir from 'make-dir'
+import path from 'node:path'
+import symlinkDir from 'symlink-dir'
 
 test('is inner', async () => {
   const target = path.resolve('.tmp', '1', 'a', 'b')

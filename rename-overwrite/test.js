@@ -1,13 +1,12 @@
-'use strict'
-const fs = require('fs')
-const path = require('path')
-const { test, describe } = require('node:test')
-const assert = require('node:assert')
-const writeJsonFile = require('write-json-file')
-const loadJsonFile = require('load-json-file')
-const renameOverwrite = require('rename-overwrite')
-const symlinkDir = require('symlink-dir')
-const tempy = require('tempy')
+import fs from 'node:fs'
+import path from 'node:path'
+import { test, describe } from 'node:test'
+import assert from 'node:assert'
+import writeJsonFile from 'write-json-file'
+import loadJsonFile from 'load-json-file'
+import { renameOverwrite, renameOverwriteSync } from 'rename-overwrite'
+import symlinkDir from 'symlink-dir'
+import tempy from 'tempy'
 
 test('overwrite directory', async () => {
   process.chdir(tempy.directory())
@@ -57,7 +56,7 @@ test('sync overwrite directory', () => {
   writeJsonFile.sync('1/foo.json', 1)
   writeJsonFile.sync('2/foo.json', 2)
 
-  renameOverwrite.sync('1', '2')
+  renameOverwriteSync('1', '2')
 
   assert.strictEqual(loadJsonFile.sync('2/foo.json'), 1)
 })
@@ -68,7 +67,7 @@ test('sync overwrite file', () => {
   writeJsonFile.sync('1.json', 1)
   writeJsonFile.sync('2.json', 2)
 
-  renameOverwrite.sync('1.json', '2.json')
+  renameOverwriteSync('1.json', '2.json')
 
   assert.strictEqual(loadJsonFile.sync('2.json'), 1)
 })
@@ -78,7 +77,7 @@ test('sync rename file when no overwrite is needed', () => {
 
   writeJsonFile.sync('1.json', 1)
 
-  renameOverwrite.sync('1.json', '2.json')
+  renameOverwriteSync('1.json', '2.json')
 
   assert.strictEqual(loadJsonFile.sync('2.json'), 1)
 })
@@ -88,7 +87,7 @@ test('sync rename directory when no overwrite is needed', () => {
 
   writeJsonFile.sync('dir/foo.json', 1)
 
-  renameOverwrite.sync('dir', 'newdir')
+  renameOverwriteSync('dir', 'newdir')
 
   assert.strictEqual(loadJsonFile.sync('newdir/foo.json'), 1)
 })
@@ -108,7 +107,7 @@ test('sync create target directory, if it does not exist', () => {
 
   writeJsonFile.sync('dir/foo.json', 1)
 
-  renameOverwrite.sync('dir', 'newdir/subdir')
+  renameOverwriteSync('dir', 'newdir/subdir')
 
   assert.strictEqual(loadJsonFile.sync('newdir/subdir/foo.json'), 1)
 })
@@ -131,7 +130,7 @@ test('sync overwrite a symlink', async () => {
   await symlinkDir(path.resolve('target'), 'newdir')
   writeJsonFile.sync('dir/foo.json', 1)
 
-  renameOverwrite.sync('dir', 'newdir')
+  renameOverwriteSync('dir', 'newdir')
   assert.strictEqual(loadJsonFile.sync('newdir/foo.json'), 1)
 })
 
@@ -151,7 +150,7 @@ test('sync overwrite a broken symlink', async () => {
   await symlinkDir(path.resolve('target'), 'newdir')
   writeJsonFile.sync('dir/foo.json', 1)
 
-  renameOverwrite.sync('dir', 'newdir')
+  renameOverwriteSync('dir', 'newdir')
   assert.strictEqual(loadJsonFile.sync('newdir/foo.json'), 1)
 })
 
@@ -167,7 +166,7 @@ describe('moving across devices synchronously', () => {
       throw Object.assign(new Error('EXDEV'), { code: 'EXDEV' })
     }
     try {
-      renameOverwrite.sync('1', '2')
+      renameOverwriteSync('1', '2')
       assert.strictEqual(loadJsonFile.sync('2/foo.json'), 1)
     } finally {
       fs.renameSync = origRenameSync

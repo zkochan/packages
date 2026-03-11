@@ -1,4 +1,4 @@
-export default async function pMapValue<K extends string | number | symbol, V, U> (
+export async function pMapValues<K extends string | number | symbol, V, U> (
   mapper: (value: V, key: K, obj: Record<K, V>) => Promise<U>,
   obj: Record<K, V>
 ): Promise<Record<K, U>> {

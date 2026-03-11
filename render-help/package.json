@@ -2,7 +2,9 @@
   "name": "render-help",
   "version": "1.0.3",
   "description": "Creates a nice output for a CLI --help",
+  "type": "module",
   "main": "lib/index.js",
+  "exports": "./lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
     "lib"

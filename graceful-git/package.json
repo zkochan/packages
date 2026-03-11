@@ -2,7 +2,9 @@
   "name": "graceful-git",
   "version": "4.0.0",
   "description": "Executes git commands gracefully. Retries them on errors",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "files": [
     "index.js"
   ],
@@ -34,17 +36,11 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/graceful-git#readme",
-  "dependenciesMeta": {
-    "graceful-git": {
-      "injected": true
-    }
-  },
   "dependencies": {
     "retry": "^0.13.1",
-    "safe-execa": "^0.1.4"
+    "safe-execa": "workspace:^"
   },
   "devDependencies": {
-    "graceful-git": "file:",
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4"
   }

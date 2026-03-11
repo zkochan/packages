@@ -2,7 +2,9 @@
   "name": "@zkochan/rimraf",
   "version": "3.0.2",
   "description": "rm -rf for Node. Similar to rimraf but returns a promise",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "typings": "index.d.ts",
   "files": [
     "index.js",

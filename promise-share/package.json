@@ -2,6 +2,7 @@
   "name": "promise-share",
   "version": "1.0.0",
   "description": "Creates a getter function for a promise result",
+  "type": "module",
   "files": [
     "index.js",
     "index.d.ts"

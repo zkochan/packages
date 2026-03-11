@@ -1,7 +1,6 @@
-'use strict'
-const { test } = require('node:test')
-const assert = require('node:assert')
-const canWriteToDir = require('can-write-to-dir')
+import { test } from 'node:test'
+import assert from 'node:assert'
+import { canWriteToDir, canWriteToDirSync } from 'can-write-to-dir'
 
 const eaccesErr = new Error('EACCES: permission denied, link')
 eaccesErr.code = 'EACCES'
@@ -9,13 +8,13 @@ eaccesErr.code = 'EACCES'
 const epermErr = new Error('EPERM: permission denied, link')
 epermErr.code = 'EPERM'
 
-test('canWriteToDir.sync()', () => {
-  assert.ok(canWriteToDir.sync(process.cwd()))
-  assert.ok(!canWriteToDir.sync('/foo', {
+test('canWriteToDirSync()', () => {
+  assert.ok(canWriteToDirSync(process.cwd()))
+  assert.ok(!canWriteToDirSync('/foo', {
     writeFileSync: () => { throw eaccesErr },
     unlinkSync: () => {}
   }))
-  assert.ok(!canWriteToDir.sync('foo', {
+  assert.ok(!canWriteToDirSync('foo', {
     writeFileSync: () => { throw epermErr },
     unlinkSync: () => {}
   }))
@@ -23,7 +22,7 @@ test('canWriteToDir.sync()', () => {
     const fsMock = {
       linkSync: () => { throw new Error('Error') }
     }
-    canWriteToDir.sync('foo', 'bar', fsMock)
+    canWriteToDirSync('foo', 'bar', fsMock)
   }, /Error/)
 })
 

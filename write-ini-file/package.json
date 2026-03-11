@@ -2,7 +2,9 @@
   "name": "write-ini-file",
   "version": "4.0.1",
   "description": "Stringify and write ini to a file atomically",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "engines": {
     "node": ">=22.13"
   },
@@ -44,11 +46,6 @@
     "url": "https://github.com/zkochan/write-ini-file/issues"
   },
   "homepage": "https://github.com/zkochan/packages/tree/main/write-ini-file#readme#readme",
-  "dependenciesMeta": {
-    "write-ini-file": {
-      "injected": true
-    }
-  },
   "dependencies": {
     "ini": "^3.0.1",
     "make-dir": "^3.1.0",
@@ -58,7 +55,6 @@
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
     "standard": "^16.0.4",
-    "tempfile": "^3.0.0",
-    "write-ini-file": "file:"
+    "tempfile": "^3.0.0"
   }
 }

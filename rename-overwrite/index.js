@@ -1,11 +1,11 @@
-'use strict'
-const crypto = require('crypto')
-const fs = require('fs')
-const { copySync, copy } = require('fs-extra')
-const path = require('path')
-const rimraf = require('@zkochan/rimraf')
+import crypto from 'node:crypto'
+import fs from 'node:fs'
+import fsExtra from 'fs-extra'
+const { copySync, copy } = fsExtra
+import path from 'node:path'
+import { rimraf, rimrafSync } from '@zkochan/rimraf'
 
-module.exports = async function renameOverwrite (oldPath, newPath, retry = 0) {
+export async function renameOverwrite (oldPath, newPath, retry = 0) {
   try {
     await fs.promises.rename(oldPath, newPath)
   } catch (err) {
@@ -78,7 +78,7 @@ module.exports = async function renameOverwrite (oldPath, newPath, retry = 0) {
   }
 }
 
-module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0) {
+export function renameOverwriteSync (oldPath, newPath, retry = 0) {
   try {
     fs.renameSync(oldPath, newPath)
   } catch (err) {
@@ -89,7 +89,7 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
       case 'EPERM':
       case 'EACCESS':
       case 'EBUSY': {
-        rimraf.sync(newPath)
+        rimrafSync(newPath)
         const start = Date.now()
         let backoff = 0
         let lastError = err
@@ -118,7 +118,7 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
         } catch {
           // If swap-rename failed (e.g. target was already moved by another
           // process), fall back to rimraf + rename.
-          rimraf.sync(newPath)
+          rimrafSync(newPath)
           fs.renameSync(oldPath, newPath)
         }
         break
@@ -129,14 +129,14 @@ module.exports.sync = function renameOverwriteSync (oldPath, newPath, retry = 0)
       // Crossing filesystem boundaries so rename is not available
       case 'EXDEV':
         try {
-          rimraf.sync(newPath)
+          rimrafSync(newPath)
         } catch (rimrafErr) {
           if (rimrafErr.code !== 'ENOENT') {
             throw rimrafErr
           }
         }
         copySync(oldPath, newPath)
-        rimraf.sync(oldPath)
+        rimrafSync(oldPath)
         break
       default:
         throw err
@@ -177,6 +177,6 @@ function swapRenameSync (oldPath, newPath) {
     throw err
   }
   try {
-    rimraf.sync(temp)
+    rimrafSync(temp)
   } catch {}
 }

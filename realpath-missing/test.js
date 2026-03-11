@@ -1,7 +1,6 @@
-'use strict'
-const { test } = require('node:test')
-const assert = require('node:assert')
-const realpathMissing = require('.')
+import { test } from 'node:test'
+import assert from 'node:assert'
+import { realpathMissing } from './index.js'
 
 test('realpathMissing()', async () => {
   assert.strictEqual(typeof await realpathMissing('package.json'), 'string')

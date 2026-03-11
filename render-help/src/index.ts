@@ -2,7 +2,7 @@ import { table, getBorderCharacters } from 'table'
 
 type DescriptionItem = { shortAlias?: string, name: string, description?: string }
 
-export = function renderHelp (
+export function renderHelp (
   config: {
     aliases?: string[],
     descriptionLists?: Array<{ title: string, list: DescriptionItem[] }>,

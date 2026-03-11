@@ -1,12 +1,13 @@
-'use strict'
-const ncpcb = require('ncp')
-const { test } = require('node:test')
-const assert = require('node:assert')
-const path = require('path')
-const preferredPM = require('preferred-pm')
-const tempy = require('tempy')
-const { promisify } = require('util')
+import ncpcb from 'ncp'
+import { test } from 'node:test'
+import assert from 'node:assert'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { preferredPM } from 'preferred-pm'
+import tempy from 'tempy'
+import { promisify } from 'node:util'
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ncp = promisify(ncpcb)
 
 test('preferredPM()', async () => {

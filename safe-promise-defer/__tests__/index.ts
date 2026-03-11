@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert'
-import safePromiseDefer from '../src/index.ts'
+import { safeDeferredPromise as safePromiseDefer } from '../src/index.ts'
 
 test('safePromiseDefer resolves', async () => {
   const p = safePromiseDefer()

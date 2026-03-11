@@ -1,9 +1,8 @@
-'use strict'
-const path = require('path')
-const isSubdir = require('is-subdir')
-const resolveLinkTarget = require('resolve-link-target')
+import path from 'node:path'
+import { isSubdir } from 'is-subdir'
+import { resolveLinkTarget } from 'resolve-link-target'
 
-module.exports = async function (parent, relativePathToLink) {
+export async function isInnerLink (parent, relativePathToLink) {
   const linkPath = path.resolve(parent, relativePathToLink)
   const target = await resolveLinkTarget(linkPath)
   return {

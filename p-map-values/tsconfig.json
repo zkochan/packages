@@ -3,8 +3,8 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "esModuleInterop": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "outDir": "lib",
@@ -13,15 +13,12 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "es2017"
+    "target": "es2022"
   },
   "include": [
     "src/**/*.ts"
   ],
   "atom": {
     "rewriteTsconfig": true
-  },
-  "types": [
-    "jest"
-  ]
+  }
 }

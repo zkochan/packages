@@ -1,10 +1,9 @@
-'use strict'
-const fs = require('fs')
-const { test } = require('node:test')
-const assert = require('node:assert')
-const tempy = require('tempy')
-const path = require('path')
-const makeEmptyDir = require('.')
+import fs from 'node:fs'
+import path from 'node:path'
+import { test } from 'node:test'
+import assert from 'node:assert'
+import tempy from 'tempy'
+import { makeEmptyDir, makeEmptyDirSync } from './index.js'
 
 test('creates a new directory if it does not exist', async () => {
   const dir = path.join(tempy.directory(), 'empty')
@@ -35,19 +34,19 @@ test('removes everything from an existing directory', async () => {
 
 test('sync: creates a new directory if it does not exist', () => {
   const dir = path.join(tempy.directory(), 'empty')
-  assert.strictEqual(makeEmptyDir.sync(dir), 'created')
+  assert.strictEqual(makeEmptyDirSync(dir), 'created')
   assert.ok(fs.existsSync(dir))
 })
 
 test('sync: creates a new directory and its parent directory, when recursive is set to true', () => {
   const dir = path.join(tempy.directory(), 'empty/empty')
-  assert.strictEqual(makeEmptyDir.sync(dir, { recursive: true }), 'created')
+  assert.strictEqual(makeEmptyDirSync(dir, { recursive: true }), 'created')
   assert.ok(fs.existsSync(dir))
 })
 
 test('sync: fails if the parent directory does not exist and recursive is not set', () => {
   const dir = path.join(tempy.directory(), 'empty/empty')
-  assert.throws(() => makeEmptyDir.sync(dir))
+  assert.throws(() => makeEmptyDirSync(dir))
 })
 
 test('sync: removes everything from an existing directory', () => {
@@ -55,7 +54,7 @@ test('sync: removes everything from an existing directory', () => {
   fs.mkdirSync(path.join(dir))
   const filePath = path.join(dir, 'file')
   fs.writeFileSync(filePath, '', 'utf8')
-  assert.strictEqual(makeEmptyDir.sync(dir), 'emptied')
+  assert.strictEqual(makeEmptyDirSync(dir), 'emptied')
   assert.ok(fs.existsSync(dir))
   assert.ok(!fs.existsSync(filePath))
 })

@@ -1,4 +1,4 @@
-import pShare from 'promise-share'
+import { pShare } from 'promise-share'
 
 export interface SafePromiseDefer<T> {
   (): Promise<T>
@@ -6,7 +6,7 @@ export interface SafePromiseDefer<T> {
   reject: (err: Error) => void
 }
 
-export default function safeDeferredPromise<T> (): SafePromiseDefer<T> {
+export function safeDeferredPromise<T> (): SafePromiseDefer<T> {
   let _resolve!: (v: T) => void
   let _reject!: (err: Error) => void
 

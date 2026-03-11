@@ -1,9 +1,8 @@
-'use strict'
-const fs = require('fs')
-const path = require('path')
-const rimraf = require('@zkochan/rimraf')
+import fs from 'node:fs'
+import path from 'node:path'
+import { rimraf, rimrafSync } from '@zkochan/rimraf'
 
-module.exports = async function makeEmptyDir (dir, opts) {
+export async function makeEmptyDir (dir, opts) {
   if (opts && opts.recursive) {
     await fs.promises.mkdir(path.dirname(dir), { recursive: true })
   }
@@ -26,7 +25,7 @@ async function removeContentsOfDir (dir) {
   }
 }
 
-module.exports.sync = function makeEmptyDirSync (dir, opts) {
+export function makeEmptyDirSync (dir, opts) {
   if (opts && opts.recursive) {
     fs.mkdirSync(path.dirname(dir), { recursive: true })
   }
@@ -45,6 +44,6 @@ module.exports.sync = function makeEmptyDirSync (dir, opts) {
 function removeContentsOfDirSync (dir) {
   const items = fs.readdirSync(dir)
   for (const item of items) {
-    rimraf.sync(path.join(dir, item))
+    rimrafSync(path.join(dir, item))
   }
 }

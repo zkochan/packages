@@ -1,10 +1,9 @@
-'use strict'
-const path = require('path')
-const fs = require('fs')
-const { test } = require('node:test')
-const assert = require('node:assert')
-const tempfile = require('tempfile')
-const writeJson5File = require('.')
+import path from 'node:path'
+import fs from 'node:fs'
+import { test } from 'node:test'
+import assert from 'node:assert'
+import tempfile from 'tempfile'
+import { writeJson5File, writeJson5FileSync } from './index.js'
 
 test('async', async () => {
   const tmp = path.join(tempfile(), 'foo')
@@ -14,6 +13,6 @@ test('async', async () => {
 
 test('sync', () => {
   const tmp = path.join(tempfile(), 'foo')
-  writeJson5File.sync(tmp, { foo: true }, { indent: 2 })
+  writeJson5FileSync(tmp, { foo: true }, { indent: 2 })
   assert.strictEqual(fs.readFileSync(tmp, 'utf8'), '{\n  foo: true,\n}\n')
 })

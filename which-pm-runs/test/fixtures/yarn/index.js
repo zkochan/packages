@@ -1,5 +1,4 @@
-'use strict'
-const whichPmRuns = require('which-pm-runs')
+import { whichPMRuns } from '../../../index.js'
 
-const pm = whichPmRuns()
+const pm = whichPMRuns()
 if (pm.name !== 'yarn' || !pm.version) process.exit(1)
