@@ -27,4 +27,5 @@ test('runGroups()', async () => {
       },
     ]
   ])
+  assert.ok(group2Executed)
 })

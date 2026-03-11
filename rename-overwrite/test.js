@@ -1,7 +1,7 @@
 'use strict'
 const fs = require('fs')
 const path = require('path')
-const { test, describe, beforeEach, mock } = require('node:test')
+const { test, describe } = require('node:test')
 const assert = require('node:assert')
 const writeJsonFile = require('write-json-file')
 const loadJsonFile = require('load-json-file')
