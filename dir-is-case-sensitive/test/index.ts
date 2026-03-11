@@ -1,5 +1,5 @@
 import dirIsCaseSensitive from 'dir-is-case-sensitive'
-import test = require('tape')
+import test from 'tape'
 
 test('dirIsCaseSensitive()', async (t) => {
   const isCaseSensitive = await dirIsCaseSensitive(__dirname)

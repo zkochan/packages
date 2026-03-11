@@ -11,13 +11,5 @@ allowBuilds:
 configDependencies:
   '@pnpm/plugin-better-defaults': 0.2.1
 
-ignoredBuiltDependencies:
-  - core-js
-
-onlyBuiltDependencies:
-  - '@pnpm/exe'
-  - bun
-  - yarn
-
 overrides:
   '@types/node': 14.14.6
