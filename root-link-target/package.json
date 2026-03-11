@@ -1,6 +1,6 @@
 {
   "name": "root-link-target",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "Gets the shortest directory to which a file can be linked",
   "type": "module",
   "main": "index.js",

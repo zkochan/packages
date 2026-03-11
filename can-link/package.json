@@ -1,6 +1,6 @@
 {
   "name": "can-link",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Returns true if a link can be created",
   "type": "module",
   "main": "index.js",

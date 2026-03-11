@@ -1,5 +1,16 @@
 # preferred-pm
 
+## 5.0.0
+
+### Major Changes
+
+- f3776b0: convert to esm
+
+### Patch Changes
+
+- Updated dependencies [f3776b0]
+  - which-pm@4.0.0
+
 ## 3.1.4
 
 - Update which-pm

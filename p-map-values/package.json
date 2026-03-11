@@ -1,6 +1,6 @@
 {
   "name": "p-map-values",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A function similar to lodash.mapValues or Ramda.mapObjIndexed, but for async functions",
   "type": "module",
   "main": "lib/index.js",

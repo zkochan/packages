@@ -1,6 +1,6 @@
 {
   "name": "graceful-git",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Executes git commands gracefully. Retries them on errors",
   "type": "module",
   "main": "index.js",

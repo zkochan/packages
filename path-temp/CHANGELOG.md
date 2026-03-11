@@ -1,5 +1,11 @@
 # path-temp
 
+## 3.0.0
+
+### Major Changes
+
+- f3776b0: convert to esm
+
 ## 2.1.1
 
 ### Patch Changes

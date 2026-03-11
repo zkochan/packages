@@ -1,6 +1,6 @@
 {
   "name": "render-help",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Creates a nice output for a CLI --help",
   "type": "module",
   "main": "lib/index.js",

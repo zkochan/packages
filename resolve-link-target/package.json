@@ -1,6 +1,6 @@
 {
   "name": "resolve-link-target",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Resolve a symlink's (or junction's) target",
   "type": "module",
   "main": "index.js",

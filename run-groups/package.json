@@ -1,6 +1,6 @@
 {
   "name": "run-groups",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Runs a sequence of concurrent task groups",
   "main": "lib/index.js",
   "exports": "./lib/index.js",

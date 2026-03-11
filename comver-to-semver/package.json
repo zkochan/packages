@@ -1,6 +1,6 @@
 {
   "name": "comver-to-semver",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Converts a comver (compatible version) to a semver (semantic version).",
   "type": "module",
   "main": "index.js",
@@ -24,6 +24,5 @@
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/comver-to-semver#readme",
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

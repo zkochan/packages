@@ -1,5 +1,16 @@
 # can-write-to-dir
 
+## 2.0.0
+
+### Major Changes
+
+- f3776b0: convert to esm
+
+### Patch Changes
+
+- Updated dependencies [f3776b0]
+  - path-temp@3.0.0
+
 ## 1.1.1
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # write-ini-file
 
+## 5.0.0
+
+### Major Changes
+
+- f3776b0: convert to esm
+
 ## 3.1.0
 
 ### Minor Changes

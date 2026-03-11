@@ -1,6 +1,6 @@
 {
   "name": "preferred-pm",
-  "version": "4.1.1",
+  "version": "5.0.0",
   "description": "Detects what package manager was used for installation",
   "type": "module",
   "main": "index.js",

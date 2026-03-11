@@ -1,5 +1,11 @@
 # write-yaml-file
 
+## 6.0.0
+
+### Major Changes
+
+- f3776b0: convert to esm
+
 ## 4.2.0
 
 ### Minor Changes

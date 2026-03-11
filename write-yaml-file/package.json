@@ -1,6 +1,6 @@
 {
   "name": "write-yaml-file",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Stringify and write YAML to a file atomically",
   "type": "module",
   "main": "index.js",

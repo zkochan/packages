@@ -1,6 +1,6 @@
 {
   "name": "is-inner-link",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Returns true if a link targets a directory inside its parent directory",
   "type": "module",
   "main": "index.js",

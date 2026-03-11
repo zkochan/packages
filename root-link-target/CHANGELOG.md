@@ -1,5 +1,17 @@
 # root-link-target
 
+## 4.0.0
+
+### Major Changes
+
+- f3776b0: convert to esm
+
+### Patch Changes
+
+- Updated dependencies [f3776b0]
+  - can-link@3.0.0
+  - path-temp@3.0.0
+
 ## 3.1.0
 
 ### Minor Changes

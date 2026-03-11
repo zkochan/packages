@@ -1,6 +1,6 @@
 {
   "name": "read-json5-file",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Read and parse a JSON5 file",
   "type": "module",
   "main": "index.js",
