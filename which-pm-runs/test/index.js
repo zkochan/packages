@@ -9,7 +9,7 @@ delete process.env.npm_config_user_agent
 const fixturesDir = path.join(__dirname, 'fixtures')
 
 test('detects yarn', t => {
-  execa('yarn', [], { cwd: path.join(fixturesDir, 'yarn'), env: { ...process.env, COREPACK_ENABLE_STRICT: '0' } })
+  execa('yarn', [], { cwd: path.join(fixturesDir, 'yarn') })
     .then(() => t.end())
     .catch(t.end)
 })
