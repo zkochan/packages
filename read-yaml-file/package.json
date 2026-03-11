@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "js-yaml": "^4.1.0",
-    "strip-bom": "^4.0.0"
+    "strip-bom": "^5.0.0"
   },
   "devDependencies": {
     "standard": "^16.0.4"
