@@ -18,7 +18,7 @@
     "hardlink"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=22.13"
   },
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",

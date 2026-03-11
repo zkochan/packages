@@ -11,7 +11,7 @@
     "md": "mos"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=22.13"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/better-path-resolve",
   "keywords": [],

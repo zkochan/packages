@@ -17,7 +17,7 @@
     "semver"
   ],
   "engines": {
-    "node": ">=12.17"
+    "node": ">=22.13"
   },
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",

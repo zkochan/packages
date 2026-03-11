@@ -11,7 +11,7 @@
     "test": "standard && node test"
   },
   "engines": {
-    "node": ">=18.12"
+    "node": ">=22.13"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/preferred-pm",
   "bugs": {

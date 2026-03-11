@@ -4,7 +4,7 @@
   "description": "Stringify and write JSON to a file atomically",
   "main": "index.js",
   "engines": {
-    "node": ">=10.12"
+    "node": ">=22.13"
   },
   "files": [
     "index.js",

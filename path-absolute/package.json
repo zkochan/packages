@@ -23,7 +23,7 @@
     "url": "https://kochan.io/"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=22.13"
   },
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/path-absolute#readme",

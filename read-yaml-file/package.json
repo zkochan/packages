@@ -14,7 +14,7 @@
   },
   "repository": "https://github.com/zkochan/packages/tree/main/read-yaml-file",
   "engines": {
-    "node": ">=10.13"
+    "node": ">=22.13"
   },
   "files": [
     "index.js",

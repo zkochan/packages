@@ -4,7 +4,7 @@
   "description": "Stringify and write ini to a file atomically",
   "main": "index.js",
   "engines": {
-    "node": ">=14.6"
+    "node": ">=22.13"
   },
   "files": [
     "index.js",
