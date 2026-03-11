@@ -1,29 +1,18 @@
-'use strict';
-const test = require('tape')
-
+'use strict'
+const { test } = require('node:test')
+const assert = require('node:assert')
 const pShare = require('.')
 
-test('pShare() success', async (t) => {
+test('pShare() success', async () => {
   const getValue = pShare(Promise.resolve(1))
 
-  t.equal(await getValue(), 1)
-  t.equal(await getValue(), 1)
-
-  t.end()
+  assert.strictEqual(await getValue(), 1)
+  assert.strictEqual(await getValue(), 1)
 })
 
-test('pShare() fail', async (t) => {
-  t.plan(2)
+test('pShare() fail', async () => {
   const getValue = pShare(Promise.reject(new Error('foo')))
 
-  try {
-    t.equal(await getValue(), 1)
-  } catch (err) {
-    t.equal(err.message, 'foo')
-  }
-  try {
-    t.equal(await getValue(), 1)
-  } catch (err) {
-    t.equal(err.message, 'foo')
-  }
+  await assert.rejects(getValue(), { message: 'foo' })
+  await assert.rejects(getValue(), { message: 'foo' })
 })

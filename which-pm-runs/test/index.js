@@ -1,5 +1,5 @@
 'use strict'
-const test = require('tape')
+const { test } = require('node:test')
 const execa = require('execa')
 const path = require('path')
 const os = require('os')
@@ -8,33 +8,22 @@ delete process.env.npm_config_user_agent
 
 const fixturesDir = path.join(__dirname, 'fixtures')
 
-test('detects yarn', t => {
-  execa('yarn', [], { cwd: path.join(fixturesDir, 'yarn') })
-    .then(() => t.end())
-    .catch(t.end)
+test('detects yarn', async () => {
+  await execa('yarn', [], { cwd: path.join(fixturesDir, 'yarn') })
 })
 
-test('detects bun', t => {
-  if(os.platform() === 'win32') return t.end();
-  execa('bun', ['install'], { cwd: path.join(fixturesDir, 'bun') })
-    .then(() => t.end())
-    .catch(t.end)
+test('detects bun', { skip: os.platform() === 'win32' }, async () => {
+  await execa('bun', ['install'], { cwd: path.join(fixturesDir, 'bun') })
 })
 
-test('detects npm', t => {
-  execa('npm', ['install'], { cwd: path.join(fixturesDir, 'npm') })
-    .then(() => t.end())
-    .catch(t.end)
+test('detects npm', async () => {
+  await execa('npm', ['install'], { cwd: path.join(fixturesDir, 'npm') })
 })
 
-test('detects pnpm', t => {
-  execa('pnpm', ['install'], { cwd: path.join(fixturesDir, 'pnpm') })
-    .then(() => t.end())
-    .catch(t.end)
+test('detects pnpm', async () => {
+  await execa('pnpm', ['install'], { cwd: path.join(fixturesDir, 'pnpm') })
 })
 
-test('detects cnpm', t => {
-  execa('cnpm', ['install'], { cwd: path.join(fixturesDir, 'cnpm') })
-    .then(() => t.end())
-    .catch(t.end)
+test('detects cnpm', async () => {
+  await execa('cnpm', ['install'], { cwd: path.join(fixturesDir, 'cnpm') })
 })

@@ -1,20 +1,16 @@
 'use strict'
 const path = require('path')
-const test = require('tape')
+const { test } = require('node:test')
+const assert = require('node:assert')
 const { readIniFile, readIniFileSync } = require('read-ini-file')
 
 const fixture = path.join(__dirname, 'fixture.ini')
 
-test('async', t => {
-  readIniFile(fixture)
-    .then(data => {
-      t.equal(data.name, 'read-ini-file')
-      t.end()
-    })
-    .catch(t.end)
+test('async', async () => {
+  const data = await readIniFile(fixture)
+  assert.strictEqual(data.name, 'read-ini-file')
 })
 
-test('sync', t => {
-  t.equal(readIniFileSync(fixture).name, 'read-ini-file')
-  t.end()
+test('sync', () => {
+  assert.strictEqual(readIniFileSync(fixture).name, 'read-ini-file')
 })

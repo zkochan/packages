@@ -1,14 +1,13 @@
 'use strict'
+const { test } = require('node:test')
+const assert = require('node:assert')
 const rootLinkTarget = require('root-link-target')
-const test = require('tape')
 
-test('rootLinkTarget.sync()', t => {
-  t.equal(typeof rootLinkTarget.sync('package.json'), 'string')
-  t.end()
+test('rootLinkTarget.sync()', () => {
+  assert.strictEqual(typeof rootLinkTarget.sync('package.json'), 'string')
 })
 
-test('rootLinkTarget.sync()', async t => {
+test('rootLinkTarget()', async () => {
   const root = await rootLinkTarget('package.json')
-  t.equal(typeof root, 'string')
-  t.end()
+  assert.strictEqual(typeof root, 'string')
 })

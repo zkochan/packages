@@ -1,5 +1,6 @@
 'use strict'
-const test = require('tape')
+const { test } = require('node:test')
+const assert = require('node:assert')
 const canWriteToDir = require('can-write-to-dir')
 
 const eaccesErr = new Error('EACCES: permission denied, link')
@@ -8,59 +9,51 @@ eaccesErr.code = 'EACCES'
 const epermErr = new Error('EPERM: permission denied, link')
 epermErr.code = 'EPERM'
 
-test('canWriteToDir.sync()', t => {
-  t.ok(canWriteToDir.sync(process.cwd()))
-  t.notOk(canWriteToDir.sync('/foo', {
+test('canWriteToDir.sync()', () => {
+  assert.ok(canWriteToDir.sync(process.cwd()))
+  assert.ok(!canWriteToDir.sync('/foo', {
     writeFileSync: () => { throw eaccesErr },
     unlinkSync: () => {}
-  }), 'cannot link on EACCES error')
-  t.notOk(canWriteToDir.sync('foo', {
+  }))
+  assert.ok(!canWriteToDir.sync('foo', {
     writeFileSync: () => { throw epermErr },
     unlinkSync: () => {}
-  }), 'cannot link on EPERM error')
-  t.throws(() => {
+  }))
+  assert.throws(() => {
     const fsMock = {
       linkSync: () => { throw new Error('Error') }
     }
     canWriteToDir.sync('foo', 'bar', fsMock)
-  }, /Error/, 'errors are passed through if they are not EXDEV')
-  t.end()
+  }, /Error/)
 })
 
-test('canWriteToDir() returns true', async t => {
-  t.ok(await canWriteToDir(process.cwd()))
-  t.end()
+test('canWriteToDir() returns true', async () => {
+  assert.ok(await canWriteToDir(process.cwd()))
 })
 
-test('canWriteToDir() returns false on EACCES error', async t => {
-  t.notOk(await canWriteToDir('/', {
+test('canWriteToDir() returns false on EACCES error', async () => {
+  assert.ok(!await canWriteToDir('/', {
     promises: {
       writeFile: (a1, a2, a3, cb) => Promise.reject(eaccesErr),
       unlink: (p, cb) => Promise.resolve()
     }
   }))
-  t.end()
 })
 
-test('canWriteToDir() returns false on EACCES error', async t => {
-  t.notOk(await canWriteToDir('/', {
+test('canWriteToDir() returns false on EPERM error', async () => {
+  assert.ok(!await canWriteToDir('/', {
     promises: {
       writeFile: (a1, a2, a3, cb) => Promise.reject(epermErr),
       unlink: (p, cb) => Promise.resolve()
     }
   }))
-  t.end()
 })
 
-test('canWriteToDir() non-exdev error passed through', async t => {
-  let err
-  try {
-    await canWriteToDir('/', {
+test('canWriteToDir() non-exdev error passed through', async () => {
+  await assert.rejects(
+    canWriteToDir('/', {
       writeFile: (a1, a2, a3, cb) => cb(new Error('Error'))
-    })
-  } catch (_err) {
-    err = _err
-  }
-  t.ok(err)
-  t.end()
+    }),
+    /Error/
+  )
 })

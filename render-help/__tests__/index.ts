@@ -1,5 +1,8 @@
+import { test, beforeEach } from 'node:test'
+import assert from 'node:assert'
 import { stripIndent } from 'common-tags'
-import renderHelp from '../src'
+import renderHelpModule from '../lib/index.js'
+const renderHelp = renderHelpModule.default ?? renderHelpModule
 
 const originalColumns = process.stdout.columns
 
@@ -9,7 +12,7 @@ beforeEach(() => {
 
 test('single usage', () => {
   const output = renderHelp({ usages: ['foo [command] [options]'] })
-  expect(output).toBe('Usage: foo [command] [options]')
+  assert.strictEqual(output, 'Usage: foo [command] [options]')
 })
 
 test('multiple usages', () => {
@@ -19,7 +22,7 @@ test('multiple usages', () => {
       'foo --version',
     ],
   })
-  expect(output).toBe(stripIndent`
+  assert.strictEqual(output, stripIndent`
     Usage: foo [command] [options]
            foo --version
   `)
@@ -30,7 +33,7 @@ test('single usage with description', () => {
     description: 'Lorem ipsum.',
     usages: ['foo [command] [options]'],
   })
-  expect(output).toBe(stripIndent`
+  assert.strictEqual(output, stripIndent`
     Usage: foo [command] [options]
 
     Lorem ipsum.
@@ -39,7 +42,7 @@ test('single usage with description', () => {
 
 test('one alias', () => {
   const output = renderHelp({ aliases: ['f'], usages: ['foo [command] [options]'] })
-  expect(output).toBe(stripIndent`
+  assert.strictEqual(output, stripIndent`
   Usage: foo [command] [options]
 
   Alias: f
@@ -48,7 +51,7 @@ test('one alias', () => {
 
 test('two aliases', () => {
   const output = renderHelp({ aliases: ['f', 'fo'], usages: ['foo [command] [options]'] })
-  expect(output).toBe(stripIndent`
+  assert.strictEqual(output, stripIndent`
     Usage: foo [command] [options]
 
     Aliases: f, fo
@@ -101,7 +104,7 @@ test('description list', () => {
     usages: ['foo [command] [options]'],
     width: 1000,
   })
-  expect(output).toBe(stripIndent`
+  assert.strictEqual(output, stripIndent`
     Usage: foo [command] [options]
 
     Options:
@@ -151,7 +154,7 @@ test('description list should fit the screen', () => {
     usages: ['foo [command] [options]'],
     width: 100,
   })
-  expect(output).toBe(stripIndent`
+  assert.strictEqual(output, stripIndent`
     Usage: foo [command] [options]
 
     Options:
@@ -168,7 +171,7 @@ test('description list should fit the screen', () => {
 
 test('URL in the footer', () => {
   const output = renderHelp({ aliases: ['f', 'fo'], usages: ['foo [command] [options]'], url: 'https://example.com/' })
-  expect(output).toBe(stripIndent`
+  assert.strictEqual(output, stripIndent`
     Usage: foo [command] [options]
 
     Aliases: f, fo
@@ -192,7 +195,7 @@ test('console width is very narrow', () => {
     ],
     usages: ['foo [command] [options]'],
   })
-  expect(output).toBe(stripIndent`
+  assert.strictEqual(output, stripIndent`
     Usage: foo [command] [options]
 
     Options:

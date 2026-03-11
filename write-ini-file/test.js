@@ -2,23 +2,19 @@
 const fs = require('fs')
 const path = require('path')
 const tempfile = require('tempfile')
-const test = require('tape')
+const { test } = require('node:test')
+const assert = require('node:assert')
 const { EOL } = require('os')
 const { writeIniFile, writeIniFileSync } = require('write-ini-file')
 
-test('async', t => {
+test('async', async () => {
   const tmp = path.join(tempfile(), 'foo')
-  writeIniFile(tmp, { foo: true }, { indent: 2 })
-    .then(() => {
-      t.equal(fs.readFileSync(tmp, 'utf8'), `foo=true${EOL}`)
-      t.end()
-    })
-    .catch(t.end)
+  await writeIniFile(tmp, { foo: true }, { indent: 2 })
+  assert.strictEqual(fs.readFileSync(tmp, 'utf8'), `foo=true${EOL}`)
 })
 
-test('sync', t => {
+test('sync', () => {
   const tmp = path.join(tempfile(), 'foo')
   writeIniFileSync(tmp, { foo: true }, { indent: 2 })
-  t.equal(fs.readFileSync(tmp, 'utf8'), `foo=true${EOL}`)
-  t.end()
+  assert.strictEqual(fs.readFileSync(tmp, 'utf8'), `foo=true${EOL}`)
 })

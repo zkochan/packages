@@ -1,9 +1,9 @@
 'use strict'
-const test = require('tape')
+const { test } = require('node:test')
+const assert = require('node:assert')
 const comverToSemver = require('.')
 
-test('canWriteToDir.sync()', t => {
-  t.equal(comverToSemver('2'), '2.0.0')
-  t.equal(comverToSemver('2.1'), '2.1.0')
-  t.end()
+test('comverToSemver()', () => {
+  assert.strictEqual(comverToSemver('2'), '2.0.0')
+  assert.strictEqual(comverToSemver('2.1'), '2.1.0')
 })

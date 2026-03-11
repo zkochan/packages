@@ -1,42 +1,37 @@
 'use strict'
-const test = require('tape')
+const { test } = require('node:test')
+const assert = require('node:assert')
 const path = require('path')
 const whichpm = require('which-pm')
 
 const fixturesDir = path.join(__dirname, 'fixtures')
 
-test('identifies pnpm installation', async t => {
+test('identifies pnpm installation', async () => {
   const pm = await whichpm(path.join(fixturesDir, 'pnpm'))
-  t.deepEqual(pm, { name: 'pnpm', version: '0.70.0' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'pnpm', version: '0.70.0' })
 })
 
-test('identifies pnpm installation', async t => {
+test('identifies scoped pnpm installation', async () => {
   const pm = await whichpm(path.join(fixturesDir, 'scoped-pnpm'))
-  t.deepEqual(pm, { name: '@zkochan/pnpm', version: '0.70.0' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: '@zkochan/pnpm', version: '0.70.0' })
 })
 
-test('identifies yarn installation', async t => {
+test('identifies yarn installation', async () => {
   const pm = await whichpm(path.join(fixturesDir, 'yarn'))
-  t.deepEqual(pm, { name: 'yarn' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'yarn' })
 })
 
-test('identifies bun installation', async t => {
+test('identifies bun installation', async () => {
   const pm = await whichpm(path.join(fixturesDir, 'bun'))
-  t.deepEqual(pm, { name: 'bun' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'bun' })
 })
 
-test('identifies npm installation', async t => {
+test('identifies npm installation', async () => {
   const pm = await whichpm(path.join(fixturesDir, 'npm'))
-  t.deepEqual(pm, { name: 'npm' })
-  t.end()
+  assert.deepStrictEqual(pm, { name: 'npm' })
 })
 
-test('identifies null installation', async t => {
+test('identifies null installation', async () => {
   const pm = await whichpm(path.join(fixturesDir, 'null'))
-  t.equal(pm, null)
-  t.end()
+  assert.strictEqual(pm, null)
 })

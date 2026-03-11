@@ -1,10 +1,9 @@
 'use strict'
-const test = require('tape')
+const { test } = require('node:test')
+const assert = require('node:assert')
 const realpathMissing = require('.')
 
-test('realpathMissing()', async t => {
-  t.equal(typeof await realpathMissing('package.json'), 'string')
-  t.equal(typeof await realpathMissing('missing-file'), 'string')
-
-  t.end()
+test('realpathMissing()', async () => {
+  assert.strictEqual(typeof await realpathMissing('package.json'), 'string')
+  assert.strictEqual(typeof await realpathMissing('missing-file'), 'string')
 })
