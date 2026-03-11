@@ -1,11 +1,11 @@
-export async function pMapValues<K extends string | number | symbol, V, U> (
+export async function pMapValues<K extends string, V, U> (
   mapper: (value: V, key: K, obj: Record<K, V>) => Promise<U>,
   obj: Record<K, V>
 ): Promise<Record<K, U>> {
   const result: Record<K, U> = {} as Record<K, U>
   await Promise.all(
     Object.entries(obj).map(async ([key, value]: any) => { // eslint-disable-line @typescript-eslint/no-explicit-any
-      result[key] = await mapper(value, key, obj)
+      result[key as K] = await mapper(value, key, obj)
     })
   )
   return result

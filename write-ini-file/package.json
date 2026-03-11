@@ -47,14 +47,13 @@
   },
   "homepage": "https://github.com/zkochan/packages/tree/main/write-ini-file#readme#readme",
   "dependencies": {
-    "ini": "^3.0.1",
-    "make-dir": "^3.1.0",
-    "write-file-atomic": "^5.0.1"
+    "ini": "^6.0.0",
+    "write-file-atomic": "^7.0.1"
   },
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "standard": "^16.0.4",
-    "tempfile": "^3.0.0"
+    "standard": "^17.1.2",
+    "tempfile": "^6.0.1"
   }
 }

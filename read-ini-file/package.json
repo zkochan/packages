@@ -43,13 +43,13 @@
   },
   "homepage": "https://github.com/zkochan/packages/tree/main/read-ini-file#readme#readme",
   "dependencies": {
-    "ini": "^3.0.1",
-    "strip-bom": "^4.0.0"
+    "ini": "^6.0.0",
+    "strip-bom": "^5.0.0"
   },
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "standard": "^16.0.4"
+    "standard": "^17.1.2"
   },
   "engines": {
     "node": ">=22.13"

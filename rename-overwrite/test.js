@@ -2,164 +2,164 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { test, describe } from 'node:test'
 import assert from 'node:assert'
-import writeJsonFile from 'write-json-file'
-import loadJsonFile from 'load-json-file'
+import { writeJsonFileSync } from 'write-json-file'
+import { loadJsonFileSync } from 'load-json-file'
 import { renameOverwrite, renameOverwriteSync } from 'rename-overwrite'
 import symlinkDir from 'symlink-dir'
-import tempy from 'tempy'
+import { temporaryDirectory } from 'tempy'
 
 test('overwrite directory', async () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
-  writeJsonFile.sync('1/foo.json', 1)
-  writeJsonFile.sync('2/foo.json', 2)
+  writeJsonFileSync('1/foo.json', 1)
+  writeJsonFileSync('2/foo.json', 2)
 
   await renameOverwrite('1', '2')
 
-  assert.strictEqual(loadJsonFile.sync('2/foo.json'), 1)
+  assert.strictEqual(loadJsonFileSync('2/foo.json'), 1)
 })
 
 test('overwrite file', async () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
-  writeJsonFile.sync('1.json', 1)
-  writeJsonFile.sync('2.json', 2)
+  writeJsonFileSync('1.json', 1)
+  writeJsonFileSync('2.json', 2)
 
   await renameOverwrite('1.json', '2.json')
 
-  assert.strictEqual(loadJsonFile.sync('2.json'), 1)
+  assert.strictEqual(loadJsonFileSync('2.json'), 1)
 })
 
 test('rename file when no overwrite is needed', async () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
-  writeJsonFile.sync('1.json', 1)
+  writeJsonFileSync('1.json', 1)
 
   await renameOverwrite('1.json', '2.json')
 
-  assert.strictEqual(loadJsonFile.sync('2.json'), 1)
+  assert.strictEqual(loadJsonFileSync('2.json'), 1)
 })
 
 test('rename directory when no overwrite is needed', async () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
-  writeJsonFile.sync('dir/foo.json', 1)
+  writeJsonFileSync('dir/foo.json', 1)
 
   await renameOverwrite('dir', 'newdir')
 
-  assert.strictEqual(loadJsonFile.sync('newdir/foo.json'), 1)
+  assert.strictEqual(loadJsonFileSync('newdir/foo.json'), 1)
 })
 
 test('sync overwrite directory', () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
-  writeJsonFile.sync('1/foo.json', 1)
-  writeJsonFile.sync('2/foo.json', 2)
+  writeJsonFileSync('1/foo.json', 1)
+  writeJsonFileSync('2/foo.json', 2)
 
   renameOverwriteSync('1', '2')
 
-  assert.strictEqual(loadJsonFile.sync('2/foo.json'), 1)
+  assert.strictEqual(loadJsonFileSync('2/foo.json'), 1)
 })
 
 test('sync overwrite file', () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
-  writeJsonFile.sync('1.json', 1)
-  writeJsonFile.sync('2.json', 2)
+  writeJsonFileSync('1.json', 1)
+  writeJsonFileSync('2.json', 2)
 
   renameOverwriteSync('1.json', '2.json')
 
-  assert.strictEqual(loadJsonFile.sync('2.json'), 1)
+  assert.strictEqual(loadJsonFileSync('2.json'), 1)
 })
 
 test('sync rename file when no overwrite is needed', () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
-  writeJsonFile.sync('1.json', 1)
+  writeJsonFileSync('1.json', 1)
 
   renameOverwriteSync('1.json', '2.json')
 
-  assert.strictEqual(loadJsonFile.sync('2.json'), 1)
+  assert.strictEqual(loadJsonFileSync('2.json'), 1)
 })
 
 test('sync rename directory when no overwrite is needed', () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
-  writeJsonFile.sync('dir/foo.json', 1)
+  writeJsonFileSync('dir/foo.json', 1)
 
   renameOverwriteSync('dir', 'newdir')
 
-  assert.strictEqual(loadJsonFile.sync('newdir/foo.json'), 1)
+  assert.strictEqual(loadJsonFileSync('newdir/foo.json'), 1)
 })
 
 test('create target directory, if it does not exist', async () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
-  writeJsonFile.sync('dir/foo.json', 1)
+  writeJsonFileSync('dir/foo.json', 1)
 
   await renameOverwrite('dir', 'newdir/subdir')
 
-  assert.strictEqual(loadJsonFile.sync('newdir/subdir/foo.json'), 1)
+  assert.strictEqual(loadJsonFileSync('newdir/subdir/foo.json'), 1)
 })
 
 test('sync create target directory, if it does not exist', () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
-  writeJsonFile.sync('dir/foo.json', 1)
+  writeJsonFileSync('dir/foo.json', 1)
 
   renameOverwriteSync('dir', 'newdir/subdir')
 
-  assert.strictEqual(loadJsonFile.sync('newdir/subdir/foo.json'), 1)
+  assert.strictEqual(loadJsonFileSync('newdir/subdir/foo.json'), 1)
 })
 
 test('overwrite a symlink', async () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
   fs.mkdirSync('target')
   await symlinkDir(path.resolve('target'), 'newdir')
-  writeJsonFile.sync('dir/foo.json', 1)
+  writeJsonFileSync('dir/foo.json', 1)
 
   await renameOverwrite('dir', 'newdir')
-  assert.strictEqual(loadJsonFile.sync('newdir/foo.json'), 1)
+  assert.strictEqual(loadJsonFileSync('newdir/foo.json'), 1)
 })
 
 test('sync overwrite a symlink', async () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
   fs.mkdirSync('target')
   await symlinkDir(path.resolve('target'), 'newdir')
-  writeJsonFile.sync('dir/foo.json', 1)
+  writeJsonFileSync('dir/foo.json', 1)
 
   renameOverwriteSync('dir', 'newdir')
-  assert.strictEqual(loadJsonFile.sync('newdir/foo.json'), 1)
+  assert.strictEqual(loadJsonFileSync('newdir/foo.json'), 1)
 })
 
 test('overwrite a broken symlink', async () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
   await symlinkDir(path.resolve('target'), 'newdir')
-  writeJsonFile.sync('dir/foo.json', 1)
+  writeJsonFileSync('dir/foo.json', 1)
 
   await renameOverwrite('dir', 'newdir')
-  assert.strictEqual(loadJsonFile.sync('newdir/foo.json'), 1)
+  assert.strictEqual(loadJsonFileSync('newdir/foo.json'), 1)
 })
 
 test('sync overwrite a broken symlink', async () => {
-  process.chdir(tempy.directory())
+  process.chdir(temporaryDirectory())
 
   await symlinkDir(path.resolve('target'), 'newdir')
-  writeJsonFile.sync('dir/foo.json', 1)
+  writeJsonFileSync('dir/foo.json', 1)
 
   renameOverwriteSync('dir', 'newdir')
-  assert.strictEqual(loadJsonFile.sync('newdir/foo.json'), 1)
+  assert.strictEqual(loadJsonFileSync('newdir/foo.json'), 1)
 })
 
 describe('moving across devices synchronously', () => {
   test('should overwrite directory across devices', () => {
-    process.chdir(tempy.directory())
+    process.chdir(temporaryDirectory())
 
-    writeJsonFile.sync('1/foo.json', 1)
-    writeJsonFile.sync('2/foo.json', 2)
+    writeJsonFileSync('1/foo.json', 1)
+    writeJsonFileSync('2/foo.json', 2)
 
     const origRenameSync = fs.renameSync
     fs.renameSync = () => {
@@ -167,7 +167,7 @@ describe('moving across devices synchronously', () => {
     }
     try {
       renameOverwriteSync('1', '2')
-      assert.strictEqual(loadJsonFile.sync('2/foo.json'), 1)
+      assert.strictEqual(loadJsonFileSync('2/foo.json'), 1)
     } finally {
       fs.renameSync = origRenameSync
     }
@@ -176,10 +176,10 @@ describe('moving across devices synchronously', () => {
 
 describe('moving across devices asynchronously', () => {
   test('should overwrite directory across devices', async () => {
-    process.chdir(tempy.directory())
+    process.chdir(temporaryDirectory())
 
-    writeJsonFile.sync('1/foo.json', 1)
-    writeJsonFile.sync('2/foo.json', 2)
+    writeJsonFileSync('1/foo.json', 1)
+    writeJsonFileSync('2/foo.json', 2)
 
     const origRename = fs.promises.rename
     fs.promises.rename = async () => {
@@ -187,7 +187,7 @@ describe('moving across devices asynchronously', () => {
     }
     try {
       await renameOverwrite('1', '2')
-      assert.strictEqual(loadJsonFile.sync('2/foo.json'), 1)
+      assert.strictEqual(loadJsonFileSync('2/foo.json'), 1)
     } finally {
       fs.promises.rename = origRename
     }

@@ -28,7 +28,7 @@
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "standard": "^16.0.4"
+    "standard": "^17.1.2"
   },
   "mos": {
     "plugins": [

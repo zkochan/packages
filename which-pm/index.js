@@ -1,6 +1,6 @@
 import path from 'node:path'
 import fs from 'node:fs'
-import loadYamlFile from 'load-yaml-file'
+import { loadYamlFile } from 'load-yaml-file'
 
 export async function whichPM (pkgPath) {
   const modulesPath = path.join(pkgPath, 'node_modules')

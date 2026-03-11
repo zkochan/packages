@@ -35,10 +35,10 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/write-yaml-file#readme",
   "dependencies": {
-    "js-yaml": "^4.1.0",
-    "write-file-atomic": "^5.0.1"
+    "js-yaml": "^4.1.1",
+    "write-file-atomic": "^7.0.1"
   },
   "devDependencies": {
-    "standard": "^16.0.4"
+    "standard": "^17.1.2"
   }
 }

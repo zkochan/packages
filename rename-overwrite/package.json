@@ -29,13 +29,13 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/rename-overwrite#readme",
   "devDependencies": {
-    "load-json-file": "6.2.0",
-    "symlink-dir": "^5.2.1",
-    "tempy": "^1.0.1",
-    "write-json-file": "^4.3.0"
+    "load-json-file": "7.0.1",
+    "symlink-dir": "^7.1.0",
+    "tempy": "^3.2.0",
+    "write-json-file": "^7.0.0"
   },
   "dependencies": {
     "@zkochan/rimraf": "workspace:^",
-    "fs-extra": "11.3.0"
+    "fs-extra": "11.3.4"
   }
 }

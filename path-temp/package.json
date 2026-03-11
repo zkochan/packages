@@ -27,12 +27,12 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/path-temp#readme",
   "dependencies": {
-    "unique-string": "^2.0.0"
+    "unique-string": "^3.0.0"
   },
   "devDependencies": {
     "mos": "2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "standard": "^16.0.4"
+    "standard": "^17.1.2"
   },
   "mos": {
     "plugins": [

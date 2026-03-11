@@ -4,7 +4,7 @@ import assert from 'node:assert'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { preferredPM } from 'preferred-pm'
-import tempy from 'tempy'
+import { temporaryDirectory } from 'tempy'
 import { promisify } from 'node:util'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -36,14 +36,14 @@ test('prefer Yarn', async () => {
 })
 
 test('prefer Yarn inside a Yarn workspace', async () => {
-  const dir = tempy.directory()
+  const dir = temporaryDirectory()
   await ncp(path.join(__dirname, 'yarn-workspace'), dir)
   const pm = await preferredPM(path.join(dir, 'packages/pkg'))
   assert.deepStrictEqual(pm, { name: 'yarn', version: '*' })
 })
 
 test('prefer npm inside an npm workspace', async () => {
-  const dir = tempy.directory()
+  const dir = temporaryDirectory()
   await ncp(path.join(__dirname, 'npm-workspace'), dir)
   const pm = await preferredPM(path.join(dir, 'packages/pkg'))
   assert.deepStrictEqual(pm, { name: 'npm', version: '>=7' })
@@ -60,14 +60,14 @@ test('prefer npm 5', async () => {
 })
 
 test('prefer npm', async () => {
-  const dir = tempy.directory()
+  const dir = temporaryDirectory()
   await ncp(path.join(__dirname, 'prefers-npm'), dir)
   const pm = await preferredPM(dir)
   assert.deepStrictEqual(pm, { name: 'npm', version: '*' })
 })
 
 test('prefer nothing', async () => {
-  const dir = tempy.directory()
+  const dir = temporaryDirectory()
   await ncp(path.join(__dirname, 'prefers-nothing'), dir)
   const pm = await preferredPM(dir)
   assert.strictEqual(pm, null)

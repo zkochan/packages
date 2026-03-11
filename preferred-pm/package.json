@@ -32,12 +32,12 @@
   "license": "MIT",
   "dependencies": {
     "find-up-simple": "^1.0.1",
-    "find-yarn-workspace-root2": "1.2.16",
+    "find-yarn-workspace-root2": "1.2.53",
     "which-pm": "workspace:^"
   },
   "devDependencies": {
     "ncp": "^2.0.0",
-    "standard": "^16.0.4",
-    "tempy": "^1.0.1"
+    "standard": "^17.1.2",
+    "tempy": "^3.2.0"
   }
 }
