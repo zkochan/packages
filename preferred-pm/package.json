@@ -32,7 +32,7 @@
   "license": "MIT",
   "dependencies": {
     "find-up-simple": "^1.0.1",
-    "find-yarn-workspace-root2": "1.2.16",
+    "find-yarn-workspace-root2": "1.2.53",
     "which-pm": "workspace:^"
   },
   "devDependencies": {
