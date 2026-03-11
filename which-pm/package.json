@@ -29,9 +29,9 @@
   "author": "Zoltan Kochan",
   "license": "MIT",
   "dependencies": {
-    "load-yaml-file": "^0.2.0"
+    "load-yaml-file": "^1.0.0"
   },
   "devDependencies": {
-    "standard": "^16.0.4"
+    "standard": "^17.1.2"
   }
 }

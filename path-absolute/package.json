@@ -30,6 +30,6 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/path-absolute#readme",
   "devDependencies": {
-    "standard": "^16.0.4"
+    "standard": "^17.1.2"
   }
 }

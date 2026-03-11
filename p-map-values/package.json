@@ -26,6 +26,6 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/p-map-values#readme",
   "devDependencies": {
-    "typescript": "^4.9.5"
+    "typescript": "^5.9.3"
   }
 }

@@ -30,6 +30,6 @@
     "path-temp": "workspace:^"
   },
   "devDependencies": {
-    "standard": "^16.0.4"
+    "standard": "^17.1.2"
   }
 }

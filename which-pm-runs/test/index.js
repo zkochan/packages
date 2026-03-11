@@ -1,5 +1,5 @@
 import { test } from 'node:test'
-import execa from 'execa'
+import { execa } from 'execa'
 import path from 'node:path'
 import os from 'node:os'
 import { fileURLToPath } from 'node:url'
