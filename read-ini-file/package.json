@@ -10,19 +10,9 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test-readme": "mos t",
-    "test": "standard && node --test test/index.js",
-    "md": "mos"
+    "test": "standard && node --test test/index.js"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/read-ini-file",
-  "mos": {
-    "plugins": [
-      "readme"
-    ],
-    "installation": {
-      "useShortAlias": true
-    }
-  },
   "keywords": [
     "read",
     "ini",
@@ -47,8 +37,6 @@
     "strip-bom": "^5.0.0"
   },
   "devDependencies": {
-    "mos": "2.0.0-alpha.3",
-    "mos-plugin-readme": "^1.0.4",
     "standard": "^17.1.2"
   },
   "engines": {

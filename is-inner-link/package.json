@@ -10,8 +10,7 @@
   ],
   "scripts": {
     "pretest": "rimraf .tmp",
-    "test": "standard && node --test test.js",
-    "md": "mos"
+    "test": "standard && node --test test.js"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/is-inner-link",
   "keywords": [
@@ -28,14 +27,6 @@
     "node": ">=22.13"
   },
   "license": "MIT",
-  "mos": {
-    "plugins": [
-      "readme"
-    ],
-    "installation": {
-      "useShortAlias": true
-    }
-  },
   "homepage": "https://github.com/zkochan/packages/tree/main/is-inner-link#readme",
   "dependencies": {
     "is-subdir": "workspace:^",
@@ -43,8 +34,6 @@
   },
   "devDependencies": {
     "make-dir": "^5.1.0",
-    "mos": "2.0.0-alpha.3",
-    "mos-plugin-readme": "^1.0.4",
     "rimraf": "^6.1.3",
     "standard": "^17.1.2",
     "symlink-dir": "^7.1.0"

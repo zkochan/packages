@@ -12,16 +12,7 @@
     "node": ">=22.13"
   },
   "scripts": {
-    "test": "node --test test.js",
-    "md": "mos"
-  },
-  "mos": {
-    "plugins": [
-      "readme"
-    ],
-    "installation": {
-      "useShortAlias": true
-    }
+    "test": "node --test test.js"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/graceful-git",
   "keywords": [
@@ -39,9 +30,5 @@
   "dependencies": {
     "retry": "^0.13.1",
     "safe-execa": "workspace:^"
-  },
-  "devDependencies": {
-    "mos": "2.0.0-alpha.3",
-    "mos-plugin-readme": "^1.0.4"
   }
 }

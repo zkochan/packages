@@ -11,8 +11,7 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "standard && node --test test.js",
-    "md": "mos"
+    "test": "standard && node --test test.js"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/path-temp",
   "keywords": [
@@ -30,16 +29,6 @@
     "unique-string": "^3.0.0"
   },
   "devDependencies": {
-    "mos": "2.0.0-alpha.3",
-    "mos-plugin-readme": "^1.0.4",
     "standard": "^17.1.2"
-  },
-  "mos": {
-    "plugins": [
-      "readme"
-    ],
-    "installation": {
-      "useShortAlias": true
-    }
   }
 }

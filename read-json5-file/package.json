@@ -13,18 +13,9 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "standard && node --test test/index.js",
-    "md": "mos"
+    "test": "standard && node --test test/index.js"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/read-json5-file",
-  "mos": {
-    "plugins": [
-      "readme"
-    ],
-    "installation": {
-      "useShortAlias": true
-    }
-  },
   "keywords": [
     "read",
     "JSON5",
@@ -46,8 +37,6 @@
     "strip-bom": "^5.0.0"
   },
   "devDependencies": {
-    "mos": "2.0.0-alpha.3",
-    "mos-plugin-readme": "^1.0.4",
     "standard": "^17.1.2"
   }
 }

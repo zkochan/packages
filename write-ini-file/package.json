@@ -13,19 +13,9 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "standard && node --test test.js",
-    "test:readme": "mos t",
-    "md": "mos"
+    "test": "standard && node --test test.js"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/write-ini-file",
-  "mos": {
-    "plugins": [
-      "readme"
-    ],
-    "installation": {
-      "useShortAlias": true
-    }
-  },
   "keywords": [
     "write",
     "ini",
@@ -51,8 +41,6 @@
     "write-file-atomic": "^7.0.1"
   },
   "devDependencies": {
-    "mos": "2.0.0-alpha.3",
-    "mos-plugin-readme": "^1.0.4",
     "standard": "^17.1.2",
     "tempfile": "^6.0.1"
   }
