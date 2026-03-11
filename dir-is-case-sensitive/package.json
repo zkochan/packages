@@ -32,7 +32,7 @@
     "path-temp": "workspace:^"
   },
   "devDependencies": {
-    "@types/node": "25.4.0",
-    "typescript": "^5.9.3"
+    "@types/node": "catalog:",
+    "typescript": "catalog:"
   }
 }

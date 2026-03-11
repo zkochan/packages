@@ -33,10 +33,10 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/read-json5-file#readme",
   "dependencies": {
-    "json5": "^2.2.3",
-    "strip-bom": "^5.0.0"
+    "json5": "catalog:",
+    "strip-bom": "catalog:"
   },
   "devDependencies": {
-    "standard": "^17.1.2"
+    "standard": "catalog:"
   }
 }

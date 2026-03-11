@@ -26,10 +26,10 @@
     "test": "standard && node --test test.js"
   },
   "dependencies": {
-    "js-yaml": "^4.1.1",
-    "strip-bom": "^5.0.0"
+    "js-yaml": "catalog:",
+    "strip-bom": "catalog:"
   },
   "devDependencies": {
-    "standard": "^17.1.2"
+    "standard": "catalog:"
   }
 }

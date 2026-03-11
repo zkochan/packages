@@ -25,7 +25,7 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/rimraf#readme",
   "devDependencies": {
-    "standard": "^17.1.2",
-    "tempy": "^3.2.0"
+    "standard": "catalog:",
+    "tempy": "catalog:"
   }
 }

@@ -27,10 +27,10 @@
   "homepage": "https://github.com/zkochan/packages/tree/main/root-link-target#readme",
   "dependencies": {
     "can-link": "workspace:^",
-    "next-path": "^1.0.0",
+    "next-path": "catalog:",
     "path-temp": "workspace:^"
   },
   "devDependencies": {
-    "standard": "^17.1.2"
+    "standard": "catalog:"
   }
 }

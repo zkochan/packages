@@ -37,11 +37,11 @@
   },
   "homepage": "https://github.com/zkochan/packages/tree/main/write-ini-file#readme#readme",
   "dependencies": {
-    "ini": "^6.0.0",
-    "write-file-atomic": "^7.0.1"
+    "ini": "catalog:",
+    "write-file-atomic": "catalog:"
   },
   "devDependencies": {
-    "standard": "^17.1.2",
-    "tempfile": "^6.0.1"
+    "standard": "catalog:",
+    "tempfile": "catalog:"
   }
 }

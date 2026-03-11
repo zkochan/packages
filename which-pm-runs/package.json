@@ -28,11 +28,11 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/which-pm-runs#readme",
   "devDependencies": {
-    "@pnpm/exe": "^10.32.1",
-    "bun": "^1.3.10",
-    "cnpm": "^9.4.0",
-    "execa": "^9.6.1",
-    "npm": "^11.11.0",
-    "yarn": "^1.22.22"
+    "@pnpm/exe": "catalog:",
+    "bun": "catalog:",
+    "cnpm": "catalog:",
+    "execa": "catalog:",
+    "npm": "catalog:",
+    "yarn": "catalog:"
   }
 }

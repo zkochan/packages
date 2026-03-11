@@ -33,11 +33,11 @@
   },
   "homepage": "https://github.com/zkochan/packages/tree/main/read-ini-file#readme#readme",
   "dependencies": {
-    "ini": "^6.0.0",
-    "strip-bom": "^5.0.0"
+    "ini": "catalog:",
+    "strip-bom": "catalog:"
   },
   "devDependencies": {
-    "standard": "^17.1.2"
+    "standard": "catalog:"
   },
   "engines": {
     "node": ">=22.13"

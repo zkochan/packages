@@ -4,6 +4,129 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@changesets/cli':
+      specifier: ^2.30.0
+      version: 2.30.0
+    '@pnpm/exe':
+      specifier: ^10.32.1
+      version: 10.32.1
+    '@types/common-tags':
+      specifier: ^1.8.4
+      version: 1.8.4
+    '@types/table':
+      specifier: ^6.3.2
+      version: 6.3.2
+    '@zkochan/which':
+      specifier: ^2.0.3
+      version: 2.0.3
+    bun:
+      specifier: ^1.3.10
+      version: 1.3.10
+    cnpm:
+      specifier: ^9.4.0
+      version: 9.4.0
+    common-tags:
+      specifier: ^1.8.2
+      version: 1.8.2
+    delay:
+      specifier: 7.0.0
+      version: 7.0.0
+    execa:
+      specifier: ^9.6.1
+      version: 9.6.1
+    find-up-simple:
+      specifier: ^1.0.1
+      version: 1.0.1
+    find-yarn-workspace-root2:
+      specifier: 1.2.53
+      version: 1.2.53
+    fs-extra:
+      specifier: 11.3.4
+      version: 11.3.4
+    ini:
+      specifier: ^6.0.0
+      version: 6.0.0
+    is-windows:
+      specifier: ^1.0.2
+      version: 1.0.2
+    js-yaml:
+      specifier: ^4.1.1
+      version: 4.1.1
+    json5:
+      specifier: ^2.2.3
+      version: 2.2.3
+    load-json-file:
+      specifier: 7.0.1
+      version: 7.0.1
+    load-yaml-file:
+      specifier: ^1.0.0
+      version: 1.0.0
+    make-dir:
+      specifier: ^5.1.0
+      version: 5.1.0
+    ncp:
+      specifier: ^2.0.0
+      version: 2.0.0
+    next-path:
+      specifier: ^1.0.0
+      version: 1.0.0
+    npm:
+      specifier: ^11.11.0
+      version: 11.11.0
+    p-limit:
+      specifier: ^7.3.0
+      version: 7.3.0
+    p-reflect:
+      specifier: ^3.1.0
+      version: 3.1.0
+    path-name:
+      specifier: ^1.0.0
+      version: 1.0.0
+    retry:
+      specifier: ^0.13.1
+      version: 0.13.1
+    rimraf:
+      specifier: ^6.1.3
+      version: 6.1.3
+    sort-keys:
+      specifier: ^6.0.0
+      version: 6.0.0
+    standard:
+      specifier: ^17.1.2
+      version: 17.1.2
+    strip-bom:
+      specifier: ^5.0.0
+      version: 5.0.0
+    symlink-dir:
+      specifier: ^7.1.0
+      version: 7.1.0
+    table:
+      specifier: ^6.9.0
+      version: 6.9.0
+    tempfile:
+      specifier: ^6.0.1
+      version: 6.0.1
+    tempy:
+      specifier: ^3.2.0
+      version: 3.2.0
+    typescript:
+      specifier: ^5.9.3
+      version: 5.9.3
+    unique-string:
+      specifier: ^3.0.0
+      version: 3.0.0
+    write-file-atomic:
+      specifier: ^7.0.1
+      version: 7.0.1
+    write-json-file:
+      specifier: ^7.0.0
+      version: 7.0.0
+    yarn:
+      specifier: ^1.22.22
+      version: 1.22.22
+
 overrides:
   '@types/node': 25.4.0
 
@@ -14,22 +137,22 @@ importers:
   .:
     devDependencies:
       '@changesets/cli':
-        specifier: ^2.30.0
+        specifier: 'catalog:'
         version: 2.30.0(@types/node@25.4.0)
       typescript:
-        specifier: ^5.9.3
+        specifier: 'catalog:'
         version: 5.9.3
 
   better-path-resolve:
     dependencies:
       is-windows:
-        specifier: ^1.0.2
+        specifier: 'catalog:'
         version: 1.0.2
 
   can-link:
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
 
   can-write-to-dir:
@@ -39,7 +162,7 @@ importers:
         version: link:../path-temp
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
 
   cmd-extension: {}
@@ -56,13 +179,13 @@ importers:
         specifier: 25.4.0
         version: 25.4.0
       typescript:
-        specifier: ^5.9.3
+        specifier: 'catalog:'
         version: 5.9.3
 
   graceful-git:
     dependencies:
       retry:
-        specifier: ^0.13.1
+        specifier: 'catalog:'
         version: 0.13.1
       safe-execa:
         specifier: workspace:^
@@ -78,16 +201,16 @@ importers:
         version: link:../resolve-link-target
     devDependencies:
       make-dir:
-        specifier: ^5.1.0
+        specifier: 'catalog:'
         version: 5.1.0
       rimraf:
-        specifier: ^6.1.3
+        specifier: 'catalog:'
         version: 6.1.3
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
       symlink-dir:
-        specifier: ^7.1.0
+        specifier: 'catalog:'
         version: 7.1.0
 
   is-subdir:
@@ -97,7 +220,7 @@ importers:
         version: link:../better-path-resolve
     devDependencies:
       is-windows:
-        specifier: 1.0.2
+        specifier: 'catalog:'
         version: 1.0.2
 
   make-empty-dir:
@@ -107,96 +230,96 @@ importers:
         version: link:../rimraf
     devDependencies:
       tempy:
-        specifier: ^3.2.0
+        specifier: 'catalog:'
         version: 3.2.0
 
   p-map-values:
     devDependencies:
       typescript:
-        specifier: ^5.9.3
+        specifier: 'catalog:'
         version: 5.9.3
 
   path-absolute:
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
 
   path-temp:
     dependencies:
       unique-string:
-        specifier: ^3.0.0
+        specifier: 'catalog:'
         version: 3.0.0
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
 
   preferred-pm:
     dependencies:
       find-up-simple:
-        specifier: ^1.0.1
+        specifier: 'catalog:'
         version: 1.0.1
       find-yarn-workspace-root2:
-        specifier: 1.2.53
+        specifier: 'catalog:'
         version: 1.2.53(ts-toolbelt@9.6.0)
       which-pm:
         specifier: workspace:^
         version: link:../which-pm
     devDependencies:
       ncp:
-        specifier: ^2.0.0
+        specifier: 'catalog:'
         version: 2.0.0
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
       tempy:
-        specifier: ^3.2.0
+        specifier: 'catalog:'
         version: 3.2.0
 
   promise-share:
     dependencies:
       p-reflect:
-        specifier: ^3.1.0
+        specifier: 'catalog:'
         version: 3.1.0
 
   read-ini-file:
     dependencies:
       ini:
-        specifier: ^6.0.0
+        specifier: 'catalog:'
         version: 6.0.0
       strip-bom:
-        specifier: ^5.0.0
+        specifier: 'catalog:'
         version: 5.0.0
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
 
   read-json5-file:
     dependencies:
       json5:
-        specifier: ^2.2.3
+        specifier: 'catalog:'
         version: 2.2.3
       strip-bom:
-        specifier: ^5.0.0
+        specifier: 'catalog:'
         version: 5.0.0
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
 
   read-yaml-file:
     dependencies:
       js-yaml:
-        specifier: ^4.1.1
+        specifier: 'catalog:'
         version: 4.1.1
       strip-bom:
-        specifier: ^5.0.0
+        specifier: 'catalog:'
         version: 5.0.0
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
 
   realpath-missing: {}
@@ -207,60 +330,60 @@ importers:
         specifier: workspace:^
         version: link:../rimraf
       fs-extra:
-        specifier: 11.3.4
+        specifier: 'catalog:'
         version: 11.3.4
     devDependencies:
       load-json-file:
-        specifier: 7.0.1
+        specifier: 'catalog:'
         version: 7.0.1
       symlink-dir:
-        specifier: ^7.1.0
+        specifier: 'catalog:'
         version: 7.1.0
       tempy:
-        specifier: ^3.2.0
+        specifier: 'catalog:'
         version: 3.2.0
       write-json-file:
-        specifier: ^7.0.0
+        specifier: 'catalog:'
         version: 7.0.0
 
   render-help:
     dependencies:
       table:
-        specifier: ^6.9.0
+        specifier: 'catalog:'
         version: 6.9.0
     devDependencies:
       '@types/common-tags':
-        specifier: ^1.8.4
+        specifier: 'catalog:'
         version: 1.8.4
       '@types/node':
         specifier: 25.4.0
         version: 25.4.0
       '@types/table':
-        specifier: ^6.3.2
+        specifier: 'catalog:'
         version: 6.3.2
       common-tags:
-        specifier: ^1.8.2
+        specifier: 'catalog:'
         version: 1.8.2
       typescript:
-        specifier: ^5.9.3
+        specifier: 'catalog:'
         version: 5.9.3
 
   resolve-link-target:
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
       symlink-dir:
-        specifier: ^7.1.0
+        specifier: 'catalog:'
         version: 7.1.0
 
   rimraf:
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
       tempy:
-        specifier: ^3.2.0
+        specifier: 'catalog:'
         version: 3.2.0
 
   root-link-target:
@@ -269,42 +392,42 @@ importers:
         specifier: workspace:^
         version: link:../can-link
       next-path:
-        specifier: ^1.0.0
+        specifier: 'catalog:'
         version: 1.0.0
       path-temp:
         specifier: workspace:^
         version: link:../path-temp
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
 
   run-groups:
     dependencies:
       p-limit:
-        specifier: ^7.3.0
+        specifier: 'catalog:'
         version: 7.3.0
     devDependencies:
       '@types/node':
         specifier: 25.4.0
         version: 25.4.0
       delay:
-        specifier: 7.0.0
+        specifier: 'catalog:'
         version: 7.0.0
       typescript:
-        specifier: ^5.9.3
+        specifier: 'catalog:'
         version: 5.9.3
 
   safe-execa:
     dependencies:
       '@zkochan/which':
-        specifier: ^2.0.3
+        specifier: 'catalog:'
         version: 2.0.3
       execa:
-        specifier: ^9.6.1
+        specifier: 'catalog:'
         version: 9.6.1
       path-name:
-        specifier: ^1.0.0
+        specifier: 'catalog:'
         version: 1.0.0
     devDependencies:
       '@types/node':
@@ -318,86 +441,86 @@ importers:
         version: link:../promise-share
     devDependencies:
       typescript:
-        specifier: ^5.9.3
+        specifier: 'catalog:'
         version: 5.9.3
 
   which-pm:
     dependencies:
       load-yaml-file:
-        specifier: ^1.0.0
+        specifier: 'catalog:'
         version: 1.0.0
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
 
   which-pm-runs:
     devDependencies:
       '@pnpm/exe':
-        specifier: ^10.32.1
+        specifier: 'catalog:'
         version: 10.32.1
       bun:
-        specifier: ^1.3.10
+        specifier: 'catalog:'
         version: 1.3.10
       cnpm:
-        specifier: ^9.4.0
+        specifier: 'catalog:'
         version: 9.4.0
       execa:
-        specifier: ^9.6.1
+        specifier: 'catalog:'
         version: 9.6.1
       npm:
-        specifier: ^11.11.0
+        specifier: 'catalog:'
         version: 11.11.0
       yarn:
-        specifier: ^1.22.22
+        specifier: 'catalog:'
         version: 1.22.22
 
   write-ini-file:
     dependencies:
       ini:
-        specifier: ^6.0.0
+        specifier: 'catalog:'
         version: 6.0.0
       write-file-atomic:
-        specifier: ^7.0.1
+        specifier: 'catalog:'
         version: 7.0.1
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
       tempfile:
-        specifier: ^6.0.1
+        specifier: 'catalog:'
         version: 6.0.1
 
   write-json5-file:
     dependencies:
       json5:
-        specifier: ^2.2.3
+        specifier: 'catalog:'
         version: 2.2.3
       sort-keys:
-        specifier: ^6.0.0
+        specifier: 'catalog:'
         version: 6.0.0
       write-file-atomic:
-        specifier: ^7.0.1
+        specifier: 'catalog:'
         version: 7.0.1
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
       tempfile:
-        specifier: ^6.0.1
+        specifier: 'catalog:'
         version: 6.0.1
 
   write-yaml-file:
     dependencies:
       js-yaml:
-        specifier: ^4.1.1
+        specifier: 'catalog:'
         version: 4.1.1
       write-file-atomic:
-        specifier: ^7.0.1
+        specifier: 'catalog:'
         version: 7.0.1
     devDependencies:
       standard:
-        specifier: ^17.1.2
+        specifier: 'catalog:'
         version: 17.1.2
 
 packages:

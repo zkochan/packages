@@ -26,9 +26,9 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/path-temp#readme",
   "dependencies": {
-    "unique-string": "^3.0.0"
+    "unique-string": "catalog:"
   },
   "devDependencies": {
-    "standard": "^17.1.2"
+    "standard": "catalog:"
   }
 }

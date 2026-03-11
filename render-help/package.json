@@ -30,13 +30,13 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/render-help#readme",
   "dependencies": {
-    "table": "^6.9.0"
+    "table": "catalog:"
   },
   "devDependencies": {
-    "@types/common-tags": "^1.8.4",
-    "@types/node": "25.4.0",
-    "@types/table": "^6.3.2",
-    "common-tags": "^1.8.2",
-    "typescript": "^5.9.3"
+    "@types/common-tags": "catalog:",
+    "@types/node": "catalog:",
+    "@types/table": "catalog:",
+    "common-tags": "catalog:",
+    "typescript": "catalog:"
   }
 }

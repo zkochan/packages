@@ -30,7 +30,7 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/make-empty-dir#readme",
   "devDependencies": {
-    "tempy": "^3.2.0"
+    "tempy": "catalog:"
   },
   "dependencies": {
     "@zkochan/rimraf": "workspace:^"

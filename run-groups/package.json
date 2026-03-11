@@ -26,11 +26,11 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/run-groups#readme",
   "dependencies": {
-    "p-limit": "^7.3.0"
+    "p-limit": "catalog:"
   },
   "devDependencies": {
-    "@types/node": "25.4.0",
-    "delay": "7.0.0",
-    "typescript": "^5.9.3"
+    "@types/node": "catalog:",
+    "delay": "catalog:",
+    "typescript": "catalog:"
   }
 }

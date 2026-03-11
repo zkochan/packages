@@ -25,6 +25,6 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/can-link#readme",
   "devDependencies": {
-    "standard": "^17.1.2"
+    "standard": "catalog:"
   }
 }

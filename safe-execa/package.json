@@ -25,11 +25,11 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/safe-execa#readme",
   "dependencies": {
-    "@zkochan/which": "^2.0.3",
-    "execa": "^9.6.1",
-    "path-name": "^1.0.0"
+    "@zkochan/which": "catalog:",
+    "execa": "catalog:",
+    "path-name": "catalog:"
   },
   "devDependencies": {
-    "@types/node": "25.4.0"
+    "@types/node": "catalog:"
   }
 }

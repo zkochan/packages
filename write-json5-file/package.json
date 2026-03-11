@@ -34,12 +34,12 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/write-json5-file#readme",
   "dependencies": {
-    "json5": "^2.2.3",
-    "sort-keys": "^6.0.0",
-    "write-file-atomic": "^7.0.1"
+    "json5": "catalog:",
+    "sort-keys": "catalog:",
+    "write-file-atomic": "catalog:"
   },
   "devDependencies": {
-    "standard": "^17.1.2",
-    "tempfile": "^6.0.1"
+    "standard": "catalog:",
+    "tempfile": "catalog:"
   }
 }

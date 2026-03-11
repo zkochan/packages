@@ -28,7 +28,7 @@
   "license": "MIT",
   "homepage": "https://github.com/zkochan/packages/tree/main/graceful-git#readme",
   "dependencies": {
-    "retry": "^0.13.1",
+    "retry": "catalog:",
     "safe-execa": "workspace:^"
   }
 }
