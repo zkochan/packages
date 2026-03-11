@@ -1,5 +1,7 @@
-import dirIsCaseSensitive from 'dir-is-case-sensitive'
+import dirIsCaseSensitiveModule from 'dir-is-case-sensitive'
 import test from 'tape'
+
+const dirIsCaseSensitive = dirIsCaseSensitiveModule.default ?? dirIsCaseSensitiveModule
 
 test('dirIsCaseSensitive()', async (t) => {
   const isCaseSensitive = await dirIsCaseSensitive(import.meta.dirname)
