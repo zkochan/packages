@@ -1,5 +1,5 @@
 {
-  "packageManager": "pnpm@11.0.0-alpha.14",
+  "packageManager": "pnpm@11.0.0-beta.0",
   "devDependencies": {
     "@changesets/cli": "catalog:",
     "typescript": "catalog:"
