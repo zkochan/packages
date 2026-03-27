@@ -30,7 +30,7 @@ export async function renameOverwrite (oldPath, newPath, retry = 0) {
       case 'EPERM':
       case 'EACCESS':
       case 'EBUSY': {
-        await rimraf(newPath)
+        try { await rimraf(newPath) } catch {}
         const start = Date.now()
         let backoff = 0
         let lastError = err
@@ -89,7 +89,7 @@ export function renameOverwriteSync (oldPath, newPath, retry = 0) {
       case 'EPERM':
       case 'EACCESS':
       case 'EBUSY': {
-        rimrafSync(newPath)
+        try { rimrafSync(newPath) } catch {}
         const start = Date.now()
         let backoff = 0
         let lastError = err
