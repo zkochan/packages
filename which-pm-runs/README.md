@@ -15,11 +15,10 @@ pnpm add which-pm-runs
 ## Usage
 
 ```js
-'use strict'
-const whichPMRuns = require('which-pm-runs')
+import { whichPMRuns } from 'which-pm-runs'
 
 whichPMRuns()
-//> {name: "pnpm", version: "0.64.2"}
+//> {name: "pnpm", version: "11.1.0"}
 ```
 
 ## Related
