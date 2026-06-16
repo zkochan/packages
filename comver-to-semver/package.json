@@ -14,6 +14,9 @@
     "test": "node --test test.js"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/comver-to-semver",
+  "bugs": {
+    "url": "https://github.com/zkochan/packages/issues"
+  },
   "keywords": [
     "comver",
     "semver"
