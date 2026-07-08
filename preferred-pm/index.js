@@ -37,6 +37,12 @@ export async function preferredPM (pkgPath) {
       version: '*'
     }
   }
+  if (fs.existsSync(path.join(pkgPath, 'nub.lock'))) {
+    return {
+      name: 'nub',
+      version: '*'
+    }
+  }
   const { findUp } = await import('find-up-simple')
   if (await findUp('pnpm-lock.yaml', { cwd: pkgPath })) {
     return {
