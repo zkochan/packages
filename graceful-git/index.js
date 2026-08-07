@@ -26,5 +26,8 @@ export async function gracefulGit (args, opts) {
 
 export async function noRetry (args, opts) {
   opts = opts || {}
-  return safeExeca('git', args, {cwd: opts.cwd || process.cwd()})
+  return safeExeca('git', args, {
+    cwd: opts.cwd || process.cwd(),
+    env: opts.env,
+  })
 }
