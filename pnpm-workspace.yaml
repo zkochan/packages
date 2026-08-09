@@ -16,7 +16,7 @@ overrides:
 
 catalog:
   '@changesets/cli': ^2.30.0
-  '@pnpm/exe': ^10.32.1
+  '@pnpm/exe': ^11.0.0
   '@types/common-tags': ^1.8.4
   '@types/node': 25.4.0
   '@types/table': ^6.3.2
