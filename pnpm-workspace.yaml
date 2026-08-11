@@ -47,7 +47,7 @@ catalog:
   sort-keys: ^6.0.0
   standard: ^17.1.2
   strip-bom: ^5.0.0
-  symlink-dir: ^7.1.0
+  symlink-dir: ^10.0.0
   table: ^6.9.0
   tempfile: ^6.0.1
   tempy: ^3.2.0
