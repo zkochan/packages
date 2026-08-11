@@ -31,7 +31,7 @@ catalog:
   fs-extra: 11.3.4
   ini: ^6.0.0
   is-windows: ^1.0.2
-  js-yaml: ^4.1.1
+  js-yaml: ^5.0.0
   json5: ^2.2.3
   load-json-file: 7.0.1
   load-yaml-file: ^1.0.0
