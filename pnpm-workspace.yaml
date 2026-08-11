@@ -53,6 +53,6 @@ catalog:
   tempy: ^3.2.0
   typescript: ^5.9.3
   unique-string: ^3.0.0
-  write-file-atomic: ^7.0.1
+  write-file-atomic: ^8.0.0
   write-json-file: ^7.0.0
   yarn: ^1.22.22
