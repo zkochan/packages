@@ -38,7 +38,7 @@ export async function preferredPM (pkgPath) {
     }
   }
   const { findUp } = await import('find-up-simple')
-  if (await findUp('pnpm-lock.yaml', { cwd: pkgPath })) {
+  if (await findUp('pnpm-lock.yaml', { cwd: pkgPath }) || await findUp('pnpm-workspace.yaml', { cwd: pkgPath })) {
     return {
       name: 'pnpm',
       version: '>=3'
