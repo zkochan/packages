@@ -31,5 +31,9 @@
   },
   "devDependencies": {
     "standard": "catalog:"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/zkochan/packages/issues"
+  },
+  "homepage": "https://github.com/zkochan/packages/tree/main/read-yaml-file#readme"
 }
