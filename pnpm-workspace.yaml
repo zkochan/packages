@@ -28,7 +28,7 @@ catalog:
   execa: ^9.6.1
   find-up-simple: ^1.0.1
   find-yarn-workspace-root2: 1.2.53
-  fs-extra: 11.3.4
+  fs-extra: 11.4.0
   ini: ^6.0.0
   is-windows: ^1.0.2
   js-yaml: ^4.1.1
