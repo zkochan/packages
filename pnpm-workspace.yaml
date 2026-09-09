@@ -15,7 +15,7 @@ overrides:
   '@types/node': 25.4.0
 
 catalog:
-  '@changesets/cli': ^2.30.0
+  '@changesets/cli': ^3.0.0
   '@pnpm/exe': ^10.32.1
   '@types/common-tags': ^1.8.4
   '@types/node': 25.4.0
