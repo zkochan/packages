@@ -39,6 +39,7 @@ gracefulGit(['status', 'README.md'])
 
 - `args` - _string\[]_ - arguments passed to the Git CLI
 - `opts.cwd` - _Path_ - the directory in which the Git command should be executed
+- `opts.env` - _object_ - environment variables for the spawned Git process
 - `...opts` - _object_ - optional. Parameters used by [retry](https://www.npmjs.com/package/retry) when git operation fails.
 
 ### `git.noRetry(args, [opts]) => Promise`
