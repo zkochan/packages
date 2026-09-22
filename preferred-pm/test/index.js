@@ -54,6 +54,11 @@ test('prefer Bun', async () => {
   assert.deepStrictEqual(pm, { name: 'bun', version: '*' })
 })
 
+test('prefer nub', async () => {
+  const pm = await preferredPM(path.join(__dirname, 'prefers-nub'))
+  assert.deepStrictEqual(pm, { name: 'nub', version: '*' })
+})
+
 test('prefer npm 5', async () => {
   const pm = await preferredPM(path.join(__dirname, 'prefers-npm-5'))
   assert.deepStrictEqual(pm, { name: 'npm', version: '>=5' })
