@@ -26,7 +26,11 @@ test('prefer pnpm', async () => {
 })
 
 test('prefer pnpm inside a pnpm workspace', async () => {
-  const pm = await preferredPM(path.join(__dirname, 'pnpm-workspace/packages/pkg'))
+  // Copy the fixture out of this repo so the lookup can't climb up to the
+  // monorepo's own pnpm-lock.yaml: detection must come from pnpm-workspace.yaml.
+  const dir = temporaryDirectory()
+  await ncp(path.join(__dirname, 'pnpm-workspace'), dir)
+  const pm = await preferredPM(path.join(dir, 'packages/pkg'))
   assert.deepStrictEqual(pm, { name: 'pnpm', version: '>=3' })
 })
 
