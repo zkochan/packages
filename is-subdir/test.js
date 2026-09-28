@@ -16,11 +16,24 @@ test('isSubdir()', () => {
 
   if (_isWindows) {
     assert.ok(isSubdir('C:', 'C:\\.pnpm-store'))
+    assert.ok(isSubdir('C:\\', 'C:\\.pnpm-store'))
+    assert.ok(!isSubdir('C:\\', 'D:\\.pnpm-store'))
   }
+})
+
+test('isSubdir() when the parent is the filesystem root', () => {
+  const root = path.parse(process.cwd()).root
+  assert.ok(isSubdir(root, root))
+  assert.ok(isSubdir(root, path.join(root, 'app')))
+  assert.ok(isSubdir(root, process.cwd()))
 })
 
 test('isSubdir.strict()', () => {
   assert.ok(!strict(process.cwd(), process.cwd()))
   assert.ok(!strict('node_modules/tape', '../tape'))
   assert.ok(strict('node_modules', path.resolve('node_modules', 'tape')))
+
+  const root = path.parse(process.cwd()).root
+  assert.ok(!strict(root, root))
+  assert.ok(strict(root, path.join(root, 'app')))
 })
