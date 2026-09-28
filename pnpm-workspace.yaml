@@ -8,6 +8,11 @@ allowBuilds:
   core-js: false
   yarn: true
 
+registries:
+  https://registry.npmjs.com/:
+    scopes:
+      - '@pnpm'
+
 configDependencies:
   '@pnpm/plugin-better-defaults': 0.2.1
 
