@@ -16,6 +16,8 @@ export async function whichPM (pkgPath) {
 
   if (fs.existsSync(path.join(pkgPath, 'bun.lockb'))) return { name: 'bun' }
 
+  if (fs.existsSync(path.join(pkgPath, 'nub.lock'))) return { name: 'nub' }
+
   const modulesExists = fs.existsSync(modulesPath)
   return modulesExists ? { name: 'npm' } : null
 }

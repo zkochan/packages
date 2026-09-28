@@ -1,6 +1,6 @@
 export function whichPM (pkgPath: string): Promise<WhichPMResult | null>
 
-export type WhichPMResult = NPM | YARN | PNPM | BUN | Other
+export type WhichPMResult = NPM | YARN | PNPM | BUN | NUB | Other
 
 export interface NPM {
   readonly name: 'npm'
@@ -17,6 +17,10 @@ export interface PNPM {
 
 export interface BUN {
   readonly name: 'bun'
+}
+
+export interface NUB {
+  readonly name: 'nub'
 }
 
 export interface Other {

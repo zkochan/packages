@@ -27,6 +27,11 @@ test('identifies bun installation', async () => {
   assert.deepStrictEqual(pm, { name: 'bun' })
 })
 
+test('identifies nub installation', async () => {
+  const pm = await whichPM(path.join(fixturesDir, 'nub'))
+  assert.deepStrictEqual(pm, { name: 'nub' })
+})
+
 test('identifies npm installation', async () => {
   const pm = await whichPM(path.join(fixturesDir, 'npm'))
   assert.deepStrictEqual(pm, { name: 'npm' })
