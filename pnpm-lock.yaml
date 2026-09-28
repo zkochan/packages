@@ -200,8 +200,8 @@ catalogs:
       specifier: 7.0.0
       version: 7.0.0
     execa:
-      specifier: ^9.6.1
-      version: 9.6.1
+      specifier: ^10.0.0
+      version: 10.0.1
     find-up-simple:
       specifier: ^1.0.1
       version: 1.0.1
@@ -219,7 +219,7 @@ catalogs:
       version: 1.0.2
     js-yaml:
       specifier: ^4.1.1
-      version: 4.1.1
+      version: 4.3.2
     json5:
       specifier: ^2.2.3
       version: 2.2.3
@@ -258,7 +258,7 @@ catalogs:
       version: 6.1.3
     sort-keys:
       specifier: ^6.0.0
-      version: 6.0.0
+      version: 6.0.1
     standard:
       specifier: ^17.1.2
       version: 17.1.2
@@ -295,8 +295,6 @@ catalogs:
 
 overrides:
   '@types/node': 25.4.0
-
-pnpmfileChecksum: sha256-UtXZV825NqHOBG69jsYGuWZ97+do7mk2t42sK5gvG2I=
 
 importers:
 
@@ -479,7 +477,7 @@ importers:
     dependencies:
       js-yaml:
         specifier: 'catalog:'
-        version: 4.1.1
+        version: 4.3.2
       strip-bom:
         specifier: 'catalog:'
         version: 5.0.0
@@ -591,7 +589,7 @@ importers:
         version: 2.0.3
       execa:
         specifier: 'catalog:'
-        version: 9.6.1
+        version: 10.0.1
       path-name:
         specifier: 'catalog:'
         version: 1.0.0
@@ -633,7 +631,7 @@ importers:
         version: 9.4.0
       execa:
         specifier: 'catalog:'
-        version: 9.6.1
+        version: 10.0.1
       npm:
         specifier: 'catalog:'
         version: 11.11.0
@@ -664,7 +662,7 @@ importers:
         version: 2.2.3
       sort-keys:
         specifier: 'catalog:'
-        version: 6.0.0
+        version: 6.0.1
       write-file-atomic:
         specifier: 'catalog:'
         version: 7.0.1
@@ -680,7 +678,7 @@ importers:
     dependencies:
       js-yaml:
         specifier: 'catalog:'
-        version: 4.1.1
+        version: 4.3.2
       write-file-atomic:
         specifier: 'catalog:'
         version: 7.0.1
@@ -1369,9 +1367,9 @@ packages:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
 
-  execa@9.6.1:
-    resolution: {integrity: sha512-9Be3ZoN4LmYR90tUoVu2te2BsbzHfhJyfEiAVfz7N5/zv+jduIfLrV2xdQXOHbaD6KgpGdO9PRPM1Y4Q9QkPkA==}
-    engines: {node: ^18.19.0 || >=20.5.0}
+  execa@10.0.1:
+    resolution: {integrity: sha512-ge98qjkRK4IB7tL7Ju/6qmm5LHoH1eEMt5FNZrz3f4UIYhF28lggX20z3FaX1sgc67msLEn0N0BscOs29iuwyw==}
+    engines: {node: '>=22'}
 
   extendable-error@0.1.7:
     resolution: {integrity: sha512-UOiS2in6/Q0FK0R0q6UY9vYpQ21mr/Qn1KOnte7vsACuNJf514WvCCUHSRCPcgjPT2bAhNIJdlE6bVap1GKmeg==}
@@ -1752,10 +1750,6 @@ packages:
 
   js-yaml@3.15.2:
     resolution: {integrity: sha512-6EuL879VkRA+1Cz578mKMiKvjPNEuk6+r1JaFzoSWejZmtf7xWbIyw1e3KkxlkzTIt9Taw6JBhEppG7utc1P+w==}
-    hasBin: true
-
-  js-yaml@4.1.1:
-    resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
 
   js-yaml@4.3.2:
@@ -2306,10 +2300,6 @@ packages:
     resolution: {integrity: sha512-qMCMfhY040cVHT43K9BFygqYbUPFZKHOg7K73mtTWJRb8pyP3fzf4Ixd5SzdEJQ6MRUg/WBnOLxghZtKKurENQ==}
     engines: {node: '>=10'}
 
-  sort-keys@6.0.0:
-    resolution: {integrity: sha512-ueSlHJMwpIw42CJ4B11Uxzh/S0p0AlOyiNktlv2KOu5e1JpUE6DlC4AAUjXqesHdBRv/g0wC9Q4vwq0NP2pA9w==}
-    engines: {node: '>=20'}
-
   sort-keys@6.0.1:
     resolution: {integrity: sha512-w7xWRu8U9MneKNna8ptG194jp9PLtbd/Rl6gwrmbK4yUeKbE66a64rHgl0iKTBBDr/hpanx7zMGP1Qo8MRkc/w==}
     engines: {node: '>=20'}
@@ -2522,6 +2512,11 @@ packages:
   which-collection@1.0.2:
     resolution: {integrity: sha512-K4jVyjnBdgvc86Y6BkaLZEN933SwYOuBFkdmBu9ZfkcAbdVbpITnDmjvZ/aQjRXQrv5EPkTnD1s39GiiqbngCw==}
     engines: {node: '>= 0.4'}
+
+  which-command@0.1.0:
+    resolution: {integrity: sha512-XZyoF5/5hZtXitIwzrU4NKK+Wtbb9aB9CezUEw2Q0wlYK8NUYQxC1rRXgNueYLtBAJwXIb+/tFVk4dozciNJMA==}
+    engines: {node: '>=22'}
+    hasBin: true
 
   which-typed-array@1.1.24:
     resolution: {integrity: sha512-wk4Mf4pR5mRP7eYuuTBCIQ9d0ud2Fv2jRLQpfgnRjbOxAFHmjKFValgTpitVKzJJS8ajnYQV2Du1SZ8j6b/EUQ==}
@@ -3463,10 +3458,9 @@ snapshots:
 
   esutils@2.0.3: {}
 
-  execa@9.6.1:
+  execa@10.0.1:
     dependencies:
       '@sindresorhus/merge-streams': 4.0.0
-      cross-spawn: 7.0.6
       figures: 6.1.0
       get-stream: 9.0.1
       human-signals: 8.0.1
@@ -3476,6 +3470,7 @@ snapshots:
       pretty-ms: 9.3.1
       signal-exit: 4.1.0
       strip-final-newline: 4.0.0
+      which-command: 0.1.0
       yoctocolors: 2.2.0
 
   extendable-error@0.1.7: {}
@@ -3878,10 +3873,6 @@ snapshots:
     dependencies:
       argparse: 1.0.10
       esprima: 4.0.1
-
-  js-yaml@4.1.1:
-    dependencies:
-      argparse: 2.0.1
 
   js-yaml@4.3.2:
     dependencies:
@@ -4366,10 +4357,6 @@ snapshots:
       astral-regex: 2.0.0
       is-fullwidth-code-point: 3.0.0
 
-  sort-keys@6.0.0:
-    dependencies:
-      is-plain-obj: 4.1.0
-
   sort-keys@6.0.1:
     dependencies:
       is-plain-obj: 4.1.0
@@ -4647,6 +4634,8 @@ snapshots:
       is-set: 2.0.3
       is-weakmap: 2.0.2
       is-weakset: 2.0.4
+
+  which-command@0.1.0: {}
 
   which-typed-array@1.1.24:
     dependencies:
