@@ -219,7 +219,7 @@ catalogs:
       version: 1.0.2
     js-yaml:
       specifier: ^4.1.1
-      version: 4.1.1
+      version: 4.3.2
     json5:
       specifier: ^2.2.3
       version: 2.2.3
@@ -239,8 +239,8 @@ catalogs:
       specifier: ^1.0.0
       version: 1.0.0
     npm:
-      specifier: ^11.11.0
-      version: 11.11.0
+      specifier: ^12.0.0
+      version: 12.1.0
     p-limit:
       specifier: ^7.3.0
       version: 7.3.0
@@ -258,7 +258,7 @@ catalogs:
       version: 6.1.3
     sort-keys:
       specifier: ^6.0.0
-      version: 6.0.0
+      version: 6.0.1
     standard:
       specifier: ^17.1.2
       version: 17.1.2
@@ -295,8 +295,6 @@ catalogs:
 
 overrides:
   '@types/node': 25.4.0
-
-pnpmfileChecksum: sha256-UtXZV825NqHOBG69jsYGuWZ97+do7mk2t42sK5gvG2I=
 
 importers:
 
@@ -479,7 +477,7 @@ importers:
     dependencies:
       js-yaml:
         specifier: 'catalog:'
-        version: 4.1.1
+        version: 4.3.2
       strip-bom:
         specifier: 'catalog:'
         version: 5.0.0
@@ -636,7 +634,7 @@ importers:
         version: 9.6.1
       npm:
         specifier: 'catalog:'
-        version: 11.11.0
+        version: 12.1.0
       yarn:
         specifier: 'catalog:'
         version: 1.22.22
@@ -664,7 +662,7 @@ importers:
         version: 2.2.3
       sort-keys:
         specifier: 'catalog:'
-        version: 6.0.0
+        version: 6.0.1
       write-file-atomic:
         specifier: 'catalog:'
         version: 7.0.1
@@ -680,7 +678,7 @@ importers:
     dependencies:
       js-yaml:
         specifier: 'catalog:'
-        version: 4.1.1
+        version: 4.3.2
       write-file-atomic:
         specifier: 'catalog:'
         version: 7.0.1
@@ -1754,10 +1752,6 @@ packages:
     resolution: {integrity: sha512-6EuL879VkRA+1Cz578mKMiKvjPNEuk6+r1JaFzoSWejZmtf7xWbIyw1e3KkxlkzTIt9Taw6JBhEppG7utc1P+w==}
     hasBin: true
 
-  js-yaml@4.1.1:
-    resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
-    hasBin: true
-
   js-yaml@4.3.2:
     resolution: {integrity: sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==}
     hasBin: true
@@ -1900,15 +1894,16 @@ packages:
     resolution: {integrity: sha512-9qny7Z9DsQU8Ou39ERsPU4OZQlSTP47ShQzuKZ6PRXpYLtIFgl/DEBYEXKlvcEa+9tHVcK8CF81Y2V72qaZhWA==}
     engines: {node: '>=18'}
 
-  npm@11.11.0:
-    resolution: {integrity: sha512-82gRxKrh/eY5UnNorkTFcdBQAGpgjWehkfGVqAGlJjejEtJZGGJUqjo3mbBTNbc5BTnPKGVtGPBZGhElujX5cw==}
-    engines: {node: ^20.17.0 || >=22.9.0}
+  npm@12.1.0:
+    resolution: {integrity: sha512-Fyhu62pNx70YCs/5+dEmJQTFVmSKwvo5CA0qvBkGDRpob42MJ6G2RQ2tdxeKM4nYnIZDqkYAxEgqtoejn9QGtQ==}
+    engines: {node: ^22.22.2 || ^24.15.0 || >=26.0.0}
     hasBin: true
     bundledDependencies:
       - '@isaacs/string-locale-compare'
       - '@npmcli/arborist'
       - '@npmcli/config'
       - '@npmcli/fs'
+      - '@npmcli/git'
       - '@npmcli/map-workspaces'
       - '@npmcli/metavuln-calculator'
       - '@npmcli/package-json'
@@ -1918,9 +1913,11 @@ packages:
       - '@sigstore/tuf'
       - abbrev
       - archy
+      - bin-links
       - cacache
       - chalk
       - ci-info
+      - diff
       - fastest-levenshtein
       - fs-minipass
       - glob
@@ -2305,10 +2302,6 @@ packages:
   slice-ansi@4.0.0:
     resolution: {integrity: sha512-qMCMfhY040cVHT43K9BFygqYbUPFZKHOg7K73mtTWJRb8pyP3fzf4Ixd5SzdEJQ6MRUg/WBnOLxghZtKKurENQ==}
     engines: {node: '>=10'}
-
-  sort-keys@6.0.0:
-    resolution: {integrity: sha512-ueSlHJMwpIw42CJ4B11Uxzh/S0p0AlOyiNktlv2KOu5e1JpUE6DlC4AAUjXqesHdBRv/g0wC9Q4vwq0NP2pA9w==}
-    engines: {node: '>=20'}
 
   sort-keys@6.0.1:
     resolution: {integrity: sha512-w7xWRu8U9MneKNna8ptG194jp9PLtbd/Rl6gwrmbK4yUeKbE66a64rHgl0iKTBBDr/hpanx7zMGP1Qo8MRkc/w==}
@@ -3879,10 +3872,6 @@ snapshots:
       argparse: 1.0.10
       esprima: 4.0.1
 
-  js-yaml@4.1.1:
-    dependencies:
-      argparse: 2.0.1
-
   js-yaml@4.3.2:
     dependencies:
       argparse: 2.0.1
@@ -4015,7 +4004,7 @@ snapshots:
       path-key: 4.0.0
       unicorn-magic: 0.3.0
 
-  npm@11.11.0: {}
+  npm@12.1.0: {}
 
   object-assign@4.1.1: {}
 
@@ -4365,10 +4354,6 @@ snapshots:
       ansi-styles: 4.3.0
       astral-regex: 2.0.0
       is-fullwidth-code-point: 3.0.0
-
-  sort-keys@6.0.0:
-    dependencies:
-      is-plain-obj: 4.1.0
 
   sort-keys@6.0.1:
     dependencies:
