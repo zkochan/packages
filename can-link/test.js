@@ -11,6 +11,9 @@ eaccesErr.code = 'EACCES'
 const epermErr = new Error('EPERM: permission denied, link')
 epermErr.code = 'EPERM'
 
+const erofsErr = new Error('EROFS: read-only file system, link')
+erofsErr.code = 'EROFS'
+
 test('canLinkSync()', () => {
   assert.ok(canLinkSync('package.json', 'node_modules/package.json'))
   assert.ok(!canLinkSync('foo', 'bar', {
@@ -23,6 +26,10 @@ test('canLinkSync()', () => {
   }))
   assert.ok(!canLinkSync('foo', 'bar', {
     linkSync: () => { throw epermErr },
+    unlinkSync: () => {}
+  }))
+  assert.ok(!canLinkSync('foo', 'bar', {
+    linkSync: () => { throw erofsErr },
     unlinkSync: () => {}
   }))
   assert.throws(() => {
@@ -77,4 +84,14 @@ test('canLink() non-exdev error passed through', async () => {
     }),
     /Error/
   )
+})
+
+test('canLink() returns false on EROFS error', async () => {
+  const can = await canLink('package.json', 'node_modules/package.json', {
+    promises: {
+      link: (existingPath, newPath, cb) => Promise.reject(erofsErr),
+      unlink: (p, cb) => Promise.resolve()
+    }
+  })
+  assert.ok(!can)
 })
