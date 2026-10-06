@@ -298,6 +298,9 @@ overrides:
 
 pnpmfileChecksum: sha256-UtXZV825NqHOBG69jsYGuWZ97+do7mk2t42sK5gvG2I=
 
+patchedDependencies:
+  typescript@5.9.3: cfb1801eb0294534e2a5a1c99e21de49aae92e2b2afb738428b5cce6f8754203
+
 importers:
 
   .:
@@ -307,7 +310,7 @@ importers:
         version: 2.30.0(@types/node@25.4.0)
       typescript:
         specifier: 'catalog:'
-        version: 5.9.3
+        version: 5.9.3(patch_hash=cfb1801eb0294534e2a5a1c99e21de49aae92e2b2afb738428b5cce6f8754203)
 
   better-path-resolve:
     dependencies:
@@ -346,7 +349,7 @@ importers:
         version: 25.4.0
       typescript:
         specifier: 'catalog:'
-        version: 5.9.3
+        version: 5.9.3(patch_hash=cfb1801eb0294534e2a5a1c99e21de49aae92e2b2afb738428b5cce6f8754203)
 
   graceful-git:
     dependencies:
@@ -403,7 +406,7 @@ importers:
     devDependencies:
       typescript:
         specifier: 'catalog:'
-        version: 5.9.3
+        version: 5.9.3(patch_hash=cfb1801eb0294534e2a5a1c99e21de49aae92e2b2afb738428b5cce6f8754203)
 
   path-absolute:
     devDependencies:
@@ -532,7 +535,7 @@ importers:
         version: 1.8.2
       typescript:
         specifier: 'catalog:'
-        version: 5.9.3
+        version: 5.9.3(patch_hash=cfb1801eb0294534e2a5a1c99e21de49aae92e2b2afb738428b5cce6f8754203)
 
   resolve-link-target:
     devDependencies:
@@ -582,7 +585,7 @@ importers:
         version: 7.0.0
       typescript:
         specifier: 'catalog:'
-        version: 5.9.3
+        version: 5.9.3(patch_hash=cfb1801eb0294534e2a5a1c99e21de49aae92e2b2afb738428b5cce6f8754203)
 
   safe-execa:
     dependencies:
@@ -608,7 +611,7 @@ importers:
     devDependencies:
       typescript:
         specifier: 'catalog:'
-        version: 5.9.3
+        version: 5.9.3(patch_hash=cfb1801eb0294534e2a5a1c99e21de49aae92e2b2afb738428b5cce6f8754203)
 
   which-pm:
     dependencies:
@@ -4578,7 +4581,7 @@ snapshots:
 
   typedarray-dts@1.0.0: {}
 
-  typescript@5.9.3: {}
+  typescript@5.9.3(patch_hash=cfb1801eb0294534e2a5a1c99e21de49aae92e2b2afb738428b5cce6f8754203): {}
 
   unbox-primitive@1.1.0:
     dependencies:
