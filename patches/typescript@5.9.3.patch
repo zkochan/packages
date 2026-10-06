@@ -1,0 +1,279 @@
+diff --git a/lib/_pnpmLoadedFs.js b/lib/_pnpmLoadedFs.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..4e28861a7c3fb6133df09804f71d1ae4d1ff2166
+--- /dev/null
++++ b/lib/_pnpmLoadedFs.js
+@@ -0,0 +1,249 @@
++"use strict";
++// Lets TypeScript read dependencies installed by pnpm's "loaded" node linker.
++//
++// With that linker, node_modules holds no package directories. Packages are
++// described by node_modules/.pnpm/.store-manifest.json: a stored package is a
++// map of file paths to blobs in the content-addressable store, and every
++// package lists the packages its dependency names point to. At runtime a Node
++// loader serves them. This module does the same for TypeScript by wrapping
++// ts.sys in a read-only virtual filesystem:
++//
++// - Every stored package gets a virtual directory,
++//   <manifest dir>/.pnpm-loader/<sha256 of id>/node_modules/<name>, whose files
++//   are read from the store.
++// - <package root>/node_modules/<dep> is shown as a directory for every
++//   dependency the package declares, and realpaths to the dependency's root.
++//
++// TypeScript's regular node_modules resolution, @types discovery and symlink
++// handling then work without any other changes.
++const fs = require("fs");
++const path = require("path");
++const crypto = require("crypto");
++
++const MANIFEST = path.join("node_modules", ".pnpm", ".store-manifest.json");
++
++function findManifest(dir) {
++  for (;;) {
++    const candidate = path.join(dir, MANIFEST);
++    if (fs.existsSync(candidate)) return candidate;
++    const parent = path.dirname(dir);
++    if (parent === dir) return undefined;
++    dir = parent;
++  }
++}
++
++function packageName(id) {
++  const at = id.indexOf("@", id.startsWith("@") ? 1 : 0);
++  return at === -1 ? id : id.slice(0, at);
++}
++
++function isInside(parent, child) {
++  return child === parent || child.startsWith(parent + path.sep);
++}
++
++function createLoadedFs(manifestPath) {
++  const manifestDir = path.dirname(manifestPath);
++  const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
++  if (manifest.version !== 1 || !manifest.packages) return undefined;
++  const storeDir = path.resolve(manifestDir, manifest.storeDir);
++  const virtualRoot = path.join(manifestDir, ".pnpm-loader");
++
++  const packages = new Map();
++  const packagesByRoot = new Map();
++  for (const [id, entry] of Object.entries(manifest.packages)) {
++    const stored = Object.prototype.hasOwnProperty.call(entry, "files");
++    const root = stored
++      ? path.join(virtualRoot, crypto.createHash("sha256").update(id).digest("hex"), "node_modules", packageName(id))
++      : path.resolve(manifestDir, entry.root);
++    const pkg = { id, root, stored, entry, dependencies: new Map(Object.entries(entry.dependencies || {})), index: undefined };
++    packages.set(id, pkg);
++    packagesByRoot.set(root, pkg);
++  }
++
++  // Lists the files and directories of a stored package on first use.
++  function indexOf(pkg) {
++    if (pkg.index) return pkg.index;
++    const files = new Map();
++    const dirs = new Map([[pkg.root, new Set()]]);
++    const addToDir = (dir, name) => {
++      if (!dirs.has(dir)) dirs.set(dir, new Set());
++      dirs.get(dir).add(name);
++    };
++    const storedFiles = pkg.entry.files;
++    if (!Object.prototype.hasOwnProperty.call(storedFiles, "package.json")) {
++      files.set(path.join(pkg.root, "package.json"), { source: Buffer.from("{}") });
++    }
++    for (const [relative, hash] of Object.entries(storedFiles)) {
++      const file = path.join(pkg.root, ...relative.split("/"));
++      files.set(file, { blob: path.join(storeDir, "files", hash.slice(0, 2), hash.slice(2)) });
++      let child = file;
++      for (let dir = path.dirname(file); isInside(pkg.root, dir); dir = path.dirname(dir)) {
++        if (child !== file) addToDir(dir, path.basename(child));
++        else if (!dirs.has(dir)) dirs.set(dir, new Set());
++        child = dir;
++      }
++    }
++    pkg.index = { files, dirs };
++    return pkg.index;
++  }
++
++  // The stored package a virtual path belongs to.
++  function storedOwner(p) {
++    if (!isInside(virtualRoot, p)) return undefined;
++    for (let dir = p; isInside(virtualRoot, dir); dir = path.dirname(dir)) {
++      const pkg = packagesByRoot.get(dir);
++      if (pkg) return pkg;
++    }
++    return undefined;
++  }
++
++  // Follows <package root>/node_modules/<dep> links from left to right, so the
++  // result is the path the file or directory really has. A path that ends at a
++  // node_modules directory, or at a scope inside one, is reported separately,
++  // because its entries come from a package's dependency names.
++  function canonical(p) {
++    p = path.resolve(p);
++    const { root } = path.parse(p);
++    const parts = p.slice(root.length).split(path.sep).filter(Boolean);
++    let current = root;
++    for (let i = 0; i < parts.length; i++) {
++      const pkg = parts[i] === "node_modules" ? packagesByRoot.get(current) : undefined;
++      if (pkg && !(pkg.stored && indexOf(pkg).dirs.has(path.join(current, "node_modules")))) {
++        if (i + 1 === parts.length) return { path: path.join(current, "node_modules"), dependencyDir: { pkg, prefix: "" } };
++        let name = parts[i + 1];
++        if (name.startsWith("@")) {
++          if (i + 2 === parts.length) {
++            return { path: path.join(current, "node_modules", name), dependencyDir: { pkg, prefix: name + "/" } };
++          }
++          name += "/" + parts[i + 2];
++        }
++        const dependencyId = pkg.dependencies.get(name);
++        const dependency = dependencyId !== undefined ? packages.get(dependencyId) : undefined;
++        if (dependency) {
++          current = dependency.root;
++          i += name.includes("/") ? 2 : 1;
++          continue;
++        }
++      }
++      current = path.join(current, parts[i]);
++    }
++    return { path: current };
++  }
++
++  function dependencyNames({ pkg, prefix }) {
++    const names = new Set();
++    for (const name of pkg.dependencies.keys()) {
++      if (!name.startsWith(prefix)) continue;
++      names.add(name.slice(prefix.length).split("/")[0]);
++    }
++    return names;
++  }
++
++  function lookup(p) {
++    const resolved = canonical(p);
++    const owner = resolved.dependencyDir ? undefined : storedOwner(resolved.path);
++    if (owner) {
++      const index = indexOf(owner);
++      resolved.file = index.files.get(resolved.path);
++      resolved.dir = index.dirs.get(resolved.path);
++      resolved.virtual = true;
++    }
++    return resolved;
++  }
++
++  function readFileBuffer(file) {
++    return file.source || fs.readFileSync(file.blob);
++  }
++
++  return { lookup, readFileBuffer, dependencyNames };
++}
++
++function decode(buffer, encoding) {
++  if (buffer.length >= 2 && buffer[0] === 0xfe && buffer[1] === 0xff) {
++    const swapped = Buffer.from(buffer.subarray(2));
++    for (let i = 0; i + 1 < swapped.length; i += 2) {
++      const temp = swapped[i];
++      swapped[i] = swapped[i + 1];
++      swapped[i + 1] = temp;
++    }
++    return swapped.toString("utf16le");
++  }
++  if (buffer.length >= 2 && buffer[0] === 0xff && buffer[1] === 0xfe) return buffer.toString("utf16le", 2);
++  if (buffer.length >= 3 && buffer[0] === 0xef && buffer[1] === 0xbb && buffer[2] === 0xbf) return buffer.toString("utf8", 3);
++  return buffer.toString(encoding || "utf8");
++}
++
++function patchSystem(sys) {
++  if (!sys || process.env.PNPM_TS_LOADED_FS === "false") return sys;
++  let manifestPath;
++  try {
++    manifestPath = findManifest(process.cwd());
++  } catch {}
++  if (!manifestPath) return sys;
++  let loaded;
++  try {
++    loaded = createLoadedFs(manifestPath);
++  } catch {}
++  if (!loaded) return sys;
++
++  const original = {
++    readFile: sys.readFile,
++    fileExists: sys.fileExists,
++    directoryExists: sys.directoryExists,
++    getDirectories: sys.getDirectories,
++    realpath: sys.realpath,
++    getModifiedTime: sys.getModifiedTime,
++    getFileSize: sys.getFileSize,
++  };
++
++  sys.readFile = (p, encoding) => {
++    const r = loaded.lookup(p);
++    if (r.virtual) return r.file ? decode(loaded.readFileBuffer(r.file), encoding) : undefined;
++    return original.readFile(r.path, encoding);
++  };
++  sys.fileExists = (p) => {
++    const r = loaded.lookup(p);
++    if (r.virtual) return r.file !== undefined;
++    return original.fileExists(r.path);
++  };
++  sys.directoryExists = (p) => {
++    const r = loaded.lookup(p);
++    if (r.virtual) return r.dir !== undefined;
++    if (r.dependencyDir && loaded.dependencyNames(r.dependencyDir).size > 0) return true;
++    return original.directoryExists(r.path);
++  };
++  sys.getDirectories = (p) => {
++    const r = loaded.lookup(p);
++    if (r.virtual) return r.dir ? [...r.dir] : [];
++    const names = new Set(original.directoryExists(r.path) ? original.getDirectories(r.path) : []);
++    if (r.dependencyDir) {
++      for (const name of loaded.dependencyNames(r.dependencyDir)) names.add(name);
++    }
++    return [...names];
++  };
++  if (original.realpath) {
++    sys.realpath = (p) => {
++      const r = loaded.lookup(p);
++      if (r.virtual) return r.path;
++      return original.realpath(r.path);
++    };
++  }
++  if (original.getModifiedTime) {
++    sys.getModifiedTime = (p) => {
++      const r = loaded.lookup(p);
++      if (!r.virtual) return original.getModifiedTime(r.path);
++      if (!r.file) return undefined;
++      return r.file.blob ? fs.statSync(r.file.blob).mtime : new Date(0);
++    };
++  }
++  if (original.getFileSize) {
++    sys.getFileSize = (p) => {
++      const r = loaded.lookup(p);
++      if (!r.virtual) return original.getFileSize(r.path);
++      return r.file ? loaded.readFileBuffer(r.file).length : 0;
++    };
++  }
++  return sys;
++}
++
++module.exports = { patchSystem };
+diff --git a/lib/_tsc.js b/lib/_tsc.js
+index 612a1f7eed0fc030660b769480455aabe77b82c2..74a994a6de99b938fd78f6c07faf1f3ce68b3557 100644
+--- a/lib/_tsc.js
++++ b/lib/_tsc.js
+@@ -5292,6 +5292,7 @@ var sys = (() => {
+   }
+   if (sys2) {
+     patchWriteFileEnsuringDirectory(sys2);
++    sys2 = require("./_pnpmLoadedFs.js").patchSystem(sys2);
+   }
+   return sys2;
+ })();
+diff --git a/lib/typescript.js b/lib/typescript.js
+index 0554fc3fc707ce3edbc3c4f8f4d77f8aa3def7ba..f744f3ff1ddafee64341a1bf127a0e6a523bcaaa 100644
+--- a/lib/typescript.js
++++ b/lib/typescript.js
+@@ -8666,6 +8666,7 @@ var sys = (() => {
+   }
+   if (sys2) {
+     patchWriteFileEnsuringDirectory(sys2);
++    sys2 = require("./_pnpmLoadedFs.js").patchSystem(sys2);
+   }
+   return sys2;
+ })();

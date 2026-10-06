@@ -8,6 +8,16 @@ allowBuilds:
   core-js: false
   yarn: true
 
+nodeLinker:
+  type: loaded
+  excluded:
+    - '@pnpm/exe'
+    - bun
+    - cnpm
+    - standard
+    - typescript
+    - yarn
+
 registries:
   https://registry.npmjs.com/:
     scopes:
@@ -61,3 +71,5 @@ catalog:
   write-file-atomic: ^7.0.1
   write-json-file: ^7.0.0
   yarn: ^1.22.22
+patchedDependencies:
+  typescript@5.9.3: patches/typescript@5.9.3.patch

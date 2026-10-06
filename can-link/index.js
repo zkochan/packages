@@ -10,7 +10,8 @@ export async function canLink (existingPath, newPath, customFS) {
     if (
       err.code === 'EXDEV' ||
       err.code === 'EACCES' ||
-      err.code === 'EPERM'
+      err.code === 'EPERM' ||
+      err.code === 'EROFS'
     ) {
       return false
     }
@@ -25,7 +26,7 @@ export function canLinkSync (existingPath, newPath, customFS) {
     fs.unlinkSync(newPath)
     return true
   } catch (err) {
-    if (err.code === 'EXDEV' || err.code === 'EACCES' || err.code === 'EPERM') {
+    if (err.code === 'EXDEV' || err.code === 'EACCES' || err.code === 'EPERM' || err.code === 'EROFS') {
       return false
     }
     throw err
