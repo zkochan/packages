@@ -1,5 +1,5 @@
 {
-  "packageManager": "pnpm@12.8.0",
+  "packageManager": "pnpm@12.10.1",
   "devDependencies": {
     "@changesets/cli": "catalog:",
     "typescript": "catalog:"
