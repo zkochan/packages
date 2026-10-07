@@ -40,5 +40,8 @@
   },
   "devDependencies": {
     "standard": "catalog:"
+  },
+  "bugs": {
+    "url": "https://github.com/zkochan/packages/issues"
   }
 }

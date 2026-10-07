@@ -15,6 +15,10 @@
     "email": "z@kochan.io"
   },
   "repository": "https://github.com/zkochan/packages/tree/main/read-yaml-file",
+  "homepage": "https://github.com/zkochan/packages/tree/main/read-yaml-file#readme",
+  "bugs": {
+    "url": "https://github.com/zkochan/packages/issues"
+  },
   "engines": {
     "node": ">=22.13"
   },
